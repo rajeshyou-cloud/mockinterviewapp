@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "candidate-aws-well-architected-01",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS Well-Architected Framework and the main problem it solves.",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-well-architected-02",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS Well-Architected Framework and verify that it works?",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-well-architected-03",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS Well-Architected Framework. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-well-architected-04",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS Well-Architected Framework is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-well-architected-05",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS Well-Architected Framework. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-well-architected-06",
+    "technology": "aws",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS Well-Architected Framework, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The Well-Architected Framework evaluates workloads across operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. Reviews expose risks and drive measurable improvements. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "operational excellence",
+      "security",
+      "reliability",
+      "performance efficiency",
+      "cost optimization"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Well-Architected Framework would you validate?",
+      "What evidence would prove that AWS Well-Architected Framework is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-01",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS shared responsibility model and the main problem it solves.",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-02",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS shared responsibility model and verify that it works?",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-03",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS shared responsibility model. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-04",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS shared responsibility model is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-05",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS shared responsibility model. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-shared-responsibility-06",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS shared responsibility model, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "AWS secures the underlying cloud infrastructure while customers secure their data, identities, configurations, workloads, and operating systems according to the service model. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "security of the cloud",
+      "security in the cloud",
+      "managed service",
+      "configuration",
+      "data"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS shared responsibility model would you validate?",
+      "What evidence would prove that AWS shared responsibility model is working correctly?"
+    ],
+    "source": {
+      "title": "AWS shared responsibility model",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-01",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS Identity and Access Management and the main problem it solves.",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-02",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS Identity and Access Management and verify that it works?",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-03",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS Identity and Access Management. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-04",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS Identity and Access Management is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-05",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS Identity and Access Management. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-06",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS Identity and Access Management, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "IAM controls authentication and authorization through users, roles, policies, and temporary credentials. Least privilege, federation, short-lived sessions, and policy analysis reduce standing access. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "principal",
+      "role",
+      "policy",
+      "temporary credentials",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Identity and Access Management would you validate?",
+      "What evidence would prove that AWS Identity and Access Management is working correctly?"
+    ],
+    "source": {
+      "title": "What is IAM?",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-01",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain IAM policy evaluation and the main problem it solves.",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-02",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of IAM policy evaluation and verify that it works?",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-03",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering IAM policy evaluation. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-04",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "IAM policy evaluation is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-05",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around IAM policy evaluation. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-iam-policies-06",
+    "technology": "aws",
+    "topic": "identity",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving IAM policy evaluation, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "AWS evaluates identity, resource, boundary, organization, and session policies together. Explicit denies override allows, and missing allows produce implicit denial. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "identity policy",
+      "resource policy",
+      "permissions boundary",
+      "SCP",
+      "explicit deny"
+    ],
+    "followUps": [
+      "Which limitation or cost of IAM policy evaluation would you validate?",
+      "What evidence would prove that IAM policy evaluation is working correctly?"
+    ],
+    "source": {
+      "title": "Policy evaluation logic",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-01",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS Organizations and service control policies and the main problem it solves.",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-02",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS Organizations and service control policies and verify that it works?",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-03",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS Organizations and service control policies. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-04",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS Organizations and service control policies is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-05",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS Organizations and service control policies. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-organizations-06",
+    "technology": "aws",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS Organizations and service control policies, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Organizations groups accounts for consolidated governance and billing. Service control policies set maximum available permissions but do not grant permissions themselves. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "organization",
+      "organizational unit",
+      "account",
+      "SCP",
+      "consolidated billing"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Organizations and service control policies would you validate?",
+      "What evidence would prove that AWS Organizations and service control policies is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Organizations",
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-01",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon VPC and the main problem it solves.",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-02",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon VPC and verify that it works?",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-03",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon VPC. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-04",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon VPC is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-05",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon VPC. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-vpc-06",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon VPC, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A VPC defines an isolated regional network with CIDR ranges, subnets, route tables, gateways, endpoints, and security controls. Address planning and availability-zone placement shape later scalability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "CIDR",
+      "subnet",
+      "route table",
+      "internet gateway",
+      "VPC endpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon VPC would you validate?",
+      "What evidence would prove that Amazon VPC is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon VPC?",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-01",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain security groups and network ACLs and the main problem it solves.",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-02",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of security groups and network ACLs and verify that it works?",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-03",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering security groups and network ACLs. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-04",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "security groups and network ACLs is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-05",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around security groups and network ACLs. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-security-groups-nacls-06",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving security groups and network ACLs, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Security groups are stateful resource-level firewalls, while network ACLs are stateless subnet-level controls with ordered allow and deny rules. Layering them requires explicit traffic-path reasoning. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "security group",
+      "network ACL",
+      "stateful",
+      "stateless",
+      "rule"
+    ],
+    "followUps": [
+      "Which limitation or cost of security groups and network ACLs would you validate?",
+      "What evidence would prove that security groups and network ACLs is working correctly?"
+    ],
+    "source": {
+      "title": "Control VPC traffic",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-01",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon Route 53 routing and the main problem it solves.",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-02",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon Route 53 routing and verify that it works?",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-03",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon Route 53 routing. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-04",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon Route 53 routing is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-05",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon Route 53 routing. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-route53-06",
+    "technology": "aws",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon Route 53 routing, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Route 53 provides DNS registration, authoritative DNS, routing policies, and health checks. Simple, weighted, latency, failover, and geolocation policies serve different traffic goals. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "DNS",
+      "hosted zone",
+      "record",
+      "routing policy",
+      "health check"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon Route 53 routing would you validate?",
+      "What evidence would prove that Amazon Route 53 routing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon Route 53?",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-01",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon EC2 instances and the main problem it solves.",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-02",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon EC2 instances and verify that it works?",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-03",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon EC2 instances. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-04",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon EC2 instances is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-05",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon EC2 instances. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ec2-06",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon EC2 instances, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "EC2 supplies resizable virtual machines with instance families, AMIs, storage, networking, and purchase options. Workload profile, availability, lifecycle, patching, and cost determine configuration. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "instance type",
+      "AMI",
+      "EBS",
+      "security group",
+      "purchase option"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EC2 instances would you validate?",
+      "What evidence would prove that Amazon EC2 instances is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EC2?",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-01",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Elastic Load Balancing and EC2 Auto Scaling and the main problem it solves.",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-02",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Elastic Load Balancing and EC2 Auto Scaling and verify that it works?",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-03",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Elastic Load Balancing and EC2 Auto Scaling. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-04",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Elastic Load Balancing and EC2 Auto Scaling is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-05",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Elastic Load Balancing and EC2 Auto Scaling. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-autoscaling-elb-06",
+    "technology": "aws",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Elastic Load Balancing and EC2 Auto Scaling, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Load balancers distribute healthy traffic while Auto Scaling groups maintain desired capacity and respond to demand. Health checks, cooldowns, scaling metrics, and graceful termination must align. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "load balancer",
+      "target group",
+      "Auto Scaling group",
+      "health check",
+      "scaling policy"
+    ],
+    "followUps": [
+      "Which limitation or cost of Elastic Load Balancing and EC2 Auto Scaling would you validate?",
+      "What evidence would prove that Elastic Load Balancing and EC2 Auto Scaling is working correctly?"
+    ],
+    "source": {
+      "title": "What is Elastic Load Balancing?",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-01",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon S3 and the main problem it solves.",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-02",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon S3 and verify that it works?",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-03",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon S3. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-04",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon S3 is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-05",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon S3. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-06",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon S3, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "S3 stores objects in buckets with regional durability, versioning, lifecycle, encryption, policies, and event integrations. Key design, access controls, request patterns, and storage classes affect operation and cost. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "bucket",
+      "object",
+      "versioning",
+      "storage class",
+      "lifecycle"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 would you validate?",
+      "What evidence would prove that Amazon S3 is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon S3?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-01",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon S3 access controls and the main problem it solves.",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-02",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon S3 access controls and verify that it works?",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-03",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon S3 access controls. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-04",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon S3 access controls is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-05",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon S3 access controls. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-s3-security-06",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon S3 access controls, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "S3 authorization combines IAM and bucket policies with Block Public Access, ownership controls, access points, and optional ACLs. Account-level guardrails and explicit public-access review are essential. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "bucket policy",
+      "Block Public Access",
+      "object ownership",
+      "access point",
+      "ACL"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon S3 access controls would you validate?",
+      "What evidence would prove that Amazon S3 access controls is working correctly?"
+    ],
+    "source": {
+      "title": "Access control in Amazon S3",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-01",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon EBS volumes and snapshots and the main problem it solves.",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-02",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon EBS volumes and snapshots and verify that it works?",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-03",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon EBS volumes and snapshots. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-04",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon EBS volumes and snapshots is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-05",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon EBS volumes and snapshots. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ebs-06",
+    "technology": "aws",
+    "topic": "storage",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon EBS volumes and snapshots, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "EBS provides block storage for EC2 with volume types tuned for IOPS or throughput. Snapshots are incremental regional backups; attachment, encryption, resizing, and restore testing matter. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "block storage",
+      "volume type",
+      "IOPS",
+      "snapshot",
+      "encryption"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon EBS volumes and snapshots would you validate?",
+      "What evidence would prove that Amazon EBS volumes and snapshots is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon EBS?",
+      "url": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-01",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon RDS and the main problem it solves.",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-02",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon RDS and verify that it works?",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-03",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon RDS. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-04",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon RDS is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-05",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon RDS. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-rds-06",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon RDS, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "RDS manages relational database provisioning, backups, patching, monitoring, and failover. Engine needs, Multi-AZ, read replicas, parameter groups, connection management, and maintenance windows shape design. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "DB instance",
+      "Multi-AZ",
+      "read replica",
+      "backup",
+      "parameter group"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon RDS would you validate?",
+      "What evidence would prove that Amazon RDS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon RDS?",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-01",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon DynamoDB and the main problem it solves.",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-02",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon DynamoDB and verify that it works?",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-03",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon DynamoDB. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-04",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon DynamoDB is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-05",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon DynamoDB. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-dynamodb-06",
+    "technology": "aws",
+    "topic": "databases",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon DynamoDB, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "DynamoDB is a managed key-value and document database whose partition and sort keys determine access patterns. Capacity mode, indexes, consistency, item size, and hot partitions affect behavior. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "partition key",
+      "sort key",
+      "secondary index",
+      "capacity mode",
+      "consistency"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon DynamoDB would you validate?",
+      "What evidence would prove that Amazon DynamoDB is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon DynamoDB?",
+      "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-01",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS Lambda and the main problem it solves.",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-02",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS Lambda and verify that it works?",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-03",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS Lambda. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-04",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS Lambda is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-05",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS Lambda. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-lambda-06",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS Lambda, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Lambda runs event-driven functions with managed scaling and metered execution. Event sources, concurrency, cold starts, timeouts, idempotency, packaging, and permissions determine reliability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "function",
+      "event source",
+      "concurrency",
+      "timeout",
+      "execution role"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS Lambda would you validate?",
+      "What evidence would prove that AWS Lambda is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS Lambda?",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-01",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon API Gateway and the main problem it solves.",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-02",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon API Gateway and verify that it works?",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-03",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon API Gateway. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-04",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon API Gateway is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-05",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon API Gateway. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-api-gateway-06",
+    "technology": "aws",
+    "topic": "serverless",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon API Gateway, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "API Gateway publishes HTTP, REST, and WebSocket APIs with routing, authorization, throttling, validation, and observability. API type and integration choice affect features, latency, and cost. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "REST API",
+      "HTTP API",
+      "route",
+      "authorizer",
+      "throttling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon API Gateway would you validate?",
+      "What evidence would prove that Amazon API Gateway is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon API Gateway?",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-01",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon ECS and Amazon EKS and the main problem it solves.",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-02",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon ECS and Amazon EKS and verify that it works?",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-03",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon ECS and Amazon EKS. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-04",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon ECS and Amazon EKS is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-05",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon ECS and Amazon EKS. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-ecs-eks-06",
+    "technology": "aws",
+    "topic": "containers",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon ECS and Amazon EKS, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "ECS provides AWS-native container orchestration, while EKS provides managed Kubernetes control planes. Team skills, portability needs, control surface, operations, and integrations guide the choice. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "container",
+      "ECS",
+      "EKS",
+      "task",
+      "Kubernetes"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon ECS and Amazon EKS would you validate?",
+      "What evidence would prove that Amazon ECS and Amazon EKS is working correctly?"
+    ],
+    "source": {
+      "title": "AWS container services",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-01",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon SQS and the main problem it solves.",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-02",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon SQS and verify that it works?",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-03",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon SQS. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-04",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon SQS is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-05",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon SQS. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sqs-06",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon SQS, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "SQS decouples producers and consumers with durable queues. Standard and FIFO semantics, visibility timeout, long polling, dead-letter queues, deduplication, and idempotent consumers matter. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "queue",
+      "visibility timeout",
+      "long polling",
+      "dead-letter queue",
+      "FIFO"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SQS would you validate?",
+      "What evidence would prove that Amazon SQS is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon SQS?",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-01",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon SNS and EventBridge and the main problem it solves.",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-02",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon SNS and EventBridge and verify that it works?",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-03",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon SNS and EventBridge. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-04",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon SNS and EventBridge is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-05",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon SNS and EventBridge. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-sns-eventbridge-06",
+    "technology": "aws",
+    "topic": "messaging",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon SNS and EventBridge, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "SNS fans messages to subscribed endpoints, while EventBridge routes events by patterns across buses and services. Delivery guarantees, filtering, schemas, retries, and destinations differ. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "topic",
+      "subscription",
+      "event bus",
+      "event pattern",
+      "retry"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon SNS and EventBridge would you validate?",
+      "What evidence would prove that Amazon SNS and EventBridge is working correctly?"
+    ],
+    "source": {
+      "title": "Amazon EventBridge concepts",
+      "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-01",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Amazon CloudWatch and AWS CloudTrail and the main problem it solves.",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-02",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Amazon CloudWatch and AWS CloudTrail and verify that it works?",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-03",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Amazon CloudWatch and AWS CloudTrail. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-04",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Amazon CloudWatch and AWS CloudTrail is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-05",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Amazon CloudWatch and AWS CloudTrail. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudwatch-cloudtrail-06",
+    "technology": "aws",
+    "topic": "observability",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Amazon CloudWatch and AWS CloudTrail, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "CloudWatch collects metrics, logs, alarms, and traces for operations; CloudTrail records account API activity for governance and investigation. Retention and centralized protection are required. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "metric",
+      "log",
+      "alarm",
+      "API event",
+      "audit trail"
+    ],
+    "followUps": [
+      "Which limitation or cost of Amazon CloudWatch and AWS CloudTrail would you validate?",
+      "What evidence would prove that Amazon CloudWatch and AWS CloudTrail is working correctly?"
+    ],
+    "source": {
+      "title": "What is Amazon CloudWatch?",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-01",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS CloudFormation and the main problem it solves.",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-02",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS CloudFormation and verify that it works?",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-03",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS CloudFormation. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-04",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS CloudFormation is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-05",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS CloudFormation. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cloudformation-06",
+    "technology": "aws",
+    "topic": "infrastructure-as-code",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS CloudFormation, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "CloudFormation provisions versioned stacks from declarative templates. Change sets, dependencies, parameters, drift detection, rollback, and modular boundaries support safe infrastructure delivery. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "template",
+      "stack",
+      "change set",
+      "drift",
+      "rollback"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS CloudFormation would you validate?",
+      "What evidence would prove that AWS CloudFormation is working correctly?"
+    ],
+    "source": {
+      "title": "What is AWS CloudFormation?",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-01",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS KMS and Secrets Manager and the main problem it solves.",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-02",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS KMS and Secrets Manager and verify that it works?",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-03",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS KMS and Secrets Manager. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-04",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS KMS and Secrets Manager is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-05",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS KMS and Secrets Manager. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-kms-secrets-06",
+    "technology": "aws",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS KMS and Secrets Manager, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "KMS manages cryptographic keys and policy-controlled operations, while Secrets Manager stores and can rotate application credentials. Key policy, envelope encryption, caching, and rotation need design. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "KMS key",
+      "key policy",
+      "envelope encryption",
+      "secret",
+      "rotation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS KMS and Secrets Manager would you validate?",
+      "What evidence would prove that AWS KMS and Secrets Manager is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Key Management Service concepts",
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-01",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS backup and disaster recovery and the main problem it solves.",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-02",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS backup and disaster recovery and verify that it works?",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-03",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS backup and disaster recovery. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-04",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS backup and disaster recovery is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-05",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS backup and disaster recovery. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-backup-dr-06",
+    "technology": "aws",
+    "topic": "reliability",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS backup and disaster recovery, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Recovery strategies range from backup and restore through pilot light, warm standby, and multi-site. RTO, RPO, dependencies, regional failure, immutable copies, and tested runbooks drive selection. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "RTO",
+      "RPO",
+      "backup",
+      "restore",
+      "failover"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS backup and disaster recovery would you validate?",
+      "What evidence would prove that AWS backup and disaster recovery is working correctly?"
+    ],
+    "source": {
+      "title": "Disaster recovery of workloads on AWS",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-01",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain AWS cost management and optimization and the main problem it solves.",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-02",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of AWS cost management and optimization and verify that it works?",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-03",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering AWS cost management and optimization. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-04",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "AWS cost management and optimization is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-05",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around AWS cost management and optimization. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-aws-cost-06",
+    "technology": "aws",
+    "topic": "cost-optimization",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving AWS cost management and optimization, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Cost optimization combines tagging and allocation, budgets, anomaly detection, rightsizing, pricing models, storage lifecycle, and architecture changes while preserving service objectives. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "tagging",
+      "budget",
+      "rightsizing",
+      "Savings Plans",
+      "cost allocation"
+    ],
+    "followUps": [
+      "Which limitation or cost of AWS cost management and optimization would you validate?",
+      "What evidence would prove that AWS cost management and optimization is working correctly?"
+    ],
+    "source": {
+      "title": "AWS Cost Management",
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  }
+]

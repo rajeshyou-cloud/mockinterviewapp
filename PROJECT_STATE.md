@@ -42,7 +42,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 
 ## Verification snapshot
 
-- Web: **43 tests passing** across 12 files
+- Web: **45 tests passing** across 12 files
 - API: **8 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
@@ -74,7 +74,9 @@ Status: **PREPARATION STARTED**
 - [x] Generate and structurally validate 150 Python candidate questions (50 per difficulty)
 - [x] Verify all 50 unique Oracle Database/Python source URLs are reachable official documentation
 - [ ] Human-review and approve the Oracle Database and Python candidate packs
-- [ ] Add and validate 150 AWS questions
+- [x] Generate and structurally validate 150 AWS candidate questions (50 per difficulty)
+- [x] Verify all 25 unique AWS source URLs are reachable official documentation
+- [ ] Human-review and approve the AWS candidate pack
 - [ ] Human-review and approve each pack before exposing it in production
 - [ ] Revalidate all official source links and run production browser verification per launch
 

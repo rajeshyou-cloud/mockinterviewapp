@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
+import aws from './candidates/aws.json';
 import databricks from './candidates/databricks.json';
 import oracle from './candidates/oracle.json';
 import powerBi from './candidates/power-bi.json';
 import python from './candidates/python.json';
 
-const packs = { databricks, oracle, 'power-bi': powerBi, python };
+const packs = { aws, databricks, oracle, 'power-bi': powerBi, python };
 
 describe('candidate course question packs', () => {
   it.each(Object.entries(packs))('%s has 150 complete, traceable questions', (technology, questions) => {
@@ -43,6 +44,9 @@ describe('candidate course question packs', () => {
     }
     for (const question of python) {
       expect(['docs.python.org', 'packaging.python.org']).toContain(new URL(question.source.url).hostname);
+    }
+    for (const question of aws) {
+      expect(new URL(question.source.url).hostname).toBe('docs.aws.amazon.com');
     }
   });
 });

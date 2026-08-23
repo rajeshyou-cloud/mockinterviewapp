@@ -14,7 +14,7 @@ The released bank contains 300 questions: 150 Snowflake and 150 Informatica. Mil
 | Oracle Database | 150 candidate | 150 | Awaiting human approval |
 | Power BI | 150 candidate | 150 | Awaiting human approval |
 | Python | 150 candidate | 150 | Awaiting human approval |
-| AWS | 0 | 150 | Planned |
+| AWS | 150 candidate | 150 | Awaiting human approval |
 | **Total after initial expansion** | **300** | **1,050** | |
 
 The initial target is 150 per technology to match the two released courses. Expansion to 300 per technology is a later depth target and should happen only after usage and review evidence identifies the topics that need more coverage.
