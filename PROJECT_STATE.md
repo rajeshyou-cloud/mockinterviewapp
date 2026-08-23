@@ -6,37 +6,52 @@ _Last updated: 2026-08-23_
 
 **Milestone 1 — First usable interview slice**
 
-Status: **IN PROGRESS**
+Status: **IN PROGRESS — implementation substantially complete, CI verification pending**
 
 ### Completed
 
 - [x] Repository and monorepo workspace initialized
 - [x] Next.js candidate interview shell
 - [x] Technology selector for Snowflake and Informatica
-- [x] Difficulty selector placeholder
+- [x] Difficulty selector wired to question API filters
 - [x] Text answer experience
-- [x] Explainable baseline keyword/concept score
+- [x] Explainable baseline keyword/concept scoring API
 - [x] Interview follow-up display
 - [x] Responsive first-pass UI
 - [x] FastAPI service and health endpoint
-- [x] Baseline scoring API contract
 - [x] Documentation-backed technology-neutral starter question pack
 - [x] Scenario-question content model established
 - [x] Shared JSON Schema for interview questions
-- [x] Initial FastAPI automated tests
+- [x] API-backed question loading from `packages/content`
+- [x] Web scoring flow connected to FastAPI
+- [x] Browser speech-to-text adapter using Web Speech API when supported
+- [x] Browser text-to-speech adapter using Speech Synthesis when supported
+- [x] Provider-neutral voice adapter interfaces in the web layer
+- [x] Basic interview session progression across filtered questions
+- [x] FastAPI endpoint tests
+- [x] JSON Schema validation test for the starter pack
+- [x] Backend/content test verification: 5 tests passing in implementation environment
+- [x] GitHub Actions CI workflow for Next.js build and API/content tests
 - [x] Living handover document
 
 ### Required before Milestone 1 is complete
 
-- [ ] Move UI question loading from local constants to shared content pack/API
-- [ ] Connect web scoring flow to FastAPI endpoint
-- [ ] Browser microphone capture
-- [ ] Speech-to-text provider interface and local/mock adapter
-- [ ] Text-to-speech provider interface and browser/mock adapter
-- [ ] Interview session state and question progression
-- [ ] Content-schema validation test
-- [ ] Local developer setup/build verification
-- [ ] Handover and architecture documentation updated to final Milestone 1 state
+- [ ] Confirm GitHub Actions web build and API test jobs are green on `main`
+- [ ] Perform browser smoke test with both text and microphone flows
+- [ ] Finalize Milestone 1 handover after CI/browser verification
+
+## Current user flow
+
+1. Candidate selects Snowflake or Informatica.
+2. Candidate selects Beginner, Intermediate, or Advanced.
+3. Web app requests matching reviewed questions from FastAPI.
+4. Candidate can hear the question using browser text-to-speech when supported.
+5. Candidate answers by typing or browser speech recognition when supported.
+6. Web app sends the answer and expected concepts to FastAPI scoring.
+7. Candidate receives an explainable score, matched concepts, and a follow-up question.
+8. Candidate can progress to the next question in the filtered session.
+
+The current starter bank intentionally has only intermediate and advanced examples. A level with no reviewed starter content shows an explicit empty state rather than silently substituting another level.
 
 ## Product principles
 
@@ -50,11 +65,11 @@ Status: **IN PROGRESS**
 
 ## Next implementation actions
 
-1. Add API content loading from `packages/content`.
-2. Wire the web application to the API for questions and scoring.
-3. Add browser audio capture and provider-neutral voice contracts.
-4. Add content-schema validation tests.
-5. Expand the verified starter bank while the full 300-question research bank is developed.
+1. Observe/fix CI until the Next.js production build and API tests are green.
+2. Browser smoke-test microphone permissions, transcript capture, speech output, scoring, and question progression.
+3. Expand the reviewed bank, including beginner coverage, while building toward the 300-question Snowflake/Informatica target.
+4. Introduce persistent interview-session models after Milestone 1 is accepted.
+5. Replace baseline concept matching with a provider-neutral semantic scoring layer in a later milestone.
 
 ## Deferred
 
