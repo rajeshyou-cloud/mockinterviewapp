@@ -1,7 +1,9 @@
 # Benchmark Answer and Evidence-Based Scoring Plan
 
-_Created: 2026-08-23_  
-_Status: Proposed implementation plan_  
+_Created: 2026-08-23_
+
+_Status: Proposed implementation plan_
+
 _Scope: all released and candidate question packs (1,050 questions)_
 
 ## 1. Purpose
