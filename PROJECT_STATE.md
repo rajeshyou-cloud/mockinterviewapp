@@ -75,6 +75,7 @@ Status: **HUMAN REVIEW READY**
 - [x] Production gate verified with exactly Snowflake/Informatica and 300 questions released while Databricks remained blocked before approval
 - [x] Initial target set to 150 questions per technology, matching the released courses
 - [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
+- [x] Vendor-evidence benchmark and semantic-scoring implementation plan documented in `docs/BENCHMARK_SCORING_PLAN.md`
 - [x] Searchable/filterable/paginated Question Bank UI for the existing 300 questions
 - [x] Private-key interview replay with answer, score, feedback, concept, and timestamp timeline
 - [x] Generate and structurally validate 150 Databricks candidate questions (50 per difficulty)
@@ -90,6 +91,8 @@ Status: **HUMAN REVIEW READY**
 - [ ] Human-review and approve the AWS candidate pack
 - [ ] Human-review and approve each pack before exposing it in production
 - [ ] Revalidate all official source links and run production browser verification per launch
+
+The next content-quality work is specified in `docs/BENCHMARK_SCORING_PLAN.md`: versioned benchmark answers, independent evidence-grounded AI review, dispute withholding, dimension-level semantic scoring, immutable scoring records, calibration, and staged release gates. This is a plan, not a completed vendor review; existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
 
 ## Current user flow
 
