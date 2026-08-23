@@ -28,6 +28,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
           {(roles.includes('reviewer') || roles.includes('admin')) && <Link className="secondaryLink" href="/review">Review courses</Link>}
           {(roles.includes('recruiter') || roles.includes('admin')) && <Link className="secondaryLink" href="/recruiter">Recruiter analytics</Link>}
           {roles.includes('admin') && <Link className="secondaryLink" href="/admin">Manage access</Link>}
+          <Link className="secondaryLink" href="/billing">Billing</Link>
         </div>
         <section className="accountHistory">
           <h2>Interview history</h2>

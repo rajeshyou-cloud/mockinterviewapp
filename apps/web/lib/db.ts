@@ -17,6 +17,8 @@ export type PersistedSession = {
 
 export type AppRole = 'candidate' | 'reviewer' | 'recruiter' | 'admin';
 export type CourseReviewStatus = 'in_review' | 'approved' | 'changes_requested';
+export type SubscriptionPlan = 'free' | 'candidate_pro' | 'recruiter_pro';
+export type SubscriptionStatus = 'active' | 'trialing' | 'past_due' | 'canceled' | 'incomplete';
 
 export type PersistedAnswer = {
   id: string;
@@ -254,4 +256,39 @@ export async function getRecruiterAnalytics() {
     LIMIT 100
   `;
   return { summary, sessions };
+}
+
+export async function getSubscriptionAccount(userId: string) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    SELECT user_id, plan, status, provider_customer_id, provider_subscription_id, current_period_end, updated_at
+    FROM subscription_accounts WHERE user_id = ${userId} LIMIT 1
+  `;
+  return rows[0] ?? null;
+}
+
+export async function saveSubscriptionAccount(input: {
+  userId: string;
+  plan: SubscriptionPlan;
+  status: SubscriptionStatus;
+  customerId?: string | null;
+  subscriptionId?: string | null;
+  currentPeriodEnd?: Date | null;
+}) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    INSERT INTO subscription_accounts (user_id, plan, status, provider_customer_id, provider_subscription_id, current_period_end)
+    VALUES (${input.userId}, ${input.plan}, ${input.status}, ${input.customerId ?? null}, ${input.subscriptionId ?? null}, ${input.currentPeriodEnd ?? null})
+    ON CONFLICT (user_id) DO UPDATE SET
+      plan = EXCLUDED.plan,
+      status = EXCLUDED.status,
+      provider_customer_id = COALESCE(EXCLUDED.provider_customer_id, subscription_accounts.provider_customer_id),
+      provider_subscription_id = COALESCE(EXCLUDED.provider_subscription_id, subscription_accounts.provider_subscription_id),
+      current_period_end = EXCLUDED.current_period_end,
+      updated_at = now()
+    RETURNING user_id, plan, status, provider_customer_id, provider_subscription_id, current_period_end, updated_at
+  `;
+  return rows[0] ?? null;
 }
