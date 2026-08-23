@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-const mocks = vi.hoisted(() => ({ constructEvent: vi.fn(), saveSubscriptionAccount: vi.fn() }));
+const mocks = vi.hoisted(() => ({ constructEvent: vi.fn(), saveCheckoutSubscriptionReference: vi.fn(), saveSubscriptionAccount: vi.fn() }));
 
 vi.mock('../../../../lib/stripe', () => ({ getStripe: () => ({ webhooks: { constructEvent: mocks.constructEvent } }) }));
-vi.mock('../../../../lib/db', () => ({ saveSubscriptionAccount: mocks.saveSubscriptionAccount }));
+vi.mock('../../../../lib/db', () => ({ saveCheckoutSubscriptionReference: mocks.saveCheckoutSubscriptionReference, saveSubscriptionAccount: mocks.saveSubscriptionAccount }));
 
 import { POST } from './route';
 
@@ -48,5 +48,22 @@ describe('Stripe webhook', () => {
     expect(mocks.saveSubscriptionAccount).toHaveBeenCalledWith(expect.objectContaining({
       userId: 'user-123', plan: 'candidate_pro', status: 'active', customerId: 'cus_123', subscriptionId: 'sub_123',
     }));
+  });
+
+  it('records checkout references without overwriting an established subscription status', async () => {
+    mocks.constructEvent.mockReturnValue({
+      type: 'checkout.session.completed',
+      data: { object: {
+        client_reference_id: 'user-123', customer: 'cus_123', subscription: 'sub_123',
+        metadata: { userId: 'user-123', plan: 'recruiter_pro' },
+      } },
+    });
+
+    const response = await POST(request());
+    expect(response.status).toBe(200);
+    expect(mocks.saveCheckoutSubscriptionReference).toHaveBeenCalledWith({
+      userId: 'user-123', plan: 'recruiter_pro', customerId: 'cus_123', subscriptionId: 'sub_123',
+    });
+    expect(mocks.saveSubscriptionAccount).not.toHaveBeenCalled();
   });
 });

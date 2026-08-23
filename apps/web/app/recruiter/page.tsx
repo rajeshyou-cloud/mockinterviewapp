@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
-import { requireRole } from '../../lib/auth/access';
+import { requirePlan, requireRole } from '../../lib/auth/access';
 import { getRecruiterAnalytics } from '../../lib/db';
 
 export const dynamic = 'force-dynamic';
 
 export default async function RecruiterPage() {
   await requireRole(['recruiter']);
+  await requirePlan('recruiter_pro');
   const analytics = await getRecruiterAnalytics();
   const totalSessions = analytics.summary.reduce((total, row) => total + Number(row.sessions), 0);
   const totalCandidates = new Set(analytics.sessions.map((session) => session.owner_user_id)).size;

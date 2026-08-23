@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
 import { auth, isAuthConfigured } from '../../lib/auth/server';
+import { deleteUserApplicationData, getSubscriptionAccount } from '../../lib/db';
 
 export type AuthActionState = { error: string } | null;
 
@@ -54,7 +55,13 @@ export async function deleteAccount(formData: FormData) {
   const { data: session } = await auth.getSession();
   if (!session?.user) redirect('/auth/sign-in');
 
+  const subscription = await getSubscriptionAccount(session.user.id);
+  if (subscription?.provider_subscription_id && ['active', 'trialing', 'past_due'].includes(subscription.status)) {
+    redirect('/billing?error=cancel_required');
+  }
+
   const { error } = await auth.deleteUser();
   if (error) redirect('/account?delete=failed');
+  await deleteUserApplicationData(session.user.id);
   redirect('/');
 }

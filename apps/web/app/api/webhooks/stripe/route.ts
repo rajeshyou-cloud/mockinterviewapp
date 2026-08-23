@@ -1,9 +1,9 @@
 import Stripe from 'stripe';
 
-import { saveSubscriptionAccount, type SubscriptionPlan, type SubscriptionStatus } from '../../../../lib/db';
+import { saveCheckoutSubscriptionReference, saveSubscriptionAccount, type SubscriptionPlan, type SubscriptionStatus } from '../../../../lib/db';
 import { getStripe } from '../../../../lib/stripe';
 
-function planFromMetadata(metadata: Stripe.Metadata): SubscriptionPlan | null {
+function planFromMetadata(metadata: Stripe.Metadata): Exclude<SubscriptionPlan, 'free'> | null {
   return metadata.plan === 'candidate_pro' || metadata.plan === 'recruiter_pro' ? metadata.plan : null;
 }
 
@@ -37,10 +37,9 @@ export async function POST(request: Request) {
     const userId = checkout.metadata?.userId ?? checkout.client_reference_id;
     const plan = planFromMetadata(checkout.metadata ?? {});
     if (userId && plan) {
-      await saveSubscriptionAccount({
+      await saveCheckoutSubscriptionReference({
         userId,
         plan,
-        status: 'incomplete',
         customerId: typeof checkout.customer === 'string' ? checkout.customer : checkout.customer?.id,
         subscriptionId: typeof checkout.subscription === 'string' ? checkout.subscription : checkout.subscription?.id,
       });

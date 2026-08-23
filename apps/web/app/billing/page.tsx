@@ -18,7 +18,9 @@ export default async function BillingPage({ searchParams }: { searchParams: Prom
       <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/">Interview</Link></nav>
       <header className="bankHeader"><div><p className="eyebrow">SUBSCRIPTION</p><h1>Choose your plan</h1><p className="lede">Secure checkout and subscription management are handled by Stripe. Entitlements update only from signed webhook events.</p></div></header>
       {query.checkout === 'success' && <p className="successBanner">Checkout completed. Your entitlement will update after Stripe confirms the subscription.</p>}
-      {query.error && <p className="authError">Billing is not available yet. No charge was attempted.</p>}
+      {query.error === 'cancel_required' && <p className="authError">Cancel the active subscription in the billing portal before deleting your account.</p>}
+      {query.error === 'entitlement' && <p className="authError">An active Recruiter Pro subscription is required for recruiter analytics.</p>}
+      {query.error && !['cancel_required', 'entitlement'].includes(query.error) && <p className="authError">Billing is not available yet. No charge was attempted.</p>}
       {!enabled && <p className="summaryCallout"><strong>Billing setup pending.</strong> Stripe marketplace terms, products, prices, and webhook configuration are still required.</p>}
       <section className="pricingGrid">
         <article className="card pricingCard"><p className="eyebrow">FREE</p><h2>Practice</h2><p>Public interview practice, private resume key, baseline scoring, and replay.</p><strong>Current default</strong></article>

@@ -292,3 +292,36 @@ export async function saveSubscriptionAccount(input: {
   `;
   return rows[0] ?? null;
 }
+
+export async function saveCheckoutSubscriptionReference(input: {
+  userId: string;
+  plan: Exclude<SubscriptionPlan, 'free'>;
+  customerId?: string | null;
+  subscriptionId?: string | null;
+}) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    INSERT INTO subscription_accounts (user_id, plan, status, provider_customer_id, provider_subscription_id)
+    VALUES (${input.userId}, ${input.plan}, 'incomplete', ${input.customerId ?? null}, ${input.subscriptionId ?? null})
+    ON CONFLICT (user_id) DO UPDATE SET
+      provider_customer_id = COALESCE(EXCLUDED.provider_customer_id, subscription_accounts.provider_customer_id),
+      provider_subscription_id = COALESCE(EXCLUDED.provider_subscription_id, subscription_accounts.provider_subscription_id),
+      updated_at = now()
+    RETURNING user_id, plan, status, provider_customer_id, provider_subscription_id, current_period_end, updated_at
+  `;
+  return rows[0] ?? null;
+}
+
+export async function deleteUserApplicationData(userId: string) {
+  const sql = getSql();
+  if (!sql) return false;
+  await sql.transaction([
+    sql`DELETE FROM course_pack_reviews WHERE reviewer_user_id = ${userId}`,
+    sql`UPDATE app_user_roles SET granted_by = NULL WHERE granted_by = ${userId}`,
+    sql`DELETE FROM app_user_roles WHERE user_id = ${userId}`,
+    sql`DELETE FROM subscription_accounts WHERE user_id = ${userId}`,
+    sql`DELETE FROM interview_sessions WHERE owner_user_id = ${userId}`,
+  ]);
+  return true;
+}
