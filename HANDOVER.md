@@ -80,7 +80,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current staged counts are 50 web tests and 8 API tests, with a green Next.js production build and zero high-severity dependency findings. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, Python, and AWS.
+Current deployed counts are 51 web tests and 8 API tests, with a green Next.js production build and zero production dependency vulnerabilities. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, Python, and AWS.
 
 ## Deployment
 
@@ -96,9 +96,9 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. Candidate packs remain hidden until human approval and full launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
 
-## Staged completion work
+## Deployed completion work
 
 - `731e132` adds account-linked session claiming/history, secure account replay, application roles, reviewer decisions, recruiter comparisons, and admin role management.
 - `bd502b9` adds Stripe Checkout, customer portal, signed raw-body webhooks, and server-side subscription entitlements.
-- Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` is applied and schema-verified in production. The release passed 50 web tests, 8 API tests, type checking, the Next.js production build, and a zero-vulnerability production dependency audit before deployment.
+- Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` is applied and schema-verified in production. The release passed 51 web tests, 8 API tests, type checking, the Next.js production build, and a zero-vulnerability production dependency audit. Production browser checks covered the reviewer, administrator, recruiter, billing, account-history, and secure replay surfaces. Account deletion now signs out first and deletes application data plus the managed identity atomically; its final disposable-user check left zero identities, roles, subscriptions, or owned sessions.
 - Stripe Marketplace installation stopped at the provider terms-acceptance page. After terms acceptance, create Candidate Pro and Recruiter Pro recurring prices, bind the five documented Stripe variables, and register `/api/webhooks/stripe`.

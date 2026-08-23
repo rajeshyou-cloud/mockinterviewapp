@@ -42,7 +42,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 
 ## Verification snapshot
 
-- Web: **50 tests passing** across 13 files on the staged completion branch
+- Web: **51 tests passing** across 13 files on the deployed completion branch
 - API: **8 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
@@ -60,7 +60,7 @@ The current Vercel team rejects live AI Gateway calls until a payment card is ad
 
 Neon Managed Auth has been provisioned on the production database branch. The production application now includes email/password sign-up, sign-in, sign-out, permanent self-deletion, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint, trusted production origin, and an independent 48-byte cookie secret are configured in production. On 2026-08-23 a disposable-user browser test verified sign-up, protected account access, sign-out, sign-in, and deletion; a database check then confirmed that zero disposable test users remained.
 
-Role-based account history, reviewer, recruiter, admin, and billing implementations are complete on the release branch, with 50 tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed.
+Role-based account history, reviewer, recruiter, admin, and billing implementations are deployed, with 51 web tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed. A disposable administrator then verified `/review`, `/admin`, `/recruiter`, `/billing`, account-linked history, and secure account replay in production. Final account-deletion verification confirmed atomic cleanup of the identity, roles, subscription, and owned sessions, with zero disposable users remaining.
 
 ## Milestone 3 — Course and question-bank expansion
 
@@ -113,9 +113,9 @@ Status: **PREPARATION STARTED**
 ## Deferred roadmap
 
 - Interview replay — implemented, deployed, and production page verified
-- Recruiter comparison and analytics — implementation and production schema complete; deployment and role verification pending
-- Human reviewer/admin workflow — implementation and production schema complete; deployment, role bootstrap, and human decisions pending
-- Production user authentication — provisioned, deployed, and full disposable-user lifecycle verified; role-backed release pending deployment
+- Recruiter comparison and analytics — deployed and administrator-access production verification complete; real recruiter role and cohort-data acceptance pending
+- Human reviewer/admin workflow — deployed and administrator-access production verification complete; real reviewer bootstrap and human decisions pending
+- Production user authentication — provisioned, deployed, and full account/history/deletion lifecycle verified
 - Subscription billing — implementation complete locally; Stripe terms/products/prices/webhook activation pending
 
 These are intentionally separate product surfaces, not incomplete Milestone 2 requirements.
