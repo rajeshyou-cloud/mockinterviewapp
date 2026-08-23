@@ -1,0 +1,16 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+import questions from '../../../data/starter.json';
+
+export async function GET(request: NextRequest) {
+  const technology = request.nextUrl.searchParams.get('technology');
+  const difficulty = request.nextUrl.searchParams.get('difficulty');
+
+  const filtered = questions.filter((question) => {
+    if (technology && question.technology !== technology) return false;
+    if (difficulty && question.difficulty !== difficulty) return false;
+    return true;
+  });
+
+  return NextResponse.json(filtered);
+}
