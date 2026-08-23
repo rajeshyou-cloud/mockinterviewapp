@@ -27,10 +27,12 @@ Status: **IN PROGRESS — implementation substantially complete, CI verification
 - [x] Browser speech-to-text adapter using Web Speech API when supported
 - [x] Browser text-to-speech adapter using Speech Synthesis when supported
 - [x] Provider-neutral voice adapter interfaces in the web layer
+- [x] Server-side STT/TTS provider protocols with deterministic mock adapters
 - [x] Basic interview session progression across filtered questions
 - [x] FastAPI endpoint tests
 - [x] JSON Schema validation test for the starter pack
-- [x] Backend/content test verification: 5 tests passing in implementation environment
+- [x] Voice-provider contract tests
+- [x] Backend/content/voice test verification: 7 tests passing in implementation environment
 - [x] GitHub Actions CI workflow for Next.js build and API/content tests
 - [x] Living handover document
 
@@ -52,6 +54,10 @@ Status: **IN PROGRESS — implementation substantially complete, CI verification
 8. Candidate can progress to the next question in the filtered session.
 
 The current starter bank intentionally has only intermediate and advanced examples. A level with no reviewed starter content shows an explicit empty state rather than silently substituting another level.
+
+## Voice architecture
+
+Milestone 1 uses browser speech APIs for an immediately testable zero-provider-cost experience. The API also defines `SpeechToTextProvider` and `TextToSpeechProvider` protocols plus mock implementations so later production providers can be introduced without coupling interview-domain logic to a vendor.
 
 ## Product principles
 
