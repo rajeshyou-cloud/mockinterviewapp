@@ -1,7 +1,17 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Difficulty, InterviewQuestion, ScoreResponse, Technology, fetchQuestions, scoreAnswer } from '../lib/api';
+import {
+  Difficulty,
+  InterviewQuestion,
+  ScoreResponse,
+  Technology,
+  completeRemoteSession,
+  createRemoteSession,
+  fetchQuestions,
+  saveRemoteAnswer,
+  scoreAnswer,
+} from '../lib/api';
 import { InterviewSession, clearSession, loadSession, newSession, saveSession } from '../lib/session';
 import { SpeechInputAdapter, SpeechOutputAdapter, createBrowserSpeechInput, createBrowserSpeechOutput } from '../lib/voice';
 
@@ -22,6 +32,7 @@ export default function Home() {
   const [error, setError] = useState('');
   const [listening, setListening] = useState(false);
   const [voiceAvailable, setVoiceAvailable] = useState(false);
+  const [cloudPersisted, setCloudPersisted] = useState(false);
   const speechInput = useRef<SpeechInputAdapter | null>(null);
   const speechOutput = useRef<SpeechOutputAdapter | null>(null);
 
@@ -51,10 +62,15 @@ export default function Home() {
           const saved = restored.current;
           if (saved && saved.technology === technology && saved.difficulty === difficulty) {
             setIndex(Math.min(saved.currentIndex, Math.max(payload.length - 1, 0)));
+            setSession(saved);
+            const remote = await createRemoteSession({ id: saved.id, technology, difficulty, currentIndex: saved.currentIndex });
+            if (!cancelled) setCloudPersisted(Boolean(remote.persisted));
             restored.current = null;
           } else {
             const fresh = newSession(technology, difficulty);
             setIndex(0); setSession(fresh); saveSession(fresh);
+            const remote = await createRemoteSession({ id: fresh.id, technology, difficulty, currentIndex: 0 });
+            if (!cancelled) setCloudPersisted(Boolean(remote.persisted));
           }
         }
       } catch (e) { if (!cancelled) { setQuestions([]); setError(e instanceof Error ? e.message : 'Unable to load questions'); } }
@@ -77,26 +93,51 @@ export default function Home() {
     setSubmitting(true); setError('');
     try {
       const score = await scoreAnswer(answer, current.expectedConcepts); setResult(score);
-      const updated: InterviewSession = { ...session, answers: [...session.answers.filter((a) => a.questionId !== current.id), { questionId: current.id, answer: answer.trim(), score, answeredAt: new Date().toISOString() }] };
+      const updated: InterviewSession = {
+        ...session,
+        answers: [...session.answers.filter((a) => a.questionId !== current.id), {
+          questionId: current.id,
+          answer: answer.trim(),
+          score,
+          answeredAt: new Date().toISOString(),
+        }],
+      };
       setSession(updated); saveSession(updated);
+      const remote = await saveRemoteAnswer(session.id, {
+        questionId: current.id,
+        answerText: answer.trim(),
+        score: score.score,
+        matchedConcepts: score.matched_concepts,
+        missingConcepts: score.missing_concepts,
+        feedback: score.summary,
+        currentIndex: index,
+      });
+      setCloudPersisted(Boolean(remote.persisted));
     } catch (e) { setError(e instanceof Error ? e.message : 'Unable to score answer'); }
     finally { setSubmitting(false); }
   }
 
-  function nextQuestion() {
+  async function nextQuestion() {
     if (!questions.length || !session) return;
     speechInput.current?.stop(); setListening(false);
     if (isLastQuestion) {
       const updated = { ...session, status: 'completed' as const, completedAt: new Date().toISOString() };
-      setSession(updated); saveSession(updated); return;
+      setSession(updated); saveSession(updated);
+      const remote = await completeRemoteSession(session.id, averageScore);
+      setCloudPersisted(Boolean(remote.persisted));
+      return;
     }
     const next = index + 1; setIndex(next); setAnswer(''); setResult(null);
     const updated = { ...session, currentIndex: next }; setSession(updated); saveSession(updated);
+    const remote = await createRemoteSession({ id: session.id, technology, difficulty, currentIndex: next });
+    setCloudPersisted(Boolean(remote.persisted));
   }
 
-  function restartSession() {
+  async function restartSession() {
     clearSession(); const fresh = newSession(technology, difficulty); setSession(fresh); saveSession(fresh);
     setIndex(0); setAnswer(''); setResult(null); setError('');
+    const remote = await createRemoteSession({ id: fresh.id, technology, difficulty, currentIndex: 0 });
+    setCloudPersisted(Boolean(remote.persisted));
   }
 
   function toggleListening() {
@@ -114,11 +155,11 @@ export default function Home() {
   }
 
   return <main className="shell">
-    <section className="hero"><div><p className="eyebrow">AI MOCK INTERVIEW</p><h1>Practice technical interviews with structured feedback.</h1><p className="lede">Choose a technology and level, answer by voice or text, and resume an interview even after refreshing the page.</p></div><div className="statusCard"><span className="dot"/><strong>Milestone 2</strong><span>Persistent sessions + interview summary</span></div></section>
+    <section className="hero"><div><p className="eyebrow">AI MOCK INTERVIEW</p><h1>Practice technical interviews with structured feedback.</h1><p className="lede">Choose a technology and level, answer by voice or text, and resume an interview after refreshing the page.</p></div><div className="statusCard"><span className="dot"/><strong>Milestone 2</strong><span>{cloudPersisted ? 'Cloud persistence active' : 'Local persistence active'}</span></div></section>
     <section className="toolbar card"><label>Technology<select value={technology} onChange={(e)=>setTechnology(e.target.value as Technology)}><option value="snowflake">Snowflake</option><option value="informatica">Informatica</option></select></label><label>Level<select value={difficulty} onChange={(e)=>setDifficulty(e.target.value as Difficulty)}><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label><div className="modePill">{voiceAvailable?'Voice + text ready':'Text ready · voice unavailable'}</div></section>
     {error?<div className="errorBanner">{error}</div>:null}
     <section className="interviewGrid"><article className="card interviewer">
-      {loadingQuestions?<div className="loadingState">Loading reviewed questions…</div>:completed?<div className="loadingState"><p className="eyebrow">INTERVIEW COMPLETE</p><h2>Score: {averageScore}/100</h2><p>You answered {session?.answers.length ?? 0} of {questions.length} questions in this {technologyLabels[technology]} · {difficultyLabels[difficulty]} session.</p><button className="primary" onClick={restartSession}>Start a new interview</button></div>:!current?<div className="loadingState">No reviewed starter question is available for {technologyLabels[technology]} · {difficultyLabels[difficulty]} yet.</div>:<><div className="questionMeta"><span>{technologyLabels[current.technology]} · {difficultyLabels[current.difficulty]} · {current.type}</span><span>Question {progress}</span></div><div className="questionHeader"><h2>{current.question}</h2><button className="iconButton" onClick={speakQuestion} type="button" aria-label="Read question aloud">🔊</button></div><textarea value={answer} onChange={(e)=>{setAnswer(e.target.value);setResult(null);}} placeholder="Answer as if you were speaking to an interviewer..." rows={9}/><div className="voiceRow"><button className={listening?'listening':'secondary'} onClick={toggleListening} type="button">{listening?'■ Stop listening':'🎙 Start voice answer'}</button><span>{listening?'Listening… speak naturally.':'Progress is saved automatically in this browser.'}</span></div><div className="actions"><button className="primary" disabled={submitting||!answer.trim()} onClick={()=>void submitAnswer()}>{submitting?'Scoring…':'Submit answer'}</button><button className="secondary" onClick={nextQuestion}>{isLastQuestion?'Finish interview':'Next question'}</button></div><p className="sourceNote">Reviewed source: <a href={current.source.url} target="_blank" rel="noreferrer">{current.source.title}</a> · verified {current.source.verified}</p></>}
+      {loadingQuestions?<div className="loadingState">Loading reviewed questions…</div>:completed?<div className="loadingState"><p className="eyebrow">INTERVIEW COMPLETE</p><h2>Score: {averageScore}/100</h2><p>You answered {session?.answers.length ?? 0} of {questions.length} questions in this {technologyLabels[technology]} · {difficultyLabels[difficulty]} session.</p><button className="primary" onClick={()=>void restartSession()}>Start a new interview</button></div>:!current?<div className="loadingState">No reviewed starter question is available for {technologyLabels[technology]} · {difficultyLabels[difficulty]} yet.</div>:<><div className="questionMeta"><span>{technologyLabels[current.technology]} · {difficultyLabels[current.difficulty]} · {current.type}</span><span>Question {progress}</span></div><div className="questionHeader"><h2>{current.question}</h2><button className="iconButton" onClick={speakQuestion} type="button" aria-label="Read question aloud">🔊</button></div><textarea value={answer} onChange={(e)=>{setAnswer(e.target.value);setResult(null);}} placeholder="Answer as if you were speaking to an interviewer..." rows={9}/><div className="voiceRow"><button className={listening?'listening':'secondary'} onClick={toggleListening} type="button">{listening?'■ Stop listening':'🎙 Start voice answer'}</button><span>{listening?'Listening… speak naturally.':cloudPersisted?'Progress is synced to the cloud.':'Progress is saved in this browser.'}</span></div><div className="actions"><button className="primary" disabled={submitting||!answer.trim()} onClick={()=>void submitAnswer()}>{submitting?'Scoring…':'Submit answer'}</button><button className="secondary" onClick={()=>void nextQuestion()}>{isLastQuestion?'Finish interview':'Next question'}</button></div><p className="sourceNote">Reviewed source: <a href={current.source.url} target="_blank" rel="noreferrer">{current.source.title}</a> · verified {current.source.verified}</p></>}
     </article><aside className="card feedback"><p className="eyebrow">FEEDBACK</p>{!result||!current||completed?<div className="emptyState"><div className="scoreRing">{completed?averageScore:'—'}</div><p>{completed?'Final average across submitted answers.':'Submit an answer to see the explainable baseline score and interviewer follow-up.'}</p></div>:<><div className="scoreRing">{result.score}</div><h3>{result.summary}</h3><p>You covered {result.matched_concepts.length} of {current.expectedConcepts.length} expected concepts.</p><div className="concepts">{current.expectedConcepts.map((term)=><span key={term} className={result.matched_concepts.includes(term)?'matched':''}>{term}</span>)}</div><div className="followUp"><strong>Interviewer follow-up</strong><p>{current.followUps[0]??'Explain the trade-offs behind your answer in more depth.'}</p></div></>}</aside></section>
   </main>;
 }
