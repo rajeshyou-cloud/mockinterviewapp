@@ -30,6 +30,8 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] Web client performs best-effort cloud sync while retaining browser fallback
 - [x] Server-only environment contract documented in `apps/web/.env.example`
 - [x] `DATABASE_URL` securely bound to Vercel `mockinterviewapp-web` for Production and Preview
+- [x] `mockinterviewapp-web` connected to GitHub repository `rajeshyou-cloud/mockinterviewapp`
+- [x] Vercel web Root Directory configured as `apps/web`
 - [x] Beginner Snowflake and Informatica content pack added
 - [x] Question API composes multiple content packs without UI changes
 - [x] Topic-level assessment summary implemented
@@ -42,18 +44,17 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] Speech adapter nullability/build issue fixed
 - [x] Milestone 2 browser-persistence slice successfully built and deployed on Vercel
 
-### Deployment topology discovered
+### Deployment topology
 
 - `mockinterviewapp-api` is GitHub-linked to `rajeshyou-cloud/mockinterviewapp` and auto-deploys from `main` as the FastAPI project.
-- `mockinterviewapp-web` is currently a manually deployed Next.js project and is not GitHub-linked.
-- The web project therefore does not yet receive new GitHub commits automatically.
-- `DATABASE_URL` is now configured securely on `mockinterviewapp-web`, but a fresh web deployment is still required before the latest cloud-persistence code can consume it.
+- `mockinterviewapp-web` is now GitHub-linked to the same repository with Root Directory `apps/web`.
+- `DATABASE_URL` is configured securely for Production and Preview on the web project.
+- A fresh Git-triggered web deployment is being used to verify that the latest Next.js revision consumes the Neon binding correctly.
 
 ### Milestone 2 next actions
 
-- [ ] Deploy the latest Next.js revision to `mockinterviewapp-web`
+- [ ] Verify the fresh Git-triggered Next.js deployment is green
 - [ ] Verify durable session creation, answer writes, and completion against Neon from the deployed web app
-- [ ] Link `mockinterviewapp-web` to the GitHub repo with root directory `apps/web`, or keep an explicit deployment workflow
 - [ ] Restore session progress across devices using server persistence and a user/session identity mechanism
 - [ ] Add a semantic/LLM scoring provider behind the existing provider-neutral contract
 - [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
