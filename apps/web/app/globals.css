@@ -18,7 +18,7 @@ h1 { max-width: 760px; font-size: clamp(36px, 6vw, 68px); line-height: .98; lett
 .statusCard { min-width: 220px; padding: 18px; border-radius: 18px; background: #111827; color: white; display: grid; gap: 6px; }
 .statusCard span:last-child { color: #aeb8ca; font-size: 14px; }
 .dot { width: 9px; height: 9px; background: #34d399; border-radius: 50%; }
-.toolbar { padding: 18px; display: flex; gap: 18px; align-items: end; margin-bottom: 22px; }
+.toolbar { padding: 18px; display: flex; gap: 18px; align-items: flex-end; margin-bottom: 22px; }
 label { display: grid; gap: 7px; font-size: 13px; font-weight: 700; color: #4a5568; }
 select { min-width: 180px; padding: 11px 12px; border: 1px solid #d7deea; border-radius: 12px; background: #fff; }
 .modePill { margin-left: auto; padding: 11px 14px; border-radius: 999px; background: #eef2ff; color: #4338ca; font-size: 13px; font-weight: 700; }
@@ -41,6 +41,16 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .voiceRow { display: flex; align-items: center; gap: 12px; margin-top: 12px; color: #667085; font-size: 13px; }
 .sourceNote { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid #edf0f5; color: #667085; font-size: 12px; line-height: 1.5; }
 .loadingState { min-height: 420px; display: grid; place-items: center; text-align: center; color: #697386; line-height: 1.6; padding: 24px; }
+.completionState { min-height: 420px; display: flex; flex-direction: column; justify-content: center; color: #4b5563; line-height: 1.6; }
+.completionState h2 { margin-bottom: 8px; }
+.topicGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 20px 0; }
+.topicCard { display: grid; gap: 4px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; background: #f8fafc; text-transform: capitalize; }
+.topicCard span { font-size: 12px; color: #64748b; }
+.topicCard.strong { background: #f0fdf4; border-color: #bbf7d0; }
+.topicCard.developing { background: #fffbeb; border-color: #fde68a; }
+.topicCard.gap { background: #fff1f2; border-color: #fecdd3; }
+.summaryCallout { border-radius: 14px; padding: 14px; margin: 0 0 18px; background: #eef2ff; border: 1px solid #c7d2fe; }
+.summaryCallout p { margin: 4px 0 0; text-transform: capitalize; color: #4f46e5; }
 .feedback { min-height: 430px; }
 .emptyState { min-height: 300px; display: grid; place-items: center; text-align: center; color: #697386; }
 .scoreRing { width: 104px; height: 104px; border-radius: 50%; background: #eef2ff; display: grid; place-items: center; font-size: 30px; font-weight: 900; color: #4338ca; margin: 18px auto; }
