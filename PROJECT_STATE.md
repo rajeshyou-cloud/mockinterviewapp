@@ -22,6 +22,9 @@ Status: **IN PROGRESS**
 - [x] Baseline scoring API contract
 - [x] Documentation-backed technology-neutral starter question pack
 - [x] Scenario-question content model established
+- [x] Shared JSON Schema for interview questions
+- [x] Initial FastAPI automated tests
+- [x] Living handover document
 
 ### Required before Milestone 1 is complete
 
@@ -31,8 +34,8 @@ Status: **IN PROGRESS**
 - [ ] Speech-to-text provider interface and local/mock adapter
 - [ ] Text-to-speech provider interface and browser/mock adapter
 - [ ] Interview session state and question progression
-- [ ] Basic test suite for API and content schema
-- [ ] Local developer setup verification
+- [ ] Content-schema validation test
+- [ ] Local developer setup/build verification
 - [ ] Handover and architecture documentation updated to final Milestone 1 state
 
 ## Product principles
@@ -47,10 +50,10 @@ Status: **IN PROGRESS**
 
 ## Next implementation actions
 
-1. Define the shared question schema and content loader.
-2. Wire the web application to the API.
+1. Add API content loading from `packages/content`.
+2. Wire the web application to the API for questions and scoring.
 3. Add browser audio capture and provider-neutral voice contracts.
-4. Add Milestone 1 tests.
+4. Add content-schema validation tests.
 5. Expand the verified starter bank while the full 300-question research bank is developed.
 
 ## Deferred
