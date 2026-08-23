@@ -1,0 +1,74 @@
+[
+  {
+    "id": "snowflake-architecture-001",
+    "technology": "snowflake",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "conceptual",
+    "question": "Explain how Snowflake separates storage and compute, and why that matters for workload isolation.",
+    "canonicalAnswer": "Snowflake stores persisted table data centrally in cloud storage while queries run on independent virtual warehouses. Each virtual warehouse is an independent compute cluster, so separate warehouses can isolate ETL, BI, data science, or other workloads from one another while allowing compute to be resized or managed independently of persisted storage.",
+    "expectedConcepts": ["storage", "compute", "virtual warehouse", "independent scaling", "workload isolation"],
+    "followUps": ["How would you use separate virtual warehouses for ETL and BI workloads?", "When would you scale up versus use additional compute for concurrency?"],
+    "source": {
+      "title": "Snowflake key concepts and architecture",
+      "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "snowflake-dynamic-tables-001",
+    "technology": "snowflake",
+    "topic": "data-engineering",
+    "difficulty": "advanced",
+    "type": "scenario",
+    "question": "Your team maintains an INSERT/MERGE pipeline using streams and scheduled tasks. When would you consider redesigning it with Dynamic Tables?",
+    "canonicalAnswer": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective.",
+    "expectedConcepts": ["declarative", "select", "target lag", "streams", "tasks", "imperative"],
+    "followUps": ["Why is TARGET_LAG different from a fixed task schedule?", "What operational control might you lose or simplify by moving to Dynamic Tables?"],
+    "source": {
+      "title": "Migrate from streams and tasks to dynamic tables",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/migrate-streams-tasks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "informatica-secure-agent-001",
+    "technology": "informatica",
+    "topic": "runtime-environments",
+    "difficulty": "intermediate",
+    "type": "conceptual",
+    "question": "What role does a Secure Agent play in Informatica Cloud Data Integration, and when would you deploy one yourself?",
+    "canonicalAnswer": "A runtime environment is the execution platform for tasks and can consist of one or more Secure Agents. A Secure Agent is a lightweight runtime that executes tasks and enables secure communication across the firewall. A customer-managed Secure Agent is appropriate when workloads must access on-premises or firewall-protected sources, when a connector or task requires it, or when the organization wants the runtime located in its own environment.",
+    "expectedConcepts": ["runtime environment", "secure agent", "execution", "firewall", "on-premises", "connectivity"],
+    "followUps": ["How would runtime environment placement affect data movement?", "What would you check if a Secure Agent-based task suddenly could not reach a source?"],
+    "source": {
+      "title": "Informatica Cloud Data Integration Getting Started - Runtime environment configuration",
+      "url": "https://docs.informatica.com/content/dam/source/GUID-3/GUID-36BD2D5D-D89B-45EE-B614-739FDE830C57/67/en/CDI_October2025_GettingStarted_en.pdf",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "informatica-performance-001",
+    "technology": "informatica",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "scenario",
+    "question": "A Cloud Data Integration mapping is processing a large relational workload slowly. How would you evaluate whether pushdown optimization could help?",
+    "canonicalAnswer": "First determine whether supported transformation logic can be executed efficiently by the source or target database and whether the connector and mapping configuration support pushdown. Source, target, or full pushdown can move eligible transformation logic into generated SQL executed by the database. The choice must consider database capacity, transaction length, concurrency, unsupported transformations, and the remaining logic that still has to run in the Data Integration runtime. Session and compilation logs can help verify what was pushed down.",
+    "expectedConcepts": ["pushdown", "source", "target", "full pushdown", "database", "logs"],
+    "followUps": ["Why might full pushdown be a bad choice during peak database hours?", "Which logs would you inspect to confirm whether pushdown occurred?"],
+    "source": {
+      "title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  }
+]
