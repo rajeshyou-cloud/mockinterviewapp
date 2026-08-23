@@ -93,6 +93,8 @@ A milestone is complete only when:
 
 Latest local verification: **15 web tests passing**, **7 API tests passing**, the Next.js 16.3.2 production build succeeds, and `npm audit` reports zero known vulnerabilities.
 
+API CI runs pytest through the selected Python interpreter (`python -m pytest`) so the `apps/api` package root is resolved consistently on GitHub-hosted runners.
+
 Neon migration `8281cb61-64e9-4e68-8298-d0d523a77344` has been applied to the main branch. A disposable create/answer/complete/authorized read-back transaction succeeded on main, and its test data was removed.
 
 Commit `c1bfc85` passed GitHub CI #49 and deployed READY to Vercel production on Next.js 16.3.2. The live production routes passed create/answer/complete/authorized read-back verification, the disposable test session was deleted, and a browser review confirmed cloud persistence, resume controls, reviewed question loading and a clean browser/runtime error scan.

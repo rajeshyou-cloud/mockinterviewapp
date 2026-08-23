@@ -56,6 +56,7 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] Resume-identity migration applied to the main Neon branch
 - [x] Main Neon create/answer/complete/authorized read-back transaction verified and disposable test data removed
 - [x] Commit `c1bfc85` passed GitHub CI #49 (web tests/build and API tests)
+- [x] API CI invokes pytest through the selected Python interpreter so repository-local `app` imports resolve consistently
 - [x] Next.js 16.3.2 revision deployed READY to Vercel production
 - [x] Live production create/answer/complete/authorized read-back verified and disposable test data removed
 - [x] Production UI browser-reviewed with cloud persistence active, resume controls visible, reviewed questions loaded and no browser/runtime errors
