@@ -70,6 +70,7 @@ Status: **PREPARATION STARTED**
 - [x] Initial target set to 150 questions per technology, matching the released courses
 - [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
 - [x] Searchable/filterable/paginated Question Bank UI for the existing 300 questions
+- [x] Private-key interview replay with answer, score, feedback, concept, and timestamp timeline
 - [x] Generate and structurally validate 150 Databricks candidate questions (50 per difficulty)
 - [x] Generate and structurally validate 150 Power BI candidate questions (50 per difficulty)
 - [x] Verify all 49 unique Databricks/Power BI source URLs are reachable official documentation
@@ -109,7 +110,7 @@ Status: **PREPARATION STARTED**
 
 ## Deferred roadmap
 
-- Interview replay
+- Interview replay — implemented; production browser verification pending
 - Recruiter comparison and analytics
 - Human reviewer/admin workflow (required to promote candidate packs into the live bank)
 - Production user authentication — provisioned and implemented; deployment verification pending
