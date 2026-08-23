@@ -9,6 +9,7 @@ Production: https://mockinterviewapp-web.vercel.app
 - 300 schema-validated, official-documentation-backed questions
 - Snowflake and Informatica across beginner, intermediate, and advanced levels
 - Stable per-session question sampling
+- Searchable, filterable, paginated Question Bank with answer frameworks and official sources
 - Text and browser speech input/output
 - Explainable baseline scoring with matched and missing concepts
 - Optional Vercel AI Gateway semantic scoring with deterministic fallback

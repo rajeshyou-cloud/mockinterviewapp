@@ -11,6 +11,7 @@ Production: https://mockinterviewapp-web.vercel.app
 ## Repository map
 
 - `apps/web/app/page.tsx` — candidate flow and session UI
+- `apps/web/app/questions/page.tsx` — server-rendered Question Bank search, filters, pagination, and answer review
 - `apps/web/app/api/questions/route.ts` — filtered/stable question sampling
 - `apps/web/app/api/score/route.ts` — server-side rubric lookup and scoring
 - `apps/web/app/api/sessions` — authenticated Neon persistence routes

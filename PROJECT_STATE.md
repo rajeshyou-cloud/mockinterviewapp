@@ -65,7 +65,7 @@ Status: **PREPARATION STARTED**
 - [x] Planned courses kept out of the production selector until launch gates pass
 - [x] Initial target set to 150 questions per technology, matching the released courses
 - [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
-- [ ] Build a searchable/filterable Question Bank UI for the existing 300 questions
+- [x] Searchable/filterable/paginated Question Bank UI for the existing 300 questions
 - [ ] Add and validate 150 Databricks questions
 - [ ] Add and validate 150 Power BI questions
 - [ ] Add and validate 150 Oracle Database questions
