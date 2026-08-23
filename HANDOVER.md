@@ -61,7 +61,7 @@ The current Vercel team needs a payment card before Gateway calls are serviced. 
 
 ## Authentication configuration
 
-Neon Managed Auth is enabled on the production database branch. Vercel Production contains `NEON_AUTH_BASE_URL` and a sensitive `NEON_AUTH_COOKIE_SECRET`; neither value belongs in Git. `apps/web/.env.example` documents the required names for local setup. The public interview remains accessible without an account, while `/account`, `/review`, `/recruiter`, and `/billing` are authentication-protected. Role authorization for the staff routes is the next identity task.
+Neon Managed Auth is enabled on the production database branch. Vercel Production contains `NEON_AUTH_BASE_URL` and a sensitive `NEON_AUTH_COOKIE_SECRET`; neither value belongs in Git. The managed-auth project trusts `https://mockinterviewapp-web.vercel.app`. `apps/web/.env.example` documents the required names for local setup. The public interview remains accessible without an account, while `/account`, `/review`, `/recruiter`, and `/billing` are authentication-protected. A disposable-user production test verified sign-up, protected account access, sign-out, sign-in, and permanent deletion, followed by a database query confirming zero test users remained. Role authorization for staff routes is staged and awaits the production schema migration.
 
 ## Verification commands
 
@@ -80,7 +80,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current staged counts are 49 web tests and 8 API tests, with a green Next.js production build and zero high-severity dependency findings. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, Python, and AWS.
+Current staged counts are 50 web tests and 8 API tests, with a green Next.js production build and zero high-severity dependency findings. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, Python, and AWS.
 
 ## Deployment
 
