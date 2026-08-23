@@ -45,11 +45,11 @@ export function createBrowserSpeechInput(): SpeechInputAdapter {
     supported: true,
     start(onTranscript, onEnd) {
       recognition?.stop();
-      recognition = new Recognition();
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
-      recognition.continuous = true;
-      recognition.onresult = (event) => {
+      const instance = new Recognition();
+      instance.lang = 'en-US';
+      instance.interimResults = false;
+      instance.continuous = true;
+      instance.onresult = (event) => {
         const chunks: string[] = [];
         for (let index = 0; index < event.results.length; index += 1) {
           const transcript = event.results[index]?.[0]?.transcript;
@@ -58,8 +58,9 @@ export function createBrowserSpeechInput(): SpeechInputAdapter {
         const text = chunks.join(' ').trim();
         if (text) onTranscript(text);
       };
-      recognition.onend = () => onEnd?.();
-      recognition.start();
+      instance.onend = () => onEnd?.();
+      recognition = instance;
+      instance.start();
     },
     stop() {
       recognition?.stop();
