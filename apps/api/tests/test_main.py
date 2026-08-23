@@ -24,3 +24,29 @@ def test_score_endpoint_returns_explainable_result():
     assert body['score'] >= 60
     assert 'compute' in body['matched_concepts']
     assert isinstance(body['missing_concepts'], list)
+
+
+def test_questions_endpoint_filters_by_technology_and_difficulty():
+    response = client.get('/v1/questions?technology=snowflake&difficulty=advanced')
+    assert response.status_code == 200
+
+    questions = response.json()
+    assert questions
+    assert all(question['technology'] == 'snowflake' for question in questions)
+    assert all(question['difficulty'] == 'advanced' for question in questions)
+
+
+def test_question_content_has_review_and_source_metadata():
+    response = client.get('/v1/questions?technology=informatica')
+    assert response.status_code == 200
+
+    questions = response.json()
+    assert questions
+    for question in questions:
+        assert question['id']
+        assert question['canonicalAnswer']
+        assert question['expectedConcepts']
+        assert question['followUps']
+        assert question['reviewStatus'] == 'ai-reviewed'
+        assert question['source']['url'].startswith('https://')
+        assert question['source']['verified']
