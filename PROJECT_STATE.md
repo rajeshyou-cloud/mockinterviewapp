@@ -62,6 +62,8 @@ Neon Managed Auth has been provisioned on the production database branch. The pr
 
 Role-based account history, reviewer, recruiter, admin, and billing implementations are deployed, with 57 web tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed. A disposable administrator then verified `/review`, `/admin`, `/recruiter`, `/billing`, account-linked history, and secure account replay in production. Final account-deletion verification confirmed atomic cleanup of the identity, roles, subscription, and owned sessions, with zero disposable users remaining.
 
+The verified production-owner account was bootstrapped with the `admin` application role on 2026-08-23. No account identifier or email is stored in the repository. Human pack decisions can now be recorded through `/review`.
+
 ## Milestone 3 — Course and question-bank expansion
 
 Status: **HUMAN REVIEW READY**
