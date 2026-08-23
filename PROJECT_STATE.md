@@ -42,7 +42,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 
 ## Verification snapshot
 
-- Web: **57 tests passing** across 15 files on the release branch
+- Web: **57 tests passing** across 15 files on the deployed completion branch
 - API: **8 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
@@ -64,12 +64,13 @@ Role-based account history, reviewer, recruiter, admin, and billing implementati
 
 ## Milestone 3 — Course and question-bank expansion
 
-Status: **PREPARATION STARTED**
+Status: **HUMAN REVIEW READY**
 
 - [x] Central course registry created
 - [x] Databricks, Oracle Database, Power BI, Python, and AWS registered as planned
 - [x] Planned courses kept out of the production selector until launch gates pass
 - [x] Approval-driven publication gate covers the course API, selector, Question Bank, scoring, and answer persistence
+- [x] Production gate verified with exactly Snowflake/Informatica and 300 questions released while Databricks remained blocked before approval
 - [x] Initial target set to 150 questions per technology, matching the released courses
 - [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
 - [x] Searchable/filterable/paginated Question Bank UI for the existing 300 questions
