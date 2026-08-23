@@ -3,6 +3,7 @@
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
+import { getAppUrl } from '../../lib/app-url';
 import { auth, isAuthConfigured } from '../../lib/auth/server';
 import { deleteUserApplicationData, getSubscriptionAccount } from '../../lib/db';
 
@@ -25,7 +26,7 @@ export async function signInWithEmail(_state: AuthActionState, formData: FormDat
   });
   if (!parsed.success) return { error: 'Enter a valid email address and password.' };
 
-  const { error } = await auth.signIn.email(parsed.data);
+  const { error } = await auth.signIn.email({ ...parsed.data, callbackURL: `${getAppUrl()}/account` });
   if (error) return { error: 'The email or password is incorrect.' };
   redirect('/account');
 }
@@ -40,7 +41,7 @@ export async function signUpWithEmail(_state: AuthActionState, formData: FormDat
   });
   if (!parsed.success) return { error: 'Use a valid name, email, and a password of at least 8 characters.' };
 
-  const { error } = await auth.signUp.email(parsed.data);
+  const { error } = await auth.signUp.email({ ...parsed.data, callbackURL: `${getAppUrl()}/account` });
   if (error) return { error: 'We could not create that account. The email may already be registered.' };
   redirect('/account');
 }
