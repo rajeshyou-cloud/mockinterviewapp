@@ -1,0 +1,9 @@
+{
+  "name": "mockinterviewapp",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "build:web": "npm --workspace apps/web run build"
+  }
+}
