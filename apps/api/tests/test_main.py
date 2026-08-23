@@ -36,6 +36,17 @@ def test_questions_endpoint_filters_by_technology_and_difficulty():
     assert all(question['difficulty'] == 'advanced' for question in questions)
 
 
+def test_questions_endpoint_returns_stable_bounded_session_sample():
+    path = '/v1/questions?technology=snowflake&difficulty=intermediate&seed=session-123&limit=10'
+    first = client.get(path)
+    second = client.get(path)
+
+    assert first.status_code == 200
+    assert first.json() == second.json()
+    assert len(first.json()) == 10
+    assert len({question['id'] for question in first.json()}) == 10
+
+
 def test_question_content_has_review_and_source_metadata():
     response = client.get('/v1/questions?technology=informatica')
     assert response.status_code == 200

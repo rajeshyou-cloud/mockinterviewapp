@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import List, Literal, Optional
+import hashlib
 import json
 
 from fastapi import FastAPI, HTTPException, Query
@@ -21,7 +22,12 @@ app.add_middleware(
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-STARTER_QUESTIONS_PATH = REPO_ROOT / "packages" / "content" / "questions" / "starter.json"
+QUESTION_PACK_PATHS = [
+    REPO_ROOT / "apps" / "web" / "data" / "beginner.json",
+    REPO_ROOT / "apps" / "web" / "data" / "starter.json",
+    REPO_ROOT / "apps" / "web" / "data" / "expanded.json",
+    REPO_ROOT / "apps" / "web" / "data" / "generated.json",
+]
 
 Technology = Literal["snowflake", "informatica"]
 Difficulty = Literal["beginner", "intermediate", "advanced"]
@@ -61,13 +67,13 @@ class ScoreResponse(BaseModel):
 
 
 def load_questions() -> List[InterviewQuestion]:
-    if not STARTER_QUESTIONS_PATH.exists():
-        raise HTTPException(status_code=500, detail="Starter question pack is unavailable")
-
-    with STARTER_QUESTIONS_PATH.open("r", encoding="utf-8") as handle:
-        payload = json.load(handle)
-
-    return [InterviewQuestion.model_validate(item) for item in payload]
+    questions: List[InterviewQuestion] = []
+    for path in QUESTION_PACK_PATHS:
+        if not path.exists():
+            raise HTTPException(status_code=500, detail=f"Question pack is unavailable: {path.name}")
+        with path.open("r", encoding="utf-8") as handle:
+            questions.extend(InterviewQuestion.model_validate(item) for item in json.load(handle))
+    return questions
 
 
 @app.get("/health")
@@ -79,14 +85,20 @@ def health() -> dict:
 def questions(
     technology: Optional[Technology] = Query(default=None),
     difficulty: Optional[Difficulty] = Query(default=None),
+    seed: Optional[str] = Query(default=None, max_length=128),
+    limit: Optional[int] = Query(default=None, ge=1, le=20),
 ) -> List[InterviewQuestion]:
-    """Return reviewed starter questions using technology-neutral filters."""
+    """Return reviewed questions using technology-neutral filters and stable session sampling."""
     result = load_questions()
 
     if technology:
         result = [question for question in result if question.technology == technology]
     if difficulty:
         result = [question for question in result if question.difficulty == difficulty]
+    if seed:
+        result.sort(key=lambda question: hashlib.sha256(f"{seed}:{question.id}".encode()).hexdigest())
+    if limit:
+        result = result[:limit]
 
     return result
 

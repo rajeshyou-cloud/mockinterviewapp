@@ -21,6 +21,7 @@ export type ScoreResponse = {
   matched_concepts: string[];
   missing_concepts: string[];
   summary: string;
+  provider?: string;
 };
 
 export type PersistenceResponse = { persisted: boolean; reason?: string } & Record<string, unknown>;
@@ -49,21 +50,31 @@ export type RemoteSessionResponse = {
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? '';
 const QUESTIONS_PATH = API_BASE_URL ? '/v1/questions' : '/api/questions';
-const SCORE_PATH = API_BASE_URL ? '/v1/score' : '/api/score';
+const SCORE_PATH = '/api/score';
 
-export async function fetchQuestions(technology: Technology, difficulty?: Difficulty): Promise<InterviewQuestion[]> {
+export async function fetchQuestions(
+  technology: Technology,
+  difficulty: Difficulty,
+  seed: string,
+  limit = 10,
+): Promise<InterviewQuestion[]> {
   const params = new URLSearchParams({ technology });
-  if (difficulty) params.set('difficulty', difficulty);
+  params.set('difficulty', difficulty);
+  params.set('seed', seed);
+  params.set('limit', String(limit));
   const response = await fetch(`${API_BASE_URL}${QUESTIONS_PATH}?${params.toString()}`, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Question API failed with status ${response.status}`);
   return response.json() as Promise<InterviewQuestion[]>;
 }
 
-export async function scoreAnswer(answer: string, expectedConcepts: string[]): Promise<ScoreResponse> {
-  const response = await fetch(`${API_BASE_URL}${SCORE_PATH}`, {
+export async function scoreAnswer(answer: string, question: InterviewQuestion, sessionId: string): Promise<ScoreResponse> {
+  const response = await fetch(SCORE_PATH, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ answer, expected_concepts: expectedConcepts }),
+    headers: { 'Content-Type': 'application/json', 'x-session-id': sessionId },
+    body: JSON.stringify({
+      answer,
+      question_id: question.id,
+    }),
   });
   if (!response.ok) throw new Error(`Scoring API failed with status ${response.status}`);
   return response.json() as Promise<ScoreResponse>;
