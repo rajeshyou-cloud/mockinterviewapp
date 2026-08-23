@@ -56,6 +56,10 @@ Semantic scoring is fully implemented behind the provider-neutral contract with 
 
 The current Vercel team rejects live AI Gateway calls until a payment card is added. Production therefore identifies results as **Explainable baseline evaluation** instead of claiming AI evaluation. This is an external account activation prerequisite, not an unfinished code path; after billing is enabled, the deployed code selects AI Gateway automatically without an application change.
 
+## Production identity
+
+Neon Managed Auth has been provisioned on the production database branch. The application now includes email/password sign-up, sign-in, sign-out, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint and an independent 48-byte cookie secret are configured in Vercel Production. Production browser verification remains required before this activity is marked complete.
+
 ## Milestone 3 — Course and question-bank expansion
 
 Status: **PREPARATION STARTED**
@@ -108,7 +112,7 @@ Status: **PREPARATION STARTED**
 - Interview replay
 - Recruiter comparison and analytics
 - Human reviewer/admin workflow (required to promote candidate packs into the live bank)
-- Production user authentication
+- Production user authentication — provisioned and implemented; deployment verification pending
 - Subscription billing
 
 These are intentionally separate product surfaces, not incomplete Milestone 2 requirements.

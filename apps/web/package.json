@@ -9,6 +9,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@neondatabase/auth": "^0.5.0-beta",
     "@neondatabase/serverless": "1.0.2",
     "ai": "^7.0.77",
     "next": "16.3.2",

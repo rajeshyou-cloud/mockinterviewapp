@@ -15,6 +15,11 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/app/api/questions/route.ts` — filtered/stable question sampling
 - `apps/web/app/api/score/route.ts` — server-side rubric lookup and scoring
 - `apps/web/app/api/sessions` — authenticated Neon persistence routes
+- `apps/web/app/api/auth/[...path]` — Neon Managed Auth API proxy
+- `apps/web/app/auth` — custom sign-in/sign-up server actions and forms
+- `apps/web/app/account` — protected signed-in account surface
+- `apps/web/lib/auth/server.ts` — server-only Managed Auth configuration
+- `apps/web/proxy.ts` — Next.js 16 protection for account/staff/billing routes
 - `apps/web/lib/scoring.ts` — AI Gateway, deterministic, and resilient scoring providers
 - `apps/web/lib/session.ts` — browser session and versioned resume-key format
 - `apps/web/lib/db.ts` — server-only Neon adapter and resume-token hashing
@@ -52,6 +57,10 @@ The production web app uses self-contained Next.js routes for scoring and persis
 - Vercel authentication: automatically supplied OIDC when AI Gateway is enabled for the team
 
 The current Vercel team needs a payment card before Gateway calls are serviced. Until then, production safely returns `ai-gateway:...->deterministic-keyword`, and the UI labels the result as an explainable baseline evaluation. Do not remove the fallback or claim live AI scoring until a production response returns an `ai-gateway:` provider without `->`.
+
+## Authentication configuration
+
+Neon Managed Auth is enabled on the production database branch. Vercel Production contains `NEON_AUTH_BASE_URL` and a sensitive `NEON_AUTH_COOKIE_SECRET`; neither value belongs in Git. `apps/web/.env.example` documents the required names for local setup. The public interview remains accessible without an account, while `/account`, `/review`, `/recruiter`, and `/billing` are authentication-protected. Role authorization for the staff routes is the next identity task.
 
 ## Verification commands
 
