@@ -32,6 +32,9 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] `DATABASE_URL` securely bound to Vercel `mockinterviewapp-web` for Production and Preview
 - [x] `mockinterviewapp-web` connected to GitHub repository `rajeshyou-cloud/mockinterviewapp`
 - [x] Vercel web Root Directory configured as `apps/web`
+- [x] Fresh Git-triggered production web deployment verified green on Next.js 15.5.21
+- [x] Live question API verified from the production web deployment
+- [x] Live durable-session read route verified to reach Neon (database binding active)
 - [x] Beginner Snowflake and Informatica content pack added
 - [x] Question API composes multiple content packs without UI changes
 - [x] Topic-level assessment summary implemented
@@ -42,24 +45,22 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] CI updated to run web unit tests before the Next.js production build
 - [x] Expanded scenario bank added for Snowflake security, Time Travel/cloning, streams and Informatica orchestration/runtime/performance
 - [x] Speech adapter nullability/build issue fixed
-- [x] Milestone 2 browser-persistence slice successfully built and deployed on Vercel
 
 ### Deployment topology
 
 - `mockinterviewapp-api` is GitHub-linked to `rajeshyou-cloud/mockinterviewapp` and auto-deploys from `main` as the FastAPI project.
-- `mockinterviewapp-web` is now GitHub-linked to the same repository with Root Directory `apps/web`.
+- `mockinterviewapp-web` is GitHub-linked to the same repository with Root Directory `apps/web` and auto-deploys from `main`.
 - `DATABASE_URL` is configured securely for Production and Preview on the web project.
-- A fresh Git-triggered web deployment is being used to verify that the latest Next.js revision consumes the Neon binding correctly.
+- Production web URL: `https://mockinterviewapp-web.vercel.app`.
 
 ### Milestone 2 next actions
 
-- [ ] Verify the fresh Git-triggered Next.js deployment is green
-- [ ] Verify durable session creation, answer writes, and completion against Neon from the deployed web app
+- [ ] Verify durable session creation, answer writes, and completion against Neon from a full live interview
 - [ ] Restore session progress across devices using server persistence and a user/session identity mechanism
 - [ ] Add a semantic/LLM scoring provider behind the existing provider-neutral contract
 - [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
 - [ ] Add route-level persistence tests and CI coverage
-- [ ] Browser-review the server-persistent Milestone 2 flow
+- [ ] Browser-review the fully server-persistent Milestone 2 flow
 
 ## Current user flow
 
@@ -71,7 +72,7 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 6. Candidate receives an explainable baseline score, matched concepts, and a follow-up question.
 7. Candidate progresses through the filtered interview.
 8. Progress and scored answers are always saved in browser storage and resume after refresh in the same browser.
-9. When server persistence is active in the deployed web revision, the same lifecycle also syncs sessions and answers to Neon Postgres.
+9. The deployed web app is configured to sync sessions and answers to Neon Postgres.
 10. The final question produces an aggregate score, topic-level scores, and focus areas for the next practice session.
 
 ## Architecture principles
