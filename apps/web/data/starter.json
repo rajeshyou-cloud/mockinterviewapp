@@ -14,6 +14,20 @@
     "version": 1
   },
   {
+    "id": "snowflake-warehouse-002",
+    "technology": "snowflake",
+    "topic": "virtual-warehouses",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A BI dashboard is slowing down whenever a nightly ETL job starts. How would you use Snowflake virtual warehouses to reduce this contention?",
+    "canonicalAnswer": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data.",
+    "expectedConcepts": ["separate warehouses", "workload isolation", "compute", "BI", "ETL", "independent scaling"],
+    "followUps": ["What cost trade-offs come with adding another warehouse?", "How would auto-suspend help manage cost?"],
+    "source": {"title": "Snowflake virtual warehouses", "url": "https://docs.snowflake.com/en/user-guide/warehouses", "verified": "2026-08-23"},
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
     "id": "snowflake-dynamic-tables-001",
     "technology": "snowflake",
     "topic": "data-engineering",
@@ -28,6 +42,20 @@
     "version": 1
   },
   {
+    "id": "snowflake-dynamic-tables-002",
+    "technology": "snowflake",
+    "topic": "data-engineering",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "You need a pipeline whose downstream table should stay within roughly ten minutes of its source data. How would a Dynamic Table model that requirement?",
+    "canonicalAnswer": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step.",
+    "expectedConcepts": ["target lag", "freshness", "refresh", "upstream", "dynamic table", "declarative"],
+    "followUps": ["How is this different from running a task every ten minutes?", "What would you monitor if the target lag is not being met?"],
+    "source": {"title": "Dynamic tables", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-about", "verified": "2026-08-23"},
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
     "id": "informatica-secure-agent-001",
     "technology": "informatica",
     "topic": "runtime-environments",
@@ -37,7 +65,21 @@
     "canonicalAnswer": "A runtime environment is the execution platform for tasks and can consist of one or more Secure Agents. A Secure Agent is a lightweight runtime that executes tasks and enables secure communication across the firewall. A customer-managed Secure Agent is appropriate when workloads must access on-premises or firewall-protected sources, when a connector or task requires it, or when the organization wants the runtime located in its own environment.",
     "expectedConcepts": ["runtime environment", "secure agent", "execution", "firewall", "on-premises", "connectivity"],
     "followUps": ["How would runtime environment placement affect data movement?", "What would you check if a Secure Agent-based task suddenly could not reach a source?"],
-    "source": {"title": "Informatica Cloud Data Integration Getting Started - Runtime environment configuration", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "source": {"title": "Informatica Cloud Data Integration Getting Started", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "informatica-runtime-002",
+    "technology": "informatica",
+    "topic": "runtime-environments",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A mapping must read from an on-premises database that is not exposed to the public internet. What Informatica runtime design would you consider?",
+    "canonicalAnswer": "Use a customer-managed Secure Agent in a runtime environment that has network access to the on-premises database. The Secure Agent executes the task and provides the connectivity needed for Data Integration to reach protected resources without exposing the database directly to the public internet.",
+    "expectedConcepts": ["secure agent", "runtime environment", "on-premises", "network access", "connectivity", "execution"],
+    "followUps": ["Where would you place the Secure Agent?", "What network checks would you perform if connectivity fails?"],
+    "source": {"title": "Informatica Cloud Data Integration Getting Started", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
     "reviewStatus": "ai-reviewed",
     "version": 1
   },
@@ -52,6 +94,20 @@
     "expectedConcepts": ["pushdown", "source", "target", "full pushdown", "database", "logs"],
     "followUps": ["Why might full pushdown be a bad choice during peak database hours?", "Which logs would you inspect to confirm whether pushdown occurred?"],
     "source": {"title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "informatica-performance-002",
+    "technology": "informatica",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "A mapping was configured for pushdown optimization, but performance did not improve. What would you inspect first?",
+    "canonicalAnswer": "Inspect the task and session logs to confirm which transformations were actually pushed to the source or target database. Check connector support, unsupported transformations, generated SQL, database load, and whether significant processing is still occurring in the Data Integration runtime.",
+    "expectedConcepts": ["logs", "generated SQL", "connector", "unsupported transformations", "database load", "runtime"],
+    "followUps": ["How would you distinguish a database bottleneck from a runtime bottleneck?", "What would make you disable full pushdown?"],
+    "source": {"title": "Informatica Cloud Data Integration pushdown optimization", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
     "reviewStatus": "ai-reviewed",
     "version": 1
   }
