@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "candidate-python-execution-model-01",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python execution model and namespaces and the main problem it solves.",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-execution-model-02",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python execution model and namespaces and verify that it works?",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-execution-model-03",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python execution model and namespaces. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-execution-model-04",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python execution model and namespaces is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-execution-model-05",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python execution model and namespaces. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-execution-model-06",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python execution model and namespaces, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Python executes code blocks in execution frames with local, global, and built-in namespaces. Name binding, scope, closures, and object identity explain many runtime behaviors. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "namespace",
+      "binding",
+      "scope",
+      "closure",
+      "object identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python execution model and namespaces would you validate?",
+      "What evidence would prove that Python execution model and namespaces is working correctly?"
+    ],
+    "source": {
+      "title": "Python execution model",
+      "url": "https://docs.python.org/3/reference/executionmodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-01",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python data model and the main problem it solves.",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-02",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python data model and verify that it works?",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-03",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python data model. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-04",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python data model is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-05",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python data model. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-data-model-06",
+    "technology": "python",
+    "topic": "fundamentals",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python data model, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Python objects have identity, type, and value, and special methods implement language protocols. Mutability, hashing, equality, and lifecycle rules determine safe object behavior. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "object",
+      "type",
+      "mutability",
+      "special method",
+      "hashing"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python data model would you validate?",
+      "What evidence would prove that Python data model is working correctly?"
+    ],
+    "source": {
+      "title": "Python data model",
+      "url": "https://docs.python.org/3/reference/datamodel.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-01",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain built-in Python collections and the main problem it solves.",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-02",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of built-in Python collections and verify that it works?",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-03",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering built-in Python collections. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-04",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "built-in Python collections is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-05",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around built-in Python collections. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-collections-06",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving built-in Python collections, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Lists, tuples, dictionaries, and sets offer different ordering, mutability, uniqueness, and lookup properties. The choice should match access patterns and semantic intent. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "list",
+      "tuple",
+      "dict",
+      "set",
+      "complexity"
+    ],
+    "followUps": [
+      "Which limitation or cost of built-in Python collections would you validate?",
+      "What evidence would prove that built-in Python collections is working correctly?"
+    ],
+    "source": {
+      "title": "Data structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-01",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain comprehensions and generator expressions and the main problem it solves.",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-02",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of comprehensions and generator expressions and verify that it works?",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-03",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering comprehensions and generator expressions. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-04",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "comprehensions and generator expressions is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-05",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around comprehensions and generator expressions. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-comprehensions-06",
+    "technology": "python",
+    "topic": "data-structures",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving comprehensions and generator expressions, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Comprehensions construct collections declaratively, while generator expressions produce values lazily. Readability, memory, nested logic, and short-circuit behavior guide the choice. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "list comprehension",
+      "generator expression",
+      "lazy",
+      "filter",
+      "memory"
+    ],
+    "followUps": [
+      "Which limitation or cost of comprehensions and generator expressions would you validate?",
+      "What evidence would prove that comprehensions and generator expressions is working correctly?"
+    ],
+    "source": {
+      "title": "Displays for lists, sets and dictionaries",
+      "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-01",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python function definitions and arguments and the main problem it solves.",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-02",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python function definitions and arguments and verify that it works?",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-03",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python function definitions and arguments. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-04",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python function definitions and arguments is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-05",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python function definitions and arguments. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-functions-06",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python function definitions and arguments, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Functions create reusable callables with positional-only, positional-or-keyword, keyword-only, variadic, and default parameters. Defaults are evaluated at definition time, which matters for mutable values. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "parameter",
+      "default argument",
+      "positional-only",
+      "keyword-only",
+      "variadic"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python function definitions and arguments would you validate?",
+      "What evidence would prove that Python function definitions and arguments is working correctly?"
+    ],
+    "source": {
+      "title": "Defining functions",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-01",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain decorators and the main problem it solves.",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-02",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of decorators and verify that it works?",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-03",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering decorators. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-04",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "decorators is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-05",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around decorators. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-decorators-06",
+    "technology": "python",
+    "topic": "functions",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving decorators, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A decorator transforms a function or class at definition time. Correct decorators preserve metadata, handle arguments and descriptors, and make added behavior explicit and testable. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "callable",
+      "wrapper",
+      "functools.wraps",
+      "closure",
+      "metadata"
+    ],
+    "followUps": [
+      "Which limitation or cost of decorators would you validate?",
+      "What evidence would prove that decorators is working correctly?"
+    ],
+    "source": {
+      "title": "Function definitions",
+      "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-01",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python classes and inheritance and the main problem it solves.",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-02",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python classes and inheritance and verify that it works?",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-03",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python classes and inheritance. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-04",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python classes and inheritance is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-05",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python classes and inheritance. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-classes-06",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python classes and inheritance, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Classes create user-defined types with instance state, methods, inheritance, and method resolution order. Composition, cooperative super calls, and clear invariants usually improve maintainability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "class",
+      "instance",
+      "inheritance",
+      "MRO",
+      "super"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python classes and inheritance would you validate?",
+      "What evidence would prove that Python classes and inheritance is working correctly?"
+    ],
+    "source": {
+      "title": "Classes",
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-01",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain data classes and the main problem it solves.",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-02",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of data classes and verify that it works?",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-03",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering data classes. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-04",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "data classes is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-05",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around data classes. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-dataclasses-06",
+    "technology": "python",
+    "topic": "object-oriented-programming",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving data classes, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The dataclasses module generates methods for annotated fields. Defaults, factories, frozen behavior, ordering, slots, and post-init validation should reflect the value object contract. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "dataclass",
+      "field",
+      "default_factory",
+      "frozen",
+      "__post_init__"
+    ],
+    "followUps": [
+      "Which limitation or cost of data classes would you validate?",
+      "What evidence would prove that data classes is working correctly?"
+    ],
+    "source": {
+      "title": "dataclasses",
+      "url": "https://docs.python.org/3/library/dataclasses.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-01",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python type hints and the main problem it solves.",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-02",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python type hints and verify that it works?",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-03",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python type hints. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-04",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python type hints is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-05",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python type hints. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-typing-06",
+    "technology": "python",
+    "topic": "typing",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python type hints, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Type hints describe expected interfaces for static analysis without enforcing types at runtime. Generics, protocols, unions, narrowing, and gradual adoption improve correctness when kept aligned with behavior. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "annotation",
+      "generic",
+      "Protocol",
+      "union",
+      "type checker"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python type hints would you validate?",
+      "What evidence would prove that Python type hints is working correctly?"
+    ],
+    "source": {
+      "title": "typing support",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-01",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain exception handling and the main problem it solves.",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-02",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of exception handling and verify that it works?",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-03",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering exception handling. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-04",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "exception handling is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-05",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around exception handling. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-exceptions-06",
+    "technology": "python",
+    "topic": "error-handling",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving exception handling, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Exceptions separate failure paths from normal returns. Specific exception types, careful try scope, chaining, cleanup, and preserving tracebacks make errors diagnosable. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "exception chaining"
+    ],
+    "followUps": [
+      "Which limitation or cost of exception handling would you validate?",
+      "What evidence would prove that exception handling is working correctly?"
+    ],
+    "source": {
+      "title": "Errors and exceptions",
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-01",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain context managers and the main problem it solves.",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-02",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of context managers and verify that it works?",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-03",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering context managers. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-04",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "context managers is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-05",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around context managers. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-context-managers-06",
+    "technology": "python",
+    "topic": "resource-management",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving context managers, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Context managers define setup and cleanup around a with statement, ensuring deterministic release even on exceptions. They are appropriate for files, locks, transactions, and temporary state. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "with",
+      "__enter__",
+      "__exit__",
+      "cleanup",
+      "contextlib"
+    ],
+    "followUps": [
+      "Which limitation or cost of context managers would you validate?",
+      "What evidence would prove that context managers is working correctly?"
+    ],
+    "source": {
+      "title": "With statement context managers",
+      "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-01",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain iterators and generators and the main problem it solves.",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-02",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of iterators and generators and verify that it works?",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-03",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering iterators and generators. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-04",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "iterators and generators is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-05",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around iterators and generators. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-iterators-06",
+    "technology": "python",
+    "topic": "iteration",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving iterators and generators, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Iterables produce iterators, and iterators yield values until StopIteration. Generator functions preserve suspended state, enabling lazy pipelines with explicit resource and error handling. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "iterable",
+      "iterator",
+      "yield",
+      "StopIteration",
+      "lazy evaluation"
+    ],
+    "followUps": [
+      "Which limitation or cost of iterators and generators would you validate?",
+      "What evidence would prove that iterators and generators is working correctly?"
+    ],
+    "source": {
+      "title": "Iterator types",
+      "url": "https://docs.python.org/3/library/stdtypes.html#iterator-types",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-01",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain modules and import behavior and the main problem it solves.",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-02",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of modules and import behavior and verify that it works?",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-03",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering modules and import behavior. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-04",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "modules and import behavior is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-05",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around modules and import behavior. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-modules-06",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving modules and import behavior, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Modules provide namespaces loaded by the import system. Search paths, packages, relative imports, caching in sys.modules, and import-time side effects affect maintainability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "module",
+      "package",
+      "sys.path",
+      "sys.modules",
+      "relative import"
+    ],
+    "followUps": [
+      "Which limitation or cost of modules and import behavior would you validate?",
+      "What evidence would prove that modules and import behavior is working correctly?"
+    ],
+    "source": {
+      "title": "The import system",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-01",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python project packaging and the main problem it solves.",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-02",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python project packaging and verify that it works?",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-03",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python project packaging. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-04",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python project packaging is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-05",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python project packaging. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-packaging-06",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python project packaging, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Modern Python projects declare build metadata and dependencies in pyproject.toml and build distributions through standardized backends. Reproducible builds, versioning, and minimal metadata support reliable delivery. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "pyproject.toml",
+      "build backend",
+      "wheel",
+      "source distribution",
+      "version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python project packaging would you validate?",
+      "What evidence would prove that Python project packaging is working correctly?"
+    ],
+    "source": {
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-01",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain virtual environments and the main problem it solves.",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-02",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of virtual environments and verify that it works?",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-03",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering virtual environments. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-04",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "virtual environments is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-05",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around virtual environments. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-venv-06",
+    "technology": "python",
+    "topic": "packaging",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving virtual environments, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Virtual environments isolate project interpreters and installed packages from a base environment. They are disposable boundaries, so dependencies should be declared and installations reproducible. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "venv",
+      "interpreter",
+      "site-packages",
+      "activation",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of virtual environments would you validate?",
+      "What evidence would prove that virtual environments is working correctly?"
+    ],
+    "source": {
+      "title": "venv",
+      "url": "https://docs.python.org/3/library/venv.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-01",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain unit testing with unittest and the main problem it solves.",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-02",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of unit testing with unittest and verify that it works?",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-03",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering unit testing with unittest. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-04",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "unit testing with unittest is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-05",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around unit testing with unittest. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-unittest-06",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving unit testing with unittest, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "unittest organizes test cases, fixtures, assertions, suites, and mocks. Tests should be isolated, deterministic, behavior-focused, and clear about setup and cleanup. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "TestCase",
+      "fixture",
+      "assertion",
+      "mock",
+      "test discovery"
+    ],
+    "followUps": [
+      "Which limitation or cost of unit testing with unittest would you validate?",
+      "What evidence would prove that unit testing with unittest is working correctly?"
+    ],
+    "source": {
+      "title": "unittest",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-01",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain mocking with unittest.mock and the main problem it solves.",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-02",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of mocking with unittest.mock and verify that it works?",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-03",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering mocking with unittest.mock. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-04",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "mocking with unittest.mock is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-05",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around mocking with unittest.mock. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-mock-06",
+    "technology": "python",
+    "topic": "testing",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving mocking with unittest.mock, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Mocks replace collaborators and record interactions, but excessive mocking couples tests to implementation. Autospec, patch location, cleanup, and realistic boundaries matter. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "Mock",
+      "patch",
+      "autospec",
+      "side_effect",
+      "assert_called"
+    ],
+    "followUps": [
+      "Which limitation or cost of mocking with unittest.mock would you validate?",
+      "What evidence would prove that mocking with unittest.mock is working correctly?"
+    ],
+    "source": {
+      "title": "unittest.mock",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-01",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python logging and the main problem it solves.",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-02",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python logging and verify that it works?",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-03",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python logging. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-04",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python logging is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-05",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python logging. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-logging-06",
+    "technology": "python",
+    "topic": "observability",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python logging, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The logging package emits structured severity-based events through loggers, handlers, filters, and formatters. Library code should avoid configuring global policy and must not leak secrets. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "logger",
+      "handler",
+      "level",
+      "formatter",
+      "structured context"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python logging would you validate?",
+      "What evidence would prove that Python logging is working correctly?"
+    ],
+    "source": {
+      "title": "Logging HOWTO",
+      "url": "https://docs.python.org/3/howto/logging.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-01",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain asyncio and the main problem it solves.",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-02",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of asyncio and verify that it works?",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-03",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering asyncio. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-04",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "asyncio is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-05",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around asyncio. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-asyncio-06",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving asyncio, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "asyncio coordinates cooperative coroutines on an event loop for high-concurrency I/O. Await points, task lifetime, cancellation, timeouts, and avoiding blocking calls are critical. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "event loop",
+      "coroutine",
+      "await",
+      "task",
+      "cancellation"
+    ],
+    "followUps": [
+      "Which limitation or cost of asyncio would you validate?",
+      "What evidence would prove that asyncio is working correctly?"
+    ],
+    "source": {
+      "title": "asyncio",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-01",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain threads and processes and the main problem it solves.",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-02",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of threads and processes and verify that it works?",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-03",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering threads and processes. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-04",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "threads and processes is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-05",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around threads and processes. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-threads-processes-06",
+    "technology": "python",
+    "topic": "concurrency",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving threads and processes, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Threads share memory and suit much blocking I/O, while processes isolate memory and can parallelize CPU-bound Python code. Serialization, startup, synchronization, and failure handling affect the choice. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "thread",
+      "process",
+      "GIL",
+      "shared memory",
+      "serialization"
+    ],
+    "followUps": [
+      "Which limitation or cost of threads and processes would you validate?",
+      "What evidence would prove that threads and processes is working correctly?"
+    ],
+    "source": {
+      "title": "concurrent.futures",
+      "url": "https://docs.python.org/3/library/concurrent.futures.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-01",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Python profiling and the main problem it solves.",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-02",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Python profiling and verify that it works?",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-03",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Python profiling. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-04",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Python profiling is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-05",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Python profiling. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-profiling-06",
+    "technology": "python",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Python profiling, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Profiling measures where time is spent before optimization. Deterministic profiles, statistical sampling, representative inputs, allocation evidence, and algorithmic analysis prevent guesswork. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "profile",
+      "cProfile",
+      "call count",
+      "cumulative time",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Python profiling would you validate?",
+      "What evidence would prove that Python profiling is working correctly?"
+    ],
+    "source": {
+      "title": "The Python profilers",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-01",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain file and path handling and the main problem it solves.",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-02",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of file and path handling and verify that it works?",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-03",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering file and path handling. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-04",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "file and path handling is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-05",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around file and path handling. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-files-paths-06",
+    "technology": "python",
+    "topic": "io",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving file and path handling, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "File operations require explicit modes, encodings, buffering, cleanup, and error handling. pathlib supplies object-oriented path operations while preserving platform-specific semantics. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "open",
+      "encoding",
+      "with",
+      "pathlib",
+      "atomicity"
+    ],
+    "followUps": [
+      "Which limitation or cost of file and path handling would you validate?",
+      "What evidence would prove that file and path handling is working correctly?"
+    ],
+    "source": {
+      "title": "Reading and writing files",
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-01",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain JSON serialization and the main problem it solves.",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-02",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of JSON serialization and verify that it works?",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-03",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering JSON serialization. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-04",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "JSON serialization is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-05",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around JSON serialization. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-json-06",
+    "technology": "python",
+    "topic": "data-processing",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving JSON serialization, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The json module maps supported Python values to JSON text and back. Validation, numeric precision, custom encoding, character handling, and untrusted input limits matter at interfaces. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "dumps",
+      "loads",
+      "encoder",
+      "decoder",
+      "validation"
+    ],
+    "followUps": [
+      "Which limitation or cost of JSON serialization would you validate?",
+      "What evidence would prove that JSON serialization is working correctly?"
+    ],
+    "source": {
+      "title": "json",
+      "url": "https://docs.python.org/3/library/json.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-01",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain HTTP clients and servers in the standard library and the main problem it solves.",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-02",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of HTTP clients and servers in the standard library and verify that it works?",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-03",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering HTTP clients and servers in the standard library. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-04",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "HTTP clients and servers in the standard library is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-05",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around HTTP clients and servers in the standard library. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-http-06",
+    "technology": "python",
+    "topic": "networking",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving HTTP clients and servers in the standard library, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Python standard-library HTTP modules expose protocol clients and basic servers, but production use requires TLS verification, timeouts, bounded bodies, status handling, and appropriate frameworks. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "HTTP",
+      "TLS",
+      "timeout",
+      "status code",
+      "headers"
+    ],
+    "followUps": [
+      "Which limitation or cost of HTTP clients and servers in the standard library would you validate?",
+      "What evidence would prove that HTTP clients and servers in the standard library is working correctly?"
+    ],
+    "source": {
+      "title": "HTTP modules",
+      "url": "https://docs.python.org/3/library/http.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-01",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain secure handling of secrets and randomness and the main problem it solves.",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-02",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of secure handling of secrets and randomness and verify that it works?",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-03",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering secure handling of secrets and randomness. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-04",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "secure handling of secrets and randomness is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-05",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around secure handling of secrets and randomness. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-python-security-06",
+    "technology": "python",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving secure handling of secrets and randomness, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Security-sensitive code should use the secrets module for tokens, compare digests safely, avoid unsafe deserialization and shell construction, validate inputs, and keep credentials out of source and logs. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "secrets",
+      "token",
+      "compare_digest",
+      "input validation",
+      "credential"
+    ],
+    "followUps": [
+      "Which limitation or cost of secure handling of secrets and randomness would you validate?",
+      "What evidence would prove that secure handling of secrets and randomness is working correctly?"
+    ],
+    "source": {
+      "title": "secrets",
+      "url": "https://docs.python.org/3/library/secrets.html",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  }
+]

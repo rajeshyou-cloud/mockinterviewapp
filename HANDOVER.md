@@ -70,7 +70,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current verified counts are 39 web tests and 8 API tests. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks and Power BI.
+Current verified counts are 43 web tests and 8 API tests. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, and Python.
 
 ## Deployment
 
@@ -84,4 +84,4 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 ## Deferred roadmap
 
-Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks and Power BI candidate packs. Their 49 unique official source links passed reachability validation on 2026-08-23. Candidate packs remain hidden until human approval and full launch verification. Oracle Database, Python, and AWS packs are next. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
+Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, and Python candidate packs. Their 99 unique official source links passed reachability validation on 2026-08-23. Candidate packs remain hidden until human approval and full launch verification. AWS is the remaining content pack. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
