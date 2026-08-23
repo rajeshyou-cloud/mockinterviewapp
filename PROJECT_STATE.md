@@ -60,7 +60,7 @@ The current Vercel team rejects live AI Gateway calls until a payment card is ad
 
 Neon Managed Auth has been provisioned on the production database branch. The production application now includes email/password sign-up, sign-in, sign-out, permanent self-deletion, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint, trusted production origin, and an independent 48-byte cookie secret are configured in production. On 2026-08-23 a disposable-user browser test verified sign-up, protected account access, sign-out, sign-in, and deletion; a database check then confirmed that zero disposable test users remained.
 
-Role-based account history, reviewer, recruiter, admin, and billing implementations are complete on the staged branch, with 50 tests, a production build, and zero high-severity dependency findings. They are intentionally not pushed because their database migration has only been verified on an isolated Neon branch. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` is awaiting explicit production-apply approval.
+Role-based account history, reviewer, recruiter, admin, and billing implementations are complete on the release branch, with 50 tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed.
 
 ## Milestone 3 — Course and question-bank expansion
 
@@ -113,9 +113,9 @@ Status: **PREPARATION STARTED**
 ## Deferred roadmap
 
 - Interview replay — implemented, deployed, and production page verified
-- Recruiter comparison and analytics — implemented locally; database migration/deployment pending
-- Human reviewer/admin workflow — implemented locally; database migration, role bootstrap, and human decisions pending
-- Production user authentication — provisioned, deployed, and full disposable-user lifecycle verified; role-backed surfaces pending migration
+- Recruiter comparison and analytics — implementation and production schema complete; deployment and role verification pending
+- Human reviewer/admin workflow — implementation and production schema complete; deployment, role bootstrap, and human decisions pending
+- Production user authentication — provisioned, deployed, and full disposable-user lifecycle verified; role-backed release pending deployment
 - Subscription billing — implementation complete locally; Stripe terms/products/prices/webhook activation pending
 
 These are intentionally separate product surfaces, not incomplete Milestone 2 requirements.
