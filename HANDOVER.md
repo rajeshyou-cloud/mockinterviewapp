@@ -6,17 +6,59 @@ This file is the fastest way for a new developer or a future ChatGPT session to 
 
 Mock Interview System is a voice-first technical interview practice platform. Snowflake and Informatica are the first content packs, but the interview engine must remain technology-neutral.
 
-## Current state
+## Start here
 
-Read `PROJECT_STATE.md` first. Milestone 1 is currently in progress.
+Read `PROJECT_STATE.md` first. It is the authoritative implementation status.
 
 The repository contains:
 
 - `apps/web` — Next.js candidate experience
+- `apps/web/lib/api.ts` — typed API client
+- `apps/web/lib/voice.ts` — provider-neutral browser speech input/output adapters
 - `apps/api` — FastAPI backend
-- `packages/content` — versioned question-bank content
+- `packages/content/questions/starter.json` — reviewed starter pack
+- `packages/content/schema/question.schema.json` — shared content contract
+- `.github/workflows/ci.yml` — web-build and API/content-test gate
 - `PROJECT_STATE.md` — authoritative implementation status
 - `HANDOVER.md` — restart context
+
+## Current Milestone 1 flow
+
+1. Candidate selects technology and difficulty.
+2. Next.js requests matching questions from `GET /v1/questions`.
+3. Candidate can hear the question through browser Speech Synthesis when available.
+4. Candidate types an answer or uses browser Speech Recognition when available.
+5. Next.js sends the answer to `POST /v1/score`.
+6. FastAPI returns score, matched concepts, missing concepts, and summary.
+7. UI displays explainable feedback and a reviewed follow-up prompt.
+8. Candidate progresses through the filtered question set.
+
+The browser speech adapters are intentionally interfaces rather than vendor-specific domain code. A production STT/TTS provider can replace or complement them without changing interview content or scoring models.
+
+## API contracts
+
+### `GET /health`
+Basic service health.
+
+### `GET /v1/questions`
+Optional query parameters:
+
+- `technology=snowflake|informatica`
+- `difficulty=beginner|intermediate|advanced`
+
+Returns questions validated by Pydantic from the shared content pack.
+
+### `POST /v1/score`
+Request:
+
+```json
+{
+  "answer": "candidate answer",
+  "expected_concepts": ["concept one", "concept two"]
+}
+```
+
+Returns baseline explainable concept coverage. This is an interface placeholder for later semantic/LLM scoring, not the final assessment algorithm.
 
 ## Architecture rules
 
@@ -26,6 +68,7 @@ The repository contains:
 - Prefer official vendor documentation as the factual source of truth.
 - Scenario questions should evaluate reasoning and trade-offs, not keyword recall alone.
 - Baseline keyword scoring exists only to establish an explainable API contract; semantic/LLM scoring will supersede it.
+- Never mark a milestone complete until build/test verification is green and `PROJECT_STATE.md` has no required unchecked item.
 
 ## Engineering contract
 
@@ -35,30 +78,51 @@ A milestone is complete only when:
 2. Relevant automated tests pass.
 3. Content/schema changes are validated.
 4. `PROJECT_STATE.md` is updated.
-5. `HANDOVER.md` reflects any architecture or setup changes.
-6. No required milestone item remains unchecked.
+5. `HANDOVER.md` reflects architecture/setup changes.
+6. CI/build verification is green.
+7. No required milestone item remains unchecked.
 
-## Milestone 1 target
+## Verification status
 
-A candidate can:
+Backend and content tests have been executed in the implementation environment: **5 tests passing**.
 
-1. choose Snowflake or Informatica,
-2. choose a level,
-3. receive a question,
-4. answer by text or microphone,
-5. submit the answer,
-6. receive explainable scoring/feedback,
-7. receive an interviewer follow-up,
-8. progress through a basic interview session.
+GitHub Actions now provides the authoritative repository-level gate for:
+
+- Next.js production build
+- FastAPI endpoint tests
+- JSON Schema content validation
+
+Milestone 1 remains **IN PROGRESS** until CI and a browser smoke test are confirmed.
+
+## Local development
+
+Start the API:
+
+```bash
+cd apps/api
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+Start the web app from the repository root:
+
+```bash
+npm install
+npm run dev:web
+```
+
+The web app defaults to `http://localhost:8000` for the API. Override it with `NEXT_PUBLIC_API_BASE_URL` when needed.
 
 ## Next work
 
-- Shared question schema validation
-- API-backed content loading
-- API-backed scoring from the web UI
-- Microphone capture
-- STT/TTS provider contracts and initial adapters
-- Tests and local build verification
+- Confirm/fix GitHub Actions CI
+- Browser smoke-test voice and text paths
+- Expand reviewed content toward 300 Snowflake/Informatica questions, including beginner coverage
+- Add persistent interview-session models after Milestone 1 acceptance
+- Add semantic scoring and server-side production voice providers in later milestones
 
 ## Deferred
 
