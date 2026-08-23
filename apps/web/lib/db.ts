@@ -38,6 +38,14 @@ function getSql() {
   return neon(url);
 }
 
+export async function deleteManagedAuthUser(userId: string) {
+  const sql = getSql();
+  if (!sql) return false;
+
+  const rows = await sql`DELETE FROM neon_auth.user WHERE id = ${userId} RETURNING id`;
+  return rows.length === 1;
+}
+
 function hashResumeToken(token: string) {
   return createHash('sha256').update(token).digest('hex');
 }
