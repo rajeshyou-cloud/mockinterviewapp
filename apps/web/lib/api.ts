@@ -27,7 +27,9 @@ export type ScoreResponse = {
   summary: string;
 };
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? '';
+const QUESTIONS_PATH = API_BASE_URL ? '/v1/questions' : '/api/questions';
+const SCORE_PATH = API_BASE_URL ? '/v1/score' : '/api/score';
 
 export async function fetchQuestions(
   technology: Technology,
@@ -36,7 +38,7 @@ export async function fetchQuestions(
   const params = new URLSearchParams({ technology });
   if (difficulty) params.set('difficulty', difficulty);
 
-  const response = await fetch(`${API_BASE_URL}/v1/questions?${params.toString()}`, {
+  const response = await fetch(`${API_BASE_URL}${QUESTIONS_PATH}?${params.toString()}`, {
     cache: 'no-store',
   });
 
@@ -51,7 +53,7 @@ export async function scoreAnswer(
   answer: string,
   expectedConcepts: string[],
 ): Promise<ScoreResponse> {
-  const response = await fetch(`${API_BASE_URL}/v1/score`, {
+  const response = await fetch(`${API_BASE_URL}${SCORE_PATH}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
