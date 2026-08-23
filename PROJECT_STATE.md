@@ -23,18 +23,33 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] In-progress interviews resume after refresh in the same browser
 - [x] Submitted answers and score results retained in the local session
 - [x] Interview completion summary with aggregate score implemented
+- [x] Server-only Neon adapter implemented using `DATABASE_URL`
+- [x] Durable session create/read API routes implemented
+- [x] Durable answer persistence API route implemented
+- [x] Durable session completion API route implemented
+- [x] Web client performs best-effort cloud sync while retaining browser fallback
+- [x] Server-only environment contract documented in `apps/web/.env.example`
+- [x] Beginner Snowflake and Informatica content pack added
+- [x] Question API composes multiple content packs without UI changes
 - [x] Speech adapter nullability/build issue fixed
 - [x] Milestone 2 browser-persistence slice successfully built and deployed on Vercel
 
+### Deployment topology discovered
+
+- `mockinterviewapp-api` is GitHub-linked to `rajeshyou-cloud/mockinterviewapp` and auto-deploys from `main` as the FastAPI project.
+- `mockinterviewapp-web` is currently a manually deployed Next.js project and is not GitHub-linked.
+- The web project therefore does not yet receive new GitHub commits automatically.
+- Cross-device persistence remains inactive in the web UI until the web Vercel project receives a server-only `DATABASE_URL` binding and the latest Next.js revision is deployed there.
+
 ### Milestone 2 next actions
 
-- [ ] Wire Vercel server routes to Postgres through a server-only database adapter
-- [ ] Create/start/resume/complete durable interview-session API routes
-- [ ] Persist scored answers and per-question feedback in Postgres
-- [ ] Restore session progress across devices/reconnects using server persistence
+- [ ] Bind `DATABASE_URL` securely to the Vercel web project
+- [ ] Link `mockinterviewapp-web` to the GitHub repo with root directory `apps/web`, or keep an explicit deployment workflow
+- [ ] Verify durable session creation, answer writes, and completion against Neon from the deployed web app
+- [ ] Restore session progress across devices using server persistence and a user/session identity mechanism
 - [ ] Add topic-gap breakdown to the interview completion summary
 - [ ] Introduce provider-neutral semantic scoring contract while retaining deterministic fallback scoring
-- [ ] Expand reviewed Snowflake and Informatica content, including beginner coverage and scenario questions
+- [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
 - [ ] Add persistence/session tests and CI coverage
 - [ ] Browser-review the server-persistent Milestone 2 flow
 
@@ -42,15 +57,14 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 
 1. Candidate selects Snowflake or Informatica.
 2. Candidate selects Beginner, Intermediate, or Advanced.
-3. Web app requests matching reviewed questions.
+3. Web app requests matching reviewed questions from composable content packs.
 4. Candidate can hear the question using browser text-to-speech when supported.
 5. Candidate answers by typing or browser speech recognition when supported.
 6. Candidate receives an explainable baseline score, matched concepts, and a follow-up question.
 7. Candidate progresses through the filtered interview.
-8. Progress and scored answers are saved in browser storage and resume after refresh in the same browser.
-9. The final question produces an interview-complete summary and aggregate score.
-
-The next persistence layer moves this state from browser-only storage into Neon Postgres so a session can survive device changes and support analytics/reviewer workflows.
+8. Progress and scored answers are always saved in browser storage and resume after refresh in the same browser.
+9. When server persistence is configured, the same lifecycle also syncs sessions and answers to Neon Postgres.
+10. The final question produces an interview-complete summary and aggregate score.
 
 ## Architecture principles
 
@@ -62,7 +76,8 @@ The next persistence layer moves this state from browser-only storage into Neon 
 6. Scenario-based reasoning is a first-class interview mode.
 7. Persistence is domain-oriented: sessions and answers are independent of UI/provider choices.
 8. Database credentials remain server-only and are never committed or exposed through `NEXT_PUBLIC_` variables.
-9. Each milestone follows the engineering contract: build, tests, documentation and handover.
+9. Local persistence remains a graceful fallback when cloud persistence is unavailable.
+10. Each milestone follows the engineering contract: build, tests, documentation and handover.
 
 ## Deferred
 
