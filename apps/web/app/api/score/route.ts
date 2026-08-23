@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+import { createScoringProvider } from '../../../lib/scoring';
+
 type ScorePayload = {
   answer?: string;
   expected_concepts?: string[];
+  canonical_answer?: string;
+  question?: string;
 };
+
+const provider = createScoringProvider();
 
 export async function POST(request: NextRequest) {
   const payload = (await request.json()) as ScorePayload;
@@ -14,22 +20,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'answer and expected_concepts are required' }, { status: 400 });
   }
 
-  const normalized = answer.toLowerCase();
-  const matched = expected.filter((concept) => normalized.includes(concept.toLowerCase()));
-  const missing = expected.filter((concept) => !matched.includes(concept));
-  const score = Math.round((matched.length / expected.length) * 100);
-
-  const summary =
-    score >= 70
-      ? 'Strong coverage of the expected concepts.'
-      : score >= 40
-        ? 'Partial coverage. Add the missing concepts and explain the trade-offs.'
-        : 'The answer needs more technical depth against this baseline rubric.';
-
-  return NextResponse.json({
-    score,
-    matched_concepts: matched,
-    missing_concepts: missing,
-    summary,
+  const result = await provider.score({
+    answer,
+    expectedConcepts: expected,
+    canonicalAnswer: payload.canonical_answer,
+    question: payload.question,
   });
+
+  return NextResponse.json(result);
 }
