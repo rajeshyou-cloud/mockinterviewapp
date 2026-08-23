@@ -19,18 +19,24 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] `interview_answers` persistence model created
 - [x] Session/answer indexes created
 - [x] Database schema captured in `packages/db/schema.sql`
+- [x] Browser-local interview session persistence implemented
+- [x] In-progress interviews resume after refresh in the same browser
+- [x] Submitted answers and score results retained in the local session
+- [x] Interview completion summary with aggregate score implemented
+- [x] Speech adapter nullability/build issue fixed
+- [x] Milestone 2 browser-persistence slice successfully built and deployed on Vercel
 
 ### Milestone 2 next actions
 
 - [ ] Wire Vercel server routes to Postgres through a server-only database adapter
-- [ ] Create/start/resume/complete interview-session API routes
-- [ ] Persist scored answers and per-question feedback
-- [ ] Restore session progress after refresh/reconnect
-- [ ] Add interview completion summary with aggregate score and topic gaps
+- [ ] Create/start/resume/complete durable interview-session API routes
+- [ ] Persist scored answers and per-question feedback in Postgres
+- [ ] Restore session progress across devices/reconnects using server persistence
+- [ ] Add topic-gap breakdown to the interview completion summary
 - [ ] Introduce provider-neutral semantic scoring contract while retaining deterministic fallback scoring
 - [ ] Expand reviewed Snowflake and Informatica content, including beginner coverage and scenario questions
 - [ ] Add persistence/session tests and CI coverage
-- [ ] Deploy and browser-review Milestone 2
+- [ ] Browser-review the server-persistent Milestone 2 flow
 
 ## Current user flow
 
@@ -41,9 +47,10 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 5. Candidate answers by typing or browser speech recognition when supported.
 6. Candidate receives an explainable baseline score, matched concepts, and a follow-up question.
 7. Candidate progresses through the filtered interview.
-8. The final question ends with a clear Finish interview state rather than silently looping.
+8. Progress and scored answers are saved in browser storage and resume after refresh in the same browser.
+9. The final question produces an interview-complete summary and aggregate score.
 
-Milestone 2 is adding durable session storage beneath this flow so progress, answers, scores, and later analytics survive page refreshes and reconnects.
+The next persistence layer moves this state from browser-only storage into Neon Postgres so a session can survive device changes and support analytics/reviewer workflows.
 
 ## Architecture principles
 
@@ -54,7 +61,8 @@ Milestone 2 is adding durable session storage beneath this flow so progress, ans
 5. Voice providers and LLM providers must be replaceable adapters.
 6. Scenario-based reasoning is a first-class interview mode.
 7. Persistence is domain-oriented: sessions and answers are independent of UI/provider choices.
-8. Each milestone follows the engineering contract: build, tests, documentation and handover.
+8. Database credentials remain server-only and are never committed or exposed through `NEXT_PUBLIC_` variables.
+9. Each milestone follows the engineering contract: build, tests, documentation and handover.
 
 ## Deferred
 
