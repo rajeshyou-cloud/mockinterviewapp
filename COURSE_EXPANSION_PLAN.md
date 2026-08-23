@@ -10,9 +10,9 @@ The released bank contains 300 questions: 150 Snowflake and 150 Informatica. Mil
 |---|---:|---:|---|
 | Snowflake | 150 | 150 | Available |
 | Informatica | 150 | 150 | Available |
-| Databricks | 0 | 150 | Planned |
+| Databricks | 150 candidate | 150 | Awaiting human approval |
 | Oracle Database | 0 | 150 | Planned |
-| Power BI | 0 | 150 | Planned |
+| Power BI | 150 candidate | 150 | Awaiting human approval |
 | Python | 0 | 150 | Planned |
 | AWS | 0 | 150 | Planned |
 | **Total after initial expansion** | **300** | **1,050** | |

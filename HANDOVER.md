@@ -21,7 +21,9 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/lib/persistence-validation.ts` — persistence request boundaries
 - `apps/web/lib/question-bank.ts` — shared 300-question bank
 - `apps/web/lib/course-catalog.ts` — central released/planned technology registry
-- `apps/web/data` — versioned content packs
+- `apps/web/data` — versioned live content packs
+- `apps/web/data/candidates` — complete but not yet human-approved course packs
+- `scripts/generate-course-candidates.mjs` — deterministic candidate-pack generator
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
 - `packages/db/schema.sql` — persistence schema
 - `.github/workflows/ci.yml` — web tests/build and API tests
@@ -68,7 +70,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current verified counts are 30 web tests and 8 API tests. Content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every technology/difficulty pair.
+Current verified counts are 39 web tests and 8 API tests. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks and Power BI.
 
 ## Deployment
 
@@ -82,4 +84,4 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 ## Deferred roadmap
 
-Milestone 3 is prepared for Databricks, Oracle Database, Power BI, Python, and AWS at an initial 150 questions each, plus a searchable Question Bank UI. Planned courses must remain hidden until their content/review/test gates pass. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing remain separate future milestones.
+Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks and Power BI candidate packs. Their 49 unique official source links passed reachability validation on 2026-08-23. Candidate packs remain hidden until human approval and full launch verification. Oracle Database, Python, and AWS packs are next. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.

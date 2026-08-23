@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "candidate-databricks-lakehouse-01",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain lakehouse architecture and the main problem it solves.",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakehouse-02",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of lakehouse architecture and verify that it works?",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakehouse-03",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering lakehouse architecture. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakehouse-04",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "lakehouse architecture is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakehouse-05",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around lakehouse architecture. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakehouse-06",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving lakehouse architecture, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A lakehouse combines data-lake storage with data-warehouse management and performance capabilities. Databricks recommends governed, incremental data products rather than separate copies for each workload. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "object storage",
+      "open formats",
+      "governance",
+      "data engineering",
+      "analytics"
+    ],
+    "followUps": [
+      "Which limitation or cost of lakehouse architecture would you validate?",
+      "What evidence would prove that lakehouse architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks reference architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-01",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Delta Lake tables and the main problem it solves.",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-02",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Delta Lake tables and verify that it works?",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-03",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Delta Lake tables. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-04",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Delta Lake tables is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-05",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Delta Lake tables. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-lake-06",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Delta Lake tables, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Delta Lake extends Parquet data files with a transaction log that provides ACID transactions, scalable metadata, schema enforcement, and unified batch and streaming access. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "Parquet",
+      "transaction log",
+      "ACID",
+      "schema enforcement",
+      "batch and streaming"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Lake tables would you validate?",
+      "What evidence would prove that Delta Lake tables is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Lake?",
+      "url": "https://docs.databricks.com/aws/en/delta/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-01",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain medallion architecture and the main problem it solves.",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-02",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of medallion architecture and verify that it works?",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-03",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering medallion architecture. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-04",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "medallion architecture is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-05",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around medallion architecture. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-medallion-06",
+    "technology": "databricks",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving medallion architecture, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The bronze, silver, and gold pattern progressively improves data quality and business meaning. Bronze preserves raw fidelity, silver validates and conforms records, and gold serves curated use cases. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "bronze",
+      "silver",
+      "gold",
+      "data quality",
+      "incremental processing"
+    ],
+    "followUps": [
+      "Which limitation or cost of medallion architecture would you validate?",
+      "What evidence would prove that medallion architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Medallion architecture",
+      "url": "https://docs.databricks.com/aws/en/lakehouse/medallion",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-01",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Unity Catalog and the main problem it solves.",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-02",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Unity Catalog and verify that it works?",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-03",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Unity Catalog. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-04",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Unity Catalog is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-05",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Unity Catalog. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-unity-catalog-06",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Unity Catalog, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Unity Catalog provides centralized metadata, access control, discovery, lineage, and auditing across workspaces. Its metastore, catalog, schema, and object hierarchy defines governance boundaries. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "metastore",
+      "catalog",
+      "schema",
+      "privileges",
+      "lineage"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog would you validate?",
+      "What evidence would prove that Unity Catalog is working correctly?"
+    ],
+    "source": {
+      "title": "What is Unity Catalog?",
+      "url": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-01",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain managed and external tables and the main problem it solves.",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-02",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of managed and external tables and verify that it works?",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-03",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering managed and external tables. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-04",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "managed and external tables is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-05",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around managed and external tables. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-managed-external-06",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving managed and external tables, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Unity Catalog managed tables let Databricks manage data lifecycle and storage layout. External tables govern data at a registered external location while leaving file lifecycle outside Databricks. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "managed table",
+      "external table",
+      "data lifecycle",
+      "external location",
+      "ownership"
+    ],
+    "followUps": [
+      "Which limitation or cost of managed and external tables would you validate?",
+      "What evidence would prove that managed and external tables is working correctly?"
+    ],
+    "source": {
+      "title": "Tables in Unity Catalog",
+      "url": "https://docs.databricks.com/aws/en/tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-01",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Unity Catalog volumes and the main problem it solves.",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-02",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Unity Catalog volumes and verify that it works?",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-03",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Unity Catalog volumes. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-04",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Unity Catalog volumes is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-05",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Unity Catalog volumes. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-volumes-06",
+    "technology": "databricks",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Unity Catalog volumes, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Volumes govern non-tabular files under Unity Catalog. Managed volumes use managed storage, while external volumes reference an external location and preserve independently managed file lifecycle. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "volume",
+      "non-tabular data",
+      "managed storage",
+      "external location",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Unity Catalog volumes would you validate?",
+      "What evidence would prove that Unity Catalog volumes is working correctly?"
+    ],
+    "source": {
+      "title": "What are Unity Catalog volumes?",
+      "url": "https://docs.databricks.com/aws/en/volumes/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-01",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Auto Loader and the main problem it solves.",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-02",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Auto Loader and verify that it works?",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-03",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Auto Loader. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-04",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Auto Loader is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-05",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Auto Loader. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-auto-loader-06",
+    "technology": "databricks",
+    "topic": "ingestion",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Auto Loader, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Auto Loader incrementally discovers and processes new cloud files with the cloudFiles source. Checkpoint state provides exactly-once processing into Delta Lake and supports evolving schemas. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "cloudFiles",
+      "file discovery",
+      "checkpoint",
+      "exactly-once",
+      "schema evolution"
+    ],
+    "followUps": [
+      "Which limitation or cost of Auto Loader would you validate?",
+      "What evidence would prove that Auto Loader is working correctly?"
+    ],
+    "source": {
+      "title": "What is Auto Loader?",
+      "url": "https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-01",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Structured Streaming and the main problem it solves.",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-02",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Structured Streaming and verify that it works?",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-03",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Structured Streaming. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-04",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Structured Streaming is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-05",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Structured Streaming. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-structured-streaming-06",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Structured Streaming, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Structured Streaming expresses incremental computation with DataFrame APIs. Sources, state, triggers, checkpoints, watermarks, and sinks determine correctness and recovery behavior. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "incremental execution",
+      "checkpoint",
+      "trigger",
+      "state",
+      "sink"
+    ],
+    "followUps": [
+      "Which limitation or cost of Structured Streaming would you validate?",
+      "What evidence would prove that Structured Streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Structured Streaming concepts",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/concepts",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-01",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain watermarks and stateful streaming and the main problem it solves.",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-02",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of watermarks and stateful streaming and verify that it works?",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-03",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering watermarks and stateful streaming. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-04",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "watermarks and stateful streaming is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-05",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around watermarks and stateful streaming. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-watermarks-06",
+    "technology": "databricks",
+    "topic": "streaming",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving watermarks and stateful streaming, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Watermarks bound how long state is retained for late data. The threshold must reflect event-time lateness and the chosen operation because too-short retention drops valid late results and too-long retention increases state. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "event time",
+      "late data",
+      "state",
+      "retention",
+      "checkpoint"
+    ],
+    "followUps": [
+      "Which limitation or cost of watermarks and stateful streaming would you validate?",
+      "What evidence would prove that watermarks and stateful streaming is working correctly?"
+    ],
+    "source": {
+      "title": "Apply watermarks",
+      "url": "https://docs.databricks.com/aws/en/structured-streaming/watermarks",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-01",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Lakeflow Spark Declarative Pipelines and the main problem it solves.",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-02",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Lakeflow Spark Declarative Pipelines and verify that it works?",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-03",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Lakeflow Spark Declarative Pipelines. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-04",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Lakeflow Spark Declarative Pipelines is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-05",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Lakeflow Spark Declarative Pipelines. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-pipelines-06",
+    "technology": "databricks",
+    "topic": "pipelines",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Lakeflow Spark Declarative Pipelines, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Lakeflow Spark Declarative Pipelines defines batch and streaming transformations declaratively, manages dependency order, and adds data-quality expectations and operational event logs. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "declarative pipeline",
+      "streaming table",
+      "materialized view",
+      "expectations",
+      "event log"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Spark Declarative Pipelines would you validate?",
+      "What evidence would prove that Lakeflow Spark Declarative Pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Spark Declarative Pipelines",
+      "url": "https://docs.databricks.com/aws/en/ldp/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-01",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain pipeline expectations and the main problem it solves.",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-02",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of pipeline expectations and verify that it works?",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-03",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering pipeline expectations. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-04",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "pipeline expectations is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-05",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around pipeline expectations. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-expectations-06",
+    "technology": "databricks",
+    "topic": "data-quality",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving pipeline expectations, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Expectations attach data-quality rules to pipeline datasets and can retain, drop, or fail invalid records. Metrics and quarantine patterns make quality behavior observable without hiding loss. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "constraint",
+      "retain",
+      "drop",
+      "fail",
+      "quality metrics"
+    ],
+    "followUps": [
+      "Which limitation or cost of pipeline expectations would you validate?",
+      "What evidence would prove that pipeline expectations is working correctly?"
+    ],
+    "source": {
+      "title": "Manage data quality with expectations",
+      "url": "https://docs.databricks.com/aws/en/ldp/expectations",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-01",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Lakeflow Jobs and the main problem it solves.",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-02",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Lakeflow Jobs and verify that it works?",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-03",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Lakeflow Jobs. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-04",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Lakeflow Jobs is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-05",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Lakeflow Jobs. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-lakeflow-jobs-06",
+    "technology": "databricks",
+    "topic": "orchestration",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Lakeflow Jobs, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Lakeflow Jobs orchestrates tasks with dependencies, schedules, parameters, notifications, retries, and repair runs. Idempotent task design and explicit failure handling make reruns safe. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "job",
+      "task dependency",
+      "schedule",
+      "retry",
+      "repair run"
+    ],
+    "followUps": [
+      "Which limitation or cost of Lakeflow Jobs would you validate?",
+      "What evidence would prove that Lakeflow Jobs is working correctly?"
+    ],
+    "source": {
+      "title": "Lakeflow Jobs",
+      "url": "https://docs.databricks.com/aws/en/jobs/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-01",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Databricks notebooks and the main problem it solves.",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-02",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Databricks notebooks and verify that it works?",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-03",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Databricks notebooks. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-04",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Databricks notebooks is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-05",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Databricks notebooks. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-notebooks-06",
+    "technology": "databricks",
+    "topic": "development",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Databricks notebooks, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Notebooks combine executable cells, visualizations, parameters, and collaboration. Production use requires source control, modular code, deterministic dependencies, and separation of secrets from notebook content. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "cells",
+      "widgets",
+      "source control",
+      "dependencies",
+      "collaboration"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks notebooks would you validate?",
+      "What evidence would prove that Databricks notebooks is working correctly?"
+    ],
+    "source": {
+      "title": "Databricks notebooks",
+      "url": "https://docs.databricks.com/aws/en/notebooks/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-01",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Databricks compute and access modes and the main problem it solves.",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-02",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Databricks compute and access modes and verify that it works?",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-03",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Databricks compute and access modes. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-04",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Databricks compute and access modes is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-05",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Databricks compute and access modes. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-compute-06",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Databricks compute and access modes, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Compute selection should follow workload isolation, library needs, governance, concurrency, and cost. Access mode determines identity and data-isolation behavior and must match Unity Catalog requirements. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "compute",
+      "access mode",
+      "identity",
+      "isolation",
+      "autoscaling"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks compute and access modes would you validate?",
+      "What evidence would prove that Databricks compute and access modes is working correctly?"
+    ],
+    "source": {
+      "title": "Compute configuration reference",
+      "url": "https://docs.databricks.com/aws/en/compute/configure",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-01",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain compute policies and the main problem it solves.",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-02",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of compute policies and verify that it works?",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-03",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering compute policies. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-04",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "compute policies is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-05",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around compute policies. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-cluster-policies-06",
+    "technology": "databricks",
+    "topic": "compute",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving compute policies, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Compute policies constrain configuration, apply defaults, control cost attributes, and limit who can create resources. Policies should encode approved workload profiles without blocking legitimate operational needs. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "policy",
+      "fixed value",
+      "default",
+      "cost control",
+      "permissions"
+    ],
+    "followUps": [
+      "Which limitation or cost of compute policies would you validate?",
+      "What evidence would prove that compute policies is working correctly?"
+    ],
+    "source": {
+      "title": "Compute policies",
+      "url": "https://docs.databricks.com/aws/en/admin/clusters/policies",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-01",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain SQL warehouses and the main problem it solves.",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-02",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of SQL warehouses and verify that it works?",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-03",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering SQL warehouses. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-04",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "SQL warehouses is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-05",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around SQL warehouses. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-sql-warehouses-06",
+    "technology": "databricks",
+    "topic": "sql-analytics",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving SQL warehouses, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A SQL warehouse provides compute for SQL queries, dashboards, and BI tools. Size, scaling range, auto-stop, serverless availability, and workload management affect latency, concurrency, and cost. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "SQL warehouse",
+      "serverless",
+      "scaling",
+      "auto-stop",
+      "concurrency"
+    ],
+    "followUps": [
+      "Which limitation or cost of SQL warehouses would you validate?",
+      "What evidence would prove that SQL warehouses is working correctly?"
+    ],
+    "source": {
+      "title": "SQL warehouses",
+      "url": "https://docs.databricks.com/aws/en/compute/sql-warehouse/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-01",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Photon and the main problem it solves.",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-02",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Photon and verify that it works?",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-03",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Photon. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-04",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Photon is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-05",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Photon. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-photon-06",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Photon, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Photon is a vectorized query engine compatible with Spark SQL APIs and Delta Lake. It accelerates supported SQL and DataFrame workloads, but improvement must be confirmed using representative queries and profiles. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "vectorized engine",
+      "Spark SQL",
+      "Delta Lake",
+      "query profile",
+      "benchmark"
+    ],
+    "followUps": [
+      "Which limitation or cost of Photon would you validate?",
+      "What evidence would prove that Photon is working correctly?"
+    ],
+    "source": {
+      "title": "What is Photon?",
+      "url": "https://docs.databricks.com/aws/en/compute/photon",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-01",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain query profiles and the main problem it solves.",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-02",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of query profiles and verify that it works?",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-03",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering query profiles. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-04",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "query profiles is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-05",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around query profiles. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-query-profile-06",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving query profiles, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Query profiles expose operators, timing, rows, memory, spilling, and I/O for SQL execution. Diagnosis should locate the dominant operator and validate pruning, join strategy, skew, and resource pressure. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "operators",
+      "duration",
+      "I/O",
+      "spilling",
+      "join strategy"
+    ],
+    "followUps": [
+      "Which limitation or cost of query profiles would you validate?",
+      "What evidence would prove that query profiles is working correctly?"
+    ],
+    "source": {
+      "title": "Query profile",
+      "url": "https://docs.databricks.com/aws/en/sql/user/queries/query-profile",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-01",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain liquid clustering and the main problem it solves.",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-02",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of liquid clustering and verify that it works?",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-03",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering liquid clustering. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-04",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "liquid clustering is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-05",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around liquid clustering. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-liquid-clustering-06",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving liquid clustering, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Liquid clustering incrementally organizes table data around chosen clustering keys and can replace partitioning and Z-order for many evolving access patterns. Keys should follow measured filters and change deliberately. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "clustering keys",
+      "data layout",
+      "OPTIMIZE",
+      "pruning",
+      "access pattern"
+    ],
+    "followUps": [
+      "Which limitation or cost of liquid clustering would you validate?",
+      "What evidence would prove that liquid clustering is working correctly?"
+    ],
+    "source": {
+      "title": "Use liquid clustering",
+      "url": "https://docs.databricks.com/aws/en/delta/clustering",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-01",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain OPTIMIZE and data skipping and the main problem it solves.",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-02",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of OPTIMIZE and data skipping and verify that it works?",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-03",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering OPTIMIZE and data skipping. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-04",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "OPTIMIZE and data skipping is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-05",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around OPTIMIZE and data skipping. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-optimize-06",
+    "technology": "databricks",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving OPTIMIZE and data skipping, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "OPTIMIZE compacts small files and can improve scan efficiency. Data-skipping statistics let the engine prune files; layout and statistics should be tuned only from workload evidence. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "compaction",
+      "small files",
+      "data skipping",
+      "statistics",
+      "pruning"
+    ],
+    "followUps": [
+      "Which limitation or cost of OPTIMIZE and data skipping would you validate?",
+      "What evidence would prove that OPTIMIZE and data skipping is working correctly?"
+    ],
+    "source": {
+      "title": "Optimize data file layout",
+      "url": "https://docs.databricks.com/aws/en/delta/optimize",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-01",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Delta table history and time travel and the main problem it solves.",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-02",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Delta table history and time travel and verify that it works?",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-03",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Delta table history and time travel. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-04",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Delta table history and time travel is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-05",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Delta table history and time travel. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-history-06",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Delta table history and time travel, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Delta history records operations and versions, while time travel queries a retained version or timestamp. Retention and VACUUM settings determine how long historical files remain recoverable. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "history",
+      "version",
+      "timestamp",
+      "retention",
+      "VACUUM"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta table history and time travel would you validate?",
+      "What evidence would prove that Delta table history and time travel is working correctly?"
+    ],
+    "source": {
+      "title": "Work with Delta Lake table history",
+      "url": "https://docs.databricks.com/aws/en/delta/history",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-01",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Delta Change Data Feed and the main problem it solves.",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-02",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Delta Change Data Feed and verify that it works?",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-03",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Delta Change Data Feed. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-04",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Delta Change Data Feed is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-05",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Delta Change Data Feed. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-change-data-feed-06",
+    "technology": "databricks",
+    "topic": "delta-lake",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Delta Change Data Feed, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Change Data Feed records row-level inserts, updates, and deletes between Delta versions after it is enabled. Consumers must track progress and retention to build reliable incremental downstream processing. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "change data feed",
+      "insert",
+      "update",
+      "delete",
+      "table version"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Change Data Feed would you validate?",
+      "What evidence would prove that Delta Change Data Feed is working correctly?"
+    ],
+    "source": {
+      "title": "Use Delta Lake change data feed",
+      "url": "https://docs.databricks.com/aws/en/delta/delta-change-data-feed",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-01",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Delta Sharing and the main problem it solves.",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-02",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Delta Sharing and verify that it works?",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-03",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Delta Sharing. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-04",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Delta Sharing is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-05",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Delta Sharing. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-delta-sharing-06",
+    "technology": "databricks",
+    "topic": "sharing",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Delta Sharing, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Delta Sharing is an open protocol for granting recipients controlled access to data without copying it into their platform. Providers manage shares, recipients, privileges, and revocation. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "share",
+      "recipient",
+      "provider",
+      "open protocol",
+      "privileges"
+    ],
+    "followUps": [
+      "Which limitation or cost of Delta Sharing would you validate?",
+      "What evidence would prove that Delta Sharing is working correctly?"
+    ],
+    "source": {
+      "title": "What is Delta Sharing?",
+      "url": "https://docs.databricks.com/aws/en/delta-sharing/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-01",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Databricks secrets and the main problem it solves.",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-02",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Databricks secrets and verify that it works?",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-03",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Databricks secrets. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-04",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Databricks secrets is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-05",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Databricks secrets. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-secrets-06",
+    "technology": "databricks",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Databricks secrets, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Secret scopes and secret references keep credentials out of notebooks and job definitions. Access controls, redaction limitations, rotation, and workload identity should be considered together. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "secret scope",
+      "ACL",
+      "redaction",
+      "rotation",
+      "workload identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of Databricks secrets would you validate?",
+      "What evidence would prove that Databricks secrets is working correctly?"
+    ],
+    "source": {
+      "title": "Secret management",
+      "url": "https://docs.databricks.com/aws/en/security/secrets/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-01",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain system tables for observability and the main problem it solves.",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-02",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of system tables for observability and verify that it works?",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-03",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering system tables for observability. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-04",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "system tables for observability is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-05",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around system tables for observability. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-databricks-system-tables-06",
+    "technology": "databricks",
+    "topic": "operations",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving system tables for observability, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Unity Catalog system tables expose account operational data such as billing, audit, lineage, and query history. Retention, regional availability, access controls, and dashboard logic shape reliable monitoring. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "system catalog",
+      "billing",
+      "audit logs",
+      "query history",
+      "retention"
+    ],
+    "followUps": [
+      "Which limitation or cost of system tables for observability would you validate?",
+      "What evidence would prove that system tables for observability is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor account activity with system tables",
+      "url": "https://docs.databricks.com/aws/en/admin/system-tables/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  }
+]

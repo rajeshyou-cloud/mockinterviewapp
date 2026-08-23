@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "candidate-power-bi-platform-01",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power BI platform architecture and the main problem it solves.",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-platform-02",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power BI platform architecture and verify that it works?",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-platform-03",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power BI platform architecture. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-platform-04",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power BI platform architecture is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-platform-05",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power BI platform architecture. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-platform-06",
+    "technology": "power-bi",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power BI platform architecture, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Power BI connects and transforms data, models business meaning in semantic models, and delivers interactive reports and dashboards through governed workspaces and apps. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "Power Query",
+      "semantic model",
+      "report",
+      "workspace",
+      "app"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI platform architecture would you validate?",
+      "What evidence would prove that Power BI platform architecture is working correctly?"
+    ],
+    "source": {
+      "title": "Power BI documentation",
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-01",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power Query and the main problem it solves.",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-02",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power Query and verify that it works?",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-03",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power Query. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-04",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power Query is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-05",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power Query. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-power-query-06",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power Query, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Power Query provides repeatable extraction and transformation through M expressions and applied steps. Early filtering, explicit types, reusable functions, and source-aware design improve reliability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "M language",
+      "applied steps",
+      "data types",
+      "parameters",
+      "transformation"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power Query would you validate?",
+      "What evidence would prove that Power Query is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query documentation",
+      "url": "https://learn.microsoft.com/en-us/power-query/",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-01",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain query folding and the main problem it solves.",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-02",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of query folding and verify that it works?",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-03",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering query folding. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-04",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "query folding is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-05",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around query folding. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-query-folding-06",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving query folding, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Query folding translates Power Query steps into a source query so work runs near the data. Unsupported steps can stop folding, so filtering and projection should occur before non-foldable transformations when possible. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "source query",
+      "folding",
+      "native query",
+      "filter",
+      "performance"
+    ],
+    "followUps": [
+      "Which limitation or cost of query folding would you validate?",
+      "What evidence would prove that query folding is working correctly?"
+    ],
+    "source": {
+      "title": "Power Query query folding",
+      "url": "https://learn.microsoft.com/en-us/power-query/power-query-folding",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-01",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain star schema design and the main problem it solves.",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-02",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of star schema design and verify that it works?",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-03",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering star schema design. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-04",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "star schema design is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-05",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around star schema design. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-star-schema-06",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving star schema design, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A star schema separates dimension tables used for filtering and grouping from fact tables containing events and measures. Clear grain, surrogate keys, and one-to-many relationships improve usability and DAX behavior. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "fact table",
+      "dimension table",
+      "grain",
+      "surrogate key",
+      "one-to-many"
+    ],
+    "followUps": [
+      "Which limitation or cost of star schema design would you validate?",
+      "What evidence would prove that star schema design is working correctly?"
+    ],
+    "source": {
+      "title": "Star schema guidance",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-01",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain semantic model relationships and the main problem it solves.",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-02",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of semantic model relationships and verify that it works?",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-03",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering semantic model relationships. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-04",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "semantic model relationships is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-05",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around semantic model relationships. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-relationships-06",
+    "technology": "power-bi",
+    "topic": "modeling",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving semantic model relationships, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Relationships propagate filters between tables. Cardinality, active status, and cross-filter direction must reflect data uniqueness and intended analysis, with bidirectional filters used sparingly. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "cardinality",
+      "filter propagation",
+      "active relationship",
+      "cross-filter direction",
+      "uniqueness"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model relationships would you validate?",
+      "What evidence would prove that semantic model relationships is working correctly?"
+    ],
+    "source": {
+      "title": "Model relationships in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-01",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain DAX and the main problem it solves.",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-02",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of DAX and verify that it works?",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-03",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering DAX. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-04",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "DAX is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-05",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around DAX. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dax-06",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving DAX, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "DAX is the formula language for measures, calculated columns, calculated tables, and row-level security. Correct expressions depend on data types, evaluation context, relationships, and intentional filter modification. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "formula",
+      "measure",
+      "evaluation context",
+      "relationship",
+      "filter"
+    ],
+    "followUps": [
+      "Which limitation or cost of DAX would you validate?",
+      "What evidence would prove that DAX is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-01",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain measures and the main problem it solves.",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-02",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of measures and verify that it works?",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-03",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering measures. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-04",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "measures is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-05",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around measures. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-measures-06",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving measures, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Measures are evaluated at query time in the current filter context and should represent reusable business calculations. Explicit measures, consistent formatting, and organized display folders improve model usability. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "measure",
+      "filter context",
+      "aggregation",
+      "format string",
+      "business logic"
+    ],
+    "followUps": [
+      "Which limitation or cost of measures would you validate?",
+      "What evidence would prove that measures is working correctly?"
+    ],
+    "source": {
+      "title": "Create measures",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-01",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain calculated columns and tables and the main problem it solves.",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-02",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of calculated columns and tables and verify that it works?",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-03",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering calculated columns and tables. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-04",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "calculated columns and tables is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-05",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around calculated columns and tables. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-calculated-columns-06",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving calculated columns and tables, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Calculated columns are computed during refresh and stored in the model, while calculated tables materialize DAX-defined tables. They consume model memory and differ from query-time measures. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "calculated column",
+      "calculated table",
+      "refresh",
+      "model storage",
+      "measure"
+    ],
+    "followUps": [
+      "Which limitation or cost of calculated columns and tables would you validate?",
+      "What evidence would prove that calculated columns and tables is working correctly?"
+    ],
+    "source": {
+      "title": "Calculated columns in Power BI Desktop",
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-01",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain row context and filter context and the main problem it solves.",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-02",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of row context and filter context and verify that it works?",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-03",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering row context and filter context. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-04",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "row context and filter context is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-05",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around row context and filter context. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-evaluation-context-06",
+    "technology": "power-bi",
+    "topic": "dax",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving row context and filter context, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Row context identifies a current row, while filter context constrains values visible to a calculation. CALCULATE evaluates an expression in modified filter context and can perform context transition. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "row context",
+      "filter context",
+      "CALCULATE",
+      "context transition",
+      "iterator"
+    ],
+    "followUps": [
+      "Which limitation or cost of row context and filter context would you validate?",
+      "What evidence would prove that row context and filter context is working correctly?"
+    ],
+    "source": {
+      "title": "DAX overview",
+      "url": "https://learn.microsoft.com/en-us/dax/dax-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-01",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Import, DirectQuery, and composite models and the main problem it solves.",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-02",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Import, DirectQuery, and composite models and verify that it works?",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-03",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Import, DirectQuery, and composite models. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-04",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Import, DirectQuery, and composite models is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-05",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Import, DirectQuery, and composite models. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-storage-modes-06",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Import, DirectQuery, and composite models, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Import caches data for high query performance, DirectQuery leaves data at the source, and composite models combine storage modes. Freshness, source load, feature support, and latency determine the choice. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "Import",
+      "DirectQuery",
+      "Dual",
+      "composite model",
+      "freshness"
+    ],
+    "followUps": [
+      "Which limitation or cost of Import, DirectQuery, and composite models would you validate?",
+      "What evidence would prove that Import, DirectQuery, and composite models is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model modes",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-01",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain incremental refresh and the main problem it solves.",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-02",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of incremental refresh and verify that it works?",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-03",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering incremental refresh. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-04",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "incremental refresh is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-05",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around incremental refresh. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-incremental-refresh-06",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving incremental refresh, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Incremental refresh partitions tables by time and refreshes only the configured recent range after initial load. RangeStart and RangeEnd filters, query folding, and policy behavior must be validated. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "partition",
+      "RangeStart",
+      "RangeEnd",
+      "refresh policy",
+      "query folding"
+    ],
+    "followUps": [
+      "Which limitation or cost of incremental refresh would you validate?",
+      "What evidence would prove that incremental refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Incremental refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-01",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain scheduled refresh and the main problem it solves.",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-02",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of scheduled refresh and verify that it works?",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-03",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering scheduled refresh. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-04",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "scheduled refresh is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-05",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around scheduled refresh. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-scheduled-refresh-06",
+    "technology": "power-bi",
+    "topic": "refresh",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving scheduled refresh, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Scheduled refresh updates imported semantic models using stored credentials and, when required, a gateway. Limits, duration, failures, source availability, and notifications need operational ownership. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "schedule",
+      "credentials",
+      "semantic model",
+      "failure notification",
+      "refresh history"
+    ],
+    "followUps": [
+      "Which limitation or cost of scheduled refresh would you validate?",
+      "What evidence would prove that scheduled refresh is working correctly?"
+    ],
+    "source": {
+      "title": "Configure scheduled refresh",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-01",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain on-premises data gateway and the main problem it solves.",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-02",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of on-premises data gateway and verify that it works?",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-03",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering on-premises data gateway. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-04",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "on-premises data gateway is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-05",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around on-premises data gateway. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-gateway-06",
+    "technology": "power-bi",
+    "topic": "connectivity",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving on-premises data gateway, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "The gateway brokers secure outbound connectivity from on-premises data sources to Microsoft cloud services. Clusters, data-source mappings, service accounts, updates, and capacity determine resilience. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "gateway cluster",
+      "data source",
+      "credentials",
+      "outbound connection",
+      "high availability"
+    ],
+    "followUps": [
+      "Which limitation or cost of on-premises data gateway would you validate?",
+      "What evidence would prove that on-premises data gateway is working correctly?"
+    ],
+    "source": {
+      "title": "On-premises data gateway",
+      "url": "https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-onprem",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-01",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain row-level security and the main problem it solves.",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-02",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of row-level security and verify that it works?",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-03",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering row-level security. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-04",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "row-level security is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-05",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around row-level security. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-row-level-security-06",
+    "technology": "power-bi",
+    "topic": "security",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving row-level security, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Row-level security uses model roles and DAX filters to restrict rows for viewers. Dynamic security commonly maps the signed-in identity to an entitlement table and must be tested with effective identities. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "role",
+      "DAX filter",
+      "dynamic security",
+      "USERPRINCIPALNAME",
+      "effective identity"
+    ],
+    "followUps": [
+      "Which limitation or cost of row-level security would you validate?",
+      "What evidence would prove that row-level security is working correctly?"
+    ],
+    "source": {
+      "title": "Row-level security with Power BI",
+      "url": "https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-01",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain workspaces and workspace roles and the main problem it solves.",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-02",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of workspaces and workspace roles and verify that it works?",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-03",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering workspaces and workspace roles. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-04",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "workspaces and workspace roles is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-05",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around workspaces and workspace roles. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-workspaces-06",
+    "technology": "power-bi",
+    "topic": "collaboration",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving workspaces and workspace roles, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Workspaces organize content and collaboration. Admin, Member, Contributor, and Viewer roles grant broad capabilities, so least privilege and app distribution are safer than adding all consumers as collaborators. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "workspace",
+      "Admin",
+      "Member",
+      "Contributor",
+      "Viewer"
+    ],
+    "followUps": [
+      "Which limitation or cost of workspaces and workspace roles would you validate?",
+      "What evidence would prove that workspaces and workspace roles is working correctly?"
+    ],
+    "source": {
+      "title": "Roles in workspaces",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-01",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power BI apps and sharing and the main problem it solves.",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-02",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power BI apps and sharing and verify that it works?",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-03",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power BI apps and sharing. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-04",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power BI apps and sharing is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-05",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power BI apps and sharing. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-apps-sharing-06",
+    "technology": "power-bi",
+    "topic": "distribution",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power BI apps and sharing, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "A Power BI app packages curated workspace content for audiences. App permissions, build access, underlying semantic-model access, reshare settings, and licensing affect what recipients can do. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "app",
+      "audience",
+      "share",
+      "Build permission",
+      "license"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI apps and sharing would you validate?",
+      "What evidence would prove that Power BI apps and sharing is working correctly?"
+    ],
+    "source": {
+      "title": "Create and manage audiences",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-01",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain deployment pipelines and the main problem it solves.",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-02",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of deployment pipelines and verify that it works?",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-03",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering deployment pipelines. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-04",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "deployment pipelines is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-05",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around deployment pipelines. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-deployment-pipelines-06",
+    "technology": "power-bi",
+    "topic": "deployment",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving deployment pipelines, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Deployment pipelines move content through development, test, and production stages. Deployment rules, parameter changes, dependency checks, ownership, and post-deployment validation prevent environment drift. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "development",
+      "test",
+      "production",
+      "deployment rule",
+      "dependency"
+    ],
+    "followUps": [
+      "Which limitation or cost of deployment pipelines would you validate?",
+      "What evidence would prove that deployment pipelines is working correctly?"
+    ],
+    "source": {
+      "title": "Deployment process",
+      "url": "https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-01",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Performance Analyzer and the main problem it solves.",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-02",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Performance Analyzer and verify that it works?",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-03",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Performance Analyzer. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-04",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Performance Analyzer is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-05",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Performance Analyzer. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-performance-analyzer-06",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Performance Analyzer, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Performance Analyzer records visual load duration and separates DAX query, visual display, and other time. Captured queries help distinguish model problems from rendering or source latency. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "visual duration",
+      "DAX query",
+      "display",
+      "recording",
+      "diagnosis"
+    ],
+    "followUps": [
+      "Which limitation or cost of Performance Analyzer would you validate?",
+      "What evidence would prove that Performance Analyzer is working correctly?"
+    ],
+    "source": {
+      "title": "Use Performance Analyzer",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-01",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power BI model and report optimization and the main problem it solves.",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-02",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power BI model and report optimization and verify that it works?",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-03",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power BI model and report optimization. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-04",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power BI model and report optimization is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-05",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power BI model and report optimization. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-optimization-06",
+    "technology": "power-bi",
+    "topic": "performance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power BI model and report optimization, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Optimization starts with a star schema, reduced cardinality and model size, efficient DAX, appropriate storage mode, limited visuals, and measured source behavior rather than cosmetic changes. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "model size",
+      "cardinality",
+      "DAX",
+      "visuals",
+      "storage mode"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI model and report optimization would you validate?",
+      "What evidence would prove that Power BI model and report optimization is working correctly?"
+    ],
+    "source": {
+      "title": "Optimization guide for Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-01",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain accessible report design and the main problem it solves.",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-02",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of accessible report design and verify that it works?",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-03",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering accessible report design. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-04",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "accessible report design is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-05",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around accessible report design. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-accessibility-06",
+    "technology": "power-bi",
+    "topic": "report-design",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving accessible report design, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Accessible reports use logical tab order, alt text, sufficient contrast, descriptive titles, keyboard navigation, and designs that do not rely on color alone. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "tab order",
+      "alt text",
+      "contrast",
+      "keyboard",
+      "color"
+    ],
+    "followUps": [
+      "Which limitation or cost of accessible report design would you validate?",
+      "What evidence would prove that accessible report design is working correctly?"
+    ],
+    "source": {
+      "title": "Design Power BI reports for accessibility",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-01",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain semantic model permissions and the main problem it solves.",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-02",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of semantic model permissions and verify that it works?",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-03",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering semantic model permissions. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-04",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "semantic model permissions is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-05",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around semantic model permissions. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-permissions-06",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving semantic model permissions, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Read enables report consumption, Build enables creation of new content, Reshare delegates permission sharing, and Write permits modification. Permissions can arrive through workspaces, apps, sharing, or direct grants. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "Read",
+      "Build",
+      "Reshare",
+      "Write",
+      "least privilege"
+    ],
+    "followUps": [
+      "Which limitation or cost of semantic model permissions would you validate?",
+      "What evidence would prove that semantic model permissions is working correctly?"
+    ],
+    "source": {
+      "title": "Semantic model permissions",
+      "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-datasets-permissions",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-01",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain content endorsement and discovery and the main problem it solves.",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-02",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of content endorsement and discovery and verify that it works?",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-03",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering content endorsement and discovery. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-04",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "content endorsement and discovery is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-05",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around content endorsement and discovery. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-endorsement-06",
+    "technology": "power-bi",
+    "topic": "governance",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving content endorsement and discovery, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Promoted and certified endorsements signal trusted content, while discoverability helps users find governed semantic models. Certification needs named ownership, quality criteria, and lifecycle review. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "promoted",
+      "certified",
+      "discoverable",
+      "ownership",
+      "governance"
+    ],
+    "followUps": [
+      "Which limitation or cost of content endorsement and discovery would you validate?",
+      "What evidence would prove that content endorsement and discovery is working correctly?"
+    ],
+    "source": {
+      "title": "Endorse Power BI content",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-01",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power BI dataflows and the main problem it solves.",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-02",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power BI dataflows and verify that it works?",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-03",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power BI dataflows. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-04",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power BI dataflows is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-05",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power BI dataflows. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-dataflows-06",
+    "technology": "power-bi",
+    "topic": "data-preparation",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power BI dataflows, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Dataflows centralize reusable Power Query transformations in the service and store prepared entities for downstream use. Ownership, refresh dependencies, linked data, and capacity affect design. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "dataflow",
+      "Power Query Online",
+      "entity",
+      "reuse",
+      "refresh"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI dataflows would you validate?",
+      "What evidence would prove that Power BI dataflows is working correctly?"
+    ],
+    "source": {
+      "title": "Introduction to dataflows",
+      "url": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-01",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain paginated reports and the main problem it solves.",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-02",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of paginated reports and verify that it works?",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-03",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering paginated reports. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-04",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "paginated reports is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-05",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around paginated reports. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-paginated-reports-06",
+    "technology": "power-bi",
+    "topic": "reporting",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving paginated reports, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Paginated reports provide precise, printable, multipage output with parameters, datasets, expressions, and subscriptions. They fit operational documents better than free-form interactive canvases. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "pixel-perfect",
+      "parameter",
+      "dataset",
+      "subscription",
+      "print"
+    ],
+    "followUps": [
+      "Which limitation or cost of paginated reports would you validate?",
+      "What evidence would prove that paginated reports is working correctly?"
+    ],
+    "source": {
+      "title": "Paginated reports in Power BI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-01",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "beginner",
+    "type": "conceptual",
+    "question": "Explain Power BI monitoring and usage metrics and the main problem it solves.",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. Define its purpose, core components, and boundary with adjacent features.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-02",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "beginner",
+    "type": "hands-on",
+    "question": "How would you configure a small first implementation of Power BI monitoring and usage metrics and verify that it works?",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. State the prerequisites, minimum configuration, and one observable validation.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-03",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "intermediate",
+    "type": "scenario",
+    "question": "A production team is considering Power BI monitoring and usage metrics. How would you decide whether it fits and implement it safely?",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. Connect workload requirements to security, cost, dependencies, and measurable acceptance criteria.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-04",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "intermediate",
+    "type": "troubleshooting",
+    "question": "Power BI monitoring and usage metrics is configured but the expected result is missing or slow. What would you investigate?",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. Use runtime evidence to isolate configuration, data, permissions, capacity, and feature limitations.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-05",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "advanced",
+    "type": "design",
+    "question": "Design an enterprise-ready solution around Power BI monitoring and usage metrics. Which trade-offs and controls matter most?",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. Cover failure domains, governance, observability, recovery, scalability, and cost.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  },
+  {
+    "id": "candidate-power-bi-monitoring-06",
+    "technology": "power-bi",
+    "topic": "operations",
+    "difficulty": "advanced",
+    "type": "troubleshooting",
+    "question": "After a deployment involving Power BI monitoring and usage metrics, production results are incomplete or inconsistent. Describe a safe diagnosis and recovery.",
+    "canonicalAnswer": "Usage metrics, refresh history, activity events, capacity metrics, and audit data answer different operational questions. Monitoring must define ownership, retention, privacy, and actionable thresholds. Preserve evidence, identify the last correct state, recover idempotently, reconcile results, and prevent recurrence.",
+    "expectedConcepts": [
+      "usage metrics",
+      "refresh history",
+      "activity events",
+      "capacity",
+      "audit"
+    ],
+    "followUps": [
+      "Which limitation or cost of Power BI monitoring and usage metrics would you validate?",
+      "What evidence would prove that Power BI monitoring and usage metrics is working correctly?"
+    ],
+    "source": {
+      "title": "Monitor usage metrics",
+      "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics",
+      "verified": "2026-08-23"
+    },
+    "reviewStatus": "ai-reviewed",
+    "version": 1
+  }
+]
