@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 import beginnerQuestions from '../../../data/beginner.json';
+import expandedQuestions from '../../../data/expanded.json';
 import starterQuestions from '../../../data/starter.json';
 
-const questions = [...beginnerQuestions, ...starterQuestions];
+const questions = [...beginnerQuestions, ...starterQuestions, ...expandedQuestions];
 
 export async function GET(request: NextRequest) {
   const technology = request.nextUrl.searchParams.get('technology');
