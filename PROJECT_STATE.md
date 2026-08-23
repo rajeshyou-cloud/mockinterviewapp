@@ -4,111 +4,87 @@ _Last updated: 2026-08-23_
 
 ## Current milestone
 
-**Milestone 2 — Persistent interview sessions and assessment depth**
+**Milestone 2 — Persistent candidate interview and assessment depth**
 
-Status: **IN PROGRESS**
+Status: **COMPLETE**
 
-### Milestone 1 — COMPLETE
+The candidate-practice product is deployed and verified end to end. It provides a stable 10-question interview, structured scoring, voice/text input, 300 reviewed-content records, durable Neon persistence, secure cross-device resume, and a topic-level completion report.
 
-Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The Next.js production build is green on Vercel, the interview flow loads reviewed questions, text scoring works, browser voice adapters are present where supported, question progression was fixed and re-reviewed, and the first handover/state documentation is in place.
+## Completion evidence
 
-### Milestone 2 completed so far
+- [x] 300 unique questions across Snowflake and Informatica
+- [x] Beginner, intermediate, and advanced coverage for both technologies
+- [x] Official Snowflake/Informatica documentation links on every question
+- [x] JSON Schema validation and exact-count/uniqueness/coverage tests
+- [x] Stable SHA-256-based 10-question sampling per session
+- [x] Browser text-to-speech and speech-recognition adapters with text fallback
+- [x] Provider-neutral scoring contract
+- [x] Server-side reviewed-rubric resolution; clients cannot define their own rubric
+- [x] Vercel AI Gateway semantic provider using structured output
+- [x] Deterministic explainable fallback when the AI provider is unavailable
+- [x] Scoring input bounds and per-session rate protection
+- [x] Browser-local session recovery after refresh
+- [x] Submitted answer and feedback restoration after refresh/resume
+- [x] Neon `interview_sessions` and `interview_answers` persistence
+- [x] Private versioned cross-device resume key
+- [x] Resume credentials stored only as SHA-256 hashes in Neon
+- [x] Credential required for every cloud read and mutation
+- [x] Persistence route input validation for IDs, technology, difficulty, indexes, questions, concepts, scores, arrays, and text size
+- [x] Topic-level final score and focus-area report
+- [x] Route-level create/read/answer/complete/authentication/fallback tests
+- [x] Next.js production build and dependency audit
+- [x] GitHub Actions web/API gates
+- [x] Git-triggered Vercel web and FastAPI production deployments
+- [x] Live production question count and stable sampling verification
+- [x] Live production create/answer/wrong-credential rejection/read-back/complete transaction against Neon
+- [x] Browser verification of cloud status, question rendering, answer submission, feedback, and post-refresh answer restoration
+- [x] Disposable Neon verification rows removed after testing
 
-- [x] Dedicated Neon Postgres project provisioned for application persistence
-- [x] `interview_sessions` persistence model created
-- [x] `interview_answers` persistence model created
-- [x] Session/answer indexes created
-- [x] Database schema captured in `packages/db/schema.sql`
-- [x] Browser-local interview session persistence implemented
-- [x] In-progress interviews resume after refresh in the same browser
-- [x] Submitted answers and score results retained in the local session
-- [x] Interview completion summary with aggregate score implemented
-- [x] Server-only Neon adapter implemented using `DATABASE_URL`
-- [x] Durable session create/read API routes implemented
-- [x] Durable answer persistence API route implemented
-- [x] Durable session completion API route implemented
-- [x] Web client performs best-effort cloud sync while retaining browser fallback
-- [x] Server-only environment contract documented in `apps/web/.env.example`
-- [x] `DATABASE_URL` securely bound to Vercel `mockinterviewapp-web` for Production and Preview
-- [x] `mockinterviewapp-web` connected to GitHub repository `rajeshyou-cloud/mockinterviewapp`
-- [x] Vercel web Root Directory configured as `apps/web`
-- [x] Fresh Git-triggered production web deployment verified green on Next.js 15.5.21
-- [x] Live question API verified from the production web deployment
-- [x] Live durable-session read route verified to reach Neon (database binding active)
-- [x] Beginner Snowflake and Informatica content pack added
-- [x] Question API composes multiple content packs without UI changes
-- [x] Topic-level assessment summary implemented
-- [x] Final interview view now shows topic scores and focus areas
-- [x] Provider-neutral scoring contract implemented
-- [x] Deterministic scoring retained as the fallback provider
-- [x] Web unit tests added for scoring, assessment summaries, and database configuration fallback
-- [x] CI updated to run web unit tests before the Next.js production build
-- [x] Expanded scenario bank added for Snowflake security, Time Travel/cloning, streams and Informatica orchestration/runtime/performance
-- [x] Speech adapter nullability/build issue fixed
-- [x] Cross-device resume identity implemented with a private versioned resume key
-- [x] Resume credentials stored in Neon only as SHA-256 hashes and required on every session mutation/read
-- [x] Cloud session read-back maps persisted answers and progress into the browser session model
-- [x] Route-level persistence tests added for credential enforcement, fallback, create, read, answer and completion behavior
-- [x] Web question-bank integrity and coverage tests added to the CI test command
-- [x] Eight additional Snowflake dynamic-table and Informatica lookup-cache questions added (34 web questions total)
-- [x] Resume schema migration and create/answer/complete/read-back flow verified on a temporary Neon branch
-- [x] Web app upgraded locally to Next.js 16.3.2 / React 19.2.8; production build and zero-vulnerability audit verified
-- [x] Resume-identity migration applied to the main Neon branch
-- [x] Main Neon create/answer/complete/authorized read-back transaction verified and disposable test data removed
-- [x] Commit `c1bfc85` passed GitHub CI #49 (web tests/build and API tests)
-- [x] API CI invokes pytest through the selected Python interpreter so repository-local `app` imports resolve consistently
-- [x] Next.js 16.3.2 revision deployed READY to Vercel production
-- [x] Live production create/answer/complete/authorized read-back verified and disposable test data removed
-- [x] Production UI browser-reviewed with cloud persistence active, resume controls visible, reviewed questions loaded and no browser/runtime errors
+## Verification snapshot
 
-### Deployment topology
+- Web: **30 tests passing** across 9 files
+- API: **8 tests passing**
+- Framework: **Next.js 16.3.2 / React 19.2.8**
+- Dependency audit: **0 vulnerabilities**
+- GitHub CI: run `32644119415` passed for persistence hardening; later documentation/UX revisions must retain the same gates
+- Production web: `https://mockinterviewapp-web.vercel.app`
+- Neon project: `mockinterviewapp`; main-branch persistence transaction verified
 
-- `mockinterviewapp-api` is GitHub-linked to `rajeshyou-cloud/mockinterviewapp` and auto-deploys from `main` as the FastAPI project.
-- `mockinterviewapp-web` is GitHub-linked to the same repository with Root Directory `apps/web` and auto-deploys from `main`.
-- `DATABASE_URL` is configured securely for Production and Preview on the web project.
-- Production web URL: `https://mockinterviewapp-web.vercel.app`.
-- Production web is on Next.js 16.3.2 from the Git-linked `main` branch.
+## AI scoring activation
 
-### Milestone 2 next actions
+Semantic scoring is fully implemented behind the provider-neutral contract with model `openai/gpt-5.6-luna`, structured output, a 15-second timeout, prompt-injection boundaries, sanitized error logging, and deterministic fallback.
 
-- [ ] Add a semantic/LLM scoring provider behind the existing provider-neutral contract
-- [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
+The current Vercel team rejects live AI Gateway calls until a payment card is added. Production therefore identifies results as **Explainable baseline evaluation** instead of claiming AI evaluation. This is an external account activation prerequisite, not an unfinished code path; after billing is enabled, the deployed code selects AI Gateway automatically without an application change.
 
 ## Current user flow
 
-1. Candidate selects Snowflake or Informatica.
-2. Candidate selects Beginner, Intermediate, or Advanced.
-3. Web app requests matching reviewed questions from composable content packs.
-4. Candidate can hear the question using browser text-to-speech when supported.
-5. Candidate answers by typing or browser speech recognition when supported.
-6. Candidate receives an explainable baseline score, matched concepts, and a follow-up question.
-7. Candidate progresses through the filtered interview.
-8. Progress and scored answers are always saved in browser storage and resume after refresh in the same browser.
-9. The web app syncs sessions and answers to Neon Postgres when configured, using a private resume credential.
-10. A candidate can copy the private resume key and restore persisted progress and answers on another device.
-11. The final question produces an aggregate score, topic-level scores, and focus areas for the next practice session.
+1. Candidate selects Snowflake or Informatica and a difficulty level.
+2. The application creates a private session and loads a stable 10-question sample.
+3. Candidate answers with text or supported browser speech.
+4. The server resolves the reviewed rubric and returns semantic scoring when available or explainable fallback scoring.
+5. The browser and Neon retain progress, answers, and feedback.
+6. Refresh restores the current question, saved answer, and feedback.
+7. A private resume key restores the same cloud session on another device.
+8. Completion shows an average score, topic scores, answered count, and focus areas.
 
-## Architecture principles
+## Engineering invariants
 
-1. The core interview engine is technology-neutral.
-2. Snowflake and Informatica are content packs, not hard-coded products.
-3. Questions and canonical answers are traceable to official product documentation.
-4. AI-generated content must support human review, approval, versioning and re-validation.
-5. Voice providers and LLM providers must be replaceable adapters.
-6. Scenario-based reasoning is a first-class interview mode.
-7. Persistence is domain-oriented: sessions and answers are independent of UI/provider choices.
-8. Database credentials remain server-only and are never committed or exposed through `NEXT_PUBLIC_` variables.
-9. Local persistence remains a graceful fallback when cloud persistence is unavailable.
-10. Assessment summaries are derived from reusable domain logic rather than UI-only calculations.
-11. Scoring is provider-neutral so semantic scoring can be introduced without changing the UI/API contract.
-12. Each milestone follows the engineering contract: build, tests, documentation and handover.
-13. Session identifiers are not authorization; cloud reads and writes require the separate resume credential.
+1. The interview engine remains technology-neutral.
+2. Questions are content packs with stable IDs and official sources.
+3. Provider-specific AI and voice behavior remains behind adapters.
+4. Database credentials are server-only.
+5. Session IDs are not authorization; the separate resume credential is mandatory.
+6. Resume credentials are never stored in plaintext in Neon or logged.
+7. Browser persistence remains the graceful fallback when Neon is unavailable.
+8. Production UI never labels fallback scoring as AI semantic evaluation.
+9. Every shipped revision must pass web tests, API tests, content validation, build, and documentation handover.
 
-## Deferred
+## Deferred roadmap
 
 - Interview replay
-- Recruiter comparison dashboard
-- Full analytics suite
-- Production authentication/billing
+- Recruiter comparison and analytics
+- Human reviewer/admin workflow
+- Production user authentication
+- Subscription billing
 
-These remain deferred until the core interview and assessment experience is stable.
+These are intentionally separate product surfaces, not incomplete Milestone 2 requirements.

@@ -1,39 +1,49 @@
 # Mock Interview System
 
-Voice-first, extensible technical mock interview platform.
+Production-deployed technical interview practice for Snowflake and Informatica. Candidates receive a stable 10-question interview, answer by text or browser voice, get structured scoring and follow-up prompts, and securely resume their session on another device.
 
-Initial technology packs: Snowflake and Informatica.
+Production: https://mockinterviewapp-web.vercel.app
 
-The architecture is designed so additional technologies such as Databricks, Oracle, Power BI, Python and AWS can be added as content packs without changing the core interview engine.
+## Delivered candidate experience
 
-## Planned capabilities
-
-- Voice and text interviews
-- Adaptive AI follow-up questions
-- Official-documentation-backed question bank
-- Structured scoring and feedback
-- Candidate interview reports
-- Human question review and approval workflow
-- Versioned technology packs
-- Candidate, Reviewer and Admin interfaces
-- Pluggable LLM, speech-to-text and text-to-speech providers
+- 300 schema-validated, official-documentation-backed questions
+- Snowflake and Informatica across beginner, intermediate, and advanced levels
+- Stable per-session question sampling
+- Text and browser speech input/output
+- Explainable baseline scoring with matched and missing concepts
+- Optional Vercel AI Gateway semantic scoring with deterministic fallback
+- Topic-level completion report and recommended focus areas
+- Neon Postgres session and answer persistence
+- Same-browser refresh recovery and private-key cross-device resume
+- Server-side rubric resolution, bounded persistence inputs, and scoring rate protection
 
 ## Architecture
 
-- `apps/web` — candidate, reviewer and admin web application
-- `apps/api` — interview, scoring and content APIs
-- `packages/content` — technology-neutral question schema and technology packs
-- `packages/shared` — shared contracts and configuration
-- `docs` — architecture, research and implementation documentation
+- `apps/web` — Next.js candidate UI, scoring route, question route, and Neon persistence routes
+- `apps/api` — independently deployable FastAPI question and baseline-scoring service
+- `apps/web/data` — the complete 300-question content bank
+- `packages/content` — shared content schema and original starter contract
+- `packages/db/schema.sql` — Neon persistence schema
+- `scripts/generate-question-bank.mjs` — reproducible expansion generator
+- `PROJECT_STATE.md` — authoritative product and deployment status
+- `HANDOVER.md` — developer restart guide
 
-## Initial stack
+## Local verification
 
-- Next.js + TypeScript
-- FastAPI + Python
-- PostgreSQL
-- Browser audio capture
-- Provider-independent AI/STT/TTS adapters
+```bash
+npm install
+npm run test:web
+npm run build:web
 
-## Status
+cd apps/api
+pip install -r requirements.txt
+python -m pytest -q
+```
 
-Foundation implementation in progress.
+The web app uses its self-contained Next.js question and scoring routes by default. Set `NEXT_PUBLIC_API_BASE_URL` only when intentionally using the standalone FastAPI question service. Set `DATABASE_URL` server-side for Neon persistence.
+
+AI Gateway scoring is selected automatically on Vercel and falls back safely to the explainable scorer if the gateway is unavailable. Activating live gateway calls requires an AI Gateway-enabled Vercel team with billing configured; `SCORING_PROVIDER=deterministic` can explicitly force baseline mode.
+
+## Roadmap outside the completed candidate product
+
+Recruiter comparison, replay, full analytics, reviewer/admin workflows, production user accounts, and billing are separate future product surfaces and are not part of the completed candidate-practice milestone.

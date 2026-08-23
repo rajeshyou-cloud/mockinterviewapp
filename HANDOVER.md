@@ -1,140 +1,82 @@
 # Handover
 
-This file is the fastest way for a new developer or a future ChatGPT session to regain project context.
+Read `PROJECT_STATE.md` first; it is the authoritative product status and completion record.
 
 ## Product
 
-Mock Interview System is a voice-first technical interview practice platform. Snowflake and Informatica are the first content packs, but the interview engine must remain technology-neutral.
+Mock Interview System is a production-deployed candidate-practice application for Snowflake and Informatica. The completed milestone includes 300 questions, stable interview sampling, voice/text answers, structured scoring, Neon persistence, secure cross-device resume, and topic-level completion reports.
 
-## Start here
+Production: https://mockinterviewapp-web.vercel.app
 
-Read `PROJECT_STATE.md` first. It is the authoritative implementation status.
+## Repository map
 
-The repository contains:
+- `apps/web/app/page.tsx` — candidate flow and session UI
+- `apps/web/app/api/questions/route.ts` — filtered/stable question sampling
+- `apps/web/app/api/score/route.ts` — server-side rubric lookup and scoring
+- `apps/web/app/api/sessions` — authenticated Neon persistence routes
+- `apps/web/lib/scoring.ts` — AI Gateway, deterministic, and resilient scoring providers
+- `apps/web/lib/session.ts` — browser session and versioned resume-key format
+- `apps/web/lib/db.ts` — server-only Neon adapter and resume-token hashing
+- `apps/web/lib/persistence-validation.ts` — persistence request boundaries
+- `apps/web/lib/question-bank.ts` — shared 300-question bank
+- `apps/web/data` — versioned content packs
+- `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
+- `packages/db/schema.sql` — persistence schema
+- `.github/workflows/ci.yml` — web tests/build and API tests
 
-- `apps/web` — Next.js candidate experience
-- `apps/web/lib/api.ts` — typed API client
-- `apps/web/lib/voice.ts` — provider-neutral browser speech input/output adapters
-- `apps/web/lib/session.ts` — browser session model and versioned cross-device resume key
-- `apps/web/lib/db.ts` — server-only Neon persistence and hashed resume authorization
-- `apps/api` — FastAPI backend
-- `packages/content/questions/starter.json` — reviewed starter pack
-- `packages/content/schema/question.schema.json` — shared content contract
-- `.github/workflows/ci.yml` — web-build and API/content-test gate
-- `PROJECT_STATE.md` — authoritative implementation status
-- `HANDOVER.md` — restart context
+## Runtime flow
 
-## Current Milestone 2 flow
+1. The browser creates a UUID session and 64-hex-character resume credential.
+2. `GET /api/questions` returns a stable, session-seeded sample of 10 reviewed questions.
+3. `POST /api/score` resolves the question and rubric on the server, then uses the configured scorer.
+4. On Vercel, the scorer attempts AI Gateway and falls back deterministically on provider failure.
+5. Session and answer routes store progress in Neon while local storage preserves graceful browser fallback.
+6. Cloud routes require the private resume credential; Neon stores only its SHA-256 hash.
+7. Refresh or cross-device resume restores the current question, submitted answer, scoring feedback, and progress.
+8. Completion stores the final average and renders topic-level strengths/gaps.
 
-1. Candidate selects technology and difficulty.
-2. Next.js requests matching questions from `GET /v1/questions`.
-3. Candidate can hear the question through browser Speech Synthesis when available.
-4. Candidate types an answer or uses browser Speech Recognition when available.
-5. Next.js sends the answer to `POST /v1/score`.
-6. FastAPI returns score, matched concepts, missing concepts, and summary.
-7. UI displays explainable feedback and a reviewed follow-up prompt.
-8. Candidate progresses through the filtered question set.
-9. The browser saves locally and best-effort syncs to Neon.
-10. The candidate can copy a private resume key and use it on another device to restore progress and scored answers.
-11. Completion persists the aggregate score and displays topic-level assessment.
+The production web app uses self-contained Next.js routes for scoring and persistence. `NEXT_PUBLIC_API_BASE_URL` affects question retrieval only and is optional. The standalone FastAPI service remains independently deployable and exposes `/health`, `/v1/questions`, and a baseline `/v1/score` contract.
 
-The browser speech adapters are intentionally interfaces rather than vendor-specific domain code. A production STT/TTS provider can replace or complement them without changing interview content or scoring models.
+## Scoring configuration
 
-## API contracts
+- Default Vercel model: `openai/gpt-5.6-luna`
+- Force baseline: `SCORING_PROVIDER=deterministic`
+- Force gateway: `SCORING_PROVIDER=gateway`
+- Override model: `SCORING_MODEL=<gateway-model-id>`
+- Local gateway credential: `AI_GATEWAY_API_KEY`
+- Vercel authentication: automatically supplied OIDC when AI Gateway is enabled for the team
 
-### `GET /health`
-Basic service health.
+The current Vercel team needs a payment card before Gateway calls are serviced. Until then, production safely returns `ai-gateway:...->deterministic-keyword`, and the UI labels the result as an explainable baseline evaluation. Do not remove the fallback or claim live AI scoring until a production response returns an `ai-gateway:` provider without `->`.
 
-### `GET /v1/questions`
-Optional query parameters:
+## Verification commands
 
-- `technology=snowflake|informatica`
-- `difficulty=beginner|intermediate|advanced`
-
-Returns questions validated by Pydantic from the shared content pack.
-
-### `POST /v1/score`
-Request:
-
-```json
-{
-  "answer": "candidate answer",
-  "expected_concepts": ["concept one", "concept two"]
-}
-```
-
-Returns baseline explainable concept coverage. This is an interface placeholder for later semantic/LLM scoring, not the final assessment algorithm.
-
-## Architecture rules
-
-- Do not hard-code Snowflake/Informatica behavior into the interview engine.
-- Keep LLM, STT and TTS providers behind interfaces/adapters.
-- Every curated question should contain a stable id, technology, topic, difficulty, type, canonical answer, expected concepts, follow-ups, source, verification date, review status and version.
-- Prefer official vendor documentation as the factual source of truth.
-- Scenario questions should evaluate reasoning and trade-offs, not keyword recall alone.
-- Baseline keyword scoring exists only to establish an explainable API contract; semantic/LLM scoring will supersede it.
-- Never mark a milestone complete until build/test verification is green and `PROJECT_STATE.md` has no required unchecked item.
-- Treat the resume key as a bearer credential. Store only its SHA-256 hash in Neon, never log it, and require it for every session read or mutation.
-- Keep local browser persistence as the graceful fallback when Neon is unavailable.
-
-## Engineering contract
-
-A milestone is complete only when:
-
-1. The intended user flow works end-to-end.
-2. Relevant automated tests pass.
-3. Content/schema changes are validated.
-4. `PROJECT_STATE.md` is updated.
-5. `HANDOVER.md` reflects architecture/setup changes.
-6. CI/build verification is green.
-7. No required milestone item remains unchecked.
-
-## Verification status
-
-Latest local verification: **15 web tests passing**, **7 API tests passing**, the Next.js 16.3.2 production build succeeds, and `npm audit` reports zero known vulnerabilities.
-
-API CI runs pytest through the selected Python interpreter (`python -m pytest`) so the `apps/api` package root is resolved consistently on GitHub-hosted runners.
-The workflow action majors use their Node.js 24 runtime releases to avoid the hosted-runner Node.js 20 deprecation path.
-
-Neon migration `8281cb61-64e9-4e68-8298-d0d523a77344` has been applied to the main branch. A disposable create/answer/complete/authorized read-back transaction succeeded on main, and its test data was removed.
-
-Commit `c1bfc85` passed GitHub CI #49 and deployed READY to Vercel production on Next.js 16.3.2. The live production routes passed create/answer/complete/authorized read-back verification, the disposable test session was deleted, and a browser review confirmed cloud persistence, resume controls, reviewed question loading and a clean browser/runtime error scan.
-
-GitHub Actions now provides the authoritative repository-level gate for:
-
-- Next.js production build
-- FastAPI endpoint tests
-- JSON Schema content validation
-
-Milestone 2 remains **IN PROGRESS** for semantic scoring and continued reviewed-content expansion toward 300 questions. Persistence, secure resume identity, deployment and production verification are complete.
-
-## Local development
-
-Start the API:
-
-```bash
-cd apps/api
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
-
-Start the web app from the repository root:
+From the repository root:
 
 ```bash
 npm install
-npm run dev:web
+npm run test:web
+npm run build:web
+npm audit --audit-level=high
 ```
 
-The web app defaults to `http://localhost:8000` for the API. Override it with `NEXT_PUBLIC_API_BASE_URL` when needed.
+From `apps/api`:
 
-## Next work
+```bash
+python -m pytest -q
+```
 
-- Continue expanding reviewed content from the current 34 questions toward 300.
-- Add semantic scoring behind the existing provider-neutral contract.
+Current verified counts are 30 web tests and 8 API tests. Content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every technology/difficulty pair.
 
-## Deferred
+## Deployment
 
-Interview replay is intentionally deferred. Recruiter analytics and production auth/billing are later milestones.
+- Repository: `rajeshyou-cloud/mockinterviewapp`
+- Web Vercel project: `mockinterviewapp-web`, Root Directory `apps/web`
+- API Vercel project: `mockinterviewapp-api`
+- Database: Neon project `mockinterviewapp`, `DATABASE_URL` bound server-side to web Production/Preview
+- Both Vercel projects deploy `main` automatically
+
+The final live transaction verified create, answer write, wrong-credential rejection, authorized read-back with restored index, and completion. Its disposable rows were deleted.
+
+## Deferred roadmap
+
+Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are separate future milestones. Preserve the candidate product's provider neutrality and resume-key security if those surfaces are added.
