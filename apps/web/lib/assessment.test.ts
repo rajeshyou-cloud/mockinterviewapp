@@ -23,7 +23,7 @@ const questions: InterviewQuestion[] = [
 ];
 
 const session: InterviewSession = {
-  id: 'session-1', technology: 'snowflake', difficulty: 'intermediate', currentIndex: 2, status: 'completed',
+  id: 'session-1', resumeToken: 'a'.repeat(64), technology: 'snowflake', difficulty: 'intermediate', currentIndex: 2, status: 'completed',
   startedAt: '2026-08-23T10:00:00Z', completedAt: '2026-08-23T10:10:00Z',
   answers: [
     { questionId: 'q1', answer: 'x', answeredAt: '2026-08-23T10:01:00Z', score: { score: 80, matched_concepts: ['storage'], missing_concepts: [], summary: 'ok' } },

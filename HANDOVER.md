@@ -15,6 +15,8 @@ The repository contains:
 - `apps/web` — Next.js candidate experience
 - `apps/web/lib/api.ts` — typed API client
 - `apps/web/lib/voice.ts` — provider-neutral browser speech input/output adapters
+- `apps/web/lib/session.ts` — browser session model and versioned cross-device resume key
+- `apps/web/lib/db.ts` — server-only Neon persistence and hashed resume authorization
 - `apps/api` — FastAPI backend
 - `packages/content/questions/starter.json` — reviewed starter pack
 - `packages/content/schema/question.schema.json` — shared content contract
@@ -22,7 +24,7 @@ The repository contains:
 - `PROJECT_STATE.md` — authoritative implementation status
 - `HANDOVER.md` — restart context
 
-## Current Milestone 1 flow
+## Current Milestone 2 flow
 
 1. Candidate selects technology and difficulty.
 2. Next.js requests matching questions from `GET /v1/questions`.
@@ -32,6 +34,9 @@ The repository contains:
 6. FastAPI returns score, matched concepts, missing concepts, and summary.
 7. UI displays explainable feedback and a reviewed follow-up prompt.
 8. Candidate progresses through the filtered question set.
+9. The browser saves locally and best-effort syncs to Neon.
+10. The candidate can copy a private resume key and use it on another device to restore progress and scored answers.
+11. Completion persists the aggregate score and displays topic-level assessment.
 
 The browser speech adapters are intentionally interfaces rather than vendor-specific domain code. A production STT/TTS provider can replace or complement them without changing interview content or scoring models.
 
@@ -69,6 +74,8 @@ Returns baseline explainable concept coverage. This is an interface placeholder 
 - Scenario questions should evaluate reasoning and trade-offs, not keyword recall alone.
 - Baseline keyword scoring exists only to establish an explainable API contract; semantic/LLM scoring will supersede it.
 - Never mark a milestone complete until build/test verification is green and `PROJECT_STATE.md` has no required unchecked item.
+- Treat the resume key as a bearer credential. Store only its SHA-256 hash in Neon, never log it, and require it for every session read or mutation.
+- Keep local browser persistence as the graceful fallback when Neon is unavailable.
 
 ## Engineering contract
 
@@ -84,7 +91,9 @@ A milestone is complete only when:
 
 ## Verification status
 
-Backend and content tests have been executed in the implementation environment: **5 tests passing**.
+Latest local verification: **15 web tests passing**, **7 API tests passing**, the Next.js 16.3.2 production build succeeds, and `npm audit` reports zero known vulnerabilities.
+
+Neon migration `8281cb61-64e9-4e68-8298-d0d523a77344` has been applied to the main branch. A disposable create/answer/complete/authorized read-back transaction succeeded on main, and its test data was removed. The schema is ready for the resume-key web revision to deploy.
 
 GitHub Actions now provides the authoritative repository-level gate for:
 
@@ -92,7 +101,7 @@ GitHub Actions now provides the authoritative repository-level gate for:
 - FastAPI endpoint tests
 - JSON Schema content validation
 
-Milestone 1 remains **IN PROGRESS** until CI and a browser smoke test are confirmed.
+Milestone 2 remains **IN PROGRESS** until the verified migration is applied, the revision deploys, and the live cross-device flow receives a browser review.
 
 ## Local development
 
@@ -118,11 +127,9 @@ The web app defaults to `http://localhost:8000` for the API. Override it with `N
 
 ## Next work
 
-- Confirm/fix GitHub Actions CI
-- Browser smoke-test voice and text paths
-- Expand reviewed content toward 300 Snowflake/Informatica questions, including beginner coverage
-- Add persistent interview-session models after Milestone 1 acceptance
-- Add semantic scoring and server-side production voice providers in later milestones
+- Push/deploy the tested web revision and verify live create, answer, complete, and cross-device restore.
+- Continue expanding reviewed content from the current 34 questions toward 300.
+- Add semantic scoring behind the existing provider-neutral contract.
 
 ## Deferred
 

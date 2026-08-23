@@ -25,6 +25,28 @@ export type ScoreResponse = {
 
 export type PersistenceResponse = { persisted: boolean; reason?: string } & Record<string, unknown>;
 
+export type RemoteSessionResponse = {
+  persisted: true;
+  session: {
+    id: string;
+    technology: Technology;
+    difficulty: Difficulty;
+    status: 'in_progress' | 'completed';
+    started_at: string;
+    completed_at: string | null;
+    metadata: { currentIndex?: number };
+  };
+  answers: Array<{
+    question_id: string;
+    answer_text: string;
+    score: number;
+    matched_concepts: string[];
+    missing_concepts: string[];
+    feedback: string;
+    answered_at: string;
+  }>;
+};
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? '';
 const QUESTIONS_PATH = API_BASE_URL ? '/v1/questions' : '/api/questions';
 const SCORE_PATH = API_BASE_URL ? '/v1/score' : '/api/score';
@@ -47,11 +69,11 @@ export async function scoreAnswer(answer: string, expectedConcepts: string[]): P
   return response.json() as Promise<ScoreResponse>;
 }
 
-async function postPersistence(path: string, body: unknown): Promise<PersistenceResponse> {
+async function postPersistence(path: string, resumeToken: string, body: unknown): Promise<PersistenceResponse> {
   try {
     const response = await fetch(path, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-resume-token': resumeToken },
       body: JSON.stringify(body),
     });
     if (!response.ok) return { persisted: false, reason: `http_${response.status}` };
@@ -61,11 +83,12 @@ async function postPersistence(path: string, body: unknown): Promise<Persistence
   }
 }
 
-export function createRemoteSession(input: { id: string; technology: Technology; difficulty: Difficulty; currentIndex: number }) {
-  return postPersistence('/api/sessions', input);
+export function createRemoteSession(input: { id: string; resumeToken: string; technology: Technology; difficulty: Difficulty; currentIndex: number }) {
+  const { resumeToken, ...payload } = input;
+  return postPersistence('/api/sessions', resumeToken, payload);
 }
 
-export function saveRemoteAnswer(sessionId: string, input: {
+export function saveRemoteAnswer(sessionId: string, resumeToken: string, input: {
   questionId: string;
   answerText: string;
   score: number;
@@ -74,9 +97,15 @@ export function saveRemoteAnswer(sessionId: string, input: {
   feedback: string;
   currentIndex: number;
 }) {
-  return postPersistence(`/api/sessions/${sessionId}/answers`, input);
+  return postPersistence(`/api/sessions/${sessionId}/answers`, resumeToken, input);
 }
 
-export function completeRemoteSession(sessionId: string, totalScore: number) {
-  return postPersistence(`/api/sessions/${sessionId}/complete`, { totalScore });
+export function completeRemoteSession(sessionId: string, resumeToken: string, totalScore: number) {
+  return postPersistence(`/api/sessions/${sessionId}/complete`, resumeToken, { totalScore });
+}
+
+export async function fetchRemoteSession(id: string, resumeToken: string): Promise<RemoteSessionResponse> {
+  const response = await fetch(`/api/sessions/${id}`, { cache: 'no-store', headers: { 'x-resume-token': resumeToken } });
+  if (!response.ok) throw new Error(response.status === 404 ? 'That resume key was not found.' : `Resume failed with status ${response.status}`);
+  return response.json() as Promise<RemoteSessionResponse>;
 }

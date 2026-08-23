@@ -9,8 +9,12 @@ CREATE TABLE IF NOT EXISTS interview_sessions (
   started_at timestamptz NOT NULL DEFAULT now(),
   completed_at timestamptz,
   total_score numeric(5,2),
+  resume_token_hash text,
   metadata jsonb NOT NULL DEFAULT '{}'::jsonb
 );
+
+ALTER TABLE interview_sessions
+  ADD COLUMN IF NOT EXISTS resume_token_hash text;
 
 CREATE TABLE IF NOT EXISTS interview_answers (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -28,3 +32,5 @@ CREATE INDEX IF NOT EXISTS interview_answers_session_idx
   ON interview_answers(session_id, answered_at);
 CREATE INDEX IF NOT EXISTS interview_sessions_started_idx
   ON interview_sessions(started_at DESC);
+CREATE UNIQUE INDEX IF NOT EXISTS interview_answers_session_question_idx
+  ON interview_answers(session_id, question_id);

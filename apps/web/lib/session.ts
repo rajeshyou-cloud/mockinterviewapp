@@ -9,6 +9,7 @@ export type SavedAnswer = {
 
 export type InterviewSession = {
   id: string;
+  resumeToken: string;
   technology: Technology;
   difficulty: Difficulty;
   currentIndex: number;
@@ -24,7 +25,11 @@ export function loadSession(): InterviewSession | null {
   if (typeof window === 'undefined') return null;
   try {
     const raw = window.localStorage.getItem(KEY);
-    return raw ? (JSON.parse(raw) as InterviewSession) : null;
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as InterviewSession;
+    const normalized = { ...parsed, resumeToken: parsed.resumeToken || createResumeToken() };
+    window.localStorage.setItem(KEY, JSON.stringify(normalized));
+    return normalized;
   } catch {
     return null;
   }
@@ -41,6 +46,7 @@ export function clearSession() {
 export function newSession(technology: Technology, difficulty: Difficulty): InterviewSession {
   return {
     id: crypto.randomUUID(),
+    resumeToken: createResumeToken(),
     technology,
     difficulty,
     currentIndex: 0,
@@ -48,4 +54,17 @@ export function newSession(technology: Technology, difficulty: Difficulty): Inte
     answers: [],
     startedAt: new Date().toISOString(),
   };
+}
+
+function createResumeToken() {
+  return `${crypto.randomUUID()}${crypto.randomUUID()}`.replaceAll('-', '');
+}
+
+export function getResumeKey(session: Pick<InterviewSession, 'id' | 'resumeToken'>) {
+  return `v1:${session.id}:${session.resumeToken}`;
+}
+
+export function parseResumeKey(value: string): { id: string; resumeToken: string } | null {
+  const match = /^v1:([0-9a-f-]{36}):([0-9a-f]{64})$/i.exec(value.trim());
+  return match ? { id: match[1], resumeToken: match[2] } : null;
 }

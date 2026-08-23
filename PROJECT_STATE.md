@@ -45,6 +45,16 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] CI updated to run web unit tests before the Next.js production build
 - [x] Expanded scenario bank added for Snowflake security, Time Travel/cloning, streams and Informatica orchestration/runtime/performance
 - [x] Speech adapter nullability/build issue fixed
+- [x] Cross-device resume identity implemented with a private versioned resume key
+- [x] Resume credentials stored in Neon only as SHA-256 hashes and required on every session mutation/read
+- [x] Cloud session read-back maps persisted answers and progress into the browser session model
+- [x] Route-level persistence tests added for credential enforcement, fallback, create, read, answer and completion behavior
+- [x] Web question-bank integrity and coverage tests added to the CI test command
+- [x] Eight additional Snowflake dynamic-table and Informatica lookup-cache questions added (34 web questions total)
+- [x] Resume schema migration and create/answer/complete/read-back flow verified on a temporary Neon branch
+- [x] Web app upgraded locally to Next.js 16.3.2 / React 19.2.8; production build and zero-vulnerability audit verified
+- [x] Resume-identity migration applied to the main Neon branch
+- [x] Main Neon create/answer/complete/authorized read-back transaction verified and disposable test data removed
 
 ### Deployment topology
 
@@ -52,14 +62,13 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - `mockinterviewapp-web` is GitHub-linked to the same repository with Root Directory `apps/web` and auto-deploys from `main`.
 - `DATABASE_URL` is configured securely for Production and Preview on the web project.
 - Production web URL: `https://mockinterviewapp-web.vercel.app`.
+- Production currently remains on the prior Next.js 15.5.21 revision until the Neon migration is approved and this tested revision is pushed.
 
 ### Milestone 2 next actions
 
-- [ ] Verify durable session creation, answer writes, and completion against Neon from a full live interview
-- [ ] Restore session progress across devices using server persistence and a user/session identity mechanism
+- [ ] Deploy and verify durable session creation, answer writes, completion and cross-device read-back from the live UI
 - [ ] Add a semantic/LLM scoring provider behind the existing provider-neutral contract
 - [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
-- [ ] Add route-level persistence tests and CI coverage
 - [ ] Browser-review the fully server-persistent Milestone 2 flow
 
 ## Current user flow
@@ -72,8 +81,9 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 6. Candidate receives an explainable baseline score, matched concepts, and a follow-up question.
 7. Candidate progresses through the filtered interview.
 8. Progress and scored answers are always saved in browser storage and resume after refresh in the same browser.
-9. The deployed web app is configured to sync sessions and answers to Neon Postgres.
-10. The final question produces an aggregate score, topic-level scores, and focus areas for the next practice session.
+9. The web app syncs sessions and answers to Neon Postgres when configured, using a private resume credential.
+10. A candidate can copy the private resume key and restore persisted progress and answers on another device.
+11. The final question produces an aggregate score, topic-level scores, and focus areas for the next practice session.
 
 ## Architecture principles
 
@@ -89,6 +99,7 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 10. Assessment summaries are derived from reusable domain logic rather than UI-only calculations.
 11. Scoring is provider-neutral so semantic scoring can be introduced without changing the UI/API contract.
 12. Each milestone follows the engineering contract: build, tests, documentation and handover.
+13. Session identifiers are not authorization; cloud reads and writes require the separate resume credential.
 
 ## Deferred
 

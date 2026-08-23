@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { neon } from '@neondatabase/serverless';
+import { createHash } from 'node:crypto';
 
 export type PersistedSession = {
   id: string;
@@ -31,29 +32,43 @@ function getSql() {
   return neon(url);
 }
 
+function hashResumeToken(token: string) {
+  return createHash('sha256').update(token).digest('hex');
+}
+
 export function isDatabaseConfigured() {
   return Boolean(process.env.DATABASE_URL);
 }
 
-export async function createInterviewSession(input: { id: string; technology: string; difficulty: string; currentIndex?: number }) {
+export async function createInterviewSession(input: { id: string; resumeToken: string; technology: string; difficulty: string; currentIndex?: number }) {
   const sql = getSql();
   if (!sql) return null;
+  const tokenHash = hashResumeToken(input.resumeToken);
   const rows = await sql`
-    INSERT INTO interview_sessions (id, technology, difficulty, metadata)
-    VALUES (${input.id}::uuid, ${input.technology}, ${input.difficulty}, ${JSON.stringify({ currentIndex: input.currentIndex ?? 0 })}::jsonb)
+    INSERT INTO interview_sessions (id, technology, difficulty, resume_token_hash, metadata)
+    VALUES (${input.id}::uuid, ${input.technology}, ${input.difficulty}, ${tokenHash}, ${JSON.stringify({ currentIndex: input.currentIndex ?? 0 })}::jsonb)
     ON CONFLICT (id) DO UPDATE SET
       technology = EXCLUDED.technology,
       difficulty = EXCLUDED.difficulty,
+      resume_token_hash = EXCLUDED.resume_token_hash,
       metadata = EXCLUDED.metadata
-    RETURNING *
+    WHERE interview_sessions.resume_token_hash IS NULL
+       OR interview_sessions.resume_token_hash = EXCLUDED.resume_token_hash
+    RETURNING id, technology, difficulty, status, started_at, completed_at, total_score, metadata
   `;
-  return rows[0] as PersistedSession;
+  return rows[0] as PersistedSession | undefined;
 }
 
-export async function getInterviewSession(id: string) {
+export async function getInterviewSession(id: string, resumeToken: string) {
   const sql = getSql();
   if (!sql) return null;
-  const sessions = await sql`SELECT * FROM interview_sessions WHERE id = ${id}::uuid LIMIT 1`;
+  const tokenHash = hashResumeToken(resumeToken);
+  const sessions = await sql`
+    SELECT id, technology, difficulty, status, started_at, completed_at, total_score, metadata
+    FROM interview_sessions
+    WHERE id = ${id}::uuid AND resume_token_hash = ${tokenHash}
+    LIMIT 1
+  `;
   if (!sessions.length) return null;
   const answers = await sql`SELECT * FROM interview_answers WHERE session_id = ${id}::uuid ORDER BY answered_at`;
   return { session: sessions[0] as PersistedSession, answers: answers as PersistedAnswer[] };
@@ -61,6 +76,7 @@ export async function getInterviewSession(id: string) {
 
 export async function saveInterviewAnswer(input: {
   sessionId: string;
+  resumeToken: string;
   questionId: string;
   answerText: string;
   score: number;
@@ -71,24 +87,39 @@ export async function saveInterviewAnswer(input: {
 }) {
   const sql = getSql();
   if (!sql) return null;
-  await sql`DELETE FROM interview_answers WHERE session_id = ${input.sessionId}::uuid AND question_id = ${input.questionId}`;
+  const tokenHash = hashResumeToken(input.resumeToken);
   const rows = await sql`
     INSERT INTO interview_answers (session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback)
-    VALUES (${input.sessionId}::uuid, ${input.questionId}, ${input.answerText}, ${input.score}, ${JSON.stringify(input.matchedConcepts)}::jsonb, ${JSON.stringify(input.missingConcepts)}::jsonb, ${input.feedback})
-    RETURNING *
+    SELECT id, ${input.questionId}, ${input.answerText}, ${input.score}, ${JSON.stringify(input.matchedConcepts)}::jsonb, ${JSON.stringify(input.missingConcepts)}::jsonb, ${input.feedback}
+    FROM interview_sessions
+    WHERE id = ${input.sessionId}::uuid AND resume_token_hash = ${tokenHash}
+    ON CONFLICT (session_id, question_id) DO UPDATE SET
+      answer_text = EXCLUDED.answer_text,
+      score = EXCLUDED.score,
+      matched_concepts = EXCLUDED.matched_concepts,
+      missing_concepts = EXCLUDED.missing_concepts,
+      feedback = EXCLUDED.feedback,
+      answered_at = now()
+    RETURNING id, session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback, answered_at
   `;
-  await sql`UPDATE interview_sessions SET metadata = jsonb_set(metadata, '{currentIndex}', to_jsonb(${input.currentIndex}::int), true) WHERE id = ${input.sessionId}::uuid`;
+  if (!rows.length) return null;
+  await sql`
+    UPDATE interview_sessions
+    SET metadata = jsonb_set(metadata, '{currentIndex}', to_jsonb(${input.currentIndex}::int), true)
+    WHERE id = ${input.sessionId}::uuid AND resume_token_hash = ${tokenHash}
+  `;
   return rows[0] as PersistedAnswer;
 }
 
-export async function completeInterviewSession(id: string, totalScore: number) {
+export async function completeInterviewSession(id: string, resumeToken: string, totalScore: number) {
   const sql = getSql();
   if (!sql) return null;
+  const tokenHash = hashResumeToken(resumeToken);
   const rows = await sql`
     UPDATE interview_sessions
     SET status = 'completed', completed_at = now(), total_score = ${totalScore}
-    WHERE id = ${id}::uuid
-    RETURNING *
+    WHERE id = ${id}::uuid AND resume_token_hash = ${tokenHash}
+    RETURNING id, technology, difficulty, status, started_at, completed_at, total_score, metadata
   `;
   return rows[0] as PersistedSession | undefined;
 }
