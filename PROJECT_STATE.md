@@ -31,6 +31,9 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] Server-only environment contract documented in `apps/web/.env.example`
 - [x] Beginner Snowflake and Informatica content pack added
 - [x] Question API composes multiple content packs without UI changes
+- [x] Topic-level assessment summary implemented
+- [x] Final interview view now shows topic scores and focus areas
+- [x] Expanded scenario bank added for Snowflake security, Time Travel/cloning, streams and Informatica orchestration/runtime/performance
 - [x] Speech adapter nullability/build issue fixed
 - [x] Milestone 2 browser-persistence slice successfully built and deployed on Vercel
 
@@ -47,10 +50,9 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [ ] Link `mockinterviewapp-web` to the GitHub repo with root directory `apps/web`, or keep an explicit deployment workflow
 - [ ] Verify durable session creation, answer writes, and completion against Neon from the deployed web app
 - [ ] Restore session progress across devices using server persistence and a user/session identity mechanism
-- [ ] Add topic-gap breakdown to the interview completion summary
 - [ ] Introduce provider-neutral semantic scoring contract while retaining deterministic fallback scoring
 - [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
-- [ ] Add persistence/session tests and CI coverage
+- [ ] Add persistence/session and assessment-summary tests with CI coverage
 - [ ] Browser-review the server-persistent Milestone 2 flow
 
 ## Current user flow
@@ -64,7 +66,7 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 7. Candidate progresses through the filtered interview.
 8. Progress and scored answers are always saved in browser storage and resume after refresh in the same browser.
 9. When server persistence is configured, the same lifecycle also syncs sessions and answers to Neon Postgres.
-10. The final question produces an interview-complete summary and aggregate score.
+10. The final question produces an aggregate score, topic-level scores, and focus areas for the next practice session.
 
 ## Architecture principles
 
@@ -77,7 +79,8 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 7. Persistence is domain-oriented: sessions and answers are independent of UI/provider choices.
 8. Database credentials remain server-only and are never committed or exposed through `NEXT_PUBLIC_` variables.
 9. Local persistence remains a graceful fallback when cloud persistence is unavailable.
-10. Each milestone follows the engineering contract: build, tests, documentation and handover.
+10. Assessment summaries are derived from reusable domain logic rather than UI-only calculations.
+11. Each milestone follows the engineering contract: build, tests, documentation and handover.
 
 ## Deferred
 
