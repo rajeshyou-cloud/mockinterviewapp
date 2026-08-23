@@ -40,6 +40,7 @@ export default function Home() {
   const [error, setError] = useState('');
   const [listening, setListening] = useState(false);
   const [voiceAvailable, setVoiceAvailable] = useState(false);
+  const [sessionComplete, setSessionComplete] = useState(false);
 
   const speechInput = useRef<SpeechInputAdapter | null>(null);
   const speechOutput = useRef<SpeechOutputAdapter | null>(null);
@@ -64,6 +65,7 @@ export default function Home() {
       setResult(null);
       setAnswer('');
       setIndex(0);
+      setSessionComplete(false);
 
       try {
         const payload = await fetchQuestions(technology, difficulty);
@@ -89,6 +91,7 @@ export default function Home() {
     if (!questions.length) return '0 / 0';
     return `${index + 1} / ${questions.length}`;
   }, [index, questions.length]);
+  const isLastQuestion = questions.length > 0 && index === questions.length - 1;
 
   async function submitAnswer() {
     if (!current || !answer.trim()) return;
@@ -107,11 +110,25 @@ export default function Home() {
 
   function nextQuestion() {
     if (!questions.length) return;
-    setIndex((value) => (value + 1) % questions.length);
+    speechInput.current?.stop();
+    setListening(false);
+
+    if (isLastQuestion) {
+      setSessionComplete(true);
+      return;
+    }
+
+    setIndex((value) => value + 1);
     setAnswer('');
     setResult(null);
-    setListening(false);
-    speechInput.current?.stop();
+  }
+
+  function restartSession() {
+    setIndex(0);
+    setAnswer('');
+    setResult(null);
+    setSessionComplete(false);
+    setError('');
   }
 
   function toggleListening() {
@@ -191,6 +208,12 @@ export default function Home() {
         <article className="card interviewer">
           {loadingQuestions ? (
             <div className="loadingState">Loading reviewed questions…</div>
+          ) : sessionComplete ? (
+            <div className="loadingState">
+              <h2>Starter interview complete.</h2>
+              <p>You reached the end of this reviewed {technologyLabels[technology]} · {difficultyLabels[difficulty]} question set.</p>
+              <button className="primary" onClick={restartSession}>Restart interview</button>
+            </div>
           ) : !current ? (
             <div className="loadingState">
               No reviewed starter question is available for {technologyLabels[technology]} · {difficultyLabels[difficulty]} yet.
@@ -226,7 +249,7 @@ export default function Home() {
                 <button className="primary" disabled={submitting || !answer.trim()} onClick={() => void submitAnswer()}>
                   {submitting ? 'Scoring…' : 'Submit answer'}
                 </button>
-                <button className="secondary" onClick={nextQuestion}>Next question</button>
+                <button className="secondary" onClick={nextQuestion}>{isLastQuestion ? 'Finish interview' : 'Next question'}</button>
               </div>
               <p className="sourceNote">
                 Reviewed source: <a href={current.source.url} target="_blank" rel="noreferrer">{current.source.title}</a> · verified {current.source.verified}
@@ -237,7 +260,7 @@ export default function Home() {
 
         <aside className="card feedback">
           <p className="eyebrow">FEEDBACK</p>
-          {!result || !current ? (
+          {!result || !current || sessionComplete ? (
             <div className="emptyState">
               <div className="scoreRing">—</div>
               <p>Submit an answer to see the explainable baseline score and interviewer follow-up.</p>
