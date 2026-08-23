@@ -60,6 +60,7 @@ describe('GatewaySemanticScoringProvider', () => {
 
 describe('ResilientScoringProvider', () => {
   it('falls back without exposing provider errors or losing feedback', async () => {
+    const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     const primary = { name: 'semantic', score: vi.fn().mockRejectedValue(new Error('provider unavailable')) };
     const fallback = new DeterministicScoringProvider();
     const provider = new ResilientScoringProvider(primary, fallback);
@@ -68,6 +69,11 @@ describe('ResilientScoringProvider', () => {
 
     expect(result.score).toBe(100);
     expect(result.provider).toBe('semantic->deterministic-keyword');
+    expect(log).toHaveBeenCalledWith(
+      'Semantic scoring provider failed; using deterministic fallback.',
+      { name: 'Error', statusCode: undefined, message: 'provider unavailable' },
+    );
+    log.mockRestore();
   });
 
   it('selects deterministic mode locally and semantic mode on Vercel', () => {

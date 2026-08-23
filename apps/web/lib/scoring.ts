@@ -125,7 +125,17 @@ export class ResilientScoringProvider implements ScoringProvider {
   async score(input: ScoringInput): Promise<ScoringResult> {
     try {
       return await this.primary.score(input);
-    } catch {
+    } catch (error) {
+      const details = error instanceof Error
+        ? {
+            name: error.name,
+            statusCode: 'statusCode' in error && typeof error.statusCode === 'number'
+              ? error.statusCode
+              : undefined,
+            message: error.message.slice(0, 300),
+          }
+        : { name: 'UnknownScoringError' };
+      console.error('Semantic scoring provider failed; using deterministic fallback.', details);
       const fallbackResult = await this.fallback.score(input);
       return { ...fallbackResult, provider: `${this.primary.name}->${fallbackResult.provider}` };
     }
