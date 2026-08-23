@@ -1,22 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isDatabaseConfigured, saveInterviewAnswer } from '../../../../../lib/db';
+import { readJson, resumeTokenPattern, saveAnswerSchema, sessionIdSchema } from '../../../../../lib/persistence-validation';
+import { findQuestion } from '../../../../../lib/question-bank';
 
 export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   const { id } = await context.params;
   const resumeToken = request.headers.get('x-resume-token');
-  if (!resumeToken || !/^[0-9a-f]{64}$/i.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
-  const payload = await request.json() as {
-    questionId?: string;
-    answerText?: string;
-    score?: number;
-    matchedConcepts?: string[];
-    missingConcepts?: string[];
-    feedback?: string;
-    currentIndex?: number;
-  };
-
-  if (!payload.questionId || !payload.answerText || typeof payload.score !== 'number') {
-    return NextResponse.json({ error: 'questionId, answerText and score are required' }, { status: 400 });
+  if (!resumeToken || !resumeTokenPattern.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
+  if (!sessionIdSchema.safeParse(id).success) return NextResponse.json({ error: 'invalid_session_id' }, { status: 400 });
+  const parsed = saveAnswerSchema.safeParse(await readJson(request));
+  if (!parsed.success) return NextResponse.json({ error: 'invalid_answer_request' }, { status: 400 });
+  const payload = parsed.data;
+  const question = findQuestion(payload.questionId);
+  if (!question) return NextResponse.json({ error: 'reviewed_question_not_found' }, { status: 404 });
+  const allowedConcepts = new Set(question.expectedConcepts);
+  if ([...(payload.matchedConcepts ?? []), ...(payload.missingConcepts ?? [])].some((concept) => !allowedConcepts.has(concept))) {
+    return NextResponse.json({ error: 'invalid_scoring_concepts' }, { status: 400 });
   }
 
   if (!isDatabaseConfigured()) {

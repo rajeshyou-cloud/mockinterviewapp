@@ -58,6 +58,20 @@ describe('session persistence routes', () => {
     });
   });
 
+  it('rejects malformed JSON and invalid session fields before touching Neon', async () => {
+    const malformed = await createSession(request('/api/sessions', {
+      method: 'POST', headers: { 'x-resume-token': token }, body: '{',
+    }));
+    const invalid = await createSession(request('/api/sessions', {
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({ id: 'not-a-uuid', technology: 'oracle', difficulty: 'expert', currentIndex: 500 }),
+    }));
+
+    expect(malformed.status).toBe(400);
+    expect(invalid.status).toBe(400);
+    expect(db.createInterviewSession).not.toHaveBeenCalled();
+  });
+
   it('keeps local fallback behavior when Neon is not configured', async () => {
     db.isDatabaseConfigured.mockReturnValue(false);
     const response = await createSession(request('/api/sessions', {
@@ -82,20 +96,58 @@ describe('session persistence routes', () => {
   });
 
   it('persists an answer and current progress through the authorized route', async () => {
-    db.saveInterviewAnswer.mockResolvedValue({ question_id: 'snow-1' });
+    db.saveInterviewAnswer.mockResolvedValue({ question_id: 'snowflake-architecture-001' });
     const response = await saveAnswer(request(`/api/sessions/${id}/answers`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-resume-token': token },
       body: JSON.stringify({
-        questionId: 'snow-1', answerText: 'An answer', score: 80,
-        matchedConcepts: ['warehouse'], missingConcepts: [], feedback: 'Good', currentIndex: 1,
+        questionId: 'snowflake-architecture-001', answerText: 'An answer', score: 80,
+        matchedConcepts: ['storage'], missingConcepts: ['compute'], feedback: 'Good', currentIndex: 1,
       }),
     }), context);
 
     expect(response.status).toBe(200);
     expect(db.saveInterviewAnswer).toHaveBeenCalledWith(expect.objectContaining({
-      sessionId: id, resumeToken: token, questionId: 'snow-1', currentIndex: 1,
+      sessionId: id, resumeToken: token, questionId: 'snowflake-architecture-001', currentIndex: 1,
     }));
+  });
+
+  it('rejects oversized answers, unknown questions and client-invented concepts', async () => {
+    const oversized = await saveAnswer(request(`/api/sessions/${id}/answers`, {
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({ questionId: 'snowflake-architecture-001', answerText: 'x'.repeat(12_001), score: 80 }),
+    }), context);
+    const unknown = await saveAnswer(request(`/api/sessions/${id}/answers`, {
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({ questionId: 'invented-question', answerText: 'answer', score: 80 }),
+    }), context);
+    const inventedConcept = await saveAnswer(request(`/api/sessions/${id}/answers`, {
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({
+        questionId: 'snowflake-architecture-001', answerText: 'answer', score: 80,
+        matchedConcepts: ['attacker-controlled-concept'],
+      }),
+    }), context);
+
+    expect(oversized.status).toBe(400);
+    expect(unknown.status).toBe(404);
+    expect(inventedConcept.status).toBe(400);
+    expect(db.saveInterviewAnswer).not.toHaveBeenCalled();
+  });
+
+  it('rejects invalid session IDs and out-of-range completion scores', async () => {
+    const invalidContext = { params: Promise.resolve({ id: 'not-a-uuid' }) };
+    const badId = await getSession(request('/api/sessions/not-a-uuid', {
+      headers: { 'x-resume-token': token },
+    }), invalidContext);
+    const badScore = await completeSession(request(`/api/sessions/${id}/complete`, {
+      method: 'POST', headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({ totalScore: 101 }),
+    }), context);
+
+    expect(badId.status).toBe(400);
+    expect(badScore.status).toBe(400);
+    expect(db.completeInterviewSession).not.toHaveBeenCalled();
   });
 
   it('does not claim success when the session credential is rejected', async () => {

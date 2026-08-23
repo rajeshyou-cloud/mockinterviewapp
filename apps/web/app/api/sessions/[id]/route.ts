@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import { getInterviewSession, isDatabaseConfigured } from '../../../../lib/db';
+import { resumeTokenPattern, sessionIdSchema } from '../../../../lib/persistence-validation';
 
 export async function GET(request: Request, context: { params: Promise<{ id: string }> }) {
   const { id } = await context.params;
   const resumeToken = request.headers.get('x-resume-token');
-  if (!resumeToken || !/^[0-9a-f]{64}$/i.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
+  if (!resumeToken || !resumeTokenPattern.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
+  if (!sessionIdSchema.safeParse(id).success) return NextResponse.json({ error: 'invalid_session_id' }, { status: 400 });
   if (!isDatabaseConfigured()) {
     return NextResponse.json({ persisted: false, reason: 'database_not_configured' });
   }

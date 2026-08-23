@@ -1,13 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createInterviewSession, isDatabaseConfigured } from '../../../lib/db';
+import { createSessionSchema, readJson, resumeTokenPattern } from '../../../lib/persistence-validation';
 
 export async function POST(request: NextRequest) {
-  const payload = await request.json() as { id?: string; technology?: string; difficulty?: string; currentIndex?: number };
-  if (!payload.id || !payload.technology || !payload.difficulty) {
-    return NextResponse.json({ error: 'id, technology and difficulty are required' }, { status: 400 });
-  }
   const resumeToken = request.headers.get('x-resume-token');
-  if (!resumeToken || !/^[0-9a-f]{64}$/i.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
+  if (!resumeToken || !resumeTokenPattern.test(resumeToken)) return NextResponse.json({ error: 'resume_token_required' }, { status: 401 });
+  const parsed = createSessionSchema.safeParse(await readJson(request));
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'invalid_session_request' }, { status: 400 });
+  }
+  const payload = parsed.data;
 
   if (!isDatabaseConfigured()) {
     return NextResponse.json({ persisted: false, reason: 'database_not_configured' });
