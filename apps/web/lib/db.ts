@@ -38,12 +38,19 @@ function getSql() {
   return neon(url);
 }
 
-export async function deleteManagedAuthUser(userId: string) {
+export async function deleteManagedAccountData(userId: string) {
   const sql = getSql();
   if (!sql) return false;
 
-  const rows = await sql`DELETE FROM neon_auth.user WHERE id = ${userId} RETURNING id`;
-  return rows.length === 1;
+  await sql.transaction([
+    sql`DELETE FROM course_pack_reviews WHERE reviewer_user_id = ${userId}`,
+    sql`UPDATE app_user_roles SET granted_by = NULL WHERE granted_by = ${userId}`,
+    sql`DELETE FROM app_user_roles WHERE user_id = ${userId}`,
+    sql`DELETE FROM subscription_accounts WHERE user_id = ${userId}`,
+    sql`DELETE FROM interview_sessions WHERE owner_user_id = ${userId}`,
+    sql`DELETE FROM neon_auth.user WHERE id = ${userId}`,
+  ]);
+  return true;
 }
 
 function hashResumeToken(token: string) {

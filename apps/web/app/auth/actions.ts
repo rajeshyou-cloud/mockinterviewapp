@@ -5,7 +5,7 @@ import { z } from 'zod';
 
 import { getAppUrl } from '../../lib/app-url';
 import { auth, isAuthConfigured } from '../../lib/auth/server';
-import { deleteManagedAuthUser, deleteUserApplicationData, getSubscriptionAccount } from '../../lib/db';
+import { deleteManagedAccountData, deleteUserApplicationData, getSubscriptionAccount } from '../../lib/db';
 
 export type AuthActionState = { error: string } | null;
 
@@ -61,8 +61,11 @@ export async function deleteAccount(formData: FormData) {
     redirect('/billing?error=cancel_required');
   }
 
-  const { error } = await auth.deleteUser();
-  if (error && !(await deleteManagedAuthUser(session.user.id))) redirect('/account?delete=failed');
-  await deleteUserApplicationData(session.user.id);
+  const managedDeleted = await deleteManagedAccountData(session.user.id);
+  if (!managedDeleted) {
+    const { error } = await auth.deleteUser();
+    if (error) redirect('/account?delete=failed');
+    await deleteUserApplicationData(session.user.id);
+  }
   redirect('/');
 }
