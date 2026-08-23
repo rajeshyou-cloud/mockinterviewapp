@@ -7,6 +7,7 @@ import {
   ScoreResponse,
   Technology,
   completeRemoteSession,
+  claimRemoteSession,
   createRemoteSession,
   fetchRemoteSession,
   fetchQuestions,
@@ -81,6 +82,7 @@ export default function Home() {
             currentIndex: active.currentIndex,
           });
           if (!cancelled) setCloudPersisted(Boolean(remote.persisted));
+          if (remote.persisted) void claimRemoteSession(active.id, active.resumeToken);
           if (active === saved) restored.current = null;
         }
       } catch (e) { if (!cancelled) { setQuestions([]); setError(e instanceof Error ? e.message : 'Unable to load questions'); } }

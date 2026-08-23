@@ -12,7 +12,11 @@ export type PersistedSession = {
   completed_at: string | null;
   total_score: number | null;
   metadata: Record<string, unknown>;
+  owner_user_id?: string | null;
 };
+
+export type AppRole = 'candidate' | 'reviewer' | 'recruiter' | 'admin';
+export type CourseReviewStatus = 'in_review' | 'approved' | 'changes_requested';
 
 export type PersistedAnswer = {
   id: string;
@@ -122,4 +126,132 @@ export async function completeInterviewSession(id: string, resumeToken: string, 
     RETURNING id, technology, difficulty, status, started_at, completed_at, total_score, metadata
   `;
   return rows[0] as PersistedSession | undefined;
+}
+
+export async function claimInterviewSession(id: string, resumeToken: string, userId: string) {
+  const sql = getSql();
+  if (!sql) return null;
+  const tokenHash = hashResumeToken(resumeToken);
+  const rows = await sql`
+    UPDATE interview_sessions
+    SET owner_user_id = ${userId}
+    WHERE id = ${id}::uuid
+      AND resume_token_hash = ${tokenHash}
+      AND (owner_user_id IS NULL OR owner_user_id = ${userId})
+    RETURNING id, technology, difficulty, status, started_at, completed_at, total_score, metadata, owner_user_id
+  `;
+  return rows[0] as PersistedSession | undefined;
+}
+
+export async function listUserInterviewSessions(userId: string) {
+  const sql = getSql();
+  if (!sql) return [];
+  const rows = await sql`
+    SELECT id, technology, difficulty, status, started_at, completed_at, total_score, metadata, owner_user_id
+    FROM interview_sessions
+    WHERE owner_user_id = ${userId}
+    ORDER BY started_at DESC
+    LIMIT 100
+  `;
+  return rows as PersistedSession[];
+}
+
+export async function getOwnedInterviewSession(id: string, userId: string) {
+  const sql = getSql();
+  if (!sql) return null;
+  const sessions = await sql`
+    SELECT id, technology, difficulty, status, started_at, completed_at, total_score, metadata, owner_user_id
+    FROM interview_sessions
+    WHERE id = ${id}::uuid AND owner_user_id = ${userId}
+    LIMIT 1
+  `;
+  if (!sessions.length) return null;
+  const answers = await sql`SELECT * FROM interview_answers WHERE session_id = ${id}::uuid ORDER BY answered_at`;
+  return { session: sessions[0] as PersistedSession, answers: answers as PersistedAnswer[] };
+}
+
+export async function getUserRoles(userId: string): Promise<AppRole[]> {
+  const sql = getSql();
+  if (!sql) return [];
+  const rows = await sql`SELECT role FROM app_user_roles WHERE user_id = ${userId} ORDER BY role`;
+  return rows.map((row) => row.role as AppRole);
+}
+
+export async function listRoleAssignments() {
+  const sql = getSql();
+  if (!sql) return [];
+  return sql`SELECT user_id, role, granted_at, granted_by FROM app_user_roles ORDER BY granted_at DESC`;
+}
+
+export async function grantUserRole(userId: string, role: AppRole, grantedBy: string) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    INSERT INTO app_user_roles (user_id, role, granted_by)
+    VALUES (${userId}, ${role}, ${grantedBy})
+    ON CONFLICT (user_id, role) DO NOTHING
+    RETURNING user_id, role, granted_at, granted_by
+  `;
+  return rows[0] ?? null;
+}
+
+export async function revokeUserRole(userId: string, role: AppRole) {
+  const sql = getSql();
+  if (!sql) return false;
+  const rows = await sql`DELETE FROM app_user_roles WHERE user_id = ${userId} AND role = ${role} RETURNING user_id`;
+  return rows.length > 0;
+}
+
+export async function saveCoursePackReview(input: {
+  courseId: string;
+  reviewerUserId: string;
+  status: CourseReviewStatus;
+  notes: string;
+  sourceLinksChecked: boolean;
+}) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    INSERT INTO course_pack_reviews (course_id, reviewer_user_id, status, notes, source_links_checked)
+    VALUES (${input.courseId}, ${input.reviewerUserId}, ${input.status}, ${input.notes}, ${input.sourceLinksChecked})
+    ON CONFLICT (course_id, reviewer_user_id) DO UPDATE SET
+      status = EXCLUDED.status,
+      notes = EXCLUDED.notes,
+      source_links_checked = EXCLUDED.source_links_checked,
+      reviewed_at = now()
+    RETURNING course_id, reviewer_user_id, status, notes, source_links_checked, reviewed_at
+  `;
+  return rows[0];
+}
+
+export async function listCoursePackReviews() {
+  const sql = getSql();
+  if (!sql) return [];
+  return sql`
+    SELECT course_id, reviewer_user_id, status, notes, source_links_checked, reviewed_at
+    FROM course_pack_reviews
+    ORDER BY reviewed_at DESC
+  `;
+}
+
+export async function getRecruiterAnalytics() {
+  const sql = getSql();
+  if (!sql) return { summary: [], sessions: [] };
+  const summary = await sql`
+    SELECT technology, difficulty, count(*)::int AS sessions,
+      count(DISTINCT owner_user_id)::int AS candidates,
+      round(avg(total_score)::numeric, 2) AS average_score
+    FROM interview_sessions
+    WHERE status = 'completed' AND owner_user_id IS NOT NULL
+    GROUP BY technology, difficulty
+    ORDER BY technology, difficulty
+  `;
+  const sessions = await sql`
+    SELECT id, owner_user_id, technology, difficulty, status, started_at, completed_at, total_score
+    FROM interview_sessions
+    WHERE status = 'completed' AND owner_user_id IS NOT NULL
+    ORDER BY completed_at DESC NULLS LAST
+    LIMIT 100
+  `;
+  return { summary, sessions };
 }

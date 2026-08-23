@@ -101,6 +101,18 @@ export function createRemoteSession(input: { id: string; resumeToken: string; te
   return postPersistence('/api/sessions', resumeToken, payload);
 }
 
+export async function claimRemoteSession(sessionId: string, resumeToken: string) {
+  try {
+    const response = await fetch(`/api/sessions/${sessionId}/claim`, {
+      method: 'POST',
+      headers: { 'x-resume-token': resumeToken },
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
 export function saveRemoteAnswer(sessionId: string, resumeToken: string, input: {
   questionId: string;
   answerText: string;

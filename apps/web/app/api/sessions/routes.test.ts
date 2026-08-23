@@ -7,13 +7,18 @@ const db = vi.hoisted(() => ({
   getInterviewSession: vi.fn(),
   saveInterviewAnswer: vi.fn(),
   completeInterviewSession: vi.fn(),
+  claimInterviewSession: vi.fn(),
 }));
 
+const authMock = vi.hoisted(() => ({ getSession: vi.fn() }));
+
 vi.mock('../../../lib/db', () => db);
+vi.mock('../../../lib/auth/server', () => ({ auth: authMock }));
 
 import { GET as getSession } from './[id]/route';
 import { POST as saveAnswer } from './[id]/answers/route';
 import { POST as completeSession } from './[id]/complete/route';
+import { POST as claimSession } from './[id]/claim/route';
 import { POST as createSession } from './route';
 
 const id = 'c102a5cd-b19d-4c54-8fa6-167573b4247c';
@@ -27,6 +32,7 @@ function request(path: string, init?: ConstructorParameters<typeof NextRequest>[
 beforeEach(() => {
   vi.clearAllMocks();
   db.isDatabaseConfigured.mockReturnValue(true);
+  authMock.getSession.mockResolvedValue({ data: null });
 });
 
 describe('session persistence routes', () => {
@@ -160,5 +166,26 @@ describe('session persistence routes', () => {
 
     expect(response.status).toBe(404);
     expect(await response.json()).toEqual({ error: 'session_not_found_or_unauthorized' });
+  });
+
+  it('claims a resume-key session only for an authenticated account', async () => {
+    authMock.getSession.mockResolvedValue({ data: { user: { id: 'user-123' } } });
+    db.claimInterviewSession.mockResolvedValue({ id, owner_user_id: 'user-123' });
+
+    const response = await claimSession(request(`/api/sessions/${id}/claim`, {
+      method: 'POST', headers: { 'x-resume-token': token },
+    }), context);
+
+    expect(response.status).toBe(200);
+    expect(db.claimInterviewSession).toHaveBeenCalledWith(id, token, 'user-123');
+  });
+
+  it('does not expose session claiming to anonymous callers', async () => {
+    const response = await claimSession(request(`/api/sessions/${id}/claim`, {
+      method: 'POST', headers: { 'x-resume-token': token },
+    }), context);
+
+    expect(response.status).toBe(401);
+    expect(db.claimInterviewSession).not.toHaveBeenCalled();
   });
 });
