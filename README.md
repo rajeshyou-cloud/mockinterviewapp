@@ -25,6 +25,8 @@ Production: https://mockinterviewapp-web.vercel.app
 - `packages/content` — shared content schema and original starter contract
 - `packages/db/schema.sql` — Neon persistence schema
 - `scripts/generate-question-bank.mjs` — reproducible expansion generator
+- `apps/web/lib/course-catalog.ts` — central released/planned course registry
+- `COURSE_EXPANSION_PLAN.md` — Milestone 3 scope, launch gates, and course order
 - `PROJECT_STATE.md` — authoritative product and deployment status
 - `HANDOVER.md` — developer restart guide
 
@@ -46,4 +48,4 @@ AI Gateway scoring is selected automatically on Vercel and falls back safely to 
 
 ## Roadmap outside the completed candidate product
 
-Recruiter comparison, replay, full analytics, reviewer/admin workflows, production user accounts, and billing are separate future product surfaces and are not part of the completed candidate-practice milestone.
+Milestone 3 prepares Databricks, Oracle Database, Power BI, Python, and AWS at an initial target of 150 questions each and adds a searchable Question Bank UI. Recruiter comparison, replay, full analytics, reviewer/admin workflows, production user accounts, and billing remain separate future product surfaces.

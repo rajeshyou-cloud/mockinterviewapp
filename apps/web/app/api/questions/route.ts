@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'node:crypto';
 
+import { isAvailableTechnology } from '../../../lib/course-catalog';
 import { questionBank } from '../../../lib/question-bank';
 
 function seededRank(seed: string, id: string) {
@@ -14,7 +15,7 @@ export async function GET(request: NextRequest) {
   const requestedLimit = request.nextUrl.searchParams.get('limit');
   const limit = requestedLimit ? Number.parseInt(requestedLimit, 10) : undefined;
 
-  if (technology && !['snowflake', 'informatica'].includes(technology)) {
+  if (technology && !isAvailableTechnology(technology)) {
     return NextResponse.json({ error: 'Unsupported technology' }, { status: 400 });
   }
   if (difficulty && !['beginner', 'intermediate', 'advanced'].includes(difficulty)) {

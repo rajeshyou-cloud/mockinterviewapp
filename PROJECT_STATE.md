@@ -56,6 +56,24 @@ Semantic scoring is fully implemented behind the provider-neutral contract with 
 
 The current Vercel team rejects live AI Gateway calls until a payment card is added. Production therefore identifies results as **Explainable baseline evaluation** instead of claiming AI evaluation. This is an external account activation prerequisite, not an unfinished code path; after billing is enabled, the deployed code selects AI Gateway automatically without an application change.
 
+## Milestone 3 — Course and question-bank expansion
+
+Status: **PREPARATION STARTED**
+
+- [x] Central course registry created
+- [x] Databricks, Oracle Database, Power BI, Python, and AWS registered as planned
+- [x] Planned courses kept out of the production selector until launch gates pass
+- [x] Initial target set to 150 questions per technology, matching the released courses
+- [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
+- [ ] Build a searchable/filterable Question Bank UI for the existing 300 questions
+- [ ] Add and validate 150 Databricks questions
+- [ ] Add and validate 150 Power BI questions
+- [ ] Add and validate 150 Oracle Database questions
+- [ ] Add and validate 150 Python questions
+- [ ] Add and validate 150 AWS questions
+- [ ] Human-review and approve each pack before exposing it in production
+- [ ] Revalidate all official source links and run production browser verification per launch
+
 ## Current user flow
 
 1. Candidate selects Snowflake or Informatica and a difficulty level.

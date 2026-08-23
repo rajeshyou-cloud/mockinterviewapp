@@ -1,4 +1,6 @@
-export type Technology = 'snowflake' | 'informatica';
+import type { Technology } from './course-catalog';
+
+export type { Technology } from './course-catalog';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 
 export type InterviewQuestion = {

@@ -19,10 +19,12 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/lib/db.ts` — server-only Neon adapter and resume-token hashing
 - `apps/web/lib/persistence-validation.ts` — persistence request boundaries
 - `apps/web/lib/question-bank.ts` — shared 300-question bank
+- `apps/web/lib/course-catalog.ts` — central released/planned technology registry
 - `apps/web/data` — versioned content packs
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
 - `packages/db/schema.sql` — persistence schema
 - `.github/workflows/ci.yml` — web tests/build and API tests
+- `COURSE_EXPANSION_PLAN.md` — Milestone 3 targets and launch gates
 
 ## Runtime flow
 
@@ -79,4 +81,4 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 ## Deferred roadmap
 
-Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are separate future milestones. Preserve the candidate product's provider neutrality and resume-key security if those surfaces are added.
+Milestone 3 is prepared for Databricks, Oracle Database, Power BI, Python, and AWS at an initial 150 questions each, plus a searchable Question Bank UI. Planned courses must remain hidden until their content/review/test gates pass. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing remain separate future milestones.
