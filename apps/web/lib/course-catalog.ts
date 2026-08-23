@@ -1,7 +1,8 @@
+export const technologyIds = ['snowflake', 'informatica', 'databricks', 'oracle', 'power-bi', 'python', 'aws'] as const;
 export const availableTechnologyIds = ['snowflake', 'informatica'] as const;
 
-export type Technology = (typeof availableTechnologyIds)[number];
-export type CourseId = Technology | 'databricks' | 'oracle' | 'power-bi' | 'python' | 'aws';
+export type Technology = (typeof technologyIds)[number];
+export type CourseId = Technology;
 
 export type CourseDefinition = {
   id: CourseId;
@@ -29,6 +30,10 @@ export function isAvailableTechnology(value: string): value is Technology {
   return (availableTechnologyIds as readonly string[]).includes(value);
 }
 
+export function isKnownTechnology(value: string): value is Technology {
+  return (technologyIds as readonly string[]).includes(value);
+}
+
 export function technologyLabel(technology: Technology) {
-  return availableCourses.find((course) => course.id === technology)?.label ?? technology;
+  return courseCatalog.find((course) => course.id === technology)?.label ?? technology;
 }

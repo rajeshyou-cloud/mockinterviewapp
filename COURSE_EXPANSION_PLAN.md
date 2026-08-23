@@ -64,6 +64,8 @@ A planned course must not appear in the production interview selector until all 
 6. The Question Bank UI can browse and filter the new course.
 7. CI, production build, and browser verification are green.
 
+The application enforces these gates dynamically. A candidate pack is excluded from the course API, interview selector, Question Bank, scoring, and answer persistence until an authorized reviewer records `approved` with official-source verification. That approval releases the complete pack without a separate code promotion; revoking approval removes it again.
+
 ## Milestone 3 work order
 
 1. Build the searchable Question Bank UI for the existing 300 questions.
@@ -73,13 +75,10 @@ A planned course must not appear in the production interview selector until all 
 5. Run human review and source revalidation in batches before enabling each selector option.
 6. Reassess whether each course should expand from 150 to 300 using search, interview, and low-score topic evidence.
 
-## Other pending product activities
+## Other product activities
 
 - Enable live Vercel AI Gateway scoring by adding billing to the Vercel team.
-- Add interview replay.
-- Add recruiter comparison and analytics.
-- Add human reviewer/admin workflow.
-- Add production user authentication.
-- Add subscription billing.
+- Interview replay, recruiter analytics, reviewer/admin workflow, production authentication, and the subscription/entitlement foundation are deployed.
+- Activate Stripe products, prices, and the signed production webhook after the account owner accepts provider terms and selects prices.
 
-Only AI Gateway activation and the course/question-bank work are immediate. The remaining items are separate later product milestones.
+Human course decisions, Stripe activation, and AI Gateway billing are the remaining account-level launch gates.

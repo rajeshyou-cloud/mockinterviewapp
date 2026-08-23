@@ -11,9 +11,11 @@ const db = vi.hoisted(() => ({
 }));
 
 const authMock = vi.hoisted(() => ({ getSession: vi.fn() }));
+const released = vi.hoisted(() => ({ isReleasedTechnology: vi.fn() }));
 
 vi.mock('../../../lib/db', () => db);
 vi.mock('../../../lib/auth/server', () => ({ auth: authMock }));
+vi.mock('../../../lib/released-courses', () => released);
 
 import { GET as getSession } from './[id]/route';
 import { POST as saveAnswer } from './[id]/answers/route';
@@ -33,6 +35,7 @@ beforeEach(() => {
   vi.clearAllMocks();
   db.isDatabaseConfigured.mockReturnValue(true);
   authMock.getSession.mockResolvedValue({ data: null });
+  released.isReleasedTechnology.mockResolvedValue(true);
 });
 
 describe('session persistence routes', () => {

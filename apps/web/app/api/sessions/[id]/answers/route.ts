@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { isDatabaseConfigured, saveInterviewAnswer } from '../../../../../lib/db';
 import { readJson, resumeTokenPattern, saveAnswerSchema, sessionIdSchema } from '../../../../../lib/persistence-validation';
 import { findQuestion } from '../../../../../lib/question-bank';
+import { isReleasedTechnology } from '../../../../../lib/released-courses';
 
 export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   const { id } = await context.params;
@@ -12,7 +13,9 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
   if (!parsed.success) return NextResponse.json({ error: 'invalid_answer_request' }, { status: 400 });
   const payload = parsed.data;
   const question = findQuestion(payload.questionId);
-  if (!question) return NextResponse.json({ error: 'reviewed_question_not_found' }, { status: 404 });
+  if (!question || !(await isReleasedTechnology(question.technology))) {
+    return NextResponse.json({ error: 'reviewed_question_not_found' }, { status: 404 });
+  }
   const allowedConcepts = new Set(question.expectedConcepts);
   if ([...(payload.matchedConcepts ?? []), ...(payload.missingConcepts ?? [])].some((concept) => !allowedConcepts.has(concept))) {
     return NextResponse.json({ error: 'invalid_scoring_concepts' }, { status: 400 });

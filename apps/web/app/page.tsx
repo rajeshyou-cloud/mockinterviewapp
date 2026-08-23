@@ -10,12 +10,13 @@ import {
   claimRemoteSession,
   createRemoteSession,
   fetchRemoteSession,
+  fetchReleasedCourses,
   fetchQuestions,
   saveRemoteAnswer,
   scoreAnswer,
 } from '../lib/api';
 import { buildAssessmentSummary } from '../lib/assessment';
-import { availableCourses, technologyLabel } from '../lib/course-catalog';
+import { availableCourses, technologyLabel, type CourseDefinition } from '../lib/course-catalog';
 import { InterviewSession, clearSession, getResumeKey, loadSession, newSession, parseResumeKey, saveSession } from '../lib/session';
 import { SpeechInputAdapter, SpeechOutputAdapter, createBrowserSpeechInput, createBrowserSpeechOutput } from '../lib/voice';
 
@@ -24,6 +25,7 @@ const difficultyLabels: Record<Difficulty, string> = { beginner: 'Beginner', int
 export default function Home() {
   const restored = useRef<InterviewSession | null>(null);
   const [technology, setTechnology] = useState<Technology>('snowflake');
+  const [courses, setCourses] = useState<readonly CourseDefinition[]>(availableCourses);
   const [difficulty, setDifficulty] = useState<Difficulty>('intermediate');
   const [questions, setQuestions] = useState<InterviewQuestion[]>([]);
   const [index, setIndex] = useState(0);
@@ -55,6 +57,18 @@ export default function Home() {
       setSession(saved);
     }
     return () => { speechInput.current?.stop(); speechOutput.current?.cancel(); };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetchReleasedCourses()
+      .then((released) => {
+        if (cancelled) return;
+        setCourses(released);
+        setTechnology((current) => released.some((course) => course.id === current) ? current : 'snowflake');
+      })
+      .catch(() => undefined);
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
@@ -221,8 +235,8 @@ export default function Home() {
   }
 
   return <main className="shell">
-    <section className="hero"><div><p className="eyebrow">AI MOCK INTERVIEW</p><h1>Practice technical interviews with structured feedback.</h1><p className="lede">Choose a technology and level, answer by voice or text, and resume an interview after refreshing the page.</p><div className="heroLinks"><a className="bankLink" href="/questions">Browse all 300 questions →</a><a className="bankLink" href="/replay">Replay an interview →</a><a className="bankLink" href="/account">Sign in or create account →</a></div></div><div className="statusCard"><span className="dot"/><strong>Milestone 2</strong><span>{cloudPersisted ? 'Cloud persistence active' : 'Local persistence active'}</span></div></section>
-    <section className="toolbar card"><label>Technology<select value={technology} onChange={(e)=>setTechnology(e.target.value as Technology)}>{availableCourses.map((course)=><option value={course.id} key={course.id}>{course.label}</option>)}</select></label><label>Level<select value={difficulty} onChange={(e)=>setDifficulty(e.target.value as Difficulty)}><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label><div className="modePill">{voiceAvailable?'Voice + text ready':'Text ready · voice unavailable'}</div></section>
+    <section className="hero"><div><p className="eyebrow">AI MOCK INTERVIEW</p><h1>Practice technical interviews with structured feedback.</h1><p className="lede">Choose a technology and level, answer by voice or text, and resume an interview after refreshing the page.</p><div className="heroLinks"><a className="bankLink" href="/questions">Browse released questions →</a><a className="bankLink" href="/replay">Replay an interview →</a><a className="bankLink" href="/account">Sign in or create account →</a></div></div><div className="statusCard"><span className="dot"/><strong>Milestone 2</strong><span>{cloudPersisted ? 'Cloud persistence active' : 'Local persistence active'}</span></div></section>
+    <section className="toolbar card"><label>Technology<select value={technology} onChange={(e)=>setTechnology(e.target.value as Technology)}>{courses.map((course)=><option value={course.id} key={course.id}>{course.label}</option>)}</select></label><label>Level<select value={difficulty} onChange={(e)=>setDifficulty(e.target.value as Difficulty)}><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label><div className="modePill">{voiceAvailable?'Voice + text ready':'Text ready · voice unavailable'}</div></section>
     <section className="resumeCard card"><div><strong>Continue on another device</strong><span>Copy this session’s private key, or paste a key from another device.</span></div><button className="secondary" type="button" disabled={!session||!cloudPersisted} onClick={()=>void copyResumeKey()}>Copy resume key</button><input aria-label="Resume key" value={resumeInput} onChange={(e)=>setResumeInput(e.target.value)} placeholder="Paste resume key" autoComplete="off" spellCheck={false}/><button className="primary" type="button" disabled={resuming||!resumeInput.trim()} onClick={()=>void resumeRemoteSession()}>{resuming?'Restoring…':'Resume'}</button>{resumeMessage?<span className="resumeMessage" aria-live="polite">{resumeMessage}</span>:null}</section>
     {error?<div className="errorBanner" role="alert">{error}</div>:null}
     <section className="interviewGrid"><article className="card interviewer">

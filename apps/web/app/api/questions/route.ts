@@ -1,21 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'node:crypto';
 
-import { isAvailableTechnology } from '../../../lib/course-catalog';
-import { questionBank } from '../../../lib/question-bank';
+import { allQuestionBank } from '../../../lib/question-bank';
+import { getReleasedCourseIds } from '../../../lib/released-courses';
 
 function seededRank(seed: string, id: string) {
   return createHash('sha256').update(`${seed}:${id}`).digest('hex');
 }
 
 export async function GET(request: NextRequest) {
+  const releasedCourseIds = await getReleasedCourseIds();
+  const released = new Set(releasedCourseIds);
   const technology = request.nextUrl.searchParams.get('technology');
   const difficulty = request.nextUrl.searchParams.get('difficulty');
   const seed = request.nextUrl.searchParams.get('seed');
   const requestedLimit = request.nextUrl.searchParams.get('limit');
   const limit = requestedLimit ? Number.parseInt(requestedLimit, 10) : undefined;
 
-  if (technology && !isAvailableTechnology(technology)) {
+  if (technology && !released.has(technology as (typeof releasedCourseIds)[number])) {
     return NextResponse.json({ error: 'Unsupported technology' }, { status: 400 });
   }
   if (difficulty && !['beginner', 'intermediate', 'advanced'].includes(difficulty)) {
@@ -28,7 +30,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'seed is too long' }, { status: 400 });
   }
 
-  const filtered = questionBank.filter((question) => {
+  const filtered = allQuestionBank.filter((question) => {
+    if (!released.has(question.technology)) return false;
     if (technology && question.technology !== technology) return false;
     if (difficulty && question.difficulty !== difficulty) return false;
     return true;

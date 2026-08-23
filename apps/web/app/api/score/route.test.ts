@@ -2,10 +2,12 @@ import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const score = vi.hoisted(() => vi.fn());
+const released = vi.hoisted(() => ({ isReleasedTechnology: vi.fn() }));
 
 vi.mock('../../../lib/scoring', () => ({
   createScoringProvider: () => ({ score }),
 }));
+vi.mock('../../../lib/released-courses', () => released);
 
 import { POST } from './route';
 
@@ -18,7 +20,10 @@ function request(body: string) {
 }
 
 describe('POST /api/score', () => {
-  beforeEach(() => score.mockReset());
+  beforeEach(() => {
+    score.mockReset();
+    released.isReleasedTechnology.mockResolvedValue(true);
+  });
 
   it('rejects malformed and incomplete requests', async () => {
     expect((await POST(request('{'))).status).toBe(400);
@@ -42,6 +47,16 @@ describe('POST /api/score', () => {
       expected_concepts: ['attacker controlled'],
     })));
 
+    expect(response.status).toBe(404);
+    expect(score).not.toHaveBeenCalled();
+  });
+
+  it('does not score a candidate-pack question before human approval', async () => {
+    released.isReleasedTechnology.mockResolvedValue(false);
+    const response = await POST(request(JSON.stringify({
+      answer: 'A detailed answer',
+      question_id: 'databricks-architecture-001',
+    })));
     expect(response.status).toBe(404);
     expect(score).not.toHaveBeenCalled();
   });

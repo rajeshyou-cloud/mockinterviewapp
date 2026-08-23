@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import { findQuestion } from '../../../lib/question-bank';
 import { checkScoringRateLimit } from '../../../lib/rate-limit';
+import { isReleasedTechnology } from '../../../lib/released-courses';
 import { createScoringProvider } from '../../../lib/scoring';
 
 type ScorePayload = {
@@ -24,7 +25,7 @@ export async function POST(request: NextRequest) {
   if (!answer || !payload.question_id) {
     return NextResponse.json({ error: 'answer and question_id are required' }, { status: 400 });
   }
-  if (!question) {
+  if (!question || !(await isReleasedTechnology(question.technology))) {
     return NextResponse.json({ error: 'The reviewed question was not found' }, { status: 404 });
   }
   if (answer.length > 12_000) {

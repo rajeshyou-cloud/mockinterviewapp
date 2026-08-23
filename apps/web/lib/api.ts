@@ -1,4 +1,4 @@
-import type { Technology } from './course-catalog';
+import type { CourseDefinition, Technology } from './course-catalog';
 
 export type { Technology } from './course-catalog';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
@@ -53,6 +53,12 @@ export type RemoteSessionResponse = {
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? '';
 const QUESTIONS_PATH = API_BASE_URL ? '/v1/questions' : '/api/questions';
 const SCORE_PATH = '/api/score';
+
+export async function fetchReleasedCourses(): Promise<CourseDefinition[]> {
+  const response = await fetch('/api/courses', { cache: 'no-store' });
+  if (!response.ok) throw new Error(`Course API failed with status ${response.status}`);
+  return response.json() as Promise<CourseDefinition[]>;
+}
 
 export async function fetchQuestions(
   technology: Technology,

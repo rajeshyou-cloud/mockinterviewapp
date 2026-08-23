@@ -1,5 +1,9 @@
 import { NextRequest } from 'next/server';
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
+const released = vi.hoisted(() => ({ getReleasedCourseIds: vi.fn() }));
+
+vi.mock('../../../lib/released-courses', () => released);
 
 import { GET } from './route';
 
@@ -8,6 +12,8 @@ function request(query = '') {
 }
 
 describe('GET /api/questions', () => {
+  beforeEach(() => released.getReleasedCourseIds.mockResolvedValue(['snowflake', 'informatica']));
+
   it('exposes the full reviewed bank when no sample is requested', async () => {
     const response = await GET(request());
     expect(response.status).toBe(200);
@@ -28,5 +34,13 @@ describe('GET /api/questions', () => {
   it('rejects unsupported filters and unsafe sample sizes', async () => {
     expect((await GET(request('?technology=oracle'))).status).toBe(400);
     expect((await GET(request('?limit=100'))).status).toBe(400);
+  });
+
+  it('exposes an approved candidate pack without exposing unapproved packs', async () => {
+    released.getReleasedCourseIds.mockResolvedValue(['snowflake', 'informatica', 'databricks']);
+    const response = await GET(request('?technology=databricks'));
+    expect(response.status).toBe(200);
+    expect(await response.json()).toHaveLength(150);
+    expect((await GET(request('?technology=aws'))).status).toBe(400);
   });
 });

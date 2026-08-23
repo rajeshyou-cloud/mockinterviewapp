@@ -251,6 +251,18 @@ export async function listCoursePackReviews() {
   `;
 }
 
+export async function listApprovedCourseIds() {
+  const sql = getSql();
+  if (!sql) return [] as string[];
+  const rows = await sql`
+    SELECT DISTINCT course_id
+    FROM course_pack_reviews
+    WHERE status = 'approved' AND source_links_checked = true
+    ORDER BY course_id
+  `;
+  return rows.map((row) => String(row.course_id));
+}
+
 export async function getRecruiterAnalytics() {
   const sql = getSql();
   if (!sql) return { summary: [], sessions: [] };

@@ -42,7 +42,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 
 ## Verification snapshot
 
-- Web: **51 tests passing** across 13 files on the deployed completion branch
+- Web: **57 tests passing** across 15 files on the release branch
 - API: **8 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
@@ -60,7 +60,7 @@ The current Vercel team rejects live AI Gateway calls until a payment card is ad
 
 Neon Managed Auth has been provisioned on the production database branch. The production application now includes email/password sign-up, sign-in, sign-out, permanent self-deletion, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint, trusted production origin, and an independent 48-byte cookie secret are configured in production. On 2026-08-23 a disposable-user browser test verified sign-up, protected account access, sign-out, sign-in, and deletion; a database check then confirmed that zero disposable test users remained.
 
-Role-based account history, reviewer, recruiter, admin, and billing implementations are deployed, with 51 web tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed. A disposable administrator then verified `/review`, `/admin`, `/recruiter`, `/billing`, account-linked history, and secure account replay in production. Final account-deletion verification confirmed atomic cleanup of the identity, roles, subscription, and owned sessions, with zero disposable users remaining.
+Role-based account history, reviewer, recruiter, admin, and billing implementations are deployed, with 57 web tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed. A disposable administrator then verified `/review`, `/admin`, `/recruiter`, `/billing`, account-linked history, and secure account replay in production. Final account-deletion verification confirmed atomic cleanup of the identity, roles, subscription, and owned sessions, with zero disposable users remaining.
 
 ## Milestone 3 — Course and question-bank expansion
 
@@ -69,6 +69,7 @@ Status: **PREPARATION STARTED**
 - [x] Central course registry created
 - [x] Databricks, Oracle Database, Power BI, Python, and AWS registered as planned
 - [x] Planned courses kept out of the production selector until launch gates pass
+- [x] Approval-driven publication gate covers the course API, selector, Question Bank, scoring, and answer persistence
 - [x] Initial target set to 150 questions per technology, matching the released courses
 - [x] Topic foundations, review gates, and delivery order documented in `COURSE_EXPANSION_PLAN.md`
 - [x] Searchable/filterable/paginated Question Bank UI for the existing 300 questions

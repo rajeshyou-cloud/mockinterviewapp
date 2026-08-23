@@ -49,4 +49,11 @@ describe('candidate course question packs', () => {
       expect(new URL(question.source.url).hostname).toBe('docs.aws.amazon.com');
     }
   });
+
+  it('keeps all 750 candidate IDs and question texts globally unique', () => {
+    const questions = Object.values(packs).flat();
+    expect(questions).toHaveLength(750);
+    expect(new Set(questions.map((question) => question.id))).toHaveLength(750);
+    expect(new Set(questions.map((question) => question.question))).toHaveLength(750);
+  });
 });
