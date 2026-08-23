@@ -95,6 +95,13 @@ export default function Home() {
   const completed = session?.status === 'completed';
   const assessment = useMemo(() => buildAssessmentSummary(questions, session), [questions, session]);
 
+  useEffect(() => {
+    if (!current || !session) return;
+    const savedAnswer = session.answers.find((item) => item.questionId === current.id);
+    setAnswer(savedAnswer?.answer ?? '');
+    setResult(savedAnswer?.score ?? null);
+  }, [current, session]);
+
   async function submitAnswer() {
     if (!current || !answer.trim() || !session) return;
     setSubmitting(true); setError('');
