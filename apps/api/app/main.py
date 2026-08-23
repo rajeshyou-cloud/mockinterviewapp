@@ -107,8 +107,9 @@ def questions(
 def score_answer(payload: ScoreRequest) -> ScoreResponse:
     """Baseline explainable scoring.
 
-    This intentionally simple scorer establishes the API contract for Milestone 1.
-    A provider-independent semantic/LLM scorer will replace it in a later milestone.
+    This standalone service preserves the explainable fallback contract. The
+    production Next.js scoring route can add semantic evaluation without
+    changing this response shape.
     """
     normalized = payload.answer.lower()
     matched = [
