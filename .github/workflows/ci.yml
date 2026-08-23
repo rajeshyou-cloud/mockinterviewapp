@@ -8,7 +8,7 @@ on:
 
 jobs:
   web:
-    name: Web build
+    name: Web tests and build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,6 +17,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm install
+      - run: npm run test:web
       - run: npm run build:web
 
   api:
