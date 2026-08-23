@@ -55,6 +55,10 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - [x] Web app upgraded locally to Next.js 16.3.2 / React 19.2.8; production build and zero-vulnerability audit verified
 - [x] Resume-identity migration applied to the main Neon branch
 - [x] Main Neon create/answer/complete/authorized read-back transaction verified and disposable test data removed
+- [x] Commit `c1bfc85` passed GitHub CI #49 (web tests/build and API tests)
+- [x] Next.js 16.3.2 revision deployed READY to Vercel production
+- [x] Live production create/answer/complete/authorized read-back verified and disposable test data removed
+- [x] Production UI browser-reviewed with cloud persistence active, resume controls visible, reviewed questions loaded and no browser/runtime errors
 
 ### Deployment topology
 
@@ -62,14 +66,12 @@ Milestone 1 was accepted after the deployed Vercel UI was browser-reviewed. The 
 - `mockinterviewapp-web` is GitHub-linked to the same repository with Root Directory `apps/web` and auto-deploys from `main`.
 - `DATABASE_URL` is configured securely for Production and Preview on the web project.
 - Production web URL: `https://mockinterviewapp-web.vercel.app`.
-- Production currently remains on the prior Next.js 15.5.21 revision until the Neon migration is approved and this tested revision is pushed.
+- Production web is on Next.js 16.3.2 from the Git-linked `main` branch.
 
 ### Milestone 2 next actions
 
-- [ ] Deploy and verify durable session creation, answer writes, completion and cross-device read-back from the live UI
 - [ ] Add a semantic/LLM scoring provider behind the existing provider-neutral contract
 - [ ] Continue expanding reviewed Snowflake and Informatica content toward the 300-question target
-- [ ] Browser-review the fully server-persistent Milestone 2 flow
 
 ## Current user flow
 

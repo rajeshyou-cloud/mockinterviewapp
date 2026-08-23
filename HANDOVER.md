@@ -93,7 +93,9 @@ A milestone is complete only when:
 
 Latest local verification: **15 web tests passing**, **7 API tests passing**, the Next.js 16.3.2 production build succeeds, and `npm audit` reports zero known vulnerabilities.
 
-Neon migration `8281cb61-64e9-4e68-8298-d0d523a77344` has been applied to the main branch. A disposable create/answer/complete/authorized read-back transaction succeeded on main, and its test data was removed. The schema is ready for the resume-key web revision to deploy.
+Neon migration `8281cb61-64e9-4e68-8298-d0d523a77344` has been applied to the main branch. A disposable create/answer/complete/authorized read-back transaction succeeded on main, and its test data was removed.
+
+Commit `c1bfc85` passed GitHub CI #49 and deployed READY to Vercel production on Next.js 16.3.2. The live production routes passed create/answer/complete/authorized read-back verification, the disposable test session was deleted, and a browser review confirmed cloud persistence, resume controls, reviewed question loading and a clean browser/runtime error scan.
 
 GitHub Actions now provides the authoritative repository-level gate for:
 
@@ -101,7 +103,7 @@ GitHub Actions now provides the authoritative repository-level gate for:
 - FastAPI endpoint tests
 - JSON Schema content validation
 
-Milestone 2 remains **IN PROGRESS** until the verified migration is applied, the revision deploys, and the live cross-device flow receives a browser review.
+Milestone 2 remains **IN PROGRESS** for semantic scoring and continued reviewed-content expansion toward 300 questions. Persistence, secure resume identity, deployment and production verification are complete.
 
 ## Local development
 
@@ -127,7 +129,6 @@ The web app defaults to `http://localhost:8000` for the API. Override it with `N
 
 ## Next work
 
-- Push/deploy the tested web revision and verify live create, answer, complete, and cross-device restore.
 - Continue expanding reviewed content from the current 34 questions toward 300.
 - Add semantic scoring behind the existing provider-neutral contract.
 
