@@ -48,3 +48,13 @@ export async function signOut() {
   await auth.signOut();
   redirect('/');
 }
+
+export async function deleteAccount(formData: FormData) {
+  if (formData.get('confirmation') !== 'DELETE') return;
+  const { data: session } = await auth.getSession();
+  if (!session?.user) redirect('/auth/sign-in');
+
+  const { error } = await auth.deleteUser();
+  if (error) redirect('/account?delete=failed');
+  redirect('/');
+}

@@ -2,13 +2,14 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
 import { auth } from '../../lib/auth/server';
-import { signOut } from '../auth/actions';
+import { deleteAccount, signOut } from '../auth/actions';
 
 export const dynamic = 'force-dynamic';
 
-export default async function AccountPage() {
+export default async function AccountPage({ searchParams }: { searchParams: Promise<{ delete?: string }> }) {
   const { data: session } = await auth.getSession();
   if (!session?.user) redirect('/auth/sign-in');
+  const query = await searchParams;
 
   return (
     <main className="shell accountShell">
@@ -20,6 +21,15 @@ export default async function AccountPage() {
         <div className="accountActions">
           <form action={signOut}><button className="secondary" type="submit">Sign out</button></form>
         </div>
+        <details className="dangerZone">
+          <summary>Delete account</summary>
+          <p>This permanently removes your login identity. Type DELETE to confirm.</p>
+          {query.delete === 'failed' && <p className="authError">The account could not be deleted. Please try again.</p>}
+          <form action={deleteAccount}>
+            <label>Confirmation<input name="confirmation" required pattern="DELETE" autoComplete="off" /></label>
+            <button className="dangerButton" type="submit">Delete my account</button>
+          </form>
+        </details>
       </section>
     </main>
   );
