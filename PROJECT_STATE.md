@@ -42,7 +42,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 
 ## Verification snapshot
 
-- Web: **45 tests passing** across 12 files
+- Web: **49 tests passing** across 13 files on the staged completion branch
 - API: **8 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
@@ -58,7 +58,9 @@ The current Vercel team rejects live AI Gateway calls until a payment card is ad
 
 ## Production identity
 
-Neon Managed Auth has been provisioned on the production database branch. The application now includes email/password sign-up, sign-in, sign-out, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint and an independent 48-byte cookie secret are configured in Vercel Production. Production browser verification remains required before this activity is marked complete.
+Neon Managed Auth has been provisioned on the production database branch. The production application now includes email/password sign-up, sign-in, sign-out, a protected account route, an auth API proxy, signed HTTP-only session cookies, server-side input validation, and middleware protection reserved for account, reviewer, recruiter, and billing surfaces. The auth endpoint and an independent 48-byte cookie secret are configured in Vercel Production. Browser verification confirmed that sign-up renders and unauthenticated account access redirects to sign-in.
+
+Role-based account history, reviewer, recruiter, admin, and billing implementations are complete in local commits `731e132` and `bd502b9`, with 49 tests, a production build, and zero high-severity dependency findings. They are intentionally not pushed because their database migration has only been verified on an isolated Neon branch. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` is awaiting explicit production-apply approval.
 
 ## Milestone 3 — Course and question-bank expansion
 
@@ -110,10 +112,10 @@ Status: **PREPARATION STARTED**
 
 ## Deferred roadmap
 
-- Interview replay — implemented; production browser verification pending
-- Recruiter comparison and analytics
-- Human reviewer/admin workflow (required to promote candidate packs into the live bank)
-- Production user authentication — provisioned and implemented; deployment verification pending
-- Subscription billing
+- Interview replay — implemented, deployed, and production page verified
+- Recruiter comparison and analytics — implemented locally; database migration/deployment pending
+- Human reviewer/admin workflow — implemented locally; database migration, role bootstrap, and human decisions pending
+- Production user authentication — provisioned, deployed, and route-verified; role-backed surfaces pending migration
+- Subscription billing — implementation complete locally; Stripe terms/products/prices/webhook activation pending
 
 These are intentionally separate product surfaces, not incomplete Milestone 2 requirements.
