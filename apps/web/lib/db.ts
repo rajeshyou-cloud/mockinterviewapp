@@ -124,8 +124,8 @@ export async function saveInterviewAnswer(input: {
   if (!sql) return null;
   const tokenHash = hashResumeToken(input.resumeToken);
   const rows = await sql`
-    INSERT INTO interview_answers (session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback)
-    SELECT id, ${input.questionId}, ${input.answerText}, ${input.score}, ${JSON.stringify(input.matchedConcepts)}::jsonb, ${JSON.stringify(input.missingConcepts)}::jsonb, ${input.feedback}
+    INSERT INTO interview_answers (session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback, benchmark_version, scoring_provider, scoring_policy_version)
+    SELECT id, ${input.questionId}, ${input.answerText}, ${input.score}, ${JSON.stringify(input.matchedConcepts)}::jsonb, ${JSON.stringify(input.missingConcepts)}::jsonb, ${input.feedback}, ${input.benchmarkVersion ?? null}, ${input.provider ?? null}, ${input.scoringPolicyVersion ?? null}
     FROM interview_sessions
     WHERE id = ${input.sessionId}::uuid AND resume_token_hash = ${tokenHash}
     ON CONFLICT (session_id, question_id) DO UPDATE SET
@@ -134,8 +134,11 @@ export async function saveInterviewAnswer(input: {
       matched_concepts = EXCLUDED.matched_concepts,
       missing_concepts = EXCLUDED.missing_concepts,
       feedback = EXCLUDED.feedback,
+      benchmark_version = EXCLUDED.benchmark_version,
+      scoring_provider = EXCLUDED.scoring_provider,
+      scoring_policy_version = EXCLUDED.scoring_policy_version,
       answered_at = now()
-    RETURNING id, session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback, answered_at
+    RETURNING id, session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback, benchmark_version, scoring_provider, scoring_policy_version, answered_at
   `;
   if (!rows.length) return null;
   const answer = rows[0] as PersistedAnswer;

@@ -5,6 +5,7 @@
   "scripts": {
     "dev:web": "npm --workspace apps/web run dev",
     "build:web": "npm --workspace apps/web run build",
-    "test:web": "npm --workspace apps/web run test"
+    "test:web": "npm --workspace apps/web run test",
+    "validate:benchmarks": "node scripts/validate-benchmarks.mjs"
   }
 }

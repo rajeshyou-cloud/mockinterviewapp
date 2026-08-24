@@ -111,13 +111,39 @@ describe('session persistence routes', () => {
       headers: { 'content-type': 'application/json', 'x-resume-token': token },
       body: JSON.stringify({
         questionId: 'snowflake-architecture-001', answerText: 'An answer', score: 80,
-        matchedConcepts: ['storage'], missingConcepts: ['compute'], feedback: 'Good', currentIndex: 1,
+        dimensionScores: {
+          technical_accuracy: 32,
+          required_concept_coverage: 24,
+          reasoning_and_tradeoffs: 16,
+          relevance_and_clarity: 8,
+        },
+        matchedConcepts: ['storage'],
+        missingConcepts: ['compute'],
+        optionalConcepts: [],
+        incorrectClaims: [],
+        feedback: 'Good',
+        currentIndex: 1,
+        provider: 'deterministic-keyword',
+        benchmarkVersion: '1.0.0',
+        scoringPolicyVersion: 'benchmark-policy-1.0.0',
       }),
     }), context);
 
     expect(response.status).toBe(200);
     expect(db.saveInterviewAnswer).toHaveBeenCalledWith(expect.objectContaining({
-      sessionId: id, resumeToken: token, questionId: 'snowflake-architecture-001', currentIndex: 1,
+      sessionId: id,
+      resumeToken: token,
+      questionId: 'snowflake-architecture-001',
+      currentIndex: 1,
+      provider: 'deterministic-keyword',
+      benchmarkVersion: '1.0.0',
+      scoringPolicyVersion: 'benchmark-policy-1.0.0',
+      dimensionScores: {
+        technical_accuracy: 32,
+        required_concept_coverage: 24,
+        reasoning_and_tradeoffs: 16,
+        relevance_and_clarity: 8,
+      },
     }));
   });
 

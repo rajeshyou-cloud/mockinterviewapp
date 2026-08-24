@@ -32,6 +32,7 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/data` — versioned live content packs with benchmark-answer records
 - `apps/web/data/candidates` — complete but not yet human-approved course packs with benchmark-answer records
 - `scripts/generate-course-candidates.mjs` — deterministic candidate-pack generator
+- `scripts/validate-benchmarks.mjs` — benchmark-answer validator and publication-blocking summary
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
 - `packages/db/schema.sql` — persistence schema
 - `.github/workflows/ci.yml` — web tests/build and API tests
@@ -78,6 +79,7 @@ npm install
 npm run test:web
 npm run build:web
 npm audit --audit-level=high
+npm run validate:benchmarks
 ```
 
 From `apps/api`:
@@ -86,7 +88,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current local verification counts are 62 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions.
+Current local verification counts are 62 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions. `npm run validate:benchmarks` currently reports 1,050 total benchmarks, 150 per technology, all `draft`, and 750 candidate questions blocked from publication until benchmark evidence review passes.
 
 ## Deployment
 
@@ -98,6 +100,8 @@ Current local verification counts are 62 web tests and 9 API tests, with a green
 
 The final live transaction verified create, answer write, wrong-credential rejection, authorized read-back with restored index, and completion. Its disposable rows were deleted.
 
+Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 after temporary-branch verification. It added answer-level benchmark/scorer metadata and immutable scoring-run audit storage; a post-apply schema check confirmed the columns, table, and index.
+
 ## Deferred roadmap
 
 Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. The Question Bank and reviewer views display those benchmark details, scoring now resolves benchmark content server-side, and candidate feedback includes accuracy, required coverage, reasoning, and clarity dimensions.
@@ -106,7 +110,7 @@ These benchmark answers are structurally complete but not vendor-evidence verifi
 
 The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
 
-The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema and baseline data migration are implemented. Still pending: official-document evidence packets, independent AI reviewers, deterministic validation, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, calibration, and applying the new Neon benchmark/scoring-run migration before relying on immutable scoring-run audit records in production.
+The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema, baseline data migration, publication gate, dimension scoring, standalone validator, and Neon scoring-run migration are implemented. Still pending: official-document evidence packets, independent AI reviewers, deterministic review validation, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, and calibration.
 
 ## Deployed completion work
 
