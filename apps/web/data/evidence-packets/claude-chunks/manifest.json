@@ -1,0 +1,300 @@
+{
+  "generatedAt": "2026-08-24T14:02:08.765Z",
+  "chunkSize": 25,
+  "technologies": {
+    "aws": {
+      "source": "apps/web/data/evidence-packets/aws.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/aws-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "databricks": {
+      "source": "apps/web/data/evidence-packets/databricks.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/databricks-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "informatica": {
+      "source": "apps/web/data/evidence-packets/informatica.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/informatica-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "oracle": {
+      "source": "apps/web/data/evidence-packets/oracle.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/oracle-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "power-bi": {
+      "source": "apps/web/data/evidence-packets/power-bi.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/power-bi-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "python": {
+      "source": "apps/web/data/evidence-packets/python.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/python-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    },
+    "snowflake": {
+      "source": "apps/web/data/evidence-packets/snowflake.jsonl",
+      "total": 150,
+      "chunks": [
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-01.jsonl",
+          "count": 25,
+          "from": 1,
+          "to": 25
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-02.jsonl",
+          "count": 25,
+          "from": 26,
+          "to": 50
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-03.jsonl",
+          "count": 25,
+          "from": 51,
+          "to": 75
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-04.jsonl",
+          "count": 25,
+          "from": 76,
+          "to": 100
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-05.jsonl",
+          "count": 25,
+          "from": 101,
+          "to": 125
+        },
+        {
+          "file": "apps/web/data/evidence-packets/claude-chunks/snowflake-part-06.jsonl",
+          "count": 25,
+          "from": 126,
+          "to": 150
+        }
+      ]
+    }
+  }
+}
