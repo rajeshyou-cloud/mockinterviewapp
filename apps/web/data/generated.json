@@ -14316,15 +14316,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14421,15 +14425,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15070,15 +15078,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the tasks question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15175,15 +15187,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the tasks question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15824,15 +15840,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15929,15 +15949,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -16578,15 +16602,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -16683,15 +16711,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -17332,15 +17366,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -17437,15 +17475,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -18086,15 +18128,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -18191,15 +18237,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -18840,15 +18890,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -18945,15 +18999,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -19594,15 +19654,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -19699,15 +19763,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -20348,15 +20418,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -20453,15 +20527,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -21102,15 +21182,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -21207,15 +21291,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -21856,15 +21946,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -21961,15 +22055,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article agreement, e.g. 'After a Aggregator transformations deployment' -> 'After an Aggregator transformations deployment', and 'After a taskflows deployment' -> 'After a taskflows deployment causes...' reworded for grammatical agreement."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -22610,15 +22710,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -22715,15 +22819,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -23364,15 +23474,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -23469,15 +23583,21 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the transformations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [
+          "Minor copy-edit: fix article/phrasing agreement in the opening clause (e.g. 'After a Expression transformations deployment' -> reword for grammatical agreement); same nit appears across most of the rewritten -06/-07 variants in this batch."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -24118,15 +24238,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -24223,15 +24347,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -24872,15 +25000,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -24977,15 +25109,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -25626,15 +25762,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -25731,15 +25871,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -26380,15 +26524,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -26485,15 +26633,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -27134,15 +27286,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -27239,15 +27395,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -27888,15 +28048,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced scenario variant so it is distinct from the intermediate scenario and addresses high-volume reliability/cost evolution. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -27993,15 +28157,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude re-review dispute: rewrote advanced troubleshooting variant so it is distinct from intermediate troubleshooting and addresses safe diagnosis plus recovery from incomplete or duplicated data. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   }
