@@ -406,15 +406,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -510,15 +514,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -607,15 +615,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   }

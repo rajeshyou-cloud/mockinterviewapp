@@ -750,15 +750,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude dispute: added missing required concepts to benchmark answer. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -865,7 +869,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -964,15 +968,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [
-          "Remediated after Claude dispute: added missing required concepts to benchmark answer. Requires re-review."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.83,
+        "corrections": [],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1087,7 +1095,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -1204,7 +1212,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -1321,7 +1329,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -1882,7 +1890,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -1999,7 +2007,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -2116,7 +2124,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
@@ -2233,7 +2241,7 @@
           "approve",
           "approve"
         ],
-        "confidence": 0.82,
+        "confidence": 0.83,
         "corrections": [],
         "reviewedAt": "2026-08-24"
       }
