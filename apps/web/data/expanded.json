@@ -750,13 +750,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.56,
+        "corrections": [
+          "Either name finance/sales and capacity explicitly in the answer, or trim requiredConcepts to terms the answer actually supports.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -853,13 +862,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -956,13 +971,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.56,
+        "corrections": [
+          "Name 'mapping tasks' explicitly in the answer instead of the generic 'independent items'.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1067,13 +1091,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1178,13 +1208,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1289,13 +1325,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1844,13 +1886,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1955,13 +2003,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2066,13 +2120,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2177,13 +2237,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   }

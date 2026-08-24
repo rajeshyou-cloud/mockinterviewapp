@@ -406,13 +406,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.5,
+        "corrections": [
+          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
+          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -508,13 +517,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.5,
+        "corrections": [
+          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
+          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -603,13 +621,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.5,
+        "corrections": [
+          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
+          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   }

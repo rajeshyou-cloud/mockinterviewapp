@@ -7,6 +7,7 @@ import powerBi from './candidates/power-bi.json';
 import python from './candidates/python.json';
 
 const packs = { aws, databricks, oracle, 'power-bi': powerBi, python };
+const benchmarkReviewStatuses = ['draft', 'ai-evidence-verified', 'human-verified', 'disputed', 'rejected', 'stale'];
 
 describe('candidate course question packs', () => {
   it.each(Object.entries(packs))('%s has 150 complete, traceable questions', (technology, questions) => {
@@ -29,7 +30,7 @@ describe('candidate course question packs', () => {
       expect(question.benchmark.evidence[0].url).toBe(question.source.url);
       expect(question.benchmark.evidence[0].contentHash).toMatch(/^sha256:[a-f0-9]{64}$/);
       expect(question.benchmark.scoringAnchors.incorrect.length).toBeGreaterThan(20);
-      expect(question.benchmark.review.status).toBe('draft');
+      expect(benchmarkReviewStatuses).toContain(question.benchmark.review.status);
       expect(question.source.url).toMatch(/^https:\/\//);
       expect(question.source.verified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(question.reviewStatus).toBe('ai-reviewed');

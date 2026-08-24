@@ -91,13 +91,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -194,13 +203,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -297,13 +317,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -400,13 +431,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -503,13 +545,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -606,13 +659,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'open formats', 'data engineering', 'analytics' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -708,13 +772,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -811,13 +881,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -914,13 +993,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1017,13 +1105,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1120,13 +1217,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1223,13 +1329,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1325,13 +1440,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1428,13 +1552,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1531,13 +1666,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1634,13 +1780,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1737,13 +1894,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1840,13 +2008,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'incremental processing' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -1942,13 +2121,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2045,13 +2230,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2148,13 +2342,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2251,13 +2454,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2354,13 +2566,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2457,13 +2678,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2559,13 +2789,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2662,13 +2901,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2765,13 +3015,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2868,13 +3129,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -2971,13 +3243,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3074,13 +3357,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'ownership' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3176,13 +3470,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3279,13 +3582,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3382,13 +3696,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3485,13 +3810,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3588,13 +3924,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3691,13 +4038,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'privileges' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3793,13 +4151,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3896,13 +4260,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -3999,13 +4372,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4102,13 +4484,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4205,13 +4596,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4308,13 +4708,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the ingestion question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4410,13 +4819,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4513,13 +4928,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4616,13 +5040,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4719,13 +5152,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4822,13 +5264,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -4925,13 +5376,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5027,13 +5487,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5130,13 +5599,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5233,13 +5713,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5336,13 +5827,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5439,13 +5941,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5542,13 +6055,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the streaming question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'checkpoint' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5644,13 +6168,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5747,13 +6280,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5850,13 +6394,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -5953,13 +6508,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6056,13 +6622,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6159,13 +6736,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the pipelines question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'streaming table', 'materialized view' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6261,13 +6849,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6364,13 +6958,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6467,13 +7070,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6570,13 +7182,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6673,13 +7294,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6776,13 +7406,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data quality question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6878,13 +7517,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -6981,13 +7626,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7084,13 +7738,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7187,13 +7850,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7290,13 +7962,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7393,13 +8074,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7495,13 +8185,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7598,13 +8294,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7701,13 +8406,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7804,13 +8518,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -7907,13 +8630,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8010,13 +8742,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the development question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8112,13 +8853,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8215,13 +8965,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8318,13 +9079,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8421,13 +9193,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8524,13 +9307,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8627,13 +9421,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'autoscaling' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8729,13 +9534,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8832,13 +9646,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -8935,13 +9760,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9038,13 +9874,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9141,13 +9988,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9244,13 +10102,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'fixed value' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9346,13 +10215,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9449,13 +10324,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9552,13 +10436,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9655,13 +10548,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9758,13 +10660,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9861,13 +10772,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sql analytics question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -9963,13 +10883,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10066,13 +10992,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10169,13 +11104,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10272,13 +11216,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10375,13 +11328,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10478,13 +11440,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10580,13 +11551,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10683,13 +11660,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10786,13 +11772,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10889,13 +11884,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -10992,13 +11996,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11095,13 +12108,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11197,13 +12219,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11300,13 +12331,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11403,13 +12445,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11506,13 +12559,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11609,13 +12673,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11712,13 +12787,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Add explicit mention of 'OPTIMIZE', 'pruning' to the benchmark answer, or remove from requiredConcepts.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes.",
+          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11814,13 +12900,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -11917,13 +13009,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12020,13 +13121,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12123,13 +13233,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12226,13 +13345,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12329,13 +13457,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12431,13 +13568,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12534,13 +13677,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12637,13 +13789,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12740,13 +13901,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12843,13 +14013,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -12946,13 +14125,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13048,13 +14236,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13151,13 +14345,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13254,13 +14457,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13357,13 +14569,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13460,13 +14681,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13563,13 +14793,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the delta lake question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13665,13 +14904,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13768,13 +15013,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13871,13 +15125,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -13974,13 +15237,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14077,13 +15349,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14180,13 +15461,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the sharing question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14282,13 +15572,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14385,13 +15681,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14488,13 +15793,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14591,13 +15905,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14694,13 +16017,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14797,13 +16129,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -14899,13 +16240,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.84,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15002,13 +16349,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'hands-on' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15105,13 +16461,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'scenario' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15208,13 +16573,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15311,13 +16685,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'design' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   },
@@ -15414,13 +16797,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the operations question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "claude-web-primary",
+          "claude-web-critic"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.58,
+        "corrections": [
+          "Write benchmarkAnswer content specific to the 'troubleshooting' question instead of reusing the conceptual-level description.",
+          "Differentiate benchmarkAnswer text across the six question types for this technology; currently only the trailing instruction sentence changes."
+        ],
+        "reviewedAt": "2026-08-24"
       }
     }
   }

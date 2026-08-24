@@ -67,7 +67,7 @@ The verified production-owner account was bootstrapped with the `admin` applicat
 
 ## Milestone 3 — Course and question-bank expansion
 
-Status: **BENCHMARK STRUCTURE COMPLETE / HUMAN REVIEW READY**
+Status: **BENCHMARK STRUCTURE COMPLETE / PARTIAL CLAUDE REVIEW IMPORTED**
 
 - [x] Central course registry created
 - [x] Databricks, Oracle Database, Power BI, Python, and AWS registered as planned
@@ -103,11 +103,12 @@ Status: **BENCHMARK STRUCTURE COMPLETE / HUMAN REVIEW READY**
 - [x] Add direct Anthropic/Claude batch-review mode so expiring Claude usage credits can be used for offline benchmark review
 - [x] Add deterministic benchmark review importer with consensus validation before status updates
 - [x] Add benchmark validation to GitHub Actions CI
+- [x] Import first Claude web review batch covering 450 evidence packets across Informatica, AWS, and Databricks
 - [ ] Human-review and approve the AWS candidate pack
 - [ ] Human-review and approve each pack before exposing it in production
 - [ ] Revalidate all official source links and run production browser verification per launch
 
-The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, plus reviewer-ready evidence packets under `apps/web/data/evidence-packets`, but it is not the same as completed vendor-document review. Every benchmark currently carries `review.status = draft` until independent evidence-grounded AI review, dispute handling, and any human escalation are completed. `npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2` verifies the default AI Gateway review runner. `npm run review:benchmarks -- --dry-run --provider=anthropic --technology=snowflake --limit=2` verifies the direct Claude/Anthropic path intended for expiring Claude usage credits; live Claude review requires `ANTHROPIC_API_KEY`, `REVIEW_PROVIDER=anthropic`, `REVIEW_PRIMARY_MODEL`, and `REVIEW_CRITIC_MODEL` with two different Claude model IDs. `npm run import:benchmark-reviews -- --dry-run` verifies the status importer and currently finds no review files. Candidate-pack approval is now blocked until every benchmark is `ai-evidence-verified` or `human-verified`. Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 and verified. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
+The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, plus reviewer-ready evidence packets under `apps/web/data/evidence-packets`, but it is not the same as completed vendor-document review. `npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2` verifies the default AI Gateway review runner. `npm run review:benchmarks -- --dry-run --provider=anthropic --technology=snowflake --limit=2` verifies the direct Claude/Anthropic path intended for expiring Claude usage credits; live Claude review requires `ANTHROPIC_API_KEY`, `REVIEW_PROVIDER=anthropic`, `REVIEW_PRIMARY_MODEL`, and `REVIEW_CRITIC_MODEL` with two different Claude model IDs. On 2026-08-24, a Claude web review batch from `apps/web/data/output` was imported after a clean dry-run: 450 valid reviews, 0 rejected import records, and 600 unchanged drafts. Current benchmark status counts are 600 draft, 391 disputed, and 59 ai-evidence-verified. By technology: Informatica has 25 verified and 125 disputed; AWS has 18 verified and 132 disputed; Databricks has 16 verified and 134 disputed; Snowflake, Oracle, Power BI, and Python remain draft. The Informatica Claude summary identified three remediation themes: template reuse for scenario/troubleshooting/design variants, required-concept gaps in Secure Agent/Sorter/agent-groups/taskflow-parallel items, and generic root-domain evidence URLs on seven otherwise plausible questions. Candidate-pack approval is still blocked until every benchmark in a pack is `ai-evidence-verified` or `human-verified`. Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 and verified. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
 
 ## Current user flow
 

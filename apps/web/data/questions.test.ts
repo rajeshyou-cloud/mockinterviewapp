@@ -6,6 +6,7 @@ import generated from './generated.json';
 import starter from './starter.json';
 
 const questions = [...beginner, ...starter, ...expanded, ...generated];
+const benchmarkReviewStatuses = ['draft', 'ai-evidence-verified', 'human-verified', 'disputed', 'rejected', 'stale'];
 
 describe('web question bank', () => {
   it('keeps stable ids unique and every question traceable', () => {
@@ -27,7 +28,7 @@ describe('web question bank', () => {
       expect(question.benchmark.evidence[0].url).toBe(question.source.url);
       expect(question.benchmark.evidence[0].contentHash).toMatch(/^sha256:[a-f0-9]{64}$/);
       expect(question.benchmark.scoringAnchors.strong.length).toBeGreaterThan(20);
-      expect(question.benchmark.review.status).toBe('draft');
+      expect(benchmarkReviewStatuses).toContain(question.benchmark.review.status);
       expect(question.source.url).toMatch(/^https:\/\//);
       expect(new URL(question.source.url).hostname).toMatch(/^docs\.(snowflake|informatica)\.com$/);
       expect(question.source.verified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
