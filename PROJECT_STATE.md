@@ -99,12 +99,13 @@ Status: **BENCHMARK STRUCTURE COMPLETE / HUMAN REVIEW READY**
 - [x] Add standalone benchmark validation command with status/count/publication-blocking summary
 - [x] Export reviewer-ready benchmark evidence packets for all 1,050 questions, grouped by technology
 - [x] Add dual-model benchmark review runner with dry-run validation and live AI Gateway model configuration
+- [x] Add deterministic benchmark review importer with consensus validation before status updates
 - [x] Add benchmark validation to GitHub Actions CI
 - [ ] Human-review and approve the AWS candidate pack
 - [ ] Human-review and approve each pack before exposing it in production
 - [ ] Revalidate all official source links and run production browser verification per launch
 
-The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, plus reviewer-ready evidence packets under `apps/web/data/evidence-packets`, but it is not the same as completed vendor-document review. Every benchmark currently carries `review.status = draft` until independent evidence-grounded AI review, dispute handling, and any human escalation are completed. `npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2` verifies the review runner; live review requires `REVIEW_PRIMARY_MODEL` and `REVIEW_CRITIC_MODEL` with two different AI Gateway model IDs. Candidate-pack approval is now blocked until every benchmark is `ai-evidence-verified` or `human-verified`. Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 and verified. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
+The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, plus reviewer-ready evidence packets under `apps/web/data/evidence-packets`, but it is not the same as completed vendor-document review. Every benchmark currently carries `review.status = draft` until independent evidence-grounded AI review, dispute handling, and any human escalation are completed. `npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2` verifies the review runner; live review requires `REVIEW_PRIMARY_MODEL` and `REVIEW_CRITIC_MODEL` with two different AI Gateway model IDs. `npm run import:benchmark-reviews -- --dry-run` verifies the status importer and currently finds no review files. Candidate-pack approval is now blocked until every benchmark is `ai-evidence-verified` or `human-verified`. Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 and verified. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
 
 ## Current user flow
 

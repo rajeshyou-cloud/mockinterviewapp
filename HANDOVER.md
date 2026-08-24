@@ -34,6 +34,7 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/data/evidence-packets` — reviewer-ready JSONL evidence packets and manifest
 - `scripts/generate-course-candidates.mjs` — deterministic candidate-pack generator
 - `scripts/export-evidence-packets.mjs` — evidence-packet exporter grouped by technology
+- `scripts/import-benchmark-reviews.mjs` — consensus-validated review-status importer
 - `scripts/review-benchmark-packets.mjs` — dual-model benchmark review runner
 - `scripts/validate-benchmarks.mjs` — benchmark-answer validator and publication-blocking summary
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
@@ -84,6 +85,7 @@ npm run build:web
 npm audit --audit-level=high
 npm run validate:benchmarks
 npm run export:evidence-packets
+npm run import:benchmark-reviews -- --dry-run
 npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2
 ```
 
@@ -109,13 +111,13 @@ Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon br
 
 ## Deferred roadmap
 
-Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. Evidence packets are exported as JSONL by technology for independent AI or human review. The dual-model review runner supports dry-run validation and live review when `REVIEW_PRIMARY_MODEL` and `REVIEW_CRITIC_MODEL` are set to different AI Gateway model IDs. The Question Bank and reviewer views display benchmark details, scoring now resolves benchmark content server-side, and candidate feedback includes accuracy, required coverage, reasoning, and clarity dimensions.
+Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. Evidence packets are exported as JSONL by technology for independent AI or human review. The dual-model review runner supports dry-run validation and live review when `REVIEW_PRIMARY_MODEL` and `REVIEW_CRITIC_MODEL` are set to different AI Gateway model IDs. The review importer validates consensus before changing benchmark statuses. The Question Bank and reviewer views display benchmark details, scoring now resolves benchmark content server-side, and candidate feedback includes accuracy, required coverage, reasoning, and clarity dimensions.
 
 These benchmark answers are structurally complete but not vendor-evidence verified. Every benchmark review status is intentionally `draft` until the independent AI evidence review, dispute workflow, and any chosen human escalation have run. Candidate pack approval is blocked until all benchmarks are `ai-evidence-verified` or `human-verified`. Do not label this content vendor-certified, human-reviewed, or `ai-evidence-verified` yet.
 
 The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
 
-The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema, baseline data migration, evidence-packet export, dual-model review runner, publication gate, dimension scoring, standalone validator, CI gate, and Neon scoring-run migration are implemented. Still pending: running live independent AI reviews after AI Gateway billing/model access is available, deterministic review verdict import into benchmark statuses, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, and calibration.
+The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema, baseline data migration, evidence-packet export, dual-model review runner, review-status importer, publication gate, dimension scoring, standalone validator, CI gate, and Neon scoring-run migration are implemented. Still pending: running live independent AI reviews after AI Gateway billing/model access is available, importing real review verdicts into benchmark statuses, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, and calibration.
 
 ## Deployed completion work
 
