@@ -109,6 +109,8 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 after temporary-branch verification. It added answer-level benchmark/scorer metadata and immutable scoring-run audit storage; a post-apply schema check confirmed the columns, table, and index.
 
+Latest production deployment check: commit `04767de` deployed to `mockinterviewapp-web` as `READY` on 2026-08-24. Runtime error scan for that deployment returned no error/fatal logs, and a production `/api/questions` request returned benchmark-bearing Snowflake content.
+
 ## Deferred roadmap
 
 Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. Evidence packets are exported as JSONL by technology for independent AI or human review. The dual-model review runner supports dry-run validation and live review when `REVIEW_PRIMARY_MODEL` and `REVIEW_CRITIC_MODEL` are set to different AI Gateway model IDs. The review importer validates consensus before changing benchmark statuses. The Question Bank and reviewer views display benchmark details, scoring now resolves benchmark content server-side, and candidate feedback includes accuracy, required coverage, reasoning, and clarity dimensions.

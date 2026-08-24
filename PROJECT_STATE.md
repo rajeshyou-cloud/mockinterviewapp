@@ -49,6 +49,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 - GitHub CI: run `32644119415` passed for persistence hardening; later documentation/UX revisions must retain the same gates
 - Production web: `https://mockinterviewapp-web.vercel.app`
 - Neon project: `mockinterviewapp`; main-branch persistence transaction verified
+- Latest benchmark/review-tooling deployment: commit `04767de` deployed to Vercel production as `READY` on 2026-08-24; production runtime error scan found no error/fatal logs, and `/api/questions` returned benchmark-bearing Snowflake content.
 
 ## AI scoring activation
 
