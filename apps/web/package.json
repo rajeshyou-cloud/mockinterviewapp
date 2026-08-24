@@ -9,6 +9,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.41",
     "@neondatabase/auth": "^0.5.0-beta",
     "@neondatabase/serverless": "1.0.2",
     "ai": "^7.0.77",

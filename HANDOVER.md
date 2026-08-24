@@ -87,6 +87,7 @@ npm run validate:benchmarks
 npm run export:evidence-packets
 npm run import:benchmark-reviews -- --dry-run
 npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2
+npm run review:benchmarks -- --dry-run --provider=anthropic --technology=snowflake --limit=2
 ```
 
 From `apps/api`:
@@ -119,7 +120,7 @@ These benchmark answers are structurally complete but not vendor-evidence verifi
 
 The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
 
-The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema, baseline data migration, evidence-packet export, dual-model review runner, review-status importer, publication gate, dimension scoring, standalone validator, CI gate, and Neon scoring-run migration are implemented. Still pending: running live independent AI reviews after AI Gateway billing/model access is available, importing real review verdicts into benchmark statuses, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, and calibration.
+The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema, baseline data migration, evidence-packet export, dual-model review runner, review-status importer, publication gate, dimension scoring, standalone validator, CI gate, and Neon scoring-run migration are implemented. The review runner supports both Vercel AI Gateway and direct Anthropic/Claude execution. To use expiring Claude usage credits for offline review, set `ANTHROPIC_API_KEY`, `REVIEW_PROVIDER=anthropic`, `REVIEW_PRIMARY_MODEL`, and `REVIEW_CRITIC_MODEL`, then run a small pilot such as `npm run review:benchmarks -- --provider=anthropic --technology=snowflake --limit=10` before running full technology packs. Still pending: running live independent AI reviews after account/model access is available, importing real review verdicts into benchmark statuses, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, and calibration.
 
 ## Deployed completion work
 

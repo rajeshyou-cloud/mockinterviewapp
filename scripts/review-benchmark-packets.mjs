@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { createAnthropic } from '@ai-sdk/anthropic';
 import { Output, generateText } from 'ai';
 import { z } from 'zod';
 
@@ -12,12 +13,16 @@ const verdictSchema = z.object({
 
 const args = new Set(process.argv.slice(2));
 const dryRun = args.has('--dry-run');
+const providerArg = process.argv.find((arg) => arg.startsWith('--provider='))?.split('=')[1] ?? process.env.REVIEW_PROVIDER ?? 'gateway';
 const technologyArg = process.argv.find((arg) => arg.startsWith('--technology='))?.split('=')[1] ?? 'snowflake';
 const limit = Number.parseInt(process.argv.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? '5', 10);
 const primaryModel = process.env.REVIEW_PRIMARY_MODEL;
 const criticModel = process.env.REVIEW_CRITIC_MODEL;
 
 function requireLiveModels() {
+  if (!['gateway', 'anthropic'].includes(providerArg)) {
+    throw new Error('REVIEW_PROVIDER/--provider must be "gateway" or "anthropic".');
+  }
   if (dryRun) return;
   if (!primaryModel || !criticModel) {
     throw new Error('Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL, or run with --dry-run.');
@@ -25,11 +30,26 @@ function requireLiveModels() {
   if (primaryModel === criticModel) {
     throw new Error('Primary and critic review models must be different for independent review.');
   }
+  if (providerArg === 'anthropic' && !process.env.ANTHROPIC_API_KEY) {
+    throw new Error('Set ANTHROPIC_API_KEY to use REVIEW_PROVIDER=anthropic.');
+  }
+}
+
+function normalizeAnthropicModel(model) {
+  return model.startsWith('anthropic/') ? model.slice('anthropic/'.length) : model;
+}
+
+function resolveReviewModel(model) {
+  if (providerArg === 'anthropic') {
+    const anthropic = createAnthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    return anthropic(normalizeAnthropicModel(model));
+  }
+  return model;
 }
 
 async function reviewWithModel(packet, model, reviewerRole) {
   const { output } = await generateText({
-    model,
+    model: resolveReviewModel(model),
     output: Output.object({
       schema: verdictSchema,
       name: 'benchmark_evidence_review',
@@ -58,6 +78,7 @@ function combineReviews(packet, primary, critic) {
     promptVersion: 'benchmark-review-1.0.0',
     primaryModel,
     criticModel,
+    reviewProvider: providerArg,
     primary,
     critic,
     finalStatus: approved ? 'ai-evidence-verified' : rejected ? 'rejected' : 'disputed',
@@ -78,10 +99,13 @@ const packets = (await readFile(packetPath, 'utf8'))
 if (dryRun) {
   console.log(JSON.stringify({
     mode: 'dry-run',
+    provider: providerArg,
     technology: technologyArg,
     packetsLoaded: packets.length,
     firstQuestionId: packets[0]?.questionId ?? null,
-    liveRunRequirement: 'Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different AI Gateway model IDs.',
+    liveRunRequirement: providerArg === 'anthropic'
+      ? 'Set ANTHROPIC_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different Claude model IDs.'
+      : 'Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different AI Gateway model IDs.',
   }, null, 2));
   process.exit(0);
 }
