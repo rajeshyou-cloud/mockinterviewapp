@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-08-24T05:54:43.641Z",
+  "packetVersion": "1.0.0",
+  "totalQuestions": 1050,
+  "technologies": {
+    "aws": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/aws.jsonl"
+    },
+    "databricks": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/databricks.jsonl"
+    },
+    "informatica": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/informatica.jsonl"
+    },
+    "oracle": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/oracle.jsonl"
+    },
+    "power-bi": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/power-bi.jsonl"
+    },
+    "python": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/python.jsonl"
+    },
+    "snowflake": {
+      "count": 150,
+      "path": "apps/web/data/evidence-packets/snowflake.jsonl"
+    }
+  }
+}

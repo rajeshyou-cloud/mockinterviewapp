@@ -75,6 +75,7 @@ const summary = {
   blockedCandidateQuestions: 0,
   byTechnology: {},
   byReviewStatus: {},
+  evidencePackets: {},
 };
 
 for (const [packType, path] of packs) {
@@ -83,6 +84,24 @@ for (const [packType, path] of packs) {
 }
 
 if (summary.total !== 1050) fail(errors, 'question-bank', `expected 1050 questions, found ${summary.total}`);
+
+try {
+  const manifest = JSON.parse(await readFile('apps/web/data/evidence-packets/manifest.json', 'utf8'));
+  if (manifest.totalQuestions !== summary.total) fail(errors, 'evidence-packets', 'manifest total does not match question bank');
+  for (const [technology, count] of Object.entries(summary.byTechnology)) {
+    const entry = manifest.technologies?.[technology];
+    if (!entry) {
+      fail(errors, 'evidence-packets', `missing manifest entry for ${technology}`);
+      continue;
+    }
+    if (entry.count !== count) fail(errors, 'evidence-packets', `${technology} manifest count does not match question bank`);
+    const lines = (await readFile(entry.path, 'utf8')).trim().split('\n').filter(Boolean);
+    if (lines.length !== count) fail(errors, 'evidence-packets', `${technology} packet count does not match manifest`);
+    summary.evidencePackets[technology] = lines.length;
+  }
+} catch (error) {
+  fail(errors, 'evidence-packets', error instanceof Error ? error.message : 'could not validate packet manifest');
+}
 
 console.log(JSON.stringify(summary, null, 2));
 
