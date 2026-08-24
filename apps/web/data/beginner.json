@@ -334,8 +334,8 @@
       "Which one do you schedule or run?"
     ],
     "source": {
-      "title": "Cloud Data Integration Mappings",
-      "url": "https://docs.informatica.com/",
+      "title": "Mappings",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/mappings/mappings.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -391,37 +391,30 @@
       "reasoning": "A complete answer should explain why mappings matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Cloud Data Integration Mappings",
-          "section": "Cloud Data Integration Mappings",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/mappings/mappings.html",
+          "title": "Mappings",
+          "section": "Mappings",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:c560a3bb13bed905d84f58987e7337672de6d8abf72af0faa0c2d7d3e585fba0"
+          "contentHash": "sha256:74e22db73d095bd6ccd527cf1b0e1e94970ab612249c18be76983687f2d3181d"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required mappings concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the conceptual question, covers the required mappings concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required mappings concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
         "weak": "Mentions mappings only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -445,8 +438,8 @@
       "When would you need a customer-managed Secure Agent?"
     ],
     "source": {
-      "title": "Cloud Data Integration task configuration",
-      "url": "https://docs.informatica.com/",
+      "title": "Secure Agents",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -502,37 +495,30 @@
       "reasoning": "A complete answer should explain why runtime environments matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Cloud Data Integration task configuration",
-          "section": "Cloud Data Integration task configuration",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
+          "title": "Secure Agents",
+          "section": "Secure Agents",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:3b5ca8f4e1e4efe9fa71c6939f63b6b3387fb9b2bd494778ea575cb6dd018e00"
+          "contentHash": "sha256:a9e06fa2b97ee0a6eee928cbac826dffa103c47aaa5f8096732bcc228f685c79"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required runtime environments concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the conceptual question, covers the required runtime environments concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
         "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -555,8 +541,8 @@
       "What would you validate after changing the source object?"
     ],
     "source": {
-      "title": "Cloud Data Integration Tasks",
-      "url": "https://docs.informatica.com/",
+      "title": "Mapping tasks",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/tasks/mapping-tasks.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -606,37 +592,30 @@
       "reasoning": "A complete answer should explain why connections matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Cloud Data Integration Tasks",
-          "section": "Cloud Data Integration Tasks",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/tasks/mapping-tasks.html",
+          "title": "Mapping tasks",
+          "section": "Mapping tasks",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:75fbfbd73507c1d108c2557f8eeb330c3177964357dc8c18af6ad21c119cd7a7"
+          "contentHash": "sha256:91ff931962c7123325f37341dbe7866199d75819f5ae9ae1488ffa720baaba47"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required connections concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the scenario question, covers the required connections concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required connections concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
         "weak": "Mentions connections only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   }

@@ -656,7 +656,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "Finance mappings are time-critical but a high-volume sales workload frequently competes for Secure Agent capacity. How could you reduce the operational interference?",
-    "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
+    "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the finance and sales workloads so the time-critical finance mappings do not compete with high-volume sales processing for the same Secure Agent capacity. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
     "expectedConcepts": [
       "Secure Agent group",
       "runtime environment",
@@ -678,8 +678,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
-      "expandedExplanation": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the finance and sales workloads so the time-critical finance mappings do not compete with high-volume sales processing for the same Secure Agent capacity. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
+      "expandedExplanation": "Use separate Secure Agent groups or runtime environments for the finance and sales workloads so the time-critical finance mappings do not compete with high-volume sales processing for the same Secure Agent capacity. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
       "requiredConcepts": [
         "Secure Agent group",
         "runtime environment",
@@ -740,32 +740,25 @@
           "section": "Informatica Secure Agent groups",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:36149f26618b3ea02debdbf85a7ea2e28a17b028a6220e50836674e88435f2a5"
+          "contentHash": "sha256:c7c1d869f6baf81e50c61b9c8080c537e6278ba72d2125c5097ee1d77039dcf9"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the scenario question, covers the required runtime environments concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
         "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.56,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Either name finance/sales and capacity explicitly in the answer, or trim requiredConcepts to terms the answer actually supports.",
-          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+          "Remediated after Claude dispute: added missing required concepts to benchmark answer. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -885,7 +878,7 @@
     "difficulty": "advanced",
     "type": "design",
     "question": "Three independent mapping tasks can run at the same time before a common downstream step. How would you model this in an Informatica taskflow?",
-    "canonicalAnswer": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step.",
+    "canonicalAnswer": "Use a Parallel Paths step to run the three independent mapping tasks concurrently inside the taskflow. The taskflow then waits for the parallel branch behavior to complete before moving to the common downstream step.",
     "expectedConcepts": [
       "Parallel Paths",
       "concurrent",
@@ -906,8 +899,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step.",
-      "expandedExplanation": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use a Parallel Paths step to run the three independent mapping tasks concurrently inside the taskflow. The taskflow then waits for the parallel branch behavior to complete before moving to the common downstream step.",
+      "expandedExplanation": "Use a Parallel Paths step to run the three independent mapping tasks concurrently inside the taskflow. The taskflow then waits for the parallel branch behavior to complete before moving to the common downstream step. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
       "requiredConcepts": [
         "Parallel Paths",
         "concurrent",
@@ -961,32 +954,25 @@
           "section": "Informatica Cloud Data Integration Taskflows",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:a41cd40f91e888c046eb9ca2bd63437cf09abeb2f820bb09758a06b7650e1125"
+          "contentHash": "sha256:0ac4f610ef613e2547a0bacd7f182d2002ecd8890996c71bfb86dc1e4dc1b1c5"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required orchestration concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the design question, covers the required orchestration concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required orchestration concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
         "weak": "Mentions orchestration only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.56,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Name 'mapping tasks' explicitly in the answer instead of the generic 'independent items'.",
-          "Reconcile requiredConcepts with the benchmarkAnswer text so every required concept has locatable support in the answer."
+          "Remediated after Claude dispute: added missing required concepts to benchmark answer. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },

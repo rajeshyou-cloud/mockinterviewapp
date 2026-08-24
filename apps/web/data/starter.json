@@ -455,8 +455,8 @@
       "What would you check if a Secure Agent-based task suddenly could not reach a source?"
     ],
     "source": {
-      "title": "Informatica Cloud Data Integration Getting Started",
-      "url": "https://docs.informatica.com/",
+      "title": "Secure Agents",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -519,37 +519,30 @@
       "reasoning": "A complete answer should explain why runtime environments matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Informatica Cloud Data Integration Getting Started",
-          "section": "Informatica Cloud Data Integration Getting Started",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
+          "title": "Secure Agents",
+          "section": "Secure Agents",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:5e2e788f22e4bcbda7e074b767d0359c86b1fa022f46fb229624bcc112d39e4d"
+          "contentHash": "sha256:e1c7cd0e95800a52551dc171ac3b8ca94ce8f6edee397f7da8ccdc74a1a78484"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the conceptual question, covers the required runtime environments concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
         "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -574,8 +567,8 @@
       "What network checks would you perform if connectivity fails?"
     ],
     "source": {
-      "title": "Informatica Cloud Data Integration Getting Started",
-      "url": "https://docs.informatica.com/",
+      "title": "Secure Agents",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -639,37 +632,30 @@
       "reasoning": "A complete answer should explain why runtime environments matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Informatica Cloud Data Integration Getting Started",
-          "section": "Informatica Cloud Data Integration Getting Started",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agents.html",
+          "title": "Secure Agents",
+          "section": "Secure Agents",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:3d361aa03e559b40e08656309f84831072669be822ead90e8727f16de252c48e"
+          "contentHash": "sha256:2d6c761b394b33fbf9236b9bb01ba4c516565dff9c029e6668525a7836bda895"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the scenario question, covers the required runtime environments concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
         "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -694,8 +680,8 @@
       "Which logs would you inspect to confirm whether pushdown occurred?"
     ],
     "source": {
-      "title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
-      "url": "https://docs.informatica.com/",
+      "title": "SQL ELT optimization",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/tasks/mapping-tasks/sql-elt-optimization.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -759,37 +745,30 @@
       "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
-          "section": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/tasks/mapping-tasks/sql-elt-optimization.html",
+          "title": "SQL ELT optimization",
+          "section": "SQL ELT optimization",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:6568c11bdd0b97181882ed50dbd17c9724e8022158f282bd10bce7f8434d7c57"
+          "contentHash": "sha256:60596318c9749cf7accebac8badd4d7f72866907988bba964bd86cc10973b270"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the scenario question, covers the required performance concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
         "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   },
@@ -814,8 +793,8 @@
       "What would make you disable full pushdown?"
     ],
     "source": {
-      "title": "Informatica Cloud Data Integration pushdown optimization",
-      "url": "https://docs.informatica.com/",
+      "title": "SQL ELT optimization",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/tasks/mapping-tasks/sql-elt-optimization.html",
       "verified": "2026-08-23"
     },
     "reviewStatus": "ai-reviewed",
@@ -879,37 +858,30 @@
       "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
       "evidence": [
         {
-          "url": "https://docs.informatica.com/",
-          "title": "Informatica Cloud Data Integration pushdown optimization",
-          "section": "Informatica Cloud Data Integration pushdown optimization",
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/tasks/mapping-tasks/sql-elt-optimization.html",
+          "title": "SQL ELT optimization",
+          "section": "SQL ELT optimization",
           "retrievedAt": "2026-08-23",
           "documentVersion": "official-source-link-baseline",
-          "contentHash": "sha256:28b3fc92b6db3f0fdc50429696341a45bcad3e21df0d283764048b531f9b1f56"
+          "contentHash": "sha256:676a61f935a1c5690c59ae86d65a259f43cd79eefe0633a98b04e347fc190fa9"
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "strong": "Directly answers the troubleshooting question, covers the required performance concepts accurately, gives operational validation evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
         "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "claude-web-primary",
-          "claude-web-critic"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.5,
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
         "corrections": [
-          "Replace the evidence URL with the actual specific Informatica documentation page matching the stated title/section, not the docs.informatica.com root.",
-          "Verify the contentHash/documentVersion correspond to a real, specific page before re-review."
+          "Remediated after Claude dispute: replaced generic Informatica root evidence URL with specific official documentation page. Requires re-review."
         ],
-        "reviewedAt": "2026-08-24"
+        "reviewedAt": null
       }
     }
   }
