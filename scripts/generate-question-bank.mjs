@@ -1,8 +1,65 @@
 import { mkdir, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const verified = '2026-08-23';
+
+function benchmarkFor(question) {
+  const packet = JSON.stringify({
+    id: question.id,
+    question: question.question,
+    canonicalAnswer: question.canonicalAnswer,
+    expectedConcepts: question.expectedConcepts,
+    source: question.source,
+  });
+  const base = question.topic.replaceAll('-', ' ');
+  const optionalConcepts = [
+    `${question.difficulty} level trade-offs`,
+    'operational validation evidence',
+    ...(question.type === 'troubleshooting' ? ['safe diagnosis sequence'] : []),
+    ...(question.type === 'design' ? ['maintainability and governance controls'] : []),
+    ...(question.type === 'scenario' ? ['fit decision and risk controls'] : []),
+    ...(question.type === 'hands-on' ? ['small validation run'] : []),
+  ];
+
+  return {
+    version: '1.0.0',
+    canonicalAnswer: question.canonicalAnswer,
+    expandedExplanation: `${question.canonicalAnswer} A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.`,
+    requiredConcepts: question.expectedConcepts,
+    optionalConcepts: [...new Set(optionalConcepts)],
+    acceptedAlternatives: question.expectedConcepts.map((concept) => ({
+      terms: [concept],
+      meaning: `Accepted wording that expresses the required concept: ${concept}.`,
+    })),
+    incorrectClaims: [],
+    reasoning: `A complete answer should explain why ${base} matters for ${question.technology} at ${question.difficulty} level and show how the idea would be validated or applied in practice.`,
+    evidence: [{
+      url: question.source.url,
+      title: question.source.title,
+      section: question.source.title,
+      retrievedAt: question.source.verified,
+      documentVersion: 'official-source-link-baseline',
+      contentHash: `sha256:${createHash('sha256').update(packet).digest('hex')}`,
+    }],
+    scoringAnchors: {
+      strong: `Covers the required ${base} concepts accurately, explains the ${question.difficulty} level trade-offs, and stays aligned to the cited official source.`,
+      partial: `Covers some required ${base} concepts but misses important details, constraints, or operational reasoning expected at ${question.difficulty} level.`,
+      weak: `Mentions ${base} only superficially, with limited explanation and multiple missing required concepts.`,
+      incorrect: `Gives claims that conflict with the benchmark answer or does not answer the ${base} question in a technically useful way.`,
+    },
+    review: {
+      status: 'draft',
+      promptVersion: 'benchmark-policy-1.0.0',
+      reviewerModels: [],
+      verdicts: [],
+      confidence: null,
+      corrections: [],
+      reviewedAt: null,
+    },
+  };
+}
 
 const snowflake = [
   ['architecture', 'architecture', 'Snowflake architecture', 'Snowflake separates persistent cloud storage, elastic virtual-warehouse compute, and cloud services for coordination and metadata. Independent warehouses can access the same governed data while isolating workloads and scaling compute separately.', ['cloud storage', 'virtual warehouse', 'cloud services', 'workload isolation', 'independent scaling'], 'Snowflake key concepts and architecture', 'https://docs.snowflake.com/en/user-guide/intro-key-concepts'],
@@ -60,23 +117,26 @@ const variants = [
 
 function createQuestions(technology, units) {
   return units.flatMap(([slug, topic, title, summary, expectedConcepts, sourceTitle, url]) =>
-    variants.map(([difficulty, type, question, emphasis], index) => ({
-      id: `bank-${technology}-${slug}-${String(index + 1).padStart(2, '0')}`,
-      technology,
-      topic,
-      difficulty,
-      type,
-      question: question(title),
-      canonicalAnswer: `${summary} ${emphasis}`,
-      expectedConcepts,
-      followUps: [
-        `Which limitation or cost of ${title} would you validate?`,
-        `What runtime evidence would prove that ${title} is working as intended?`,
-      ],
-      source: { title: sourceTitle, url, verified },
-      reviewStatus: 'ai-reviewed',
-      version: 1,
-    })),
+    variants.map(([difficulty, type, question, emphasis], index) => {
+      const record = {
+        id: `bank-${technology}-${slug}-${String(index + 1).padStart(2, '0')}`,
+        technology,
+        topic,
+        difficulty,
+        type,
+        question: question(title),
+        canonicalAnswer: `${summary} ${emphasis}`,
+        expectedConcepts,
+        followUps: [
+          `Which limitation or cost of ${title} would you validate?`,
+          `What runtime evidence would prove that ${title} is working as intended?`,
+        ],
+        source: { title: sourceTitle, url, verified },
+        reviewStatus: 'ai-reviewed',
+        version: 1,
+      };
+      return { ...record, benchmark: benchmarkFor(record) };
+    }),
   );
 }
 

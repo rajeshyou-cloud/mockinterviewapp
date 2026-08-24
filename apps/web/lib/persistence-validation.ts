@@ -21,6 +21,9 @@ export const saveAnswerSchema = z.object({
   missingConcepts: z.array(z.string().min(1).max(160)).max(30).optional(),
   feedback: z.string().max(500).optional(),
   currentIndex: z.number().int().min(0).max(19).optional(),
+  provider: z.string().min(1).max(160).optional(),
+  benchmarkVersion: z.string().regex(/^\d+\.\d+\.\d+$/).optional(),
+  scoringPolicyVersion: z.string().min(1).max(80).optional(),
 });
 
 export const completeSessionSchema = z.object({

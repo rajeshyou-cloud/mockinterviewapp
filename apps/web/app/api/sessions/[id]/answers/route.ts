@@ -16,9 +16,12 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
   if (!question || !(await isReleasedTechnology(question.technology))) {
     return NextResponse.json({ error: 'reviewed_question_not_found' }, { status: 404 });
   }
-  const allowedConcepts = new Set(question.expectedConcepts);
+  const allowedConcepts = new Set(question.benchmark.requiredConcepts);
   if ([...(payload.matchedConcepts ?? []), ...(payload.missingConcepts ?? [])].some((concept) => !allowedConcepts.has(concept))) {
     return NextResponse.json({ error: 'invalid_scoring_concepts' }, { status: 400 });
+  }
+  if (payload.benchmarkVersion && payload.benchmarkVersion !== question.benchmark.version) {
+    return NextResponse.json({ error: 'invalid_benchmark_version' }, { status: 400 });
   }
 
   if (!isDatabaseConfigured()) {
@@ -35,6 +38,9 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
     missingConcepts: payload.missingConcepts ?? [],
     feedback: payload.feedback ?? '',
     currentIndex: payload.currentIndex ?? 0,
+    provider: payload.provider,
+    benchmarkVersion: question.benchmark.version,
+    scoringPolicyVersion: payload.scoringPolicyVersion ?? 'benchmark-policy-1.0.0',
   });
 
   if (!answer) return NextResponse.json({ error: 'session_not_found_or_unauthorized' }, { status: 404 });

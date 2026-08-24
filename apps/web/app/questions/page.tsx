@@ -8,7 +8,7 @@ import { getReleasedCourses } from '../../lib/released-courses';
 
 export const metadata: Metadata = {
   title: 'Question Bank | Mock Interview System',
-  description: 'Browse every released, human-approved technical interview question pack.',
+  description: 'Browse every released technical interview question pack and benchmark answer.',
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -59,9 +59,9 @@ export default async function QuestionsPage({ searchParams }: { searchParams: Pr
     </nav>
     <header className="bankHeader">
       <div>
-        <p className="eyebrow">COMPLETE REVIEWED LIBRARY</p>
+        <p className="eyebrow">BENCHMARKED LIBRARY</p>
         <h1>Explore all {questionBank.length} interview questions.</h1>
-        <p className="lede">Search by concept, filter by course and level, then open any question to review its answer framework, expected concepts, and official source.</p>
+        <p className="lede">Search by concept, filter by course and level, then open any question to review its benchmark answer, scoring anchors, and official source evidence.</p>
       </div>
       <div className="bankCount" aria-label={`${filtered.length} matching questions`}>
         <strong>{filtered.length}</strong>
@@ -117,16 +117,30 @@ export default async function QuestionsPage({ searchParams }: { searchParams: Pr
           </div>
           <h2>{question.question}</h2>
           <details>
-            <summary>Review answer and concepts</summary>
+            <summary>Review benchmark answer and concepts</summary>
             <div className="answerPanel">
-              <h3>Answer framework</h3>
-              <p>{question.canonicalAnswer}</p>
-              <h3>Expected concepts</h3>
-              <div className="concepts">{question.expectedConcepts.map((concept) => <span key={concept}>{concept}</span>)}</div>
+              <div className="benchmarkMeta">
+                <span>Benchmark v{question.benchmark.version}</span>
+                <span>{question.benchmark.review.status.replaceAll('-', ' ')}</span>
+              </div>
+              <h3>Standard benchmark answer</h3>
+              <p>{question.benchmark.canonicalAnswer}</p>
+              <h3>Expanded explanation</h3>
+              <p>{question.benchmark.expandedExplanation}</p>
+              <h3>Required concepts</h3>
+              <div className="concepts">{question.benchmark.requiredConcepts.map((concept) => <span key={concept}>{concept}</span>)}</div>
+              {question.benchmark.optionalConcepts.length ? <><h3>Optional depth</h3><div className="concepts">{question.benchmark.optionalConcepts.map((concept) => <span key={concept}>{concept}</span>)}</div></> : null}
+              <h3>Scoring anchors</h3>
+              <ul>
+                <li><strong>Strong:</strong> {question.benchmark.scoringAnchors.strong}</li>
+                <li><strong>Partial:</strong> {question.benchmark.scoringAnchors.partial}</li>
+                <li><strong>Weak:</strong> {question.benchmark.scoringAnchors.weak}</li>
+                <li><strong>Incorrect:</strong> {question.benchmark.scoringAnchors.incorrect}</li>
+              </ul>
               {question.followUps.length ? <><h3>Follow-up prompts</h3><ul>{question.followUps.map((followUp) => <li key={followUp}>{followUp}</li>)}</ul></> : null}
             </div>
           </details>
-          <p className="sourceNote">Official source: <a href={question.source.url} target="_blank" rel="noreferrer">{question.source.title}</a> · verified {question.source.verified}</p>
+          <p className="sourceNote">Official source: <a href={question.benchmark.evidence[0]?.url ?? question.source.url} target="_blank" rel="noreferrer">{question.benchmark.evidence[0]?.title ?? question.source.title}</a> · evidence baseline {question.benchmark.evidence[0]?.retrievedAt ?? question.source.verified}</p>
         </div>
       </article>)}
     </section> : <div className="emptyResults card"><h2>No matching questions</h2><p>Clear one or more filters and try again.</p></div>}

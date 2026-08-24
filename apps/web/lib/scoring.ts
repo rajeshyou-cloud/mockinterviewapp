@@ -3,11 +3,14 @@ import 'server-only';
 import { Output, generateText } from 'ai';
 import { z } from 'zod';
 
+import type { QuestionBenchmark } from './api';
+
 export type ScoringInput = {
   answer: string;
   expectedConcepts: string[];
   canonicalAnswer?: string;
   question?: string;
+  benchmark?: QuestionBenchmark;
 };
 
 export type ScoringResult = {
@@ -76,8 +79,15 @@ async function evaluateWithGateway(input: ScoringInput, model: string): Promise<
     prompt: JSON.stringify({
       task: 'Evaluate the candidate answer from 0 to 100 and give concise, actionable feedback.',
       question: input.question ?? 'Technical interview question',
-      canonicalAnswer: input.canonicalAnswer ?? '',
+      canonicalAnswer: input.benchmark?.canonicalAnswer ?? input.canonicalAnswer ?? '',
+      expandedBenchmark: input.benchmark?.expandedExplanation ?? '',
       expectedConcepts: input.expectedConcepts,
+      optionalConcepts: input.benchmark?.optionalConcepts ?? [],
+      acceptedAlternatives: input.benchmark?.acceptedAlternatives ?? [],
+      incorrectClaims: input.benchmark?.incorrectClaims ?? [],
+      reasoning: input.benchmark?.reasoning ?? '',
+      scoringAnchors: input.benchmark?.scoringAnchors,
+      benchmarkVersion: input.benchmark?.version,
       candidateAnswer: input.answer,
     }),
     abortSignal: AbortSignal.timeout(15_000),

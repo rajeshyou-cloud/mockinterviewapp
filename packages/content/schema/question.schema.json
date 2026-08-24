@@ -14,6 +14,7 @@
     "expectedConcepts",
     "followUps",
     "source",
+    "benchmark",
     "reviewStatus",
     "version"
   ],
@@ -46,6 +47,122 @@
     },
     "reviewStatus": {
       "enum": ["draft", "ai-reviewed", "human-reviewed", "approved", "needs-review", "deprecated"]
+    },
+    "benchmark": {
+      "type": "object",
+      "required": [
+        "version",
+        "canonicalAnswer",
+        "expandedExplanation",
+        "requiredConcepts",
+        "optionalConcepts",
+        "acceptedAlternatives",
+        "incorrectClaims",
+        "reasoning",
+        "evidence",
+        "scoringAnchors",
+        "review"
+      ],
+      "properties": {
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "canonicalAnswer": { "type": "string", "minLength": 20 },
+        "expandedExplanation": { "type": "string", "minLength": 40 },
+        "requiredConcepts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "optionalConcepts": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "acceptedAlternatives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["terms", "meaning"],
+            "properties": {
+              "terms": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              },
+              "meaning": { "type": "string", "minLength": 5 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "incorrectClaims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claim", "severity", "reason"],
+            "properties": {
+              "claim": { "type": "string", "minLength": 5 },
+              "severity": { "enum": ["minor", "major", "critical"] },
+              "reason": { "type": "string", "minLength": 5 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "reasoning": { "type": "string", "minLength": 20 },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["url", "title", "section", "retrievedAt", "contentHash"],
+            "properties": {
+              "url": { "type": "string", "format": "uri" },
+              "title": { "type": "string", "minLength": 2 },
+              "section": { "type": "string", "minLength": 2 },
+              "retrievedAt": { "type": "string", "format": "date" },
+              "documentVersion": { "type": "string" },
+              "contentHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "scoringAnchors": {
+          "type": "object",
+          "required": ["strong", "partial", "weak", "incorrect"],
+          "properties": {
+            "strong": { "type": "string", "minLength": 20 },
+            "partial": { "type": "string", "minLength": 20 },
+            "weak": { "type": "string", "minLength": 20 },
+            "incorrect": { "type": "string", "minLength": 20 }
+          },
+          "additionalProperties": false
+        },
+        "review": {
+          "type": "object",
+          "required": ["status", "promptVersion", "reviewerModels", "verdicts", "confidence", "corrections", "reviewedAt"],
+          "properties": {
+            "status": { "enum": ["draft", "reviewing", "disputed", "ai-evidence-verified", "human-verified", "stale", "rejected"] },
+            "promptVersion": { "type": "string", "minLength": 1 },
+            "reviewerModels": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "verdicts": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "confidence": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "corrections": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "reviewedAt": { "type": ["string", "null"], "format": "date" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     },
     "version": { "type": "integer", "minimum": 1 }
   },

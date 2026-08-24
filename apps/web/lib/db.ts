@@ -29,6 +29,9 @@ export type PersistedAnswer = {
   matched_concepts: string[];
   missing_concepts: string[];
   feedback: string | null;
+  benchmark_version?: string | null;
+  scoring_provider?: string | null;
+  scoring_policy_version?: string | null;
   answered_at: string;
 };
 
@@ -105,6 +108,9 @@ export async function saveInterviewAnswer(input: {
   missingConcepts: string[];
   feedback: string;
   currentIndex: number;
+  provider?: string;
+  benchmarkVersion?: string;
+  scoringPolicyVersion?: string;
 }) {
   const sql = getSql();
   if (!sql) return null;
@@ -124,12 +130,52 @@ export async function saveInterviewAnswer(input: {
     RETURNING id, session_id, question_id, answer_text, score, matched_concepts, missing_concepts, feedback, answered_at
   `;
   if (!rows.length) return null;
+  const answer = rows[0] as PersistedAnswer;
+  if (input.benchmarkVersion && input.provider && input.scoringPolicyVersion) {
+    try {
+      await sql`
+        UPDATE answer_scoring_runs
+        SET is_displayed = false
+        WHERE answer_id = ${answer.id}::uuid
+      `;
+      await sql`
+        INSERT INTO answer_scoring_runs (
+          answer_id,
+          benchmark_version,
+          scoring_provider,
+          scoring_policy_version,
+          total_score,
+          matched_concepts,
+          missing_concepts,
+          feedback,
+          fallback_reason,
+          is_displayed
+        )
+        VALUES (
+          ${answer.id}::uuid,
+          ${input.benchmarkVersion},
+          ${input.provider},
+          ${input.scoringPolicyVersion},
+          ${input.score},
+          ${JSON.stringify(input.matchedConcepts)}::jsonb,
+          ${JSON.stringify(input.missingConcepts)}::jsonb,
+          ${input.feedback},
+          ${input.provider.includes('->') || input.provider === 'deterministic-keyword' ? 'deterministic_fallback' : null},
+          true
+        )
+      `;
+    } catch (error) {
+      console.error('Scoring-run audit insert failed; preserved interview answer.', {
+        message: error instanceof Error ? error.message.slice(0, 180) : 'unknown',
+      });
+    }
+  }
   await sql`
     UPDATE interview_sessions
     SET metadata = jsonb_set(metadata, '{currentIndex}', to_jsonb(${input.currentIndex}::int), true)
     WHERE id = ${input.sessionId}::uuid AND resume_token_hash = ${tokenHash}
   `;
-  return rows[0] as PersistedAnswer;
+  return answer;
 }
 
 export async function completeInterviewSession(id: string, resumeToken: string, totalScore: number) {

@@ -1,24 +1,59 @@
 import { describe, expect, it } from 'vitest';
 
-import type { InterviewQuestion } from './api';
+import type { InterviewQuestion, QuestionBenchmark } from './api';
 import { buildAssessmentSummary } from './assessment';
 import type { InterviewSession } from './session';
+
+function benchmark(concepts: string[]): QuestionBenchmark {
+  return {
+    version: '1.0.0',
+    canonicalAnswer: 'A benchmark answer for the fixture question.',
+    expandedExplanation: 'A benchmark answer for the fixture question with enough explanation for scoring.',
+    requiredConcepts: concepts,
+    optionalConcepts: ['trade-offs'],
+    acceptedAlternatives: concepts.map((concept) => ({ terms: [concept], meaning: concept })),
+    incorrectClaims: [],
+    reasoning: 'A strong answer explains the concept and validates the result.',
+    evidence: [{
+      url: 'https://example.com',
+      title: 'source',
+      section: 'source',
+      retrievedAt: '2026-08-23',
+      contentHash: `sha256:${'a'.repeat(64)}`,
+    }],
+    scoringAnchors: {
+      strong: 'Covers all required concepts with accurate practical reasoning.',
+      partial: 'Covers some required concepts but misses important detail.',
+      weak: 'Mentions the topic superficially with major gaps.',
+      incorrect: 'Does not answer the question or contradicts the benchmark.',
+    },
+    review: {
+      status: 'draft',
+      promptVersion: 'benchmark-policy-1.0.0',
+      reviewerModels: [],
+      verdicts: [],
+      confidence: null,
+      corrections: [],
+      reviewedAt: null,
+    },
+  };
+}
 
 const questions: InterviewQuestion[] = [
   {
     id: 'q1', technology: 'snowflake', topic: 'architecture', difficulty: 'intermediate', type: 'conceptual',
     question: 'q1', canonicalAnswer: 'a', expectedConcepts: ['storage'], followUps: [],
-    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, reviewStatus: 'ai-reviewed', version: 1,
+    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, benchmark: benchmark(['storage']), reviewStatus: 'ai-reviewed', version: 1,
   },
   {
     id: 'q2', technology: 'snowflake', topic: 'architecture', difficulty: 'intermediate', type: 'scenario',
     question: 'q2', canonicalAnswer: 'a', expectedConcepts: ['warehouse'], followUps: [],
-    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, reviewStatus: 'ai-reviewed', version: 1,
+    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, benchmark: benchmark(['warehouse']), reviewStatus: 'ai-reviewed', version: 1,
   },
   {
     id: 'q3', technology: 'snowflake', topic: 'security', difficulty: 'intermediate', type: 'scenario',
     question: 'q3', canonicalAnswer: 'a', expectedConcepts: ['role'], followUps: [],
-    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, reviewStatus: 'ai-reviewed', version: 1,
+    source: { title: 'source', url: 'https://example.com', verified: '2026-08-23' }, benchmark: benchmark(['role']), reviewStatus: 'ai-reviewed', version: 1,
   },
 ];
 

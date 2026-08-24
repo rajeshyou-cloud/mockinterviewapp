@@ -27,8 +27,8 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/lib/persistence-validation.ts` — persistence request boundaries
 - `apps/web/lib/question-bank.ts` — shared 300-question bank
 - `apps/web/lib/course-catalog.ts` — central released/planned technology registry
-- `apps/web/data` — versioned live content packs
-- `apps/web/data/candidates` — complete but not yet human-approved course packs
+- `apps/web/data` — versioned live content packs with benchmark-answer records
+- `apps/web/data/candidates` — complete but not yet human-approved course packs with benchmark-answer records
 - `scripts/generate-course-candidates.mjs` — deterministic candidate-pack generator
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
 - `packages/db/schema.sql` — persistence schema
@@ -42,10 +42,11 @@ Production: https://mockinterviewapp-web.vercel.app
 2. `GET /api/questions` returns a stable, session-seeded sample of 10 reviewed questions.
 3. `POST /api/score` resolves the question and rubric on the server, then uses the configured scorer.
 4. On Vercel, the scorer attempts AI Gateway and falls back deterministically on provider failure.
-5. Session and answer routes store progress in Neon while local storage preserves graceful browser fallback.
-6. Cloud routes require the private resume credential; Neon stores only its SHA-256 hash.
-7. Refresh or cross-device resume restores the current question, submitted answer, scoring feedback, and progress.
-8. Completion stores the final average and renders topic-level strengths/gaps.
+5. The score response includes the benchmark version and scoring-policy version used for the result.
+6. Session and answer routes store progress in Neon while local storage preserves graceful browser fallback.
+7. Cloud routes require the private resume credential; Neon stores only its SHA-256 hash.
+8. Refresh or cross-device resume restores the current question, submitted answer, scoring feedback, and progress.
+9. Completion stores the final average and renders topic-level strengths/gaps.
 
 The production web app uses self-contained Next.js routes for scoring and persistence. `NEXT_PUBLIC_API_BASE_URL` affects question retrieval only and is optional. The standalone FastAPI service remains independently deployable and exposes `/health`, `/v1/questions`, and a baseline `/v1/score` contract.
 
@@ -83,7 +84,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current deployed counts are 57 web tests and 8 API tests, with a green Next.js production build and zero production dependency vulnerabilities. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, and official-source hosts for Databricks, Oracle Database, Power BI, Python, and AWS.
+Current local verification counts are 57 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions.
 
 ## Deployment
 
@@ -97,9 +98,13 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 ## Deferred roadmap
 
-Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
+Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. The Question Bank and reviewer views display those benchmark details, and scoring now resolves benchmark content server-side.
 
-The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. It requires official-document evidence packets, independent AI reviewers, deterministic validation, unanimous approval for an `ai-evidence-verified` label, and withholding of disputed or stale questions. It also defines versioned benchmark answers and auditable rubric-based candidate scoring. None of those planned review states should be claimed as complete until their implementation and release gates pass.
+These benchmark answers are structurally complete but not vendor-evidence verified. Every benchmark review status is intentionally `draft` until the independent AI evidence review, dispute workflow, and any chosen human escalation have run. Do not label this content vendor-certified, human-reviewed, or `ai-evidence-verified` yet.
+
+The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
+
+The proposed replacement or supplement for manual content review is documented in `docs/BENCHMARK_SCORING_PLAN.md`. The benchmark-answer schema and baseline data migration are implemented. Still pending: official-document evidence packets, independent AI reviewers, deterministic validation, unanimous approval for an `ai-evidence-verified` label, withholding of disputed or stale questions, calibration, and applying the new Neon benchmark/scoring-run migration before relying on immutable scoring-run audit records in production.
 
 ## Deployed completion work
 

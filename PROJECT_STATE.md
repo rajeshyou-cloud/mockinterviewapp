@@ -1,6 +1,6 @@
 # Project State
 
-_Last updated: 2026-08-23_
+_Last updated: 2026-08-24_
 
 ## Current milestone
 
@@ -43,7 +43,7 @@ The candidate-practice product is deployed and verified end to end. It provides 
 ## Verification snapshot
 
 - Web: **57 tests passing** across 15 files on the deployed completion branch
-- API: **8 tests passing**
+- API: **9 tests passing**
 - Framework: **Next.js 16.3.2 / React 19.2.8**
 - Dependency audit: **0 vulnerabilities**
 - GitHub CI: run `32644119415` passed for persistence hardening; later documentation/UX revisions must retain the same gates
@@ -66,7 +66,7 @@ The verified production-owner account was bootstrapped with the `admin` applicat
 
 ## Milestone 3 — Course and question-bank expansion
 
-Status: **HUMAN REVIEW READY**
+Status: **BENCHMARK STRUCTURE COMPLETE / HUMAN REVIEW READY**
 
 - [x] Central course registry created
 - [x] Databricks, Oracle Database, Power BI, Python, and AWS registered as planned
@@ -88,11 +88,18 @@ Status: **HUMAN REVIEW READY**
 - [ ] Human-review and approve the Oracle Database and Python candidate packs
 - [x] Generate and structurally validate 150 AWS candidate questions (50 per difficulty)
 - [x] Verify all 25 unique AWS source URLs are reachable official documentation
+- [x] Add versioned benchmark-answer records to all 1,050 released and candidate questions
+- [x] Add benchmark evidence metadata, required/optional concepts, accepted alternatives, scoring anchors, and draft review status to every question
+- [x] Make scoring resolve benchmark answers server-side and return benchmark/scoring-policy versions
+- [x] Make the Question Bank and reviewer screens display benchmark-answer details
+- [x] Extend content/schema tests so all 1,050 questions must keep complete benchmark records
+- [x] Add database schema support for benchmark/scorer metadata and immutable scoring-run records; runtime answer saving remains backward-compatible until the migration is applied
 - [ ] Human-review and approve the AWS candidate pack
 - [ ] Human-review and approve each pack before exposing it in production
+- [ ] Apply the new benchmark/scoring-run database migration in Neon before relying on immutable scoring-run audit records in production
 - [ ] Revalidate all official source links and run production browser verification per launch
 
-The next content-quality work is specified in `docs/BENCHMARK_SCORING_PLAN.md`: versioned benchmark answers, independent evidence-grounded AI review, dispute withholding, dimension-level semantic scoring, immutable scoring records, calibration, and staged release gates. This is a plan, not a completed vendor review; existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
+The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, but it is not the same as completed vendor-document review. Every benchmark currently carries `review.status = draft` until independent evidence-grounded AI review, dispute handling, and any human escalation are completed. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed.
 
 ## Current user flow
 

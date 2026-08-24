@@ -25,8 +25,16 @@ CREATE TABLE IF NOT EXISTS interview_answers (
   matched_concepts jsonb NOT NULL DEFAULT '[]'::jsonb,
   missing_concepts jsonb NOT NULL DEFAULT '[]'::jsonb,
   feedback text,
+  benchmark_version text,
+  scoring_provider text,
+  scoring_policy_version text,
   answered_at timestamptz NOT NULL DEFAULT now()
 );
+
+ALTER TABLE interview_answers
+  ADD COLUMN IF NOT EXISTS benchmark_version text,
+  ADD COLUMN IF NOT EXISTS scoring_provider text,
+  ADD COLUMN IF NOT EXISTS scoring_policy_version text;
 
 CREATE INDEX IF NOT EXISTS interview_answers_session_idx
   ON interview_answers(session_id, answered_at);
@@ -34,6 +42,29 @@ CREATE INDEX IF NOT EXISTS interview_sessions_started_idx
   ON interview_sessions(started_at DESC);
 CREATE UNIQUE INDEX IF NOT EXISTS interview_answers_session_question_idx
   ON interview_answers(session_id, question_id);
+
+CREATE TABLE IF NOT EXISTS answer_scoring_runs (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  answer_id uuid NOT NULL REFERENCES interview_answers(id) ON DELETE CASCADE,
+  benchmark_version text NOT NULL,
+  scoring_provider text NOT NULL,
+  scoring_policy_version text NOT NULL,
+  total_score integer NOT NULL CHECK (total_score BETWEEN 0 AND 100),
+  dimension_scores jsonb NOT NULL DEFAULT '{}'::jsonb,
+  matched_concepts jsonb NOT NULL DEFAULT '[]'::jsonb,
+  missing_concepts jsonb NOT NULL DEFAULT '[]'::jsonb,
+  optional_concepts jsonb NOT NULL DEFAULT '[]'::jsonb,
+  incorrect_claims jsonb NOT NULL DEFAULT '[]'::jsonb,
+  feedback text NOT NULL DEFAULT '',
+  fallback_reason text,
+  latency_ms integer,
+  token_usage jsonb NOT NULL DEFAULT '{}'::jsonb,
+  estimated_cost_cents numeric(10,4),
+  is_displayed boolean NOT NULL DEFAULT true,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS answer_scoring_runs_answer_created_idx
+  ON answer_scoring_runs(answer_id, created_at DESC);
 
 -- Account ownership is optional so anonymous resume-key sessions remain supported.
 ALTER TABLE interview_sessions

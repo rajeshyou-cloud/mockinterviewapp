@@ -22,8 +22,12 @@ export function filterQuestions(questions: InterviewQuestion[], filters: Questio
     return [
       question.question,
       question.topic,
-      question.canonicalAnswer,
-      ...question.expectedConcepts,
+      question.benchmark.canonicalAnswer,
+      question.benchmark.expandedExplanation,
+      question.benchmark.reasoning,
+      ...question.benchmark.requiredConcepts,
+      ...question.benchmark.optionalConcepts,
+      ...question.benchmark.acceptedAlternatives.flatMap((alternative) => alternative.terms),
     ].some((value) => value.toLowerCase().includes(query));
   });
 }

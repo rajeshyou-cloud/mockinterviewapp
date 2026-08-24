@@ -3,6 +3,49 @@ import type { CourseDefinition, Technology } from './course-catalog';
 export type { Technology } from './course-catalog';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 
+export type BenchmarkReviewStatus =
+  | 'draft'
+  | 'reviewing'
+  | 'disputed'
+  | 'ai-evidence-verified'
+  | 'human-verified'
+  | 'stale'
+  | 'rejected';
+
+export type QuestionBenchmark = {
+  version: string;
+  canonicalAnswer: string;
+  expandedExplanation: string;
+  requiredConcepts: string[];
+  optionalConcepts: string[];
+  acceptedAlternatives: Array<{ terms: string[]; meaning: string }>;
+  incorrectClaims: Array<{ claim: string; severity: 'minor' | 'major' | 'critical'; reason: string }>;
+  reasoning: string;
+  evidence: Array<{
+    url: string;
+    title: string;
+    section: string;
+    retrievedAt: string;
+    documentVersion?: string;
+    contentHash: string;
+  }>;
+  scoringAnchors: {
+    strong: string;
+    partial: string;
+    weak: string;
+    incorrect: string;
+  };
+  review: {
+    status: BenchmarkReviewStatus;
+    promptVersion: string;
+    reviewerModels: string[];
+    verdicts: string[];
+    confidence: number | null;
+    corrections: string[];
+    reviewedAt: string | null;
+  };
+};
+
 export type InterviewQuestion = {
   id: string;
   technology: Technology;
@@ -14,6 +57,7 @@ export type InterviewQuestion = {
   expectedConcepts: string[];
   followUps: string[];
   source: { title: string; url: string; verified: string };
+  benchmark: QuestionBenchmark;
   reviewStatus: string;
   version: number;
 };
@@ -24,6 +68,8 @@ export type ScoreResponse = {
   missing_concepts: string[];
   summary: string;
   provider?: string;
+  benchmark_version?: string;
+  scoring_policy_version?: string;
 };
 
 export type PersistenceResponse = { persisted: boolean; reason?: string } & Record<string, unknown>;
@@ -127,6 +173,9 @@ export function saveRemoteAnswer(sessionId: string, resumeToken: string, input: 
   missingConcepts: string[];
   feedback: string;
   currentIndex: number;
+  provider?: string;
+  benchmarkVersion?: string;
+  scoringPolicyVersion?: string;
 }) {
   return postPersistence(`/api/sessions/${sessionId}/answers`, resumeToken, input);
 }

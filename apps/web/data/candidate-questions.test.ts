@@ -20,6 +20,16 @@ describe('candidate course question packs', () => {
       expect(question.canonicalAnswer.length).toBeGreaterThanOrEqual(100);
       expect(question.expectedConcepts).toHaveLength(5);
       expect(question.followUps).toHaveLength(2);
+      expect(question.benchmark.version).toBe('1.0.0');
+      expect(question.benchmark.canonicalAnswer).toBe(question.canonicalAnswer);
+      expect(question.benchmark.requiredConcepts).toEqual(question.expectedConcepts);
+      expect(question.benchmark.optionalConcepts.length).toBeGreaterThan(0);
+      expect(question.benchmark.acceptedAlternatives).toHaveLength(question.expectedConcepts.length);
+      expect(question.benchmark.evidence).toHaveLength(1);
+      expect(question.benchmark.evidence[0].url).toBe(question.source.url);
+      expect(question.benchmark.evidence[0].contentHash).toMatch(/^sha256:[a-f0-9]{64}$/);
+      expect(question.benchmark.scoringAnchors.incorrect.length).toBeGreaterThan(20);
+      expect(question.benchmark.review.status).toBe('draft');
       expect(question.source.url).toMatch(/^https:\/\//);
       expect(question.source.verified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(question.reviewStatus).toBe('ai-reviewed');
@@ -55,5 +65,6 @@ describe('candidate course question packs', () => {
     expect(questions).toHaveLength(750);
     expect(new Set(questions.map((question) => question.id))).toHaveLength(750);
     expect(new Set(questions.map((question) => question.question))).toHaveLength(750);
+    expect(new Set(questions.map((question) => `${question.id}:${question.benchmark.version}`))).toHaveLength(750);
   });
 });

@@ -45,10 +45,15 @@ export async function POST(request: NextRequest) {
 
   const result = await provider.score({
     answer,
-    expectedConcepts: question.expectedConcepts,
-    canonicalAnswer: question.canonicalAnswer,
+    expectedConcepts: question.benchmark.requiredConcepts,
+    canonicalAnswer: question.benchmark.canonicalAnswer,
+    benchmark: question.benchmark,
     question: question.question,
   });
 
-  return NextResponse.json(result);
+  return NextResponse.json({
+    ...result,
+    benchmark_version: question.benchmark.version,
+    scoring_policy_version: 'benchmark-policy-1.0.0',
+  });
 }

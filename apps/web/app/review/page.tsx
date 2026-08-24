@@ -44,7 +44,7 @@ export default async function ReviewPage({ searchParams }: { searchParams: Promi
         {questions.map((question, index) => (
           <article className="card questionCard" key={question.id}>
             <div className="questionNumber">{index + 1}</div>
-            <div><div className="questionTags"><span>{question.difficulty}</span><span>{question.type}</span><span>{question.topic}</span></div><h2>{question.question}</h2><details><summary>Review answer and sources</summary><div className="answerPanel"><h3>Canonical answer</h3><p>{question.canonicalAnswer}</p><h3>Expected concepts</h3><p>{question.expectedConcepts.join(' · ')}</p><h3>Official source</h3><p><a href={question.source.url} target="_blank" rel="noreferrer">{question.source.title} ↗</a></p></div></details></div>
+            <div><div className="questionTags"><span>{question.difficulty}</span><span>{question.type}</span><span>{question.topic}</span></div><h2>{question.question}</h2><details><summary>Review benchmark and sources</summary><div className="answerPanel"><div className="benchmarkMeta"><span>Benchmark v{question.benchmark.version}</span><span>{question.benchmark.review.status.replaceAll('-', ' ')}</span></div><h3>Standard benchmark answer</h3><p>{question.benchmark.canonicalAnswer}</p><h3>Required concepts</h3><p>{question.benchmark.requiredConcepts.join(' · ')}</p><h3>Official source evidence</h3><p><a href={question.benchmark.evidence[0]?.url ?? question.source.url} target="_blank" rel="noreferrer">{question.benchmark.evidence[0]?.title ?? question.source.title} ↗</a></p></div></details></div>
           </article>
         ))}
       </section>

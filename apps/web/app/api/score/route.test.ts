@@ -80,6 +80,12 @@ describe('POST /api/score', () => {
       answer: 'Data remains persisted independently.',
       expectedConcepts: ['storage', 'compute', 'virtual warehouse', 'independent scaling', 'workload isolation'],
       canonicalAnswer: expect.stringContaining('centrally in cloud storage'),
+      benchmark: expect.objectContaining({
+        version: '1.0.0',
+        canonicalAnswer: expect.stringContaining('centrally in cloud storage'),
+        requiredConcepts: ['storage', 'compute', 'virtual warehouse', 'independent scaling', 'workload isolation'],
+        review: expect.objectContaining({ status: 'draft' }),
+      }),
       question: 'Explain how Snowflake separates storage and compute, and why that matters for workload isolation.',
     });
     expect((await response.json()).provider).toBe('ai-gateway:test/model');

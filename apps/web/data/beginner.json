@@ -7,11 +7,99 @@
     "type": "conceptual",
     "question": "What are the roles of a database, schema, table, and virtual warehouse in Snowflake?",
     "canonicalAnswer": "A database is a top-level logical container for data objects. A schema organizes objects within a database. A table stores structured data. A virtual warehouse supplies compute resources used to load data, run queries, and perform DML operations.",
-    "expectedConcepts": ["database", "schema", "table", "virtual warehouse", "compute"],
-    "followUps": ["Which of those objects stores data?", "Which object consumes credits while it is running?"],
-    "source": {"title": "Snowflake in 20 minutes", "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "database",
+      "schema",
+      "table",
+      "virtual warehouse",
+      "compute"
+    ],
+    "followUps": [
+      "Which of those objects stores data?",
+      "Which object consumes credits while it is running?"
+    ],
+    "source": {
+      "title": "Snowflake in 20 minutes",
+      "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A database is a top-level logical container for data objects. A schema organizes objects within a database. A table stores structured data. A virtual warehouse supplies compute resources used to load data, run queries, and perform DML operations.",
+      "expandedExplanation": "A database is a top-level logical container for data objects. A schema organizes objects within a database. A table stores structured data. A virtual warehouse supplies compute resources used to load data, run queries, and perform DML operations. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "database",
+        "schema",
+        "table",
+        "virtual warehouse",
+        "compute"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "database"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: database."
+        },
+        {
+          "terms": [
+            "schema"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: schema."
+        },
+        {
+          "terms": [
+            "table"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: table."
+        },
+        {
+          "terms": [
+            "virtual warehouse"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: virtual warehouse."
+        },
+        {
+          "terms": [
+            "compute"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compute."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why core objects matters for snowflake at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+          "title": "Snowflake in 20 minutes",
+          "section": "Snowflake in 20 minutes",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:c0034aa9f19261b6ae368a1a2ff821a0300b3e81264bf07887deb0617f34151d"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required core objects concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required core objects concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions core objects only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the core objects question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-basics-002",
@@ -21,11 +109,107 @@
     "type": "conceptual",
     "question": "Why does Snowflake need a virtual warehouse to run a query or load data?",
     "canonicalAnswer": "A virtual warehouse is Snowflake's compute cluster. It supplies CPU, memory, and temporary storage for SQL queries, DML, and data loading operations. The warehouse must be running for those operations and consumes credits while running.",
-    "expectedConcepts": ["compute", "CPU", "memory", "queries", "loading", "credits"],
-    "followUps": ["What happens when the warehouse is suspended?", "Why might auto-suspend be useful?"],
-    "source": {"title": "Virtual warehouses", "url": "https://docs.snowflake.com/en/user-guide/warehouses", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "compute",
+      "CPU",
+      "memory",
+      "queries",
+      "loading",
+      "credits"
+    ],
+    "followUps": [
+      "What happens when the warehouse is suspended?",
+      "Why might auto-suspend be useful?"
+    ],
+    "source": {
+      "title": "Virtual warehouses",
+      "url": "https://docs.snowflake.com/en/user-guide/warehouses",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A virtual warehouse is Snowflake's compute cluster. It supplies CPU, memory, and temporary storage for SQL queries, DML, and data loading operations. The warehouse must be running for those operations and consumes credits while running.",
+      "expandedExplanation": "A virtual warehouse is Snowflake's compute cluster. It supplies CPU, memory, and temporary storage for SQL queries, DML, and data loading operations. The warehouse must be running for those operations and consumes credits while running. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "compute",
+        "CPU",
+        "memory",
+        "queries",
+        "loading",
+        "credits"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "compute"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compute."
+        },
+        {
+          "terms": [
+            "CPU"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: CPU."
+        },
+        {
+          "terms": [
+            "memory"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: memory."
+        },
+        {
+          "terms": [
+            "queries"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: queries."
+        },
+        {
+          "terms": [
+            "loading"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: loading."
+        },
+        {
+          "terms": [
+            "credits"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: credits."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why virtual warehouses matters for snowflake at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/warehouses",
+          "title": "Virtual warehouses",
+          "section": "Virtual warehouses",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:19d35e7f2cae371f3eafbad46a95f23040a381f52afa037c0da42d8ca851ae1c"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required virtual warehouses concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required virtual warehouses concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions virtual warehouses only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual warehouses question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-basics-003",
@@ -35,11 +219,100 @@
     "type": "scenario",
     "question": "You have a CSV file and want to load it into Snowflake for analysis. At a high level, what objects or steps do you need?",
     "canonicalAnswer": "You need a target database and table, a running virtual warehouse for compute, a way to stage or access the file, and then a load operation such as COPY INTO before querying the loaded data.",
-    "expectedConcepts": ["database", "table", "warehouse", "stage", "COPY INTO"],
-    "followUps": ["Which part provides compute?", "What does the stage represent?"],
-    "source": {"title": "Snowflake in 20 minutes", "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "database",
+      "table",
+      "warehouse",
+      "stage",
+      "COPY INTO"
+    ],
+    "followUps": [
+      "Which part provides compute?",
+      "What does the stage represent?"
+    ],
+    "source": {
+      "title": "Snowflake in 20 minutes",
+      "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "You need a target database and table, a running virtual warehouse for compute, a way to stage or access the file, and then a load operation such as COPY INTO before querying the loaded data.",
+      "expandedExplanation": "You need a target database and table, a running virtual warehouse for compute, a way to stage or access the file, and then a load operation such as COPY INTO before querying the loaded data. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "database",
+        "table",
+        "warehouse",
+        "stage",
+        "COPY INTO"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "database"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: database."
+        },
+        {
+          "terms": [
+            "table"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: table."
+        },
+        {
+          "terms": [
+            "warehouse"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: warehouse."
+        },
+        {
+          "terms": [
+            "stage"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: stage."
+        },
+        {
+          "terms": [
+            "COPY INTO"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: COPY INTO."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why loading data matters for snowflake at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+          "title": "Snowflake in 20 minutes",
+          "section": "Snowflake in 20 minutes",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:2ef0d0c07507641750f275f7f7cd3309a50f1f4d57f2bfba8ac967020de5d4b9"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required loading data concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required loading data concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions loading data only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the loading data question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-basics-001",
@@ -49,11 +322,99 @@
     "type": "conceptual",
     "question": "What is the difference between a mapping and a mapping task in Informatica Cloud Data Integration?",
     "canonicalAnswer": "A mapping defines the data-flow logic, such as sources, transformations, and targets. A mapping task provides the executable task configuration for that mapping, including the runtime environment and, when parameterized, specific source or target connections and objects.",
-    "expectedConcepts": ["mapping", "data flow", "mapping task", "runtime environment", "connections"],
-    "followUps": ["Which one defines transformation logic?", "Which one do you schedule or run?"],
-    "source": {"title": "Cloud Data Integration Mappings", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "mapping",
+      "data flow",
+      "mapping task",
+      "runtime environment",
+      "connections"
+    ],
+    "followUps": [
+      "Which one defines transformation logic?",
+      "Which one do you schedule or run?"
+    ],
+    "source": {
+      "title": "Cloud Data Integration Mappings",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A mapping defines the data-flow logic, such as sources, transformations, and targets. A mapping task provides the executable task configuration for that mapping, including the runtime environment and, when parameterized, specific source or target connections and objects.",
+      "expandedExplanation": "A mapping defines the data-flow logic, such as sources, transformations, and targets. A mapping task provides the executable task configuration for that mapping, including the runtime environment and, when parameterized, specific source or target connections and objects. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "mapping",
+        "data flow",
+        "mapping task",
+        "runtime environment",
+        "connections"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "mapping"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: mapping."
+        },
+        {
+          "terms": [
+            "data flow"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: data flow."
+        },
+        {
+          "terms": [
+            "mapping task"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: mapping task."
+        },
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "connections"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: connections."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why mappings matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Cloud Data Integration Mappings",
+          "section": "Cloud Data Integration Mappings",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:c560a3bb13bed905d84f58987e7337672de6d8abf72af0faa0c2d7d3e585fba0"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required mappings concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required mappings concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions mappings only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the mappings question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-basics-002",
@@ -63,11 +424,99 @@
     "type": "conceptual",
     "question": "What is a runtime environment in Informatica Cloud Data Integration?",
     "canonicalAnswer": "A runtime environment is the execution environment selected for a task. For customer-managed execution it can contain a Secure Agent or Secure Agent group that runs the task and provides access to required data sources and targets.",
-    "expectedConcepts": ["runtime environment", "execution", "Secure Agent", "task", "connectivity"],
-    "followUps": ["Why does runtime placement matter?", "When would you need a customer-managed Secure Agent?"],
-    "source": {"title": "Cloud Data Integration task configuration", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "runtime environment",
+      "execution",
+      "Secure Agent",
+      "task",
+      "connectivity"
+    ],
+    "followUps": [
+      "Why does runtime placement matter?",
+      "When would you need a customer-managed Secure Agent?"
+    ],
+    "source": {
+      "title": "Cloud Data Integration task configuration",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A runtime environment is the execution environment selected for a task. For customer-managed execution it can contain a Secure Agent or Secure Agent group that runs the task and provides access to required data sources and targets.",
+      "expandedExplanation": "A runtime environment is the execution environment selected for a task. For customer-managed execution it can contain a Secure Agent or Secure Agent group that runs the task and provides access to required data sources and targets. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "runtime environment",
+        "execution",
+        "Secure Agent",
+        "task",
+        "connectivity"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "execution"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: execution."
+        },
+        {
+          "terms": [
+            "Secure Agent"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Secure Agent."
+        },
+        {
+          "terms": [
+            "task"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: task."
+        },
+        {
+          "terms": [
+            "connectivity"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: connectivity."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why runtime environments matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Cloud Data Integration task configuration",
+          "section": "Cloud Data Integration task configuration",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:3b5ca8f4e1e4efe9fa71c6939f63b6b3387fb9b2bd494778ea575cb6dd018e00"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required runtime environments concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-basics-003",
@@ -77,10 +526,91 @@
     "type": "scenario",
     "question": "A mapping task uses a parameterized source. What must you choose when configuring the task so it can read the actual source data?",
     "canonicalAnswer": "You select a compatible source connection and the source object for the task. The connection must be suitable for the source type and available to the chosen runtime environment.",
-    "expectedConcepts": ["source connection", "source object", "runtime environment", "compatible connection"],
-    "followUps": ["Why might the connection list depend on the runtime environment?", "What would you validate after changing the source object?"],
-    "source": {"title": "Cloud Data Integration Tasks", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "source connection",
+      "source object",
+      "runtime environment",
+      "compatible connection"
+    ],
+    "followUps": [
+      "Why might the connection list depend on the runtime environment?",
+      "What would you validate after changing the source object?"
+    ],
+    "source": {
+      "title": "Cloud Data Integration Tasks",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "You select a compatible source connection and the source object for the task. The connection must be suitable for the source type and available to the chosen runtime environment.",
+      "expandedExplanation": "You select a compatible source connection and the source object for the task. The connection must be suitable for the source type and available to the chosen runtime environment. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "source connection",
+        "source object",
+        "runtime environment",
+        "compatible connection"
+      ],
+      "optionalConcepts": [
+        "beginner level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "source connection"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: source connection."
+        },
+        {
+          "terms": [
+            "source object"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: source object."
+        },
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "compatible connection"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compatible connection."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why connections matters for informatica at beginner level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Cloud Data Integration Tasks",
+          "section": "Cloud Data Integration Tasks",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:75fbfbd73507c1d108c2557f8eeb330c3177964357dc8c18af6ad21c119cd7a7"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required connections concepts accurately, explains the beginner level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required connections concepts but misses important details, constraints, or operational reasoning expected at beginner level.",
+        "weak": "Mentions connections only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the connections question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   }
 ]

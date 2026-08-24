@@ -7,11 +7,99 @@
     "type": "conceptual",
     "question": "Explain how Snowflake separates storage and compute, and why that matters for workload isolation.",
     "canonicalAnswer": "Snowflake stores persisted table data centrally in cloud storage while queries run on independent virtual warehouses. Each virtual warehouse is an independent compute cluster, so separate warehouses can isolate ETL, BI, data science, or other workloads from one another while allowing compute to be resized or managed independently of persisted storage.",
-    "expectedConcepts": ["storage", "compute", "virtual warehouse", "independent scaling", "workload isolation"],
-    "followUps": ["How would you use separate virtual warehouses for ETL and BI workloads?", "When would you scale up versus use additional compute for concurrency?"],
-    "source": {"title": "Snowflake key concepts and architecture", "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "storage",
+      "compute",
+      "virtual warehouse",
+      "independent scaling",
+      "workload isolation"
+    ],
+    "followUps": [
+      "How would you use separate virtual warehouses for ETL and BI workloads?",
+      "When would you scale up versus use additional compute for concurrency?"
+    ],
+    "source": {
+      "title": "Snowflake key concepts and architecture",
+      "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Snowflake stores persisted table data centrally in cloud storage while queries run on independent virtual warehouses. Each virtual warehouse is an independent compute cluster, so separate warehouses can isolate ETL, BI, data science, or other workloads from one another while allowing compute to be resized or managed independently of persisted storage.",
+      "expandedExplanation": "Snowflake stores persisted table data centrally in cloud storage while queries run on independent virtual warehouses. Each virtual warehouse is an independent compute cluster, so separate warehouses can isolate ETL, BI, data science, or other workloads from one another while allowing compute to be resized or managed independently of persisted storage. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "storage",
+        "compute",
+        "virtual warehouse",
+        "independent scaling",
+        "workload isolation"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "storage"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: storage."
+        },
+        {
+          "terms": [
+            "compute"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compute."
+        },
+        {
+          "terms": [
+            "virtual warehouse"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: virtual warehouse."
+        },
+        {
+          "terms": [
+            "independent scaling"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: independent scaling."
+        },
+        {
+          "terms": [
+            "workload isolation"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: workload isolation."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why architecture matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+          "title": "Snowflake key concepts and architecture",
+          "section": "Snowflake key concepts and architecture",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:ee7a167169a8e62f06989499850668c39163c6ad14d8772871fe57cb530b2f1c"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required architecture concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required architecture concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions architecture only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-warehouse-002",
@@ -21,11 +109,108 @@
     "type": "scenario",
     "question": "A BI dashboard is slowing down whenever a nightly ETL job starts. How would you use Snowflake virtual warehouses to reduce this contention?",
     "canonicalAnswer": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data.",
-    "expectedConcepts": ["separate warehouses", "workload isolation", "compute", "BI", "ETL", "independent scaling"],
-    "followUps": ["What cost trade-offs come with adding another warehouse?", "How would auto-suspend help manage cost?"],
-    "source": {"title": "Snowflake virtual warehouses", "url": "https://docs.snowflake.com/en/user-guide/warehouses", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "separate warehouses",
+      "workload isolation",
+      "compute",
+      "BI",
+      "ETL",
+      "independent scaling"
+    ],
+    "followUps": [
+      "What cost trade-offs come with adding another warehouse?",
+      "How would auto-suspend help manage cost?"
+    ],
+    "source": {
+      "title": "Snowflake virtual warehouses",
+      "url": "https://docs.snowflake.com/en/user-guide/warehouses",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data.",
+      "expandedExplanation": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "separate warehouses",
+        "workload isolation",
+        "compute",
+        "BI",
+        "ETL",
+        "independent scaling"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "separate warehouses"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: separate warehouses."
+        },
+        {
+          "terms": [
+            "workload isolation"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: workload isolation."
+        },
+        {
+          "terms": [
+            "compute"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compute."
+        },
+        {
+          "terms": [
+            "BI"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: BI."
+        },
+        {
+          "terms": [
+            "ETL"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: ETL."
+        },
+        {
+          "terms": [
+            "independent scaling"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: independent scaling."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why virtual warehouses matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/warehouses",
+          "title": "Snowflake virtual warehouses",
+          "section": "Snowflake virtual warehouses",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:fd01309455bb34abbc2446ecc51142ee02cfc6bc5dbbe148e911c5a14f32090f"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required virtual warehouses concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required virtual warehouses concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions virtual warehouses only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual warehouses question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-tables-001",
@@ -35,11 +220,108 @@
     "type": "scenario",
     "question": "Your team maintains an INSERT/MERGE pipeline using streams and scheduled tasks. When would you consider redesigning it with Dynamic Tables?",
     "canonicalAnswer": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective.",
-    "expectedConcepts": ["declarative", "select", "target lag", "streams", "tasks", "imperative"],
-    "followUps": ["Why is TARGET_LAG different from a fixed task schedule?", "What operational control might you lose or simplify by moving to Dynamic Tables?"],
-    "source": {"title": "Migrate from streams and tasks to dynamic tables", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/migrate-streams-tasks", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "declarative",
+      "select",
+      "target lag",
+      "streams",
+      "tasks",
+      "imperative"
+    ],
+    "followUps": [
+      "Why is TARGET_LAG different from a fixed task schedule?",
+      "What operational control might you lose or simplify by moving to Dynamic Tables?"
+    ],
+    "source": {
+      "title": "Migrate from streams and tasks to dynamic tables",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/migrate-streams-tasks",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective.",
+      "expandedExplanation": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "declarative",
+        "select",
+        "target lag",
+        "streams",
+        "tasks",
+        "imperative"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "declarative"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: declarative."
+        },
+        {
+          "terms": [
+            "select"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: select."
+        },
+        {
+          "terms": [
+            "target lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: target lag."
+        },
+        {
+          "terms": [
+            "streams"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: streams."
+        },
+        {
+          "terms": [
+            "tasks"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: tasks."
+        },
+        {
+          "terms": [
+            "imperative"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: imperative."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why data engineering matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/migrate-streams-tasks",
+          "title": "Migrate from streams and tasks to dynamic tables",
+          "section": "Migrate from streams and tasks to dynamic tables",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:3d268fb2f689e6e8e028a56be8fad0d0f950d8b02066458d77947657835089a6"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required data engineering concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required data engineering concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data engineering only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-tables-002",
@@ -49,11 +331,108 @@
     "type": "design",
     "question": "You need a pipeline whose downstream table should stay within roughly ten minutes of its source data. How would a Dynamic Table model that requirement?",
     "canonicalAnswer": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step.",
-    "expectedConcepts": ["target lag", "freshness", "refresh", "upstream", "dynamic table", "declarative"],
-    "followUps": ["How is this different from running a task every ten minutes?", "What would you monitor if the target lag is not being met?"],
-    "source": {"title": "Dynamic tables", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-about", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "target lag",
+      "freshness",
+      "refresh",
+      "upstream",
+      "dynamic table",
+      "declarative"
+    ],
+    "followUps": [
+      "How is this different from running a task every ten minutes?",
+      "What would you monitor if the target lag is not being met?"
+    ],
+    "source": {
+      "title": "Dynamic tables",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-about",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step.",
+      "expandedExplanation": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "target lag",
+        "freshness",
+        "refresh",
+        "upstream",
+        "dynamic table",
+        "declarative"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "maintainability and governance controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "target lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: target lag."
+        },
+        {
+          "terms": [
+            "freshness"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: freshness."
+        },
+        {
+          "terms": [
+            "refresh"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: refresh."
+        },
+        {
+          "terms": [
+            "upstream"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: upstream."
+        },
+        {
+          "terms": [
+            "dynamic table"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: dynamic table."
+        },
+        {
+          "terms": [
+            "declarative"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: declarative."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why data engineering matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-about",
+          "title": "Dynamic tables",
+          "section": "Dynamic tables",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:1d1407de54c6023cd1fc070e02dd0fa8867b3dbe6e753f6229b1ee089f23ddd7"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required data engineering concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required data engineering concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data engineering only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-secure-agent-001",
@@ -63,11 +442,107 @@
     "type": "conceptual",
     "question": "What role does a Secure Agent play in Informatica Cloud Data Integration, and when would you deploy one yourself?",
     "canonicalAnswer": "A runtime environment is the execution platform for tasks and can consist of one or more Secure Agents. A Secure Agent is a lightweight runtime that executes tasks and enables secure communication across the firewall. A customer-managed Secure Agent is appropriate when workloads must access on-premises or firewall-protected sources, when a connector or task requires it, or when the organization wants the runtime located in its own environment.",
-    "expectedConcepts": ["runtime environment", "secure agent", "execution", "firewall", "on-premises", "connectivity"],
-    "followUps": ["How would runtime environment placement affect data movement?", "What would you check if a Secure Agent-based task suddenly could not reach a source?"],
-    "source": {"title": "Informatica Cloud Data Integration Getting Started", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "runtime environment",
+      "secure agent",
+      "execution",
+      "firewall",
+      "on-premises",
+      "connectivity"
+    ],
+    "followUps": [
+      "How would runtime environment placement affect data movement?",
+      "What would you check if a Secure Agent-based task suddenly could not reach a source?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration Getting Started",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "A runtime environment is the execution platform for tasks and can consist of one or more Secure Agents. A Secure Agent is a lightweight runtime that executes tasks and enables secure communication across the firewall. A customer-managed Secure Agent is appropriate when workloads must access on-premises or firewall-protected sources, when a connector or task requires it, or when the organization wants the runtime located in its own environment.",
+      "expandedExplanation": "A runtime environment is the execution platform for tasks and can consist of one or more Secure Agents. A Secure Agent is a lightweight runtime that executes tasks and enables secure communication across the firewall. A customer-managed Secure Agent is appropriate when workloads must access on-premises or firewall-protected sources, when a connector or task requires it, or when the organization wants the runtime located in its own environment. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "runtime environment",
+        "secure agent",
+        "execution",
+        "firewall",
+        "on-premises",
+        "connectivity"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "secure agent"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: secure agent."
+        },
+        {
+          "terms": [
+            "execution"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: execution."
+        },
+        {
+          "terms": [
+            "firewall"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: firewall."
+        },
+        {
+          "terms": [
+            "on-premises"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: on-premises."
+        },
+        {
+          "terms": [
+            "connectivity"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: connectivity."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why runtime environments matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Informatica Cloud Data Integration Getting Started",
+          "section": "Informatica Cloud Data Integration Getting Started",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:5e2e788f22e4bcbda7e074b767d0359c86b1fa022f46fb229624bcc112d39e4d"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-runtime-002",
@@ -77,11 +552,108 @@
     "type": "scenario",
     "question": "A mapping must read from an on-premises database that is not exposed to the public internet. What Informatica runtime design would you consider?",
     "canonicalAnswer": "Use a customer-managed Secure Agent in a runtime environment that has network access to the on-premises database. The Secure Agent executes the task and provides the connectivity needed for Data Integration to reach protected resources without exposing the database directly to the public internet.",
-    "expectedConcepts": ["secure agent", "runtime environment", "on-premises", "network access", "connectivity", "execution"],
-    "followUps": ["Where would you place the Secure Agent?", "What network checks would you perform if connectivity fails?"],
-    "source": {"title": "Informatica Cloud Data Integration Getting Started", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "secure agent",
+      "runtime environment",
+      "on-premises",
+      "network access",
+      "connectivity",
+      "execution"
+    ],
+    "followUps": [
+      "Where would you place the Secure Agent?",
+      "What network checks would you perform if connectivity fails?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration Getting Started",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use a customer-managed Secure Agent in a runtime environment that has network access to the on-premises database. The Secure Agent executes the task and provides the connectivity needed for Data Integration to reach protected resources without exposing the database directly to the public internet.",
+      "expandedExplanation": "Use a customer-managed Secure Agent in a runtime environment that has network access to the on-premises database. The Secure Agent executes the task and provides the connectivity needed for Data Integration to reach protected resources without exposing the database directly to the public internet. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "secure agent",
+        "runtime environment",
+        "on-premises",
+        "network access",
+        "connectivity",
+        "execution"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "secure agent"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: secure agent."
+        },
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "on-premises"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: on-premises."
+        },
+        {
+          "terms": [
+            "network access"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: network access."
+        },
+        {
+          "terms": [
+            "connectivity"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: connectivity."
+        },
+        {
+          "terms": [
+            "execution"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: execution."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why runtime environments matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Informatica Cloud Data Integration Getting Started",
+          "section": "Informatica Cloud Data Integration Getting Started",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:3d361aa03e559b40e08656309f84831072669be822ead90e8727f16de252c48e"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-performance-001",
@@ -91,11 +663,108 @@
     "type": "scenario",
     "question": "A Cloud Data Integration mapping is processing a large relational workload slowly. How would you evaluate whether pushdown optimization could help?",
     "canonicalAnswer": "First determine whether supported transformation logic can be executed efficiently by the source or target database and whether the connector and mapping configuration support pushdown. Source, target, or full pushdown can move eligible transformation logic into generated SQL executed by the database. The choice must consider database capacity, transaction length, concurrency, unsupported transformations, and the remaining logic that still has to run in the Data Integration runtime. Session and compilation logs can help verify what was pushed down.",
-    "expectedConcepts": ["pushdown", "source", "target", "full pushdown", "database", "logs"],
-    "followUps": ["Why might full pushdown be a bad choice during peak database hours?", "Which logs would you inspect to confirm whether pushdown occurred?"],
-    "source": {"title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "pushdown",
+      "source",
+      "target",
+      "full pushdown",
+      "database",
+      "logs"
+    ],
+    "followUps": [
+      "Why might full pushdown be a bad choice during peak database hours?",
+      "Which logs would you inspect to confirm whether pushdown occurred?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "First determine whether supported transformation logic can be executed efficiently by the source or target database and whether the connector and mapping configuration support pushdown. Source, target, or full pushdown can move eligible transformation logic into generated SQL executed by the database. The choice must consider database capacity, transaction length, concurrency, unsupported transformations, and the remaining logic that still has to run in the Data Integration runtime. Session and compilation logs can help verify what was pushed down.",
+      "expandedExplanation": "First determine whether supported transformation logic can be executed efficiently by the source or target database and whether the connector and mapping configuration support pushdown. Source, target, or full pushdown can move eligible transformation logic into generated SQL executed by the database. The choice must consider database capacity, transaction length, concurrency, unsupported transformations, and the remaining logic that still has to run in the Data Integration runtime. Session and compilation logs can help verify what was pushed down. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "pushdown",
+        "source",
+        "target",
+        "full pushdown",
+        "database",
+        "logs"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "pushdown"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: pushdown."
+        },
+        {
+          "terms": [
+            "source"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: source."
+        },
+        {
+          "terms": [
+            "target"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: target."
+        },
+        {
+          "terms": [
+            "full pushdown"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: full pushdown."
+        },
+        {
+          "terms": [
+            "database"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: database."
+        },
+        {
+          "terms": [
+            "logs"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: logs."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
+          "section": "Informatica Cloud Data Integration mappings and tasks - Pushdown optimization",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:6568c11bdd0b97181882ed50dbd17c9724e8022158f282bd10bce7f8434d7c57"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-performance-002",
@@ -105,10 +774,107 @@
     "type": "troubleshooting",
     "question": "A mapping was configured for pushdown optimization, but performance did not improve. What would you inspect first?",
     "canonicalAnswer": "Inspect the task and session logs to confirm which transformations were actually pushed to the source or target database. Check connector support, unsupported transformations, generated SQL, database load, and whether significant processing is still occurring in the Data Integration runtime.",
-    "expectedConcepts": ["logs", "generated SQL", "connector", "unsupported transformations", "database load", "runtime"],
-    "followUps": ["How would you distinguish a database bottleneck from a runtime bottleneck?", "What would make you disable full pushdown?"],
-    "source": {"title": "Informatica Cloud Data Integration pushdown optimization", "url": "https://docs.informatica.com/", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "logs",
+      "generated SQL",
+      "connector",
+      "unsupported transformations",
+      "database load",
+      "runtime"
+    ],
+    "followUps": [
+      "How would you distinguish a database bottleneck from a runtime bottleneck?",
+      "What would make you disable full pushdown?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration pushdown optimization",
+      "url": "https://docs.informatica.com/",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Inspect the task and session logs to confirm which transformations were actually pushed to the source or target database. Check connector support, unsupported transformations, generated SQL, database load, and whether significant processing is still occurring in the Data Integration runtime.",
+      "expandedExplanation": "Inspect the task and session logs to confirm which transformations were actually pushed to the source or target database. Check connector support, unsupported transformations, generated SQL, database load, and whether significant processing is still occurring in the Data Integration runtime. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "logs",
+        "generated SQL",
+        "connector",
+        "unsupported transformations",
+        "database load",
+        "runtime"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "logs"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: logs."
+        },
+        {
+          "terms": [
+            "generated SQL"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: generated SQL."
+        },
+        {
+          "terms": [
+            "connector"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: connector."
+        },
+        {
+          "terms": [
+            "unsupported transformations"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: unsupported transformations."
+        },
+        {
+          "terms": [
+            "database load"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: database load."
+        },
+        {
+          "terms": [
+            "runtime"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/",
+          "title": "Informatica Cloud Data Integration pushdown optimization",
+          "section": "Informatica Cloud Data Integration pushdown optimization",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:28b3fc92b6db3f0fdc50429696341a45bcad3e21df0d283764048b531f9b1f56"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   }
 ]

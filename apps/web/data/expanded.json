@@ -7,11 +7,108 @@
     "type": "scenario",
     "question": "Your analysts need read access to curated schemas, but you do not want to grant object privileges directly to every user. How would you structure access in Snowflake?",
     "canonicalAnswer": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles.",
-    "expectedConcepts": ["RBAC", "custom roles", "privileges", "role hierarchy", "users", "least privilege"],
-    "followUps": ["Why avoid putting business-data privileges directly on ACCOUNTADMIN?", "How does privilege inheritance work through a role hierarchy?"],
-    "source": {"title": "Snowflake overview of access control", "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "RBAC",
+      "custom roles",
+      "privileges",
+      "role hierarchy",
+      "users",
+      "least privilege"
+    ],
+    "followUps": [
+      "Why avoid putting business-data privileges directly on ACCOUNTADMIN?",
+      "How does privilege inheritance work through a role hierarchy?"
+    ],
+    "source": {
+      "title": "Snowflake overview of access control",
+      "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles.",
+      "expandedExplanation": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "RBAC",
+        "custom roles",
+        "privileges",
+        "role hierarchy",
+        "users",
+        "least privilege"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "RBAC"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: RBAC."
+        },
+        {
+          "terms": [
+            "custom roles"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: custom roles."
+        },
+        {
+          "terms": [
+            "privileges"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: privileges."
+        },
+        {
+          "terms": [
+            "role hierarchy"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: role hierarchy."
+        },
+        {
+          "terms": [
+            "users"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: users."
+        },
+        {
+          "terms": [
+            "least privilege"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: least privilege."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why security access control matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
+          "title": "Snowflake overview of access control",
+          "section": "Snowflake overview of access control",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:67f0ff8c141c2e123cb081cccddb347b4c0ce0c19a7674f0c2f69afd8f84157b"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required security access control concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required security access control concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions security access control only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-managed-access-004",
@@ -21,11 +118,100 @@
     "type": "scenario",
     "question": "A data-governance team wants grant decisions in a schema centralized rather than controlled by individual object owners. What Snowflake feature would you consider and why?",
     "canonicalAnswer": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration.",
-    "expectedConcepts": ["managed access schema", "schema owner", "MANAGE GRANTS", "centralized grants", "object owners"],
-    "followUps": ["How does this differ from a regular schema?", "What governance trade-off does centralized grant management introduce?"],
-    "source": {"title": "Snowflake overview of access control", "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "managed access schema",
+      "schema owner",
+      "MANAGE GRANTS",
+      "centralized grants",
+      "object owners"
+    ],
+    "followUps": [
+      "How does this differ from a regular schema?",
+      "What governance trade-off does centralized grant management introduce?"
+    ],
+    "source": {
+      "title": "Snowflake overview of access control",
+      "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration.",
+      "expandedExplanation": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "managed access schema",
+        "schema owner",
+        "MANAGE GRANTS",
+        "centralized grants",
+        "object owners"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "managed access schema"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: managed access schema."
+        },
+        {
+          "terms": [
+            "schema owner"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: schema owner."
+        },
+        {
+          "terms": [
+            "MANAGE GRANTS"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: MANAGE GRANTS."
+        },
+        {
+          "terms": [
+            "centralized grants"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: centralized grants."
+        },
+        {
+          "terms": [
+            "object owners"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: object owners."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why security access control matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
+          "title": "Snowflake overview of access control",
+          "section": "Snowflake overview of access control",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:7b7ab492459ed8c2bf88207e3a899ad8ec6ae4c846479d55684ddb2a549abfc6"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required security access control concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required security access control concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions security access control only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-time-travel-005",
@@ -35,11 +221,108 @@
     "type": "scenario",
     "question": "A table was accidentally updated two hours ago and the team needs to inspect the previous data before restoring anything. How can Snowflake Time Travel help?",
     "canonicalAnswer": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required.",
-    "expectedConcepts": ["Time Travel", "retention period", "historical data", "timestamp", "offset", "statement"],
-    "followUps": ["What happens if the requested point is outside the retention period?", "How would you reduce risk before replacing the current table?"],
-    "source": {"title": "Snowflake Time Travel", "url": "https://docs.snowflake.com/en/user-guide/data-time-travel", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Time Travel",
+      "retention period",
+      "historical data",
+      "timestamp",
+      "offset",
+      "statement"
+    ],
+    "followUps": [
+      "What happens if the requested point is outside the retention period?",
+      "How would you reduce risk before replacing the current table?"
+    ],
+    "source": {
+      "title": "Snowflake Time Travel",
+      "url": "https://docs.snowflake.com/en/user-guide/data-time-travel",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required.",
+      "expandedExplanation": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Time Travel",
+        "retention period",
+        "historical data",
+        "timestamp",
+        "offset",
+        "statement"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Time Travel"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Time Travel."
+        },
+        {
+          "terms": [
+            "retention period"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: retention period."
+        },
+        {
+          "terms": [
+            "historical data"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: historical data."
+        },
+        {
+          "terms": [
+            "timestamp"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: timestamp."
+        },
+        {
+          "terms": [
+            "offset"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: offset."
+        },
+        {
+          "terms": [
+            "statement"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: statement."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why data protection matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/data-time-travel",
+          "title": "Snowflake Time Travel",
+          "section": "Snowflake Time Travel",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:6993ca4cef234712c8ad68f95c4fad05170911fea84fe43ae44d1361ada0da85"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required data protection concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required data protection concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions data protection only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-zero-copy-clone-006",
@@ -49,11 +332,108 @@
     "type": "scenario",
     "question": "You need an isolated copy of a production schema for a short-lived test without first making a full physical copy of all table data. What Snowflake capability fits this need?",
     "canonicalAnswer": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available.",
-    "expectedConcepts": ["zero-copy clone", "CREATE CLONE", "logical copy", "schema", "Time Travel", "retention"],
-    "followUps": ["When could a historical clone fail?", "Why is a clone useful for development or recovery workflows?"],
-    "source": {"title": "Snowflake CREATE CLONE", "url": "https://docs.snowflake.com/en/sql-reference/sql/create-clone", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "zero-copy clone",
+      "CREATE CLONE",
+      "logical copy",
+      "schema",
+      "Time Travel",
+      "retention"
+    ],
+    "followUps": [
+      "When could a historical clone fail?",
+      "Why is a clone useful for development or recovery workflows?"
+    ],
+    "source": {
+      "title": "Snowflake CREATE CLONE",
+      "url": "https://docs.snowflake.com/en/sql-reference/sql/create-clone",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available.",
+      "expandedExplanation": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "zero-copy clone",
+        "CREATE CLONE",
+        "logical copy",
+        "schema",
+        "Time Travel",
+        "retention"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "zero-copy clone"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: zero-copy clone."
+        },
+        {
+          "terms": [
+            "CREATE CLONE"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: CREATE CLONE."
+        },
+        {
+          "terms": [
+            "logical copy"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: logical copy."
+        },
+        {
+          "terms": [
+            "schema"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: schema."
+        },
+        {
+          "terms": [
+            "Time Travel"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Time Travel."
+        },
+        {
+          "terms": [
+            "retention"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: retention."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why data protection matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/sql-reference/sql/create-clone",
+          "title": "Snowflake CREATE CLONE",
+          "section": "Snowflake CREATE CLONE",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:d9f6830c6aa38f3de8587e68b0a6b78d6ad0d501ceff0d013fa78fccee3b3ac8"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required data protection concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required data protection concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data protection only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-stream-staleness-007",
@@ -63,11 +443,108 @@
     "type": "troubleshooting",
     "question": "A stream-based CDC pipeline stopped running for an extended period and now the stream may be stale. What would you investigate and how would you prevent recurrence?",
     "canonicalAnswer": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set.",
-    "expectedConcepts": ["STALE_AFTER", "retention", "consume", "offset", "stream", "stale"],
-    "followUps": ["Does merely selecting from a stream advance its offset?", "What source-object operation can invalidate stream history?"],
-    "source": {"title": "Snowflake introduction to streams", "url": "https://docs.snowflake.com/en/user-guide/streams-intro", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "STALE_AFTER",
+      "retention",
+      "consume",
+      "offset",
+      "stream",
+      "stale"
+    ],
+    "followUps": [
+      "Does merely selecting from a stream advance its offset?",
+      "What source-object operation can invalidate stream history?"
+    ],
+    "source": {
+      "title": "Snowflake introduction to streams",
+      "url": "https://docs.snowflake.com/en/user-guide/streams-intro",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set.",
+      "expandedExplanation": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "STALE_AFTER",
+        "retention",
+        "consume",
+        "offset",
+        "stream",
+        "stale"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "STALE_AFTER"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: STALE_AFTER."
+        },
+        {
+          "terms": [
+            "retention"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: retention."
+        },
+        {
+          "terms": [
+            "consume"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: consume."
+        },
+        {
+          "terms": [
+            "offset"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: offset."
+        },
+        {
+          "terms": [
+            "stream"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: stream."
+        },
+        {
+          "terms": [
+            "stale"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: stale."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why change data capture matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/streams-intro",
+          "title": "Snowflake introduction to streams",
+          "section": "Snowflake introduction to streams",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:5d264d9e5f54c97c389b7a7dceb9a0f6a026d0716689f8cb0d392d42e222fa63"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required change data capture concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required change data capture concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions change data capture only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change data capture question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-stream-consumers-008",
@@ -77,11 +554,100 @@
     "type": "design",
     "question": "Two independent downstream pipelines both need to consume the same source-table changes. Would you normally point both consumers at one Snowflake stream?",
     "canonicalAnswer": "Normally create a separate stream for each consumer. A stream tracks an offset, and consumption in a DML transaction advances that offset. If independent consumers share one stream, one consumer can advance the change position before the other processes the same delta.",
-    "expectedConcepts": ["separate stream", "consumer", "offset", "DML transaction", "change data"],
-    "followUps": ["Why are multiple streams relatively inexpensive?", "When does a stream offset advance?"],
-    "source": {"title": "Snowflake introduction to streams", "url": "https://docs.snowflake.com/en/user-guide/streams-intro", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "separate stream",
+      "consumer",
+      "offset",
+      "DML transaction",
+      "change data"
+    ],
+    "followUps": [
+      "Why are multiple streams relatively inexpensive?",
+      "When does a stream offset advance?"
+    ],
+    "source": {
+      "title": "Snowflake introduction to streams",
+      "url": "https://docs.snowflake.com/en/user-guide/streams-intro",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Normally create a separate stream for each consumer. A stream tracks an offset, and consumption in a DML transaction advances that offset. If independent consumers share one stream, one consumer can advance the change position before the other processes the same delta.",
+      "expandedExplanation": "Normally create a separate stream for each consumer. A stream tracks an offset, and consumption in a DML transaction advances that offset. If independent consumers share one stream, one consumer can advance the change position before the other processes the same delta. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "separate stream",
+        "consumer",
+        "offset",
+        "DML transaction",
+        "change data"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "maintainability and governance controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "separate stream"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: separate stream."
+        },
+        {
+          "terms": [
+            "consumer"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: consumer."
+        },
+        {
+          "terms": [
+            "offset"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: offset."
+        },
+        {
+          "terms": [
+            "DML transaction"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: DML transaction."
+        },
+        {
+          "terms": [
+            "change data"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: change data."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why change data capture matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/streams-intro",
+          "title": "Snowflake introduction to streams",
+          "section": "Snowflake introduction to streams",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:302be6f5018a6f1b95280044a05e7507e8dc56ce3395e6e78490c15f48e45b54"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required change data capture concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required change data capture concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions change data capture only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change data capture question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-agent-groups-003",
@@ -91,11 +657,108 @@
     "type": "scenario",
     "question": "Finance mappings are time-critical but a high-volume sales workload frequently competes for Secure Agent capacity. How could you reduce the operational interference?",
     "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
-    "expectedConcepts": ["Secure Agent group", "runtime environment", "workload isolation", "finance", "sales", "capacity"],
-    "followUps": ["What else would you monitor before adding more runtime capacity?", "How does runtime placement affect access to on-premises systems?"],
-    "source": {"title": "Informatica Secure Agent groups", "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agent-groups.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Secure Agent group",
+      "runtime environment",
+      "workload isolation",
+      "finance",
+      "sales",
+      "capacity"
+    ],
+    "followUps": [
+      "What else would you monitor before adding more runtime capacity?",
+      "How does runtime placement affect access to on-premises systems?"
+    ],
+    "source": {
+      "title": "Informatica Secure Agent groups",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agent-groups.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks.",
+      "expandedExplanation": "Use separate Secure Agent groups or runtime environments for the workloads. Informatica documents Secure Agent groups as a way to isolate departmental activity so one department's workload does not negatively affect another department's tasks. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Secure Agent group",
+        "runtime environment",
+        "workload isolation",
+        "finance",
+        "sales",
+        "capacity"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Secure Agent group"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Secure Agent group."
+        },
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "workload isolation"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: workload isolation."
+        },
+        {
+          "terms": [
+            "finance"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: finance."
+        },
+        {
+          "terms": [
+            "sales"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: sales."
+        },
+        {
+          "terms": [
+            "capacity"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: capacity."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why runtime environments matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/runtime-environments/secure-agent-groups.html",
+          "title": "Informatica Secure Agent groups",
+          "section": "Informatica Secure Agent groups",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:36149f26618b3ea02debdbf85a7ea2e28a17b028a6220e50836674e88435f2a5"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required runtime environments concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required runtime environments concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions runtime environments only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the runtime environments question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-taskflow-decision-004",
@@ -105,11 +768,100 @@
     "type": "scenario",
     "question": "A Data Integration process should run one mapping when a validation flag is true and a different path when it is false. Which taskflow construct is designed for this?",
     "canonicalAnswer": "Use a Decision step in a taskflow. A Decision step lets taskflow execution take different paths based on the value of a field or condition.",
-    "expectedConcepts": ["taskflow", "Decision step", "branch", "condition", "field"],
-    "followUps": ["When would Parallel Paths be more appropriate?", "How would you model a failure that should stop later steps?"],
-    "source": {"title": "Informatica Cloud Data Integration Taskflows", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "taskflow",
+      "Decision step",
+      "branch",
+      "condition",
+      "field"
+    ],
+    "followUps": [
+      "When would Parallel Paths be more appropriate?",
+      "How would you model a failure that should stop later steps?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration Taskflows",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use a Decision step in a taskflow. A Decision step lets taskflow execution take different paths based on the value of a field or condition.",
+      "expandedExplanation": "Use a Decision step in a taskflow. A Decision step lets taskflow execution take different paths based on the value of a field or condition. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "taskflow",
+        "Decision step",
+        "branch",
+        "condition",
+        "field"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "taskflow"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: taskflow."
+        },
+        {
+          "terms": [
+            "Decision step"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Decision step."
+        },
+        {
+          "terms": [
+            "branch"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: branch."
+        },
+        {
+          "terms": [
+            "condition"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: condition."
+        },
+        {
+          "terms": [
+            "field"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: field."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why orchestration matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html",
+          "title": "Informatica Cloud Data Integration Taskflows",
+          "section": "Informatica Cloud Data Integration Taskflows",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:0f29e8a947e9b08bc24bf7f5982fc7eb0da74f70b5b36c046e5769ab98069fbe"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required orchestration concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required orchestration concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions orchestration only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-taskflow-parallel-005",
@@ -119,11 +871,100 @@
     "type": "design",
     "question": "Three independent mapping tasks can run at the same time before a common downstream step. How would you model this in an Informatica taskflow?",
     "canonicalAnswer": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step.",
-    "expectedConcepts": ["Parallel Paths", "concurrent", "taskflow", "mapping tasks", "downstream"],
-    "followUps": ["What risks should you consider if the parallel branches write to the same target?", "How would fault handling change the design?"],
-    "source": {"title": "Informatica Cloud Data Integration Taskflows", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Parallel Paths",
+      "concurrent",
+      "taskflow",
+      "mapping tasks",
+      "downstream"
+    ],
+    "followUps": [
+      "What risks should you consider if the parallel branches write to the same target?",
+      "How would fault handling change the design?"
+    ],
+    "source": {
+      "title": "Informatica Cloud Data Integration Taskflows",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step.",
+      "expandedExplanation": "Use a Parallel Paths step to run independent items concurrently. The taskflow waits for the items in the parallel section according to its taskflow behavior before moving to the subsequent common step. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Parallel Paths",
+        "concurrent",
+        "taskflow",
+        "mapping tasks",
+        "downstream"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "maintainability and governance controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Parallel Paths"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Parallel Paths."
+        },
+        {
+          "terms": [
+            "concurrent"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: concurrent."
+        },
+        {
+          "terms": [
+            "taskflow"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: taskflow."
+        },
+        {
+          "terms": [
+            "mapping tasks"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: mapping tasks."
+        },
+        {
+          "terms": [
+            "downstream"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: downstream."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why orchestration matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/taskflows.html",
+          "title": "Informatica Cloud Data Integration Taskflows",
+          "section": "Informatica Cloud Data Integration Taskflows",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:a41cd40f91e888c046eb9ca2bd63437cf09abeb2f820bb09758a06b7650e1125"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required orchestration concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required orchestration concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions orchestration only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-aggregator-sorted-006",
@@ -133,11 +974,108 @@
     "type": "scenario",
     "question": "An Aggregator transformation is a bottleneck on a large grouped data set. When can Sorted Input improve performance, and what correctness condition must you verify?",
     "canonicalAnswer": "Sorted Input can improve Aggregator performance when the incoming data is correctly sorted by the group-by keys, allowing the runtime to aggregate sequential groups with less caching. The upstream sort must actually match the grouping requirements; for relational input, Informatica also documents requirements around sort-key uniqueness to avoid unexpected results or errors.",
-    "expectedConcepts": ["Sorted Input", "Aggregator", "group by", "sorted data", "cache", "performance"],
-    "followUps": ["What can happen if the data is not sorted as declared?", "Why can sorted aggregation reduce memory pressure?"],
-    "source": {"title": "Informatica Aggregator transformation sorted data", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/aggregator-transformation/sorted-data.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Sorted Input",
+      "Aggregator",
+      "group by",
+      "sorted data",
+      "cache",
+      "performance"
+    ],
+    "followUps": [
+      "What can happen if the data is not sorted as declared?",
+      "Why can sorted aggregation reduce memory pressure?"
+    ],
+    "source": {
+      "title": "Informatica Aggregator transformation sorted data",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/aggregator-transformation/sorted-data.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Sorted Input can improve Aggregator performance when the incoming data is correctly sorted by the group-by keys, allowing the runtime to aggregate sequential groups with less caching. The upstream sort must actually match the grouping requirements; for relational input, Informatica also documents requirements around sort-key uniqueness to avoid unexpected results or errors.",
+      "expandedExplanation": "Sorted Input can improve Aggregator performance when the incoming data is correctly sorted by the group-by keys, allowing the runtime to aggregate sequential groups with less caching. The upstream sort must actually match the grouping requirements; for relational input, Informatica also documents requirements around sort-key uniqueness to avoid unexpected results or errors. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Sorted Input",
+        "Aggregator",
+        "group by",
+        "sorted data",
+        "cache",
+        "performance"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Sorted Input"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Sorted Input."
+        },
+        {
+          "terms": [
+            "Aggregator"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Aggregator."
+        },
+        {
+          "terms": [
+            "group by"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: group by."
+        },
+        {
+          "terms": [
+            "sorted data"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: sorted data."
+        },
+        {
+          "terms": [
+            "cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: cache."
+        },
+        {
+          "terms": [
+            "performance"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: performance."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/aggregator-transformation/sorted-data.html",
+          "title": "Informatica Aggregator transformation sorted data",
+          "section": "Informatica Aggregator transformation sorted data",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:0c778dd0fea0b002d5beeaab93717f6581b5819ca9ca2361ea1f48f887040f93"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-joiner-cache-007",
@@ -147,11 +1085,108 @@
     "type": "troubleshooting",
     "question": "A Joiner transformation is using substantial cache space. Which configuration areas would you inspect before simply increasing the runtime host size?",
     "canonicalAnswer": "Inspect which input is master versus detail, whether sorted input is appropriate, cache-directory capacity, the join condition, and the transformation scope. Informatica exposes cache and master sort settings because reducing cached master/detail data and processing sorted input appropriately can improve Joiner performance.",
-    "expectedConcepts": ["Joiner", "cache", "master", "detail", "sorted input", "join condition"],
-    "followUps": ["Why can choosing the smaller input as master help in some join designs?", "What logs would you use to diagnose the transformation?"],
-    "source": {"title": "Informatica Joiner transformation advanced properties", "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/transformations/joiner-transformation/advanced-properties.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Joiner",
+      "cache",
+      "master",
+      "detail",
+      "sorted input",
+      "join condition"
+    ],
+    "followUps": [
+      "Why can choosing the smaller input as master help in some join designs?",
+      "What logs would you use to diagnose the transformation?"
+    ],
+    "source": {
+      "title": "Informatica Joiner transformation advanced properties",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/transformations/joiner-transformation/advanced-properties.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Inspect which input is master versus detail, whether sorted input is appropriate, cache-directory capacity, the join condition, and the transformation scope. Informatica exposes cache and master sort settings because reducing cached master/detail data and processing sorted input appropriately can improve Joiner performance.",
+      "expandedExplanation": "Inspect which input is master versus detail, whether sorted input is appropriate, cache-directory capacity, the join condition, and the transformation scope. Informatica exposes cache and master sort settings because reducing cached master/detail data and processing sorted input appropriately can improve Joiner performance. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Joiner",
+        "cache",
+        "master",
+        "detail",
+        "sorted input",
+        "join condition"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Joiner"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Joiner."
+        },
+        {
+          "terms": [
+            "cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: cache."
+        },
+        {
+          "terms": [
+            "master"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: master."
+        },
+        {
+          "terms": [
+            "detail"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: detail."
+        },
+        {
+          "terms": [
+            "sorted input"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: sorted input."
+        },
+        {
+          "terms": [
+            "join condition"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: join condition."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why performance matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/transformations/joiner-transformation/advanced-properties.html",
+          "title": "Informatica Joiner transformation advanced properties",
+          "section": "Informatica Joiner transformation advanced properties",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:661f9abcce2711d5f66bddbfe63aed2b7f41b24480e9de51e5ff59bade825064"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required performance concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-command-task-008",
@@ -161,11 +1196,108 @@
     "type": "scenario",
     "question": "A taskflow must run an operating-system command on the Secure Agent and should fail immediately if one of several scripts fails. What would you configure?",
     "canonicalAnswer": "Use a Command Task step on an appropriate runtime environment and enable the option that fails the task when any script fails. The Common Integration Components service on the Secure Agent executes Command Task scripts.",
-    "expectedConcepts": ["Command Task", "Secure Agent", "runtime environment", "fail", "script", "Common Integration Components"],
-    "followUps": ["Where would you look for command execution logs?", "What changes if failure-on-any-script is disabled?"],
-    "source": {"title": "Informatica Secure Agent Common Integration Components", "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/secure-agent-services/common-integration-components.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Command Task",
+      "Secure Agent",
+      "runtime environment",
+      "fail",
+      "script",
+      "Common Integration Components"
+    ],
+    "followUps": [
+      "Where would you look for command execution logs?",
+      "What changes if failure-on-any-script is disabled?"
+    ],
+    "source": {
+      "title": "Informatica Secure Agent Common Integration Components",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/secure-agent-services/common-integration-components.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use a Command Task step on an appropriate runtime environment and enable the option that fails the task when any script fails. The Common Integration Components service on the Secure Agent executes Command Task scripts.",
+      "expandedExplanation": "Use a Command Task step on an appropriate runtime environment and enable the option that fails the task when any script fails. The Common Integration Components service on the Secure Agent executes Command Task scripts. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Command Task",
+        "Secure Agent",
+        "runtime environment",
+        "fail",
+        "script",
+        "Common Integration Components"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Command Task"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Command Task."
+        },
+        {
+          "terms": [
+            "Secure Agent"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Secure Agent."
+        },
+        {
+          "terms": [
+            "runtime environment"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: runtime environment."
+        },
+        {
+          "terms": [
+            "fail"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: fail."
+        },
+        {
+          "terms": [
+            "script"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: script."
+        },
+        {
+          "terms": [
+            "Common Integration Components"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Common Integration Components."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why orchestration matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration-free-and-paygo/current-version/secure-agent-services/common-integration-components.html",
+          "title": "Informatica Secure Agent Common Integration Components",
+          "section": "Informatica Secure Agent Common Integration Components",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:f834ff0fddc14735c5bb82c3526701410cf1b09ad2d00e17f3ab5a6329cd644b"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required orchestration concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required orchestration concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions orchestration only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the orchestration question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-target-lag-009",
@@ -175,11 +1307,108 @@
     "type": "scenario",
     "question": "A dynamic table has TARGET_LAG set to 10 minutes. Does Snowflake refresh it exactly every 10 minutes, and what should the application assume about freshness?",
     "canonicalAnswer": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput.",
-    "expectedConcepts": ["target lag", "staleness", "not a refresh interval", "best effort", "actual lag", "warehouse capacity"],
-    "followUps": ["What is the minimum target lag?", "How would you detect that actual lag is exceeding the target?"],
-    "source": {"title": "Snowflake dynamic table target lag", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "target lag",
+      "staleness",
+      "not a refresh interval",
+      "best effort",
+      "actual lag",
+      "warehouse capacity"
+    ],
+    "followUps": [
+      "What is the minimum target lag?",
+      "How would you detect that actual lag is exceeding the target?"
+    ],
+    "source": {
+      "title": "Snowflake dynamic table target lag",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput.",
+      "expandedExplanation": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "target lag",
+        "staleness",
+        "not a refresh interval",
+        "best effort",
+        "actual lag",
+        "warehouse capacity"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "target lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: target lag."
+        },
+        {
+          "terms": [
+            "staleness"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: staleness."
+        },
+        {
+          "terms": [
+            "not a refresh interval"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: not a refresh interval."
+        },
+        {
+          "terms": [
+            "best effort"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: best effort."
+        },
+        {
+          "terms": [
+            "actual lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: actual lag."
+        },
+        {
+          "terms": [
+            "warehouse capacity"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: warehouse capacity."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
+          "title": "Snowflake dynamic table target lag",
+          "section": "Snowflake dynamic table target lag",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:5bb91384188653ac733dfb2a902064718be15217dd21883e6209fe58cae916e6"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required dynamic tables concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-downstream-010",
@@ -189,11 +1418,108 @@
     "type": "design",
     "question": "In a multi-stage dynamic-table pipeline, when is TARGET_LAG = DOWNSTREAM useful, and what failure mode should you avoid at the end of the pipeline?",
     "canonicalAnswer": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually.",
-    "expectedConcepts": ["DOWNSTREAM", "intermediate table", "downstream consumer", "no independent schedule", "terminal table", "explicit target lag"],
-    "followUps": ["How does Snowflake coordinate dependency order?", "What happens if every table in the pipeline uses DOWNSTREAM?"],
-    "source": {"title": "Snowflake dynamic table target lag", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "DOWNSTREAM",
+      "intermediate table",
+      "downstream consumer",
+      "no independent schedule",
+      "terminal table",
+      "explicit target lag"
+    ],
+    "followUps": [
+      "How does Snowflake coordinate dependency order?",
+      "What happens if every table in the pipeline uses DOWNSTREAM?"
+    ],
+    "source": {
+      "title": "Snowflake dynamic table target lag",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually.",
+      "expandedExplanation": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "DOWNSTREAM",
+        "intermediate table",
+        "downstream consumer",
+        "no independent schedule",
+        "terminal table",
+        "explicit target lag"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "maintainability and governance controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "DOWNSTREAM"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: DOWNSTREAM."
+        },
+        {
+          "terms": [
+            "intermediate table"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: intermediate table."
+        },
+        {
+          "terms": [
+            "downstream consumer"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: downstream consumer."
+        },
+        {
+          "terms": [
+            "no independent schedule"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: no independent schedule."
+        },
+        {
+          "terms": [
+            "terminal table"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: terminal table."
+        },
+        {
+          "terms": [
+            "explicit target lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: explicit target lag."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
+          "title": "Snowflake dynamic table target lag",
+          "section": "Snowflake dynamic table target lag",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:f65eb93c0718ba14aa77c53cdb93edef614156e244ab6ea3511c27d924f97be5"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required dynamic tables concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-refresh-mode-011",
@@ -203,11 +1529,108 @@
     "type": "troubleshooting",
     "question": "A dynamic table is missing its freshness target because refreshes scan too much data. Which refresh and data-locality decisions would you investigate?",
     "canonicalAnswer": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity.",
-    "expectedConcepts": ["incremental refresh", "full refresh", "refresh history", "data locality", "clustering", "target lag"],
-    "followUps": ["Why can poor locality make an incremental refresh expensive?", "When might a larger warehouse help without fixing the query design?"],
-    "source": {"title": "Optimize dynamic table incremental refresh", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-performance-refresh-mode.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "incremental refresh",
+      "full refresh",
+      "refresh history",
+      "data locality",
+      "clustering",
+      "target lag"
+    ],
+    "followUps": [
+      "Why can poor locality make an incremental refresh expensive?",
+      "When might a larger warehouse help without fixing the query design?"
+    ],
+    "source": {
+      "title": "Optimize dynamic table incremental refresh",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-performance-refresh-mode.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity.",
+      "expandedExplanation": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "incremental refresh",
+        "full refresh",
+        "refresh history",
+        "data locality",
+        "clustering",
+        "target lag"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "incremental refresh"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: incremental refresh."
+        },
+        {
+          "terms": [
+            "full refresh"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: full refresh."
+        },
+        {
+          "terms": [
+            "refresh history"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: refresh history."
+        },
+        {
+          "terms": [
+            "data locality"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: data locality."
+        },
+        {
+          "terms": [
+            "clustering"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: clustering."
+        },
+        {
+          "terms": [
+            "target lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: target lag."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-performance-refresh-mode.html",
+          "title": "Optimize dynamic table incremental refresh",
+          "section": "Optimize dynamic table incremental refresh",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:ef72b7f351859ee801c98a152576bdc6384f54d6f5b903f5e45b092d2b8815e3"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required dynamic tables concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "snowflake-dynamic-monitoring-012",
@@ -217,11 +1640,108 @@
     "type": "troubleshooting",
     "question": "A dynamic-table pipeline is serving stale data intermittently. Which Snowflake history and status information would you inspect first?",
     "canonicalAnswer": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result.",
-    "expectedConcepts": ["DYNAMIC_TABLE_REFRESH_HISTORY", "refresh status", "scheduling state", "actual lag", "data timestamp", "dependency graph"],
-    "followUps": ["How would an upstream failure appear?", "Why is latest data timestamp different from query execution time?"],
-    "source": {"title": "Monitor Snowflake dynamic tables", "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-tasks-monitor", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "DYNAMIC_TABLE_REFRESH_HISTORY",
+      "refresh status",
+      "scheduling state",
+      "actual lag",
+      "data timestamp",
+      "dependency graph"
+    ],
+    "followUps": [
+      "How would an upstream failure appear?",
+      "Why is latest data timestamp different from query execution time?"
+    ],
+    "source": {
+      "title": "Monitor Snowflake dynamic tables",
+      "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-tasks-monitor",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result.",
+      "expandedExplanation": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "DYNAMIC_TABLE_REFRESH_HISTORY",
+        "refresh status",
+        "scheduling state",
+        "actual lag",
+        "data timestamp",
+        "dependency graph"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "DYNAMIC_TABLE_REFRESH_HISTORY"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: DYNAMIC_TABLE_REFRESH_HISTORY."
+        },
+        {
+          "terms": [
+            "refresh status"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: refresh status."
+        },
+        {
+          "terms": [
+            "scheduling state"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: scheduling state."
+        },
+        {
+          "terms": [
+            "actual lag"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: actual lag."
+        },
+        {
+          "terms": [
+            "data timestamp"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: data timestamp."
+        },
+        {
+          "terms": [
+            "dependency graph"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: dependency graph."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why observability matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-tasks-monitor",
+          "title": "Monitor Snowflake dynamic tables",
+          "section": "Monitor Snowflake dynamic tables",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:7ad9d61519f1d2a1f997ccf964cff3e9d98677984953cd548254878202b70a9f"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required observability concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required observability concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions observability only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-persistent-lookup-009",
@@ -231,11 +1751,108 @@
     "type": "scenario",
     "question": "A large reference table changes rarely, but rebuilding its Lookup cache makes every daily mapping run slow. Which cache option fits and why?",
     "canonicalAnswer": "Use a persistent lookup cache so Data Integration saves the cache files and reuses them across mapping runs. This avoids rereading the unchanged lookup table and rebuilding the cache on every run, while still allowing an explicit re-cache when the source changes.",
-    "expectedConcepts": ["persistent lookup cache", "reuse", "cache files", "mapping runs", "lookup source", "re-cache"],
-    "followUps": ["How does the first run differ from later runs?", "When is a persistent cache unsafe to reuse?"],
-    "source": {"title": "Informatica persistent lookup cache", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "persistent lookup cache",
+      "reuse",
+      "cache files",
+      "mapping runs",
+      "lookup source",
+      "re-cache"
+    ],
+    "followUps": [
+      "How does the first run differ from later runs?",
+      "When is a persistent cache unsafe to reuse?"
+    ],
+    "source": {
+      "title": "Informatica persistent lookup cache",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Use a persistent lookup cache so Data Integration saves the cache files and reuses them across mapping runs. This avoids rereading the unchanged lookup table and rebuilding the cache on every run, while still allowing an explicit re-cache when the source changes.",
+      "expandedExplanation": "Use a persistent lookup cache so Data Integration saves the cache files and reuses them across mapping runs. This avoids rereading the unchanged lookup table and rebuilding the cache on every run, while still allowing an explicit re-cache when the source changes. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "persistent lookup cache",
+        "reuse",
+        "cache files",
+        "mapping runs",
+        "lookup source",
+        "re-cache"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "fit decision and risk controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "persistent lookup cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: persistent lookup cache."
+        },
+        {
+          "terms": [
+            "reuse"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: reuse."
+        },
+        {
+          "terms": [
+            "cache files"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: cache files."
+        },
+        {
+          "terms": [
+            "mapping runs"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: mapping runs."
+        },
+        {
+          "terms": [
+            "lookup source"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: lookup source."
+        },
+        {
+          "terms": [
+            "re-cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: re-cache."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why lookup caching matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache.html",
+          "title": "Informatica persistent lookup cache",
+          "section": "Informatica persistent lookup cache",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:1ac8867602c2ed18f20f0174e4b830da7cce8ab4e84d365972dbbf2460a74e94"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required lookup caching concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required lookup caching concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions lookup caching only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-lookup-recache-010",
@@ -245,11 +1862,108 @@
     "type": "troubleshooting",
     "question": "A mapping uses a named persistent Lookup cache, but the lookup table was refreshed overnight. How would you prevent stale lookup results?",
     "canonicalAnswer": "Enable Re-cache from Lookup Source for the run that must rebuild the persistent cache, or otherwise rebuild the cache as part of the controlled refresh workflow. Verify cache compatibility as mapping, connection, precision, or partition changes can make a named cache fail rather than be silently reused.",
-    "expectedConcepts": ["Re-cache from Lookup Source", "persistent cache", "stale results", "rebuild", "named cache", "compatibility"],
-    "followUps": ["Where is the rebuild recorded?", "Which kinds of mapping changes can prevent reuse of a named cache?"],
-    "source": {"title": "Informatica rebuilding the lookup cache", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache/rebuilding-the-lookup-cache.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "Re-cache from Lookup Source",
+      "persistent cache",
+      "stale results",
+      "rebuild",
+      "named cache",
+      "compatibility"
+    ],
+    "followUps": [
+      "Where is the rebuild recorded?",
+      "Which kinds of mapping changes can prevent reuse of a named cache?"
+    ],
+    "source": {
+      "title": "Informatica rebuilding the lookup cache",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache/rebuilding-the-lookup-cache.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Enable Re-cache from Lookup Source for the run that must rebuild the persistent cache, or otherwise rebuild the cache as part of the controlled refresh workflow. Verify cache compatibility as mapping, connection, precision, or partition changes can make a named cache fail rather than be silently reused.",
+      "expandedExplanation": "Enable Re-cache from Lookup Source for the run that must rebuild the persistent cache, or otherwise rebuild the cache as part of the controlled refresh workflow. Verify cache compatibility as mapping, connection, precision, or partition changes can make a named cache fail rather than be silently reused. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "Re-cache from Lookup Source",
+        "persistent cache",
+        "stale results",
+        "rebuild",
+        "named cache",
+        "compatibility"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "Re-cache from Lookup Source"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Re-cache from Lookup Source."
+        },
+        {
+          "terms": [
+            "persistent cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: persistent cache."
+        },
+        {
+          "terms": [
+            "stale results"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: stale results."
+        },
+        {
+          "terms": [
+            "rebuild"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: rebuild."
+        },
+        {
+          "terms": [
+            "named cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: named cache."
+        },
+        {
+          "terms": [
+            "compatibility"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: compatibility."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why lookup caching matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/persistent-lookup-cache/rebuilding-the-lookup-cache.html",
+          "title": "Informatica rebuilding the lookup cache",
+          "section": "Informatica rebuilding the lookup cache",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:194421cc21694da0ead10fa8b4d6066450ebe79723ac57effc6f25ccfee886b6"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required lookup caching concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required lookup caching concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions lookup caching only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-dynamic-lookup-sync-011",
@@ -259,11 +1973,108 @@
     "type": "design",
     "question": "Several concurrent mapping tasks generate identifiers for new products and must not generate different identifiers for the same product. How can dynamic Lookup synchronization help?",
     "canonicalAnswer": "Configure the Lookup transformations to synchronize their dynamic caches with the shared lookup source. A task checks the source when a value is absent from its cache, reuses a value inserted by another task when present, or inserts the new value into the source before updating its own dynamic cache.",
-    "expectedConcepts": ["dynamic lookup cache", "Synchronize Dynamic Cache", "lookup source", "concurrent tasks", "shared identifier", "insert"],
-    "followUps": ["Why is each task's local cache alone insufficient?", "What fields must the lookup source contain?"],
-    "source": {"title": "Informatica dynamic cache synchronization", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/dynamic-lookup-cache/dynamic-cache-and-lookup-source-synchronization.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "dynamic lookup cache",
+      "Synchronize Dynamic Cache",
+      "lookup source",
+      "concurrent tasks",
+      "shared identifier",
+      "insert"
+    ],
+    "followUps": [
+      "Why is each task's local cache alone insufficient?",
+      "What fields must the lookup source contain?"
+    ],
+    "source": {
+      "title": "Informatica dynamic cache synchronization",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/dynamic-lookup-cache/dynamic-cache-and-lookup-source-synchronization.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Configure the Lookup transformations to synchronize their dynamic caches with the shared lookup source. A task checks the source when a value is absent from its cache, reuses a value inserted by another task when present, or inserts the new value into the source before updating its own dynamic cache.",
+      "expandedExplanation": "Configure the Lookup transformations to synchronize their dynamic caches with the shared lookup source. A task checks the source when a value is absent from its cache, reuses a value inserted by another task when present, or inserts the new value into the source before updating its own dynamic cache. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "dynamic lookup cache",
+        "Synchronize Dynamic Cache",
+        "lookup source",
+        "concurrent tasks",
+        "shared identifier",
+        "insert"
+      ],
+      "optionalConcepts": [
+        "advanced level trade-offs",
+        "operational validation evidence",
+        "maintainability and governance controls"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "dynamic lookup cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: dynamic lookup cache."
+        },
+        {
+          "terms": [
+            "Synchronize Dynamic Cache"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: Synchronize Dynamic Cache."
+        },
+        {
+          "terms": [
+            "lookup source"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: lookup source."
+        },
+        {
+          "terms": [
+            "concurrent tasks"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: concurrent tasks."
+        },
+        {
+          "terms": [
+            "shared identifier"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: shared identifier."
+        },
+        {
+          "terms": [
+            "insert"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: insert."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why lookup caching matters for informatica at advanced level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/dynamic-lookup-cache/dynamic-cache-and-lookup-source-synchronization.html",
+          "title": "Informatica dynamic cache synchronization",
+          "section": "Informatica dynamic cache synchronization",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:dac69ab1443a545ff9128ec2c5ff6d426e438d8c6dfc97ae63773cd463cbb60c"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required lookup caching concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required lookup caching concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
+        "weak": "Mentions lookup caching only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the lookup caching question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   },
   {
     "id": "informatica-lookup-projection-012",
@@ -273,10 +2084,107 @@
     "type": "troubleshooting",
     "question": "A Lookup against a wide cloud data warehouse table is slow even though the join condition is selective. What simple projection optimization should you check?",
     "canonicalAnswer": "Remove non-required lookup fields so the generated query projects only the columns needed for conditions and returned values. Avoiding unnecessary columns reduces data read and transfer, which is especially valuable for cloud data warehouses and columnar sources with very wide tables.",
-    "expectedConcepts": ["required fields", "projection", "lookup query", "columns", "cloud data warehouse", "performance"],
-    "followUps": ["Which fields must remain projected?", "What cache settings would you inspect next?"],
-    "source": {"title": "Informatica Lookup advanced properties", "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/advanced-properties.html", "verified": "2026-08-23"},
+    "expectedConcepts": [
+      "required fields",
+      "projection",
+      "lookup query",
+      "columns",
+      "cloud data warehouse",
+      "performance"
+    ],
+    "followUps": [
+      "Which fields must remain projected?",
+      "What cache settings would you inspect next?"
+    ],
+    "source": {
+      "title": "Informatica Lookup advanced properties",
+      "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/advanced-properties.html",
+      "verified": "2026-08-23"
+    },
     "reviewStatus": "ai-reviewed",
-    "version": 1
+    "version": 1,
+    "benchmark": {
+      "version": "1.0.0",
+      "canonicalAnswer": "Remove non-required lookup fields so the generated query projects only the columns needed for conditions and returned values. Avoiding unnecessary columns reduces data read and transfer, which is especially valuable for cloud data warehouses and columnar sources with very wide tables.",
+      "expandedExplanation": "Remove non-required lookup fields so the generated query projects only the columns needed for conditions and returned values. Avoiding unnecessary columns reduces data read and transfer, which is especially valuable for cloud data warehouses and columnar sources with very wide tables. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "requiredConcepts": [
+        "required fields",
+        "projection",
+        "lookup query",
+        "columns",
+        "cloud data warehouse",
+        "performance"
+      ],
+      "optionalConcepts": [
+        "intermediate level trade-offs",
+        "operational validation evidence",
+        "safe diagnosis sequence"
+      ],
+      "acceptedAlternatives": [
+        {
+          "terms": [
+            "required fields"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: required fields."
+        },
+        {
+          "terms": [
+            "projection"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: projection."
+        },
+        {
+          "terms": [
+            "lookup query"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: lookup query."
+        },
+        {
+          "terms": [
+            "columns"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: columns."
+        },
+        {
+          "terms": [
+            "cloud data warehouse"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: cloud data warehouse."
+        },
+        {
+          "terms": [
+            "performance"
+          ],
+          "meaning": "Accepted wording that expresses the required concept: performance."
+        }
+      ],
+      "incorrectClaims": [],
+      "reasoning": "A complete answer should explain why performance matters for informatica at intermediate level and show how the idea would be validated or applied in practice.",
+      "evidence": [
+        {
+          "url": "https://docs.informatica.com/integration-cloud/data-integration/current-version/transformations/lookup-transformation/advanced-properties.html",
+          "title": "Informatica Lookup advanced properties",
+          "section": "Informatica Lookup advanced properties",
+          "retrievedAt": "2026-08-23",
+          "documentVersion": "official-source-link-baseline",
+          "contentHash": "sha256:2bb3da3b64e6f3f72201a585c4faa90bc3182f2ba5149bc6cb6965be257e613c"
+        }
+      ],
+      "scoringAnchors": {
+        "strong": "Covers the required performance concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
+        "partial": "Covers some required performance concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions performance only superficially, with limited explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
+      },
+      "review": {
+        "status": "draft",
+        "promptVersion": "benchmark-policy-1.0.0",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": null,
+        "corrections": [],
+        "reviewedAt": null
+      }
+    }
   }
 ]
