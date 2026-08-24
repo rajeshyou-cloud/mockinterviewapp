@@ -64,6 +64,10 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .scoreMode { width: fit-content; margin: -8px auto 14px; padding: 5px 9px; border-radius: 999px; background: #ecfdf5; color: #047857; font-size: 11px; font-weight: 800; }
 .feedback h3 { text-align: center; margin-bottom: 8px; line-height: 1.35; }
 .feedback > p:not(.eyebrow) { color: #667085; line-height: 1.55; }
+.dimensionGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0; }
+.dimensionGrid div { display: grid; gap: 3px; padding: 10px; border-radius: 12px; background: #f8fafc; border: 1px solid #e5e7eb; }
+.dimensionGrid span { color: #64748b; font-size: 11px; font-weight: 800; }
+.dimensionGrid strong { color: #1e293b; }
 .concepts { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
 .concepts span { font-size: 12px; padding: 7px 9px; border-radius: 999px; background: #f1f5f9; color: #64748b; }
 .concepts .matched { background: #dcfce7; color: #166534; }

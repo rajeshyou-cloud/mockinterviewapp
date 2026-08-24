@@ -5,6 +5,8 @@ import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
 import { requireRole } from '../../lib/auth/access';
+import { summarizeBenchmarkReviews } from '../../lib/benchmark-review';
+import { candidatePacks } from '../../lib/candidate-packs';
 import { saveCoursePackReview } from '../../lib/db';
 
 const reviewSchema = z.object({
@@ -25,6 +27,10 @@ export async function saveReview(formData: FormData) {
   if (!parsed.success) redirect('/review?error=invalid');
   if (parsed.data.status === 'approved' && !parsed.data.sourceLinksChecked) {
     redirect(`/review?course=${parsed.data.courseId}&error=sources`);
+  }
+  const benchmarkSummary = summarizeBenchmarkReviews(candidatePacks[parsed.data.courseId]);
+  if (parsed.data.status === 'approved' && !benchmarkSummary.publishable) {
+    redirect(`/review?course=${parsed.data.courseId}&error=benchmarks`);
   }
 
   await saveCoursePackReview({ ...parsed.data, reviewerUserId: user.id });

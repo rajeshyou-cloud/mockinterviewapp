@@ -20,6 +20,14 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
   if ([...(payload.matchedConcepts ?? []), ...(payload.missingConcepts ?? [])].some((concept) => !allowedConcepts.has(concept))) {
     return NextResponse.json({ error: 'invalid_scoring_concepts' }, { status: 400 });
   }
+  const allowedOptionalConcepts = new Set(question.benchmark.optionalConcepts);
+  if ((payload.optionalConcepts ?? []).some((concept) => !allowedOptionalConcepts.has(concept))) {
+    return NextResponse.json({ error: 'invalid_optional_concepts' }, { status: 400 });
+  }
+  const allowedIncorrectClaims = new Set(question.benchmark.incorrectClaims.map((claim) => claim.claim));
+  if ((payload.incorrectClaims ?? []).some((claim) => !allowedIncorrectClaims.has(claim))) {
+    return NextResponse.json({ error: 'invalid_incorrect_claims' }, { status: 400 });
+  }
   if (payload.benchmarkVersion && payload.benchmarkVersion !== question.benchmark.version) {
     return NextResponse.json({ error: 'invalid_benchmark_version' }, { status: 400 });
   }
@@ -36,6 +44,9 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
     score: payload.score,
     matchedConcepts: payload.matchedConcepts ?? [],
     missingConcepts: payload.missingConcepts ?? [],
+    optionalConcepts: payload.optionalConcepts ?? [],
+    incorrectClaims: payload.incorrectClaims ?? [],
+    dimensionScores: payload.dimensionScores,
     feedback: payload.feedback ?? '',
     currentIndex: payload.currentIndex ?? 0,
     provider: payload.provider,

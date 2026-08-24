@@ -64,8 +64,16 @@ export type InterviewQuestion = {
 
 export type ScoreResponse = {
   score: number;
+  dimension_scores?: {
+    technical_accuracy: number;
+    required_concept_coverage: number;
+    reasoning_and_tradeoffs: number;
+    relevance_and_clarity: number;
+  };
   matched_concepts: string[];
   missing_concepts: string[];
+  optional_concepts?: string[];
+  incorrect_claims?: string[];
   summary: string;
   provider?: string;
   benchmark_version?: string;
@@ -169,8 +177,11 @@ export function saveRemoteAnswer(sessionId: string, resumeToken: string, input: 
   questionId: string;
   answerText: string;
   score: number;
+  dimensionScores?: NonNullable<ScoreResponse['dimension_scores']>;
   matchedConcepts: string[];
   missingConcepts: string[];
+  optionalConcepts?: string[];
+  incorrectClaims?: string[];
   feedback: string;
   currentIndex: number;
   provider?: string;

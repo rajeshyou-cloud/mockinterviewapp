@@ -104,8 +104,16 @@ export async function saveInterviewAnswer(input: {
   questionId: string;
   answerText: string;
   score: number;
+  dimensionScores?: {
+    technical_accuracy: number;
+    required_concept_coverage: number;
+    reasoning_and_tradeoffs: number;
+    relevance_and_clarity: number;
+  };
   matchedConcepts: string[];
   missingConcepts: string[];
+  optionalConcepts?: string[];
+  incorrectClaims?: string[];
   feedback: string;
   currentIndex: number;
   provider?: string;
@@ -145,8 +153,11 @@ export async function saveInterviewAnswer(input: {
           scoring_provider,
           scoring_policy_version,
           total_score,
+          dimension_scores,
           matched_concepts,
           missing_concepts,
+          optional_concepts,
+          incorrect_claims,
           feedback,
           fallback_reason,
           is_displayed
@@ -157,8 +168,11 @@ export async function saveInterviewAnswer(input: {
           ${input.provider},
           ${input.scoringPolicyVersion},
           ${input.score},
+          ${JSON.stringify(input.dimensionScores ?? {})}::jsonb,
           ${JSON.stringify(input.matchedConcepts)}::jsonb,
           ${JSON.stringify(input.missingConcepts)}::jsonb,
+          ${JSON.stringify(input.optionalConcepts ?? [])}::jsonb,
+          ${JSON.stringify(input.incorrectClaims ?? [])}::jsonb,
           ${input.feedback},
           ${input.provider.includes('->') || input.provider === 'deterministic-keyword' ? 'deterministic_fallback' : null},
           true

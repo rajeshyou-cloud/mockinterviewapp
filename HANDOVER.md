@@ -25,6 +25,8 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/lib/session.ts` — browser session and versioned resume-key format
 - `apps/web/lib/db.ts` — server-only Neon adapter and resume-token hashing
 - `apps/web/lib/persistence-validation.ts` — persistence request boundaries
+- `apps/web/lib/benchmark-review.ts` — benchmark verification summary and candidate-pack launch gate
+- `apps/web/lib/candidate-packs.ts` — shared hidden course-pack registry
 - `apps/web/lib/question-bank.ts` — shared 300-question bank
 - `apps/web/lib/course-catalog.ts` — central released/planned technology registry
 - `apps/web/data` — versioned live content packs with benchmark-answer records
@@ -42,7 +44,7 @@ Production: https://mockinterviewapp-web.vercel.app
 2. `GET /api/questions` returns a stable, session-seeded sample of 10 reviewed questions.
 3. `POST /api/score` resolves the question and rubric on the server, then uses the configured scorer.
 4. On Vercel, the scorer attempts AI Gateway and falls back deterministically on provider failure.
-5. The score response includes the benchmark version and scoring-policy version used for the result.
+5. The score response includes dimension scores plus the benchmark version and scoring-policy version used for the result.
 6. Session and answer routes store progress in Neon while local storage preserves graceful browser fallback.
 7. Cloud routes require the private resume credential; Neon stores only its SHA-256 hash.
 8. Refresh or cross-device resume restores the current question, submitted answer, scoring feedback, and progress.
@@ -84,7 +86,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current local verification counts are 57 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions.
+Current local verification counts are 62 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions.
 
 ## Deployment
 
@@ -98,9 +100,9 @@ The final live transaction verified create, answer write, wrong-credential rejec
 
 ## Deferred roadmap
 
-Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. The Question Bank and reviewer views display those benchmark details, and scoring now resolves benchmark content server-side.
+Milestone 3 has a live searchable Question Bank UI plus complete 150-question Databricks, Oracle Database, Power BI, Python, and AWS candidate packs. Their 124 unique official source links passed reachability validation on 2026-08-23. All 1,050 released and candidate questions now have standard benchmark-answer records: benchmark version, canonical answer, expanded explanation, required concepts, optional depth, accepted alternatives, evidence metadata, scoring anchors, and draft benchmark-review status. The Question Bank and reviewer views display those benchmark details, scoring now resolves benchmark content server-side, and candidate feedback includes accuracy, required coverage, reasoning, and clarity dimensions.
 
-These benchmark answers are structurally complete but not vendor-evidence verified. Every benchmark review status is intentionally `draft` until the independent AI evidence review, dispute workflow, and any chosen human escalation have run. Do not label this content vendor-certified, human-reviewed, or `ai-evidence-verified` yet.
+These benchmark answers are structurally complete but not vendor-evidence verified. Every benchmark review status is intentionally `draft` until the independent AI evidence review, dispute workflow, and any chosen human escalation have run. Candidate pack approval is blocked until all benchmarks are `ai-evidence-verified` or `human-verified`. Do not label this content vendor-certified, human-reviewed, or `ai-evidence-verified` yet.
 
 The deployed release gate reads approved, source-checked reviewer decisions and exposes only those packs through the course API, interview selector, Question Bank, scoring, and answer persistence. Production verification returned only Snowflake/Informatica, exactly 300 released questions, and HTTP 400 for unapproved Databricks. Candidate packs remain hidden until human approval and per-course launch verification. Replay, recruiter analytics/comparison, human reviewer/admin tools, user authentication, and billing are part of the active completion goal.
 

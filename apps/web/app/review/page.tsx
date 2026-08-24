@@ -1,36 +1,37 @@
 import Link from 'next/link';
 
-import aws from '../../data/candidates/aws.json';
-import databricks from '../../data/candidates/databricks.json';
-import oracle from '../../data/candidates/oracle.json';
-import powerBi from '../../data/candidates/power-bi.json';
-import python from '../../data/candidates/python.json';
 import { requireRole } from '../../lib/auth/access';
+import { summarizeBenchmarkReviews } from '../../lib/benchmark-review';
+import { candidatePackLabels, candidatePacks, isCandidateCourse, type CandidateCourse } from '../../lib/candidate-packs';
 import { listCoursePackReviews } from '../../lib/db';
 import { saveReview } from './actions';
-
-const packs = { databricks, oracle, 'power-bi': powerBi, python, aws } as const;
-const labels = { databricks: 'Databricks', oracle: 'Oracle Database', 'power-bi': 'Power BI', python: 'Python', aws: 'AWS' } as const;
-type CandidateCourse = keyof typeof packs;
 
 export const dynamic = 'force-dynamic';
 
 export default async function ReviewPage({ searchParams }: { searchParams: Promise<{ course?: string; error?: string; saved?: string }> }) {
   const { user } = await requireRole(['reviewer']);
   const query = await searchParams;
-  const course: CandidateCourse = query.course && query.course in packs ? query.course as CandidateCourse : 'databricks';
-  const questions = packs[course];
+  const course: CandidateCourse = query.course && isCandidateCourse(query.course) ? query.course : 'databricks';
+  const questions = candidatePacks[course];
+  const benchmarkSummary = summarizeBenchmarkReviews(questions);
   const reviews = await listCoursePackReviews();
   const current = reviews.find((review) => review.course_id === course && review.reviewer_user_id === user.id);
 
   return (
     <main className="shell questionBankShell">
       <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/">Interview</Link></nav>
-      <header className="bankHeader"><div><p className="eyebrow">HUMAN CONTENT GATE</p><h1>Course review</h1><p className="lede">Inspect all 150 questions and record a traceable pack-level decision. Approval requires confirming the official source links.</p></div><div className="bankCount"><strong>{questions.length}</strong><span>{labels[course]} candidates</span></div></header>
+      <header className="bankHeader"><div><p className="eyebrow">CONTENT RELEASE GATE</p><h1>Course review</h1><p className="lede">Inspect all 150 questions and record a traceable pack-level decision. Approval requires source checks and verified benchmark answers for every question.</p></div><div className="bankCount"><strong>{questions.length}</strong><span>{candidatePackLabels[course]} candidates</span></div></header>
 
-      <nav className="reviewTabs">{Object.entries(labels).map(([id, label]) => <Link className={id === course ? 'active' : ''} href={`/review?course=${id}`} key={id}>{label}</Link>)}</nav>
+      <nav className="reviewTabs">{Object.entries(candidatePackLabels).map(([id, label]) => <Link className={id === course ? 'active' : ''} href={`/review?course=${id}`} key={id}>{label}</Link>)}</nav>
       {query.saved && <p className="successBanner">Review decision saved.</p>}
       {query.error === 'sources' && <p className="authError">Official source verification is required before approval.</p>}
+      {query.error === 'benchmarks' && <p className="authError">Every benchmark answer must be evidence-verified or human-verified before this pack can be approved.</p>}
+
+      <section className="analyticsCards" aria-label="Benchmark review status">
+        <div className="card"><span>Verified benchmarks</span><strong>{benchmarkSummary.verified}</strong></div>
+        <div className="card"><span>Draft or reviewing</span><strong>{benchmarkSummary.draft + benchmarkSummary.reviewing}</strong></div>
+        <div className="card"><span>Disputed, stale, rejected</span><strong>{benchmarkSummary.disputed + benchmarkSummary.stale + benchmarkSummary.rejected}</strong></div>
+      </section>
 
       <form className="card reviewDecision" action={saveReview}>
         <input name="courseId" type="hidden" value={course} />
