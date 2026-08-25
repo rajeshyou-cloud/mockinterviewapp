@@ -8,6 +8,7 @@
     "test:web": "npm --workspace apps/web run test",
     "export:evidence-packets": "node scripts/export-evidence-packets.mjs",
     "import:benchmark-reviews": "node scripts/import-benchmark-reviews.mjs",
+    "review:benchmarks:auto": "node scripts/automate-benchmark-review.mjs",
     "review:benchmarks": "node scripts/review-benchmark-packets.mjs",
     "validate:benchmarks": "node scripts/validate-benchmarks.mjs"
   }
