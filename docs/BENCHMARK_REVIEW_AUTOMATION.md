@@ -19,7 +19,7 @@ The automation still does not mean human or vendor certification. It marks recor
 
 Set these environment variables:
 
-```bash
+```env
 OPENAI_API_KEY=...
 REVIEW_PROVIDER=openai
 REVIEW_PRIMARY_MODEL=<first-openai-model>
@@ -27,6 +27,8 @@ REVIEW_CRITIC_MODEL=<second-openai-model>
 ```
 
 The two model IDs must be different. This prevents a single model from approving its own blind spots.
+
+For local runs, these values can be stored in `.env.local`. That file is ignored by Git and must never be committed. Prefer plain `.env` format as shown above. The scripts also tolerate PowerShell-style lines such as `$env:REVIEW_PROVIDER="openai"` if they are pasted into `.env.local`.
 
 Run a safe dry-run first:
 

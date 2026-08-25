@@ -1,5 +1,24 @@
+import { existsSync, readFileSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
+
+function loadLocalEnv() {
+  for (const envPath of ['.env.local', '.env']) {
+    if (!existsSync(envPath)) continue;
+    const lines = readFileSync(envPath, 'utf8').split(/\r?\n/);
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const separator = trimmed.indexOf('=');
+      if (separator < 1) continue;
+      const key = trimmed.slice(0, separator).trim().replace(/^\$env:/i, '').replace(/^env:/i, '');
+      const value = trimmed.slice(separator + 1).trim().replace(/^['"]|['"]$/g, '');
+      if (!process.env[key]) process.env[key] = value;
+    }
+  }
+}
+
+loadLocalEnv();
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
