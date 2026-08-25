@@ -84,7 +84,7 @@ describe('POST /api/score', () => {
         version: '1.0.0',
         canonicalAnswer: expect.stringContaining('centrally in cloud storage'),
         requiredConcepts: ['storage', 'compute', 'virtual warehouse', 'independent scaling', 'workload isolation'],
-        review: expect.objectContaining({ status: 'draft' }),
+        review: expect.objectContaining({ status: expect.any(String) }),
       }),
       question: 'Explain how Snowflake separates storage and compute, and why that matters for workload isolation.',
     });

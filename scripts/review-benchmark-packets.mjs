@@ -52,6 +52,7 @@ const offset = Number.parseInt(process.argv.find((arg) => arg.startsWith('--offs
 const outputName = process.argv.find((arg) => arg.startsWith('--output-name='))?.split('=')[1];
 const onlyStatusArg = process.argv.find((arg) => arg.startsWith('--only-status='))?.split('=')[1];
 const onlyStatuses = onlyStatusArg ? new Set(onlyStatusArg.split(',').map((status) => status.trim()).filter(Boolean)) : null;
+const concurrency = Math.max(1, Number.parseInt(process.argv.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '1', 10));
 const primaryModel = process.env.REVIEW_PRIMARY_MODEL;
 const criticModel = process.env.REVIEW_CRITIC_MODEL;
 
@@ -197,6 +198,7 @@ if (dryRun) {
     onlyStatuses: onlyStatuses ? [...onlyStatuses] : 'all',
     offset,
     limit: limitArg,
+    concurrency,
     packetsLoaded: packets.length,
     firstQuestionId: packets[0]?.questionId ?? null,
     liveRunRequirement: providerArg === 'anthropic'
@@ -208,23 +210,39 @@ if (dryRun) {
   process.exit(0);
 }
 
-const reviews = [];
-for (const packet of packets) {
-  const primary = await reviewWithModel(packet, primaryModel, 'primary');
-  const critic = await reviewWithModel(packet, criticModel, 'critic');
-  reviews.push(combineReviews(packet, primary, critic));
-}
-
 const outputDirectory = resolve('apps/web/data/benchmark-reviews');
 await mkdir(outputDirectory, { recursive: true });
 const safeProvider = providerArg.replace(/[^a-z0-9-]/gi, '-').toLowerCase();
 const defaultOutputName = `${technologyArg}-${safeProvider}-${new Date().toISOString().replace(/[:.]/g, '-')}.reviewed.jsonl`;
 const outputPath = resolve(outputDirectory, outputName ?? defaultOutputName);
-await writeFile(outputPath, `${reviews.map((review) => JSON.stringify(review)).join('\n')}\n`, 'utf8');
+
+const reviews = existsSync(outputPath)
+  ? readFileSync(outputPath, 'utf8').trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line))
+  : [];
+const reviewedQuestionIds = new Set(reviews.map((review) => review.questionId));
+const pendingPackets = packets.filter((packet) => !reviewedQuestionIds.has(packet.questionId));
+
+let nextPacketIndex = 0;
+async function reviewNextPacket() {
+  while (nextPacketIndex < pendingPackets.length) {
+    const packet = pendingPackets[nextPacketIndex];
+    nextPacketIndex += 1;
+  const primary = await reviewWithModel(packet, primaryModel, 'primary');
+  const critic = await reviewWithModel(packet, criticModel, 'critic');
+  reviews.push(combineReviews(packet, primary, critic));
+  await writeFile(outputPath, `${reviews.map((review) => JSON.stringify(review)).join('\n')}\n`, 'utf8');
+  }
+}
+
+await Promise.all(Array.from(
+  { length: Math.min(concurrency, pendingPackets.length) },
+  () => reviewNextPacket(),
+));
 
 console.log(JSON.stringify({
   technology: technologyArg,
-  reviewed: reviews.length,
+  reviewedThisRun: pendingPackets.length,
+  totalInOutput: reviews.length,
   outputPath,
   statuses: reviews.reduce((counts, review) => {
     counts[review.finalStatus] = (counts[review.finalStatus] ?? 0) + 1;

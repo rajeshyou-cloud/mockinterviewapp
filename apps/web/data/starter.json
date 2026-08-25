@@ -91,13 +91,22 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the architecture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.82,
+        "corrections": [
+          "Consider replacing the tautological acceptedAlternatives entries with actual synonyms or acceptable phrasings, e.g. “centralized cloud object storage” for storage, “warehouse compute cluster” for virtual warehouse, and “scale warehouses independently from storage” for independent scaling.",
+          "The scoring anchors mention “intermediate level trade-offs,” but the benchmark answer does not identify specific trade-offs. Either add examples such as cost/concurrency management and warehouse sizing, or remove that expectation from the strong anchor."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -202,13 +211,26 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual warehouses question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "Add cited evidence excerpts, not only metadata, showing that virtual warehouses provide independent compute resources, can be sized/resized, suspended/resumed, and that multiple warehouses can access the same data without sharing compute.",
+          "Tighten the required concepts to match the scenario: assign the BI dashboard to one warehouse and the nightly ETL job to a different warehouse to isolate compute contention; optionally size/schedule/auto-suspend each independently.",
+          "Revise or remove vague optional concepts such as “operational validation evidence” and “fit decision and risk controls,” which are not clearly supported by the cited evidence metadata or necessary for this scenario.",
+          "Improve accepted alternatives so they are actual paraphrases, e.g. “dedicated BI warehouse,” “dedicated ETL/loading warehouse,” “isolate workloads,” “separate compute clusters,” rather than restating the same required terms.",
+          "Adjust scoring anchors: the strong anchor should not require unspecified “intermediate level trade-offs” unless the benchmark answer and evidence define those trade-offs, such as higher credit cost from running multiple warehouses versus reduced contention.",
+          "Fix the reasoning sentence for clarity: “A complete answer should explain why separate virtual warehouses reduce Snowflake workload contention and how BI and ETL workloads can be managed independently.”"
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -313,13 +335,31 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The benchmark is directionally supported, but the evidence packet is too thin to fully validate the “when would you consider redesigning” framing. The cited migration page supports dynamic tables as a replacement for some streams/tasks patterns, but the benchmark should explicitly anchor on the migration/fit criteria from the source rather than broad generalities.",
+          "The benchmarkAnswer should be tightened to avoid overclaiming that dynamic tables are fit whenever a pipeline is expressible as a SELECT. The official source indicates dynamic tables are appropriate for certain transformations and migration scenarios, but not every SELECT-only pipeline is automatically a good redesign candidate.",
+          "The benchmark should clarify the operational constraint that dynamic tables are driven by target lag / freshness objectives, while streams and tasks are more appropriate when you need explicit orchestration, procedural control, or non-declarative DML steps. This is implied by the packet, but the current wording is somewhat generic.",
+          "The acceptedAlternatives are overly minimal and do not meaningfully support scoring at advanced level; they duplicate requiredConcepts without adding discriminative value. Consider adding stricter alternates or examples of acceptable paraphrases.",
+          "The scoring anchors are valid in spirit but too broad. Add a note that answers should mention trade-offs or migration fit conditions, not just a keyword checklist.",
+          "Provide quoted or summarized official evidence from the cited Snowflake page, not just metadata, to support the key claims: dynamic tables are defined by a SELECT, use target lag/freshness objectives, and can replace some streams/tasks pipelines.",
+          "Replace the templated reasoning field with Snowflake-specific reasoning. The current text says only that the answer should explain why data engineering matters for Snowflake and is not tailored to dynamic tables, streams, or tasks.",
+          "Improve acceptedAlternatives so they are meaningful synonyms or equivalent phrases, not repetitions of the same required terms. For example: “freshness SLA” for target lag, “SQL query definition” for SELECT/declarative, and “procedural orchestration / explicit DML” for imperative workflows.",
+          "Add important constraints/trade-offs expected at advanced difficulty, such as dynamic table query/support limitations, refresh mode considerations, warehouse cost/latency trade-offs, and cases where streams/tasks remain appropriate for custom MERGE logic, stored procedures, alerts, or non-freshness-based schedules.",
+          "Clarify that Snowflake manages refreshes toward the target lag, but dynamic tables are not a blanket replacement for all streams/tasks pipelines.",
+          "Make scoring anchors more Snowflake-specific so they can distinguish an advanced answer from a generic one."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -424,13 +464,33 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.86,
+        "corrections": [
+          "The benchmark is too sparse for an advanced design question: it should mention that Dynamic Tables are declarative and refresh automatically based on target lag, but also note that Snowflake manages refresh as best effort and actual lag may vary depending on upstream dependencies and warehouse availability.",
+          "The requiredConcepts and acceptedAlternatives are overly tautological and duplicate the same core idea; they should be consolidated into fewer concept checks such as target lag, freshness/SLA, automatic refresh, and upstream dependency handling.",
+          "The question asks how a Dynamic Table would model the requirement, but the benchmark answer does not explain that you would set TARGET_LAG to approximately ten minutes on the Dynamic Table definition.",
+          "The scoring anchors are generic and do not provide concrete guidance for distinguishing a strong answer from a merely partial one in this specific Snowflake context.",
+          "The evidence citation is insufficiently specific because it only references the general Dynamic tables page without a cited excerpt or section that explicitly supports the target-lag/freshness behavior.",
+          "Include the concrete modeling statement for the question: set the dynamic table's TARGET_LAG to about 10 minutes, e.g. TARGET_LAG = '10 minutes', subject to Snowflake's supported syntax and constraints.",
+          "Clarify that target lag is a desired freshness/SLA relative to upstream data, not a hard guarantee that the table will always be exactly within ten minutes.",
+          "Add the missing explicit 'declarative' framing if it remains a required concept: dynamic tables declare the desired result and freshness target, while Snowflake orchestrates refreshes.",
+          "Remove or rewrite the generic reasoning sentence; it is templated and does not explain this Snowflake feature or the design trade-off.",
+          "Reassess the difficulty. As written, the question is closer to basic/intermediate unless it asks about multi-level dynamic table chains, DOWNSTREAM target lag, warehouse sizing, refresh modes, monitoring, or failure/lag trade-offs.",
+          "Tighten scoring anchors to this specific topic: strong answers should mention TARGET_LAG, upstream freshness, Snowflake-managed refresh scheduling, and that lag is a target rather than a strict guarantee.",
+          "The evidence metadata cites the correct official Snowflake dynamic tables documentation page, but the packet provides no quoted excerpt. Add supporting snippets from the official docs for target lag and Snowflake-managed refresh scheduling to make the benchmark independently verifiable.",
+          "Revise acceptedAlternatives so they are true synonyms or acceptable phrasings, not just repetitions of the required concept labels."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },

@@ -28,6 +28,7 @@ const provider = args.find((arg) => arg.startsWith('--provider='))?.split('=')[1
 const technologyArg = args.find((arg) => arg.startsWith('--technology='))?.split('=')[1] ?? 'all';
 const onlyStatus = args.find((arg) => arg.startsWith('--only-status='))?.split('=')[1] ?? 'draft,disputed';
 const limit = args.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? 'all';
+const concurrency = args.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '2';
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 
 function run(command, commandArgs, options = {}) {
@@ -76,6 +77,7 @@ console.log(JSON.stringify({
   technology: technologyArg,
   onlyStatus,
   limit,
+  concurrency,
   import: shouldImport,
   test: shouldTest,
 }, null, 2));
@@ -93,6 +95,7 @@ for (const technology of technologies) {
     `--technology=${technology}`,
     `--only-status=${onlyStatus}`,
     `--limit=${limit}`,
+    `--concurrency=${concurrency}`,
   ];
 
   if (dryRun) {

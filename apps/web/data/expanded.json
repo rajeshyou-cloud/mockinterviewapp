@@ -100,13 +100,25 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "Add specific Snowflake privilege details for read access to curated schemas: grant USAGE on the database/schema and SELECT on relevant tables/views, with future grants where appropriate, to a custom role rather than directly to users.",
+          "Make the least-privilege requirement explicit in the benchmark answer, since it is listed as a required concept but is only implied by “required object privileges.”",
+          "Improve acceptedAlternatives so they include genuine equivalent wording, such as “account roles/custom account roles,” “grant roles to users,” “grant privileges to roles,” and “role inheritance,” rather than repeating the exact required terms.",
+          "Replace or remove templated optional concepts and reasoning such as “operational validation evidence” and “fit decision and risk controls,” which are not directly grounded in the scenario.",
+          "Include evidence excerpts or more precise cited sections from the official Snowflake access-control documentation. The single metadata-only citation is plausible but insufficient to verify every scoring anchor and required concept."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -203,13 +215,28 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The benchmark answer is likely correct, but the evidence packet is too thin to fully support the requiredConcepts and scoring anchors as written.",
+          "The cited source should explicitly support the key claim that in a managed access schema, object owners cannot grant privileges on their objects and grant decisions are centralized to the schema owner or a role with MANAGE GRANTS.",
+          "The benchmark should clarify whether the feature is a 'managed access schema' specifically, not just generic centralized access control, to avoid ambiguity in scoring.",
+          "The question asks 'what feature would you consider and why'; the answer should ideally mention the centralized-grants rationale and the governance benefit in one concise sentence.",
+          "The benchmark answer is technically accurate: Snowflake managed access schemas centralize object privilege grants under the schema owner or a role with the global MANAGE GRANTS privilege, rather than individual object owners.",
+          "However, the acceptedAlternatives are templated as isolated required terms rather than meaningful alternative answer formulations; a response saying only \"schema owner\" or only \"MANAGE GRANTS\" would not adequately answer the scenario.",
+          "The scoring anchors and optional concepts add expectations such as \"advanced level trade-offs,\" \"operational validation evidence,\" and \"risk controls\" that are not clearly grounded in the cited evidence packet and are not reflected in the concise benchmark answer.",
+          "The generic reasoning text should be replaced with Snowflake-specific reasoning about managed access schemas, centralized grant administration, and the object-owner grant limitation."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -314,13 +341,24 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "approve"
+        ],
+        "confidence": 0.86,
+        "corrections": [
+          "The benchmark answer is broadly correct, but the scenario says the table was updated two hours ago; the answer should explicitly note that Time Travel works only if the event is within the table's configured retention period and account for the edition/retention window constraints implied by Snowflake Time Travel docs.",
+          "The answer mentions historical cloning and undrop capabilities, which are relevant Time Travel-related recovery options, but the benchmark should separate 'inspect previous data' from 'restore' more clearly to better align with the question intent.",
+          "The requiredConcepts list includes 'statement' but the benchmark answer says 'statement reference'; this is acceptable, but the benchmark would be stronger if it explicitly named 'statement ID' or 'AT | BEFORE' syntax support to reduce ambiguity.",
+          "The scoring anchors are serviceable, but 'intermediate level trade-offs' are not actually reflected in the benchmark answer; add a concrete trade-off such as retention window limits and inability to recover data outside that window."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -425,13 +463,30 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The benchmark answer is broadly correct, but the requiredConcepts/acceptedAlternatives are overly prescriptive and partially redundant; 'schema' and 'logical copy' are descriptive context, not distinct answer concepts that should be required.",
+          "The explanation mentions Time Travel and retention, but the cited evidence metadata only includes the CREATE CLONE documentation link; the packet does not provide excerpted evidence showing historical-point cloning or retention constraints, so those claims should be softened or explicitly supported by the source text.",
+          "The scoring anchors are generic and not tightly aligned to the question's single best answer; they should emphasize zero-copy cloning of a schema via CREATE SCHEMA CLONE or CREATE ... CLONE, rather than broad 'data protection' framing.",
+          "The difficulty label 'advanced' is not well supported by the question, which is a straightforward capability identification prompt unless additional constraints or edge cases are provided.",
+          "Core answer is technically appropriate: Snowflake cloning via CREATE ... CLONE / zero-copy cloning fits an isolated schema copy without a full physical copy.",
+          "Do not make Time Travel and retention required concepts for this question unless the scenario asks for cloning from a historical point. They can remain optional/extra-credit constraints.",
+          "Reconsider the difficulty. The presented scenario is closer to basic/intermediate unless the prompt requires advanced trade-offs such as retention windows, Fail-safe/storage cost implications after divergence, privileges, object support limits, or clone lifecycle controls.",
+          "Replace the generic reasoning text with Snowflake-specific reasoning about zero-copy cloning: logical metadata copy, shared micro-partitions initially, independent changes after clone, and applicability to schemas.",
+          "Make scoring anchors more specific to the scenario rather than generic 'data protection concepts' language.",
+          "Accepted alternatives should include natural language variants such as 'zero-copy cloning a schema', 'CREATE SCHEMA ... CLONE', and 'clone the production schema', not only exact repetitions of required concept labels."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -536,13 +591,30 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change data capture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.74,
+        "corrections": [
+          "The benchmark answer is directionally correct but too specific about fields named STALE and STALE_AFTER unless the cited Snowflake streams documentation explicitly exposes those terms; the evidence packet does not include the relevant source text to verify exact field names.",
+          "The answer should distinguish between diagnosing stream staleness and preventing it: investigate stream staleness status plus the underlying source table/view retention and data-change window, then prevent recurrence by ensuring periodic consumption or a downstream task schedule.",
+          "The benchmark could be strengthened by mentioning that streams do not preserve changes indefinitely and that inactivity relative to retention can cause staleness, rather than implying only 'offset' advancement without explaining the retention constraint.",
+          "The acceptedAlternatives list is overly granular and effectively duplicates required concepts; it should be consolidated or clarified to avoid overfitting scoring to isolated tokens rather than the underlying technical meaning.",
+          "Add evidence excerpts or more specific official citations showing Snowflake stream staleness behavior, including STALE/STALE_AFTER, source object data retention, and when a stream offset is advanced.",
+          "Clarify that merely querying/selecting a stream does not necessarily advance the offset; the offset is advanced when stream records are consumed in a DML transaction/committed consuming operation.",
+          "For an advanced troubleshooting answer, include what to do if the stream is already stale, such as validating whether unread changes are still recoverable via Time Travel/retention, recreating the stream if necessary, and assessing downstream data gaps.",
+          "Prevention guidance should mention operational controls such as scheduled tasks/alerts monitoring STALE_AFTER, ensuring consumers run within retention, and adjusting retention where appropriate.",
+          "Replace the templated acceptedAlternatives entries with meaningful synonyms or acceptable phrasings rather than repeating the exact required terms.",
+          "Tighten the scoring anchors and reasoning so they are specific to Snowflake stream staleness rather than generic change-data-capture wording."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -639,13 +711,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change data capture question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.86,
         "corrections": [],
-        "reviewedAt": null
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -1436,13 +1514,25 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "Add quoted or summarized official evidence from the cited Snowflake target lag page showing that TARGET_LAG is a desired/maximum staleness objective relative to base tables, not an exact refresh interval.",
+          "Add official evidence for the claim that actual lag can exceed the target due to refresh duration, data volume/query complexity, warehouse capacity, or pipeline/dependency depth. If any of those factors are not stated in the cited page, narrow the benchmark answer to only supported causes.",
+          "Revise the generic/templated reasoning field. It should specifically explain that applications should not assume an exact 10-minute cadence and should design/monitor for possible staleness beyond the target.",
+          "Improve acceptedAlternatives: they currently just restate individual required terms rather than giving meaningful equivalent phrasings that could be used for grading.",
+          "Remove or justify vague optional concepts such as “fit decision and risk controls” unless tied to evidence or scoring needs."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -1547,13 +1637,26 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "Clarify that DOWNSTREAM refresh propagation is driven by downstream dynamic tables/refresh scheduling, not by arbitrary external consumers querying the terminal table.",
+          "State the failure mode more explicitly: if the terminal table, or every table in the dynamic-table graph, is set to TARGET_LAG = DOWNSTREAM, the graph has no independent automatic refresh trigger.",
+          "Add evidence excerpts or quoted claims from the Snowflake target-lag documentation; the single metadata-only citation is relevant but insufficient as presented to fully verify the scoring anchor.",
+          "Tighten the required concept currently labeled “downstream consumer” to “downstream dynamic table or scheduled downstream refresh dependency.”",
+          "Revise the generic reasoning text; it is templated and says only that the answer should explain why dynamic tables matter, rather than giving question-specific reasoning about TARGET_LAG = DOWNSTREAM.",
+          "Consider removing or de-emphasizing optional concepts such as governance controls unless supported by cited documentation or by the scoring rubric."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -1658,13 +1761,29 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The benchmark answer mentions 'refresh history,' 'clustering,' and 'target lag,' but the cited evidence metadata only explicitly supports dynamic table incremental refresh optimization. The packet does not provide official evidence for refresh history investigation, clustering guidance, or target lag tuning, so these should be either backed by additional cited sources or removed from the required concepts/benchmark answer.",
+          "The question asks about 'refresh and data-locality decisions,' but the answer mixes diagnosis steps and tuning advice without clearly distinguishing what is directly supported by the cited source versus general best practice. Add source-backed wording or narrow the benchmark to the documented incremental-refresh optimization topic.",
+          "The difficulty is marked 'advanced,' but the official evidence provided is limited to a single incremental-refresh optimization document. If advanced trade-offs are intended, add evidence covering those trade-offs; otherwise consider lowering or clarifying the difficulty.",
+          "The acceptedAlternatives list is fine conceptually, but because the evidence packet does not substantiate all listed concepts, the benchmark is only partially supported as written.",
+          "Add explicit support or cited evidence for each required concept. The single cited page title supports incremental refresh optimization generally, but the packet does not provide evidence excerpts for refresh history, clustering/data locality by JOIN/GROUP BY/PARTITION BY keys, target lag, or warehouse capacity.",
+          "Make the benchmark answer explicitly mention clustering, since it is listed as a required concept; “improve locality” is directionally correct but too implicit for a required scoring anchor.",
+          "Clarify that dynamic table refresh mode selection has operational constraints: if the current mode is full rather than incremental, the remedy may require recreating or redefining the dynamic table rather than simply toggling a runtime setting.",
+          "Separate performance diagnosis from freshness SLA tuning: target lag should be adjusted based on observed refresh duration and warehouse capacity, but it does not itself reduce data scanned.",
+          "Improve the scoring anchors so they require concrete investigation steps, such as checking actual refresh mode/refresh history, identifying operators causing large scans, and clustering source data around join/group/window partition keys."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -1769,13 +1888,25 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "approve"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The benchmark answer and required concepts reference 'dependency graph history' and 'latest successful data timestamp', but the cited evidence metadata only points to the dynamic tables monitoring page and does not demonstrate that these exact terms are present or required.",
+          "The packet lacks an explicit official evidence-backed mapping for 'dynamic-table metadata', 'target lag', and 'actual lag' as named concepts; if these are intended, they should be anchored to specific documented fields or views from the cited source.",
+          "The question asks which history and status information to inspect first, but the benchmark answer expands into diagnosis steps that may be reasonable yet are not clearly supported as the primary answer by the provided evidence metadata.",
+          "The acceptedAlternatives list duplicates the required concepts verbatim and does not add meaningful alternative phrasings; this is weak benchmark design and should be refined to include true synonyms or documented variants.",
+          "The evidence is limited to a single source reference without quoted supporting content, making it insufficient to validate the full breadth of the benchmark answer."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },

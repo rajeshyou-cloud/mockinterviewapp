@@ -91,13 +91,28 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the core objects question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.82,
+        "corrections": [
+          "The cited evidence metadata is insufficient on its own because no excerpt from the official source is provided, so the benchmark answer cannot be fully verified against the documentation.",
+          "The benchmark includes 'compute' as a requiredConcept and acceptedAlternative, but the question asks about the roles of database, schema, table, and virtual warehouse; 'compute' is implied by virtual warehouse rather than a separate required concept.",
+          "The scoring anchors mention 'trade-offs' and 'operational reasoning,' but the benchmark answer does not include any trade-off or validation content, making the strong/partial thresholds somewhat misaligned with the actual expected response.",
+          "The benchmark should clarify whether it expects any mention of the virtual warehouse as a scalable compute layer versus simply 'compute resources' to avoid ambiguity.",
+          "Provide cited evidence excerpts or more precise official documentation sections that explicitly define Snowflake databases, schemas, tables, and virtual warehouses; the current evidence metadata alone is not enough to verify all claims.",
+          "Remove or justify unsupported scoring expectations such as “beginner level trade-offs” and “operational validation evidence,” which are not necessary for the question and are not supported by the cited evidence metadata.",
+          "Revise the reasoning and strong scoring anchor to focus on accurately describing the roles of database, schema, table, and virtual warehouse, rather than requiring trade-offs or validation/application in practice.",
+          "Improve acceptedAlternatives so they list real synonymous wording, such as “warehouse” for “virtual warehouse” or “compute cluster/resources” for “compute,” instead of restating each required term."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -201,13 +216,25 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual warehouses question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "approve",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "Add cited evidence excerpts or metadata fields that explicitly support the key claims: a virtual warehouse is Snowflake compute, provides CPU/memory/temporary storage, is required/running for queries and loading, and consumes credits while running. The current evidence entry is only a URL/title/hash and does not itself substantiate those details.",
+          "Revise the acceptedAlternatives: they are tautological placeholders repeating the required terms rather than meaningful acceptable phrasings. Include synonyms such as “compute resources/cluster,” “processing power,” “RAM,” “SQL execution,” “data ingestion/load operations,” and “Snowflake credits/billing while running.”",
+          "Remove or clarify unsupported optional/scoring language such as “operational validation evidence” and “beginner level trade-offs” unless the benchmark expects discussion of warehouse sizing, auto-suspend/resume, concurrency, or cost-performance trade-offs.",
+          "Improve the reasoning text; it is generic and grammatically flawed (“why virtual warehouses matters for snowflake”) and asks for validation/application that the benchmark answer does not require.",
+          "Consider adding “must be running/resumed” as an explicit required or optional concept, since it is central to the benchmark answer."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
@@ -304,13 +331,29 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the loading data question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-policy-1.0.0",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": null,
-        "corrections": [],
-        "reviewedAt": null
+        "status": "disputed",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.4-mini",
+          "gpt-5.5"
+        ],
+        "verdicts": [
+          "dispute",
+          "dispute"
+        ],
+        "confidence": 0.78,
+        "corrections": [
+          "The cited evidence metadata is too weak to fully support the benchmark as written because no excerpt from the Snowflake tutorial is provided, so the required concepts cannot be directly verified.",
+          "The benchmark answer may be broadly correct, but the packet does not demonstrate that all required concepts (database, table, warehouse, stage, COPY INTO) are explicitly covered in the cited source.",
+          "The evidence is stale/ambiguous for strict review because only a URL/title/section and retrieval date are provided, without quotable source content or line-level support.",
+          "The difficulty and scoring anchors are plausible, but the benchmark should be tightened to avoid implying a single canonical loading flow if the official tutorial presents alternative paths or additional setup steps.",
+          "Add evidence excerpts or section-specific citations from the Snowflake tutorial showing the relevant loading flow, such as creating/using a database and table, using a warehouse, staging/accessing the CSV file, and running COPY INTO.",
+          "Consider adding or acknowledging other common beginner objects/steps for CSV loading that the tutorial may require, especially schema and file format, while keeping the high-level answer concise.",
+          "Revise optional concepts such as “operational validation evidence” and “fit decision and risk controls”; they are generic, not clearly beginner-level, and not directly supported by the cited evidence metadata.",
+          "Revise the reasoning and scoring anchors to be less templated and more specific to Snowflake CSV loading. The current anchors require “trade-offs” and “operational reasoning” that are not clearly part of the question or supported by the cited metadata.",
+          "Improve accepted alternatives with actual synonyms or acceptable phrasings, e.g. “virtual warehouse/compute warehouse,” “internal or external stage,” “load command/COPY statement,” rather than repeating the exact required terms."
+        ],
+        "reviewedAt": "2026-08-25"
       }
     }
   },
