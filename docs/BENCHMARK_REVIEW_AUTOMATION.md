@@ -117,6 +117,15 @@ npm run review:benchmarks:auto -- --provider=gemini --technology=aws --limit=10 
 
 For local runs, keep `GEMINI_API_KEY` in `.env.local`; never commit it. If a key is pasted into chat or terminal output, rotate it after testing.
 
+For free-tier Gemini review, use small batches and import only approvals so the remaining queue shrinks safely:
+
+```bash
+npm run review:benchmarks:auto -- --provider=gemini --technology=aws --only-status=draft --limit=10 --offset=0 --compact --import-only-verified
+npm run review:benchmarks:auto -- --provider=gemini --technology=aws --only-status=draft --limit=10 --offset=10 --compact --import-only-verified
+```
+
+Increase `--offset` by the batch size when you want to move through the pending queue without attempting all records in one run. Records are removed from the pending launch queue only when both reviewers approve and the importer writes `ai-evidence-verified`. Disputed or rejected records remain pending until their benchmark answer or evidence is fixed and re-reviewed.
+
 Use Vercel AI Gateway:
 
 ```bash
@@ -144,8 +153,10 @@ npm run review:benchmarks:auto -- --provider=anthropic --technology=python --lim
 - `--only-status=draft,disputed` is the default, so already verified records are skipped.
 - `--only-status=draft` reviews only new draft records.
 - `--limit=10` reviews a small pilot sample.
+- `--offset=10` starts from the next selected record, useful for free-tier batch review.
 - `--limit=all` reviews all selected packets.
 - `--no-import` writes review files but does not import them.
+- `--import-only-verified` imports only consensus-approved records, leaving disputed/rejected records pending for remediation.
 - `--test` runs the web test suite after validation.
 - `--dry-run` checks packet loading and configuration without spending API credits.
 - `--compact` runs static triage, exports compact re-review packets, and reviews those smaller packets.

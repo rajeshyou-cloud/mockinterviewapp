@@ -16,7 +16,15 @@ const questionPackPaths = [
 
 const reviewDirectory = 'apps/web/data/benchmark-reviews';
 const dryRun = process.argv.includes('--dry-run');
+const reviewFileArgs = process.argv
+  .filter((arg) => arg.startsWith('--review-file='))
+  .map((arg) => arg.split('=')[1])
+  .filter(Boolean);
 const allowedStatuses = new Set(['ai-evidence-verified', 'disputed', 'rejected']);
+const onlyFinalStatusArg = process.argv.find((arg) => arg.startsWith('--only-final-status='))?.split('=')[1];
+const onlyFinalStatuses = onlyFinalStatusArg
+  ? new Set(onlyFinalStatusArg.split(',').map((status) => status.trim()).filter(Boolean))
+  : null;
 
 function isValidReview(review) {
   if (!review.questionId || !review.benchmarkVersion || !allowedStatuses.has(review.finalStatus)) return false;
@@ -33,7 +41,9 @@ function isValidReview(review) {
 
 async function loadReviews() {
   if (!existsSync(reviewDirectory)) return [];
-  const files = (await readdir(reviewDirectory)).filter((file) => file.endsWith('.jsonl'));
+  const files = reviewFileArgs.length > 0
+    ? reviewFileArgs
+    : (await readdir(reviewDirectory)).filter((file) => file.endsWith('.jsonl'));
   const reviews = [];
   for (const file of files) {
     const lines = (await readFile(join(reviewDirectory, file), 'utf8')).trim().split('\n').filter(Boolean);
@@ -50,6 +60,7 @@ for (const review of reviews) {
     rejectedReviews.push(review.questionId ?? '<missing-question-id>');
     continue;
   }
+  if (onlyFinalStatuses && !onlyFinalStatuses.has(review.finalStatus)) continue;
   validReviews.set(`${review.questionId}:${review.benchmarkVersion}`, review);
 }
 
@@ -82,6 +93,7 @@ for (const path of questionPackPaths) {
 console.log(JSON.stringify({
   mode: dryRun ? 'dry-run' : 'write',
   reviewFilesFound: reviews.length,
+  onlyFinalStatus: onlyFinalStatusArg ?? 'all',
   validReviews: validReviews.size,
   rejectedReviews: rejectedReviews.length,
   updated,

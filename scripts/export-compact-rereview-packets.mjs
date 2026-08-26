@@ -8,6 +8,7 @@ const onlyStatusArg = args.find((arg) => arg.startsWith('--only-status='))?.spli
 const onlyStatuses = new Set(onlyStatusArg.split(',').map((status) => status.trim()).filter(Boolean));
 const limitArg = args.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? 'all';
 const limit = limitArg === 'all' ? Number.POSITIVE_INFINITY : Number.parseInt(limitArg, 10);
+const offset = Number.parseInt(args.find((arg) => arg.startsWith('--offset='))?.split('=')[1] ?? '0', 10);
 const outputDirectory = resolve('apps/web/data/evidence-packets-compact');
 const triagePath = resolve('apps/web/data/review-triage/latest.json');
 
@@ -71,6 +72,7 @@ const outputManifest = {
     technology: technologyArg,
     onlyStatus: [...onlyStatuses],
     limit: limitArg,
+    offset: Number.isFinite(offset) && offset > 0 ? offset : 0,
   },
   totalQuestions: 0,
   technologies: {},
@@ -84,6 +86,7 @@ for (const technology of technologies) {
     .filter(Boolean)
     .map((line) => JSON.parse(line))
     .filter((packet) => onlyStatuses.has(packet.currentReviewStatus))
+    .slice(Number.isFinite(offset) && offset > 0 ? offset : 0)
     .slice(0, Number.isFinite(limit) ? limit : undefined)
     .map(compactPacket);
 

@@ -162,36 +162,56 @@ function parseGeminiStructuredOutput(response) {
   return JSON.parse(text);
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function retryDelayMsFromGeminiError(body, attempt) {
+  const retryDelay = body?.error?.details
+    ?.find((detail) => typeof detail.retryDelay === 'string')
+    ?.retryDelay
+    ?.match(/^(\d+(?:\.\d+)?)s$/)?.[1];
+  if (retryDelay) return Math.ceil(Number.parseFloat(retryDelay) * 1000) + 1000;
+  return Math.min(60_000, 5_000 * 2 ** attempt);
+}
+
 async function reviewWithGemini(packet, model, reviewerRole) {
   const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
   const geminiModel = normalizeGeminiModel(model);
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${apiKey}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      systemInstruction: {
-        parts: [{ text: reviewSystemPrompt }],
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      contents: [{
-        role: 'user',
-        parts: [{ text: JSON.stringify({ reviewerRole, packet }) }],
-      }],
-      generationConfig: {
-        temperature: 0,
-        responseMimeType: 'application/json',
-        responseJsonSchema: verdictJsonSchema,
-      },
-    }),
-    signal: AbortSignal.timeout(60_000),
-  });
+      body: JSON.stringify({
+        systemInstruction: {
+          parts: [{ text: reviewSystemPrompt }],
+        },
+        contents: [{
+          role: 'user',
+          parts: [{ text: JSON.stringify({ reviewerRole, packet }) }],
+        }],
+        generationConfig: {
+          temperature: 0,
+          responseMimeType: 'application/json',
+          responseJsonSchema: verdictJsonSchema,
+        },
+      }),
+      signal: AbortSignal.timeout(60_000),
+    });
 
-  const body = await response.json().catch(() => null);
-  if (!response.ok) {
+    const body = await response.json().catch(() => null);
+    if (response.ok) return verdictSchema.parse(parseGeminiStructuredOutput(body));
+    if (response.status === 429 && attempt < 5) {
+      const delayMs = retryDelayMsFromGeminiError(body, attempt);
+      console.warn(`Gemini rate limit for ${geminiModel}; retrying in ${Math.round(delayMs / 1000)}s.`);
+      await sleep(delayMs);
+      continue;
+    }
     throw new Error(`Gemini review failed: HTTP ${response.status} ${JSON.stringify(body)}`);
   }
-  return verdictSchema.parse(parseGeminiStructuredOutput(body));
+  throw new Error(`Gemini review failed after retries for ${geminiModel}.`);
 }
 
 async function reviewWithModel(packet, model, reviewerRole) {

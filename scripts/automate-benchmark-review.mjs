@@ -23,12 +23,14 @@ loadLocalEnv();
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const shouldImport = !args.includes('--no-import');
+const importOnlyVerified = args.includes('--import-only-verified');
 const shouldTest = args.includes('--test');
 const compact = args.includes('--compact');
 const provider = args.find((arg) => arg.startsWith('--provider='))?.split('=')[1] ?? process.env.REVIEW_PROVIDER ?? 'openai';
 const technologyArg = args.find((arg) => arg.startsWith('--technology='))?.split('=')[1] ?? 'all';
 const onlyStatus = args.find((arg) => arg.startsWith('--only-status='))?.split('=')[1] ?? 'draft,disputed';
 const limit = args.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? 'all';
+const offset = args.find((arg) => arg.startsWith('--offset='))?.split('=')[1] ?? '0';
 const concurrency = args.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '2';
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 
@@ -81,8 +83,10 @@ console.log(JSON.stringify({
   technology: technologyArg,
   onlyStatus,
   limit,
+  offset,
   concurrency,
   import: shouldImport,
+  importOnlyVerified,
   test: shouldTest,
   compact,
 }, null, 2));
@@ -90,12 +94,14 @@ console.log(JSON.stringify({
 run('npm', ['run', 'export:evidence-packets']);
 if (compact) {
   run('npm', ['run', 'triage:benchmarks']);
-  run('npm', ['run', 'export:rereview-packets', '--', `--technology=${technologyArg}`, `--only-status=${onlyStatus}`, `--limit=${limit}`]);
+  run('npm', ['run', 'export:rereview-packets', '--', `--technology=${technologyArg}`, `--only-status=${onlyStatus}`, `--limit=${limit}`, `--offset=${offset}`]);
 }
 
 const technologies = await resolveTechnologies();
+const reviewOutputNames = [];
 
 for (const technology of technologies) {
+  const reviewOutputName = `${technology}-${provider}-automated-${timestamp}.reviewed.jsonl`;
   const reviewArgs = [
     'run',
     'review:benchmarks',
@@ -107,11 +113,13 @@ for (const technology of technologies) {
     `--concurrency=${concurrency}`,
   ];
   if (compact) reviewArgs.push('--packet-dir=apps/web/data/evidence-packets-compact');
+  if (!compact) reviewArgs.push(`--offset=${offset}`);
 
   if (dryRun) {
     reviewArgs.push('--dry-run');
   } else {
-    reviewArgs.push(`--output-name=${technology}-${provider}-automated-${timestamp}.reviewed.jsonl`);
+    reviewArgs.push(`--output-name=${reviewOutputName}`);
+    reviewOutputNames.push(reviewOutputName);
   }
 
   run('npm', reviewArgs, {
@@ -123,8 +131,15 @@ for (const technology of technologies) {
 }
 
 if (shouldImport) {
-  run('npm', ['run', 'import:benchmark-reviews', '--', '--dry-run']);
-  if (!dryRun) run('npm', ['run', 'import:benchmark-reviews']);
+  const importArgs = ['run', 'import:benchmark-reviews', '--'];
+  if (!dryRun) {
+    for (const reviewOutputName of reviewOutputNames) {
+      importArgs.push(`--review-file=${reviewOutputName}`);
+    }
+  }
+  if (importOnlyVerified) importArgs.push('--only-final-status=ai-evidence-verified');
+  run('npm', [...importArgs, '--dry-run']);
+  if (!dryRun) run('npm', importArgs);
 }
 
 run('npm', ['run', 'validate:benchmarks']);

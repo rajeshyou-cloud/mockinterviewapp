@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T11:50:58.913Z",
+  "generatedAt": "2026-08-26T12:36:11.039Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
@@ -9,7 +9,8 @@
       "disputed",
       "rejected"
     ],
-    "limit": "all"
+    "limit": "all",
+    "offset": 0
   },
   "totalQuestions": 713,
   "technologies": {
