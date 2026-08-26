@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-08-26T11:32:14.653Z",
+    "generatedAt": "2026-08-26T11:41:01.000Z",
     "filters": {
       "technology": "all",
       "onlyStatus": [
@@ -12,7 +12,7 @@
       ]
     },
     "totalInspected": 1050,
-    "totalFlaggedRecords": 713,
+    "totalFlaggedRecords": 581,
     "totalSelectedRecords": 713,
     "byTechnology": {
       "snowflake": {
@@ -21,7 +21,7 @@
       },
       "aws": {
         "selected": 132,
-        "flagged": 132
+        "flagged": 0
       },
       "databricks": {
         "selected": 134,
@@ -37,14 +37,14 @@
       }
     },
     "byStatus": {
-      "disputed": 702,
+      "disputed": 570,
       "rejected": 5,
-      "draft": 6
+      "draft": 138
     },
     "byReason": {
-      "generic-expanded-explanation": 713,
-      "missing-required-concepts": 535,
-      "generic-template-answer": 66
+      "generic-expanded-explanation": 581,
+      "missing-required-concepts": 438,
+      "generic-template-answer": 59
     }
   },
   "records": [
@@ -3302,18 +3302,11 @@
       "topic": "architecture",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-well-architected-03",
@@ -3321,18 +3314,11 @@
       "topic": "architecture",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-well-architected-04",
@@ -3340,18 +3326,11 @@
       "topic": "architecture",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-well-architected-05",
@@ -3359,18 +3338,11 @@
       "topic": "architecture",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-well-architected-06",
@@ -3378,18 +3350,11 @@
       "topic": "architecture",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-shared-responsibility-02",
@@ -3397,23 +3362,11 @@
       "topic": "security",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: security of the cloud, security in the cloud, managed service."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-shared-responsibility-03",
@@ -3421,23 +3374,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: managed service."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-shared-responsibility-04",
@@ -3445,23 +3386,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: security of the cloud, security in the cloud, managed service."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-shared-responsibility-05",
@@ -3469,23 +3398,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: security of the cloud, security in the cloud, managed service."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-shared-responsibility-06",
@@ -3493,23 +3410,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/aws-risk-and-compliance/shared-responsibility-model.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: security of the cloud, security in the cloud, managed service."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-02",
@@ -3517,23 +3422,11 @@
       "topic": "identity",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: principal."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-03",
@@ -3541,23 +3434,11 @@
       "topic": "identity",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: principal."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-04",
@@ -3565,23 +3446,11 @@
       "topic": "identity",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: principal."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-05",
@@ -3589,23 +3458,11 @@
       "topic": "identity",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: principal."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-06",
@@ -3613,23 +3470,11 @@
       "topic": "identity",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: principal."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-policies-02",
@@ -3637,23 +3482,11 @@
       "topic": "identity",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: identity policy, resource policy, permissions boundary, SCP, explicit deny."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-policies-03",
@@ -3661,23 +3494,11 @@
       "topic": "identity",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: identity policy, resource policy, permissions boundary, SCP, explicit deny."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-policies-04",
@@ -3685,23 +3506,11 @@
       "topic": "identity",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: identity policy, resource policy, SCP, explicit deny."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-policies-05",
@@ -3709,23 +3518,11 @@
       "topic": "identity",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: identity policy, resource policy, permissions boundary, SCP, explicit deny."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-iam-policies-06",
@@ -3733,23 +3530,11 @@
       "topic": "identity",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: identity policy, resource policy, permissions boundary, SCP, explicit deny."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-01",
@@ -3757,28 +3542,11 @@
       "topic": "governance",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-02",
@@ -3786,23 +3554,11 @@
       "topic": "governance",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-03",
@@ -3810,23 +3566,11 @@
       "topic": "governance",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-04",
@@ -3834,23 +3578,11 @@
       "topic": "governance",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-05",
@@ -3858,23 +3590,11 @@
       "topic": "governance",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-organizations-06",
@@ -3882,23 +3602,11 @@
       "topic": "governance",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: organizational unit, SCP."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-vpc-02",
@@ -3906,23 +3614,11 @@
       "topic": "networking",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: internet gateway."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-vpc-03",
@@ -3930,23 +3626,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: internet gateway."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-vpc-04",
@@ -3954,23 +3638,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: internet gateway."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-vpc-05",
@@ -3978,23 +3650,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: internet gateway."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-vpc-06",
@@ -4002,23 +3662,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: internet gateway."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-security-groups-nacls-02",
@@ -4026,18 +3674,11 @@
       "topic": "networking",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-security-groups-nacls-03",
@@ -4045,18 +3686,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-security-groups-nacls-04",
@@ -4064,18 +3698,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-security-groups-nacls-05",
@@ -4083,18 +3710,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-security-groups-nacls-06",
@@ -4102,18 +3722,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-01",
@@ -4121,28 +3734,11 @@
       "topic": "networking",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-02",
@@ -4150,23 +3746,11 @@
       "topic": "networking",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-03",
@@ -4174,23 +3758,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-04",
@@ -4198,23 +3770,11 @@
       "topic": "networking",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-05",
@@ -4222,23 +3782,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-route53-06",
@@ -4246,23 +3794,11 @@
       "topic": "networking",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: hosted zone, record, routing policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-01",
@@ -4270,28 +3806,11 @@
       "topic": "compute",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-02",
@@ -4299,23 +3818,11 @@
       "topic": "compute",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-03",
@@ -4323,23 +3830,11 @@
       "topic": "compute",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-04",
@@ -4347,23 +3842,11 @@
       "topic": "compute",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-05",
@@ -4371,23 +3854,11 @@
       "topic": "compute",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ec2-06",
@@ -4395,23 +3866,11 @@
       "topic": "compute",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: instance type, EBS, security group."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-01",
@@ -4419,28 +3878,11 @@
       "topic": "compute",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-02",
@@ -4448,23 +3890,11 @@
       "topic": "compute",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-03",
@@ -4472,23 +3902,11 @@
       "topic": "compute",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-04",
@@ -4496,23 +3914,11 @@
       "topic": "compute",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-05",
@@ -4520,23 +3926,11 @@
       "topic": "compute",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-autoscaling-elb-06",
@@ -4544,23 +3938,11 @@
       "topic": "compute",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: target group, scaling policy."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-02",
@@ -4568,18 +3950,11 @@
       "topic": "storage",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-03",
@@ -4587,18 +3962,11 @@
       "topic": "storage",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-04",
@@ -4606,18 +3974,11 @@
       "topic": "storage",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-05",
@@ -4625,18 +3986,11 @@
       "topic": "storage",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-06",
@@ -4644,18 +3998,11 @@
       "topic": "storage",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-security-02",
@@ -4663,23 +4010,11 @@
       "topic": "security",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: bucket policy, object ownership."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-security-03",
@@ -4687,23 +4022,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: bucket policy, object ownership."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-security-04",
@@ -4711,23 +4034,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: bucket policy, object ownership."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-security-05",
@@ -4735,23 +4046,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: bucket policy, object ownership."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-s3-security-06",
@@ -4759,23 +4058,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-overview.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: bucket policy, object ownership."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ebs-02",
@@ -4783,18 +4070,11 @@
       "topic": "storage",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ebs-03",
@@ -4802,18 +4082,11 @@
       "topic": "storage",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ebs-04",
@@ -4821,18 +4094,11 @@
       "topic": "storage",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ebs-05",
@@ -4840,18 +4106,11 @@
       "topic": "storage",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ebs-06",
@@ -4859,18 +4118,11 @@
       "topic": "storage",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-rds-02",
@@ -4878,23 +4130,11 @@
       "topic": "databases",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: DB instance."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-rds-03",
@@ -4902,23 +4142,11 @@
       "topic": "databases",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: DB instance."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-rds-04",
@@ -4926,23 +4154,11 @@
       "topic": "databases",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: DB instance."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-rds-05",
@@ -4950,23 +4166,11 @@
       "topic": "databases",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: DB instance."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-rds-06",
@@ -4974,23 +4178,11 @@
       "topic": "databases",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: DB instance."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-dynamodb-02",
@@ -4998,23 +4190,11 @@
       "topic": "databases",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: secondary index."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-dynamodb-03",
@@ -5022,23 +4202,11 @@
       "topic": "databases",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: secondary index."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-dynamodb-04",
@@ -5046,23 +4214,11 @@
       "topic": "databases",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: secondary index."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-dynamodb-05",
@@ -5070,23 +4226,11 @@
       "topic": "databases",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: secondary index."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-dynamodb-06",
@@ -5094,23 +4238,11 @@
       "topic": "databases",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: secondary index."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-lambda-02",
@@ -5118,23 +4250,11 @@
       "topic": "serverless",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: execution role."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-lambda-03",
@@ -5142,23 +4262,11 @@
       "topic": "serverless",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: execution role."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-lambda-04",
@@ -5166,23 +4274,11 @@
       "topic": "serverless",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: execution role."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-lambda-05",
@@ -5190,23 +4286,11 @@
       "topic": "serverless",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: execution role."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-lambda-06",
@@ -5214,23 +4298,11 @@
       "topic": "serverless",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: execution role."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-api-gateway-02",
@@ -5238,23 +4310,11 @@
       "topic": "serverless",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: route, authorizer."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-api-gateway-03",
@@ -5262,23 +4322,11 @@
       "topic": "serverless",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: route, authorizer."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-api-gateway-04",
@@ -5286,23 +4334,11 @@
       "topic": "serverless",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: route, authorizer."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-api-gateway-05",
@@ -5310,23 +4346,11 @@
       "topic": "serverless",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: route, authorizer."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-api-gateway-06",
@@ -5334,23 +4358,11 @@
       "topic": "serverless",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: route, authorizer."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-01",
@@ -5358,28 +4370,11 @@
       "topic": "containers",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-02",
@@ -5387,23 +4382,11 @@
       "topic": "containers",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-03",
@@ -5411,23 +4394,11 @@
       "topic": "containers",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-04",
@@ -5435,23 +4406,11 @@
       "topic": "containers",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-05",
@@ -5459,23 +4418,11 @@
       "topic": "containers",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-ecs-eks-06",
@@ -5483,23 +4430,11 @@
       "topic": "containers",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: task."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sqs-02",
@@ -5507,18 +4442,11 @@
       "topic": "messaging",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sqs-03",
@@ -5526,18 +4454,11 @@
       "topic": "messaging",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sqs-04",
@@ -5545,18 +4466,11 @@
       "topic": "messaging",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sqs-05",
@@ -5564,18 +4478,11 @@
       "topic": "messaging",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sqs-06",
@@ -5583,18 +4490,11 @@
       "topic": "messaging",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-01",
@@ -5602,28 +4502,11 @@
       "topic": "messaging",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-02",
@@ -5631,23 +4514,11 @@
       "topic": "messaging",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-03",
@@ -5655,23 +4526,11 @@
       "topic": "messaging",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-04",
@@ -5679,23 +4538,11 @@
       "topic": "messaging",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-05",
@@ -5703,23 +4550,11 @@
       "topic": "messaging",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-sns-eventbridge-06",
@@ -5727,23 +4562,11 @@
       "topic": "messaging",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: topic, subscription, retry."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-02",
@@ -5751,23 +4574,11 @@
       "topic": "observability",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: API event, audit trail."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-03",
@@ -5775,23 +4586,11 @@
       "topic": "observability",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: API event, audit trail."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-04",
@@ -5799,23 +4598,11 @@
       "topic": "observability",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: API event, audit trail."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-05",
@@ -5823,23 +4610,11 @@
       "topic": "observability",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: API event, audit trail."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-06",
@@ -5847,23 +4622,11 @@
       "topic": "observability",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: audit trail."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudformation-02",
@@ -5871,18 +4634,11 @@
       "topic": "infrastructure-as-code",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudformation-03",
@@ -5890,18 +4646,11 @@
       "topic": "infrastructure-as-code",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudformation-04",
@@ -5909,18 +4658,11 @@
       "topic": "infrastructure-as-code",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudformation-05",
@@ -5928,18 +4670,11 @@
       "topic": "infrastructure-as-code",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cloudformation-06",
@@ -5947,18 +4682,11 @@
       "topic": "infrastructure-as-code",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-kms-secrets-02",
@@ -5966,18 +4694,11 @@
       "topic": "security",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-kms-secrets-03",
@@ -5985,18 +4706,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-kms-secrets-04",
@@ -6004,18 +4718,11 @@
       "topic": "security",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-kms-secrets-05",
@@ -6023,18 +4730,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-kms-secrets-06",
@@ -6042,18 +4742,11 @@
       "topic": "security",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [
-        "generic-expanded-explanation"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-backup-dr-02",
@@ -6061,23 +4754,11 @@
       "topic": "reliability",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: failover."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-backup-dr-03",
@@ -6085,23 +4766,11 @@
       "topic": "reliability",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: failover."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-backup-dr-04",
@@ -6109,23 +4778,11 @@
       "topic": "reliability",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: failover."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-backup-dr-05",
@@ -6133,23 +4790,11 @@
       "topic": "reliability",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: failover."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-backup-dr-06",
@@ -6157,23 +4802,11 @@
       "topic": "reliability",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: failover."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-01",
@@ -6181,28 +4814,11 @@
       "topic": "cost-optimization",
       "difficulty": "beginner",
       "type": "conceptual",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-template-answer",
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-template-answer",
-          "detail": "Benchmark answer contains generic generator guidance instead of a specific scoring anchor."
-        },
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-02",
@@ -6210,23 +4826,11 @@
       "topic": "cost-optimization",
       "difficulty": "beginner",
       "type": "hands-on",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-03",
@@ -6234,23 +4838,11 @@
       "topic": "cost-optimization",
       "difficulty": "intermediate",
       "type": "scenario",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-04",
@@ -6258,23 +4850,11 @@
       "topic": "cost-optimization",
       "difficulty": "intermediate",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-05",
@@ -6282,23 +4862,11 @@
       "topic": "cost-optimization",
       "difficulty": "advanced",
       "type": "design",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-aws-cost-06",
@@ -6306,23 +4874,11 @@
       "topic": "cost-optimization",
       "difficulty": "advanced",
       "type": "troubleshooting",
-      "currentReviewStatus": "disputed",
+      "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
-      "reasonCodes": [
-        "generic-expanded-explanation",
-        "missing-required-concepts"
-      ],
-      "reasons": [
-        {
-          "code": "generic-expanded-explanation",
-          "detail": "Expanded explanation contains generic boilerplate."
-        },
-        {
-          "code": "missing-required-concepts",
-          "detail": "Answer does not explicitly cover: Savings Plans."
-        }
-      ]
+      "reasonCodes": [],
+      "reasons": []
     },
     {
       "questionId": "candidate-databricks-lakehouse-01",

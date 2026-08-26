@@ -20,6 +20,8 @@ Commands:
 ```bash
 npm run export:evidence-packets
 npm run triage:benchmarks
+npm run remediate:benchmarks -- --technology=aws --dry-run
+npm run remediate:benchmarks -- --technology=aws
 npm run export:rereview-packets
 ```
 
@@ -135,6 +137,27 @@ npm run review:benchmarks:auto -- --provider=anthropic --technology=python --lim
 - `--test` runs the web test suite after validation.
 - `--dry-run` checks packet loading and configuration without spending API credits.
 - `--compact` runs static triage, exports compact re-review packets, and reviews those smaller packets.
+
+## Bulk remediation before re-review
+
+When static triage shows repeated generic/template failures, use the remediation command before spending review credits:
+
+```bash
+npm run remediate:benchmarks -- --technology=<technology> --dry-run
+npm run remediate:benchmarks -- --technology=<technology>
+```
+
+The command updates only non-verified records for that technology. It leaves `ai-evidence-verified` and `human-verified` records untouched, rewrites generic benchmark answers into prompt-specific answers, preserves official evidence metadata, and resets remediated records to `draft`.
+
+After remediation, run:
+
+```bash
+npm run export:evidence-packets
+npm run triage:benchmarks -- --technology=<technology>
+npm run export:rereview-packets -- --technology=<technology> --only-status=draft --limit=all
+```
+
+Only run paid AI review after static triage shows no obvious local blockers for that technology.
 
 ## Re-review loop
 

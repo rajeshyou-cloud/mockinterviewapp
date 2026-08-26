@@ -1,17 +1,17 @@
 # Static Benchmark Triage Report
 
-Generated: 2026-08-26T11:32:14.653Z
+Generated: 2026-08-26T11:41:01.000Z
 Technology: all
 Statuses: draft, disputed, rejected, stale, reviewing
 
 Selected records: 713
-Records with local flags: 713
+Records with local flags: 581
 
 ## By technology
 
 | Technology | Selected | Flagged |
 |---|---:|---:|
-| aws | 132 | 132 |
+| aws | 132 | 0 |
 | databricks | 134 | 134 |
 | power-bi | 150 | 150 |
 | python | 150 | 150 |
@@ -21,146 +21,14 @@ Records with local flags: 713
 
 | Reason | Count |
 |---|---:|
-| generic-expanded-explanation | 713 |
-| missing-required-concepts | 535 |
-| generic-template-answer | 66 |
+| generic-expanded-explanation | 581 |
+| missing-required-concepts | 438 |
+| generic-template-answer | 59 |
 
 ## Flagged records
 
 | Question ID | Technology | Status | Reasons |
 |---|---|---|---|
-| candidate-aws-api-gateway-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-api-gateway-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-api-gateway-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-api-gateway-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-api-gateway-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-autoscaling-elb-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-backup-dr-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-backup-dr-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-backup-dr-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-backup-dr-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-backup-dr-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cloudformation-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-cloudformation-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-cloudformation-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-cloudformation-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-cloudformation-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-cloudwatch-cloudtrail-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cloudwatch-cloudtrail-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cloudwatch-cloudtrail-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cloudwatch-cloudtrail-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cloudwatch-cloudtrail-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-cost-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-dynamodb-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-dynamodb-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-dynamodb-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-dynamodb-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-dynamodb-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ebs-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-ebs-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-ebs-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-ebs-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-ebs-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-ec2-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ec2-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ec2-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ec2-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ec2-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ec2-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-ecs-eks-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-policies-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-policies-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-policies-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-policies-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-iam-policies-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-kms-secrets-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-kms-secrets-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-kms-secrets-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-kms-secrets-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-kms-secrets-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-lambda-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-lambda-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-lambda-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-lambda-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-lambda-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-organizations-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-rds-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-rds-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-rds-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-rds-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-rds-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-route53-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-s3-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-s3-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-s3-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-s3-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-s3-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-s3-security-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-s3-security-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-s3-security-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-s3-security-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-s3-security-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-security-groups-nacls-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-security-groups-nacls-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-security-groups-nacls-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-security-groups-nacls-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-security-groups-nacls-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-shared-responsibility-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-shared-responsibility-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-shared-responsibility-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-shared-responsibility-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-shared-responsibility-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-01 | aws | disputed | generic-template-answer, generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sns-eventbridge-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-sqs-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-sqs-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-sqs-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-sqs-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-sqs-06 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-vpc-02 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-vpc-03 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-vpc-04 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-vpc-05 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-vpc-06 | aws | disputed | generic-expanded-explanation, missing-required-concepts |
-| candidate-aws-well-architected-02 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-well-architected-03 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-well-architected-04 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-well-architected-05 | aws | disputed | generic-expanded-explanation |
-| candidate-aws-well-architected-06 | aws | disputed | generic-expanded-explanation |
 | candidate-databricks-auto-loader-02 | databricks | disputed | generic-expanded-explanation, missing-required-concepts |
 | candidate-databricks-auto-loader-03 | databricks | disputed | generic-expanded-explanation, missing-required-concepts |
 | candidate-databricks-auto-loader-04 | databricks | disputed | generic-expanded-explanation, missing-required-concepts |

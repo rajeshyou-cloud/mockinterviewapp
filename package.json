@@ -12,6 +12,7 @@
     "review:benchmarks": "node scripts/review-benchmark-packets.mjs",
     "triage:benchmarks": "node scripts/static-benchmark-triage.mjs",
     "export:rereview-packets": "node scripts/export-compact-rereview-packets.mjs",
+    "remediate:benchmarks": "node scripts/remediate-generic-benchmarks.mjs",
     "validate:benchmarks": "node scripts/validate-benchmarks.mjs"
   }
 }

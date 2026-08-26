@@ -17,6 +17,9 @@ Use this skill whenever the user asks to review benchmark answers, review eviden
    - `npm run export:evidence-packets`
 3. Prefer the cost-controlled path before paid model calls:
    - `npm run triage:benchmarks`
+   - If repeated generic/template issues are present, remediate locally first:
+     - `npm run remediate:benchmarks -- --technology=<technology> --dry-run`
+     - `npm run remediate:benchmarks -- --technology=<technology>`
    - `npm run export:rereview-packets`
    - Use compact review for disputed/draft/rejected records:
      - `npm run review:benchmarks:auto -- --provider=openai --technology=<technology> --limit=all --compact --test`
