@@ -13580,15 +13580,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the infrastructure-as-code question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },
@@ -14741,15 +14745,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the reliability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },
@@ -14846,15 +14854,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the reliability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },
@@ -14951,15 +14963,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the reliability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },
@@ -15056,15 +15072,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the reliability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },
@@ -15161,15 +15181,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the reliability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-26"
       }
     }
   },

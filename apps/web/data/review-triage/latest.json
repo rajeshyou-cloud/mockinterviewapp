@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-08-26T12:36:10.359Z",
+    "generatedAt": "2026-08-26T12:45:35.893Z",
     "filters": {
       "technology": "all",
       "onlyStatus": [
@@ -13,14 +13,14 @@
     },
     "totalInspected": 1050,
     "totalFlaggedRecords": 0,
-    "totalSelectedRecords": 713,
+    "totalSelectedRecords": 707,
     "byTechnology": {
       "snowflake": {
         "selected": 147,
         "flagged": 0
       },
       "aws": {
-        "selected": 132,
+        "selected": 126,
         "flagged": 0
       },
       "databricks": {
@@ -37,7 +37,7 @@
       }
     },
     "byStatus": {
-      "draft": 713
+      "draft": 707
     },
     "byReason": {}
   },
@@ -3151,18 +3151,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-aws-cloudformation-03",
-      "technology": "aws",
-      "topic": "infrastructure-as-code",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-aws-cloudformation-04",
       "technology": "aws",
       "topic": "infrastructure-as-code",
@@ -3255,66 +3243,6 @@
       "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-backup-dr-02",
-      "technology": "aws",
-      "topic": "reliability",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-backup-dr-03",
-      "technology": "aws",
-      "topic": "reliability",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-backup-dr-04",
-      "technology": "aws",
-      "topic": "reliability",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-backup-dr-05",
-      "technology": "aws",
-      "topic": "reliability",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-backup-dr-06",
-      "technology": "aws",
-      "topic": "reliability",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
       "reasonCodes": [],
       "reasons": []
     },

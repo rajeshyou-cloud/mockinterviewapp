@@ -1,17 +1,17 @@
 # Static Benchmark Triage Report
 
-Generated: 2026-08-26T12:36:10.359Z
+Generated: 2026-08-26T12:45:35.893Z
 Technology: all
 Statuses: draft, disputed, rejected, stale, reviewing
 
-Selected records: 713
+Selected records: 707
 Records with local flags: 0
 
 ## By technology
 
 | Technology | Selected | Flagged |
 |---|---:|---:|
-| aws | 132 | 0 |
+| aws | 126 | 0 |
 | databricks | 134 | 0 |
 | power-bi | 150 | 0 |
 | python | 150 | 0 |
