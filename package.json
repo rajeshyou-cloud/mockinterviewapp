@@ -10,6 +10,8 @@
     "import:benchmark-reviews": "node scripts/import-benchmark-reviews.mjs",
     "review:benchmarks:auto": "node scripts/automate-benchmark-review.mjs",
     "review:benchmarks": "node scripts/review-benchmark-packets.mjs",
+    "triage:benchmarks": "node scripts/static-benchmark-triage.mjs",
+    "export:rereview-packets": "node scripts/export-compact-rereview-packets.mjs",
     "validate:benchmarks": "node scripts/validate-benchmarks.mjs"
   }
 }

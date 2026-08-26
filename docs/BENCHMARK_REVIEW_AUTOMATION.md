@@ -2,6 +2,53 @@
 
 This project can review benchmark answers automatically with ChatGPT/OpenAI, Vercel AI Gateway, or Claude/Anthropic, then import only consensus-valid results into the benchmark gate.
 
+## Cost-control workflow
+
+Use the static and compact workflow before any paid review. The goal is to stop paying an AI model to rediscover mechanical issues that code can detect locally.
+
+Recommended sequence:
+
+1. Export full evidence packets.
+2. Run static triage to group obvious issues.
+3. Fix bulk generator/template issues in the benchmark source data.
+4. Export compact `sentforrereview` packets for only `draft`, `disputed`, and `rejected` records.
+5. Run a cheap-model review on compact packets.
+6. Use a stronger model only for rejects, disagreements, launch-critical samples, or final pack sign-off.
+
+Commands:
+
+```bash
+npm run export:evidence-packets
+npm run triage:benchmarks
+npm run export:rereview-packets
+```
+
+The static triage report is written to:
+
+- `apps/web/data/review-triage/latest.md`
+- `apps/web/data/review-triage/latest.json`
+
+Compact re-review packets are written to:
+
+- `apps/web/data/evidence-packets-compact/<technology>-sentforrereview-compact.jsonl`
+- `apps/web/data/evidence-packets-compact/<technology>.jsonl`
+
+The `sentforrereview` file is for upload/review handoff. The plain `<technology>.jsonl` file is the runner-friendly path used by the automated review script.
+
+Run the automated review against compact packets:
+
+```bash
+npm run review:benchmarks:auto -- --provider=openai --technology=aws --limit=all --compact --test
+```
+
+Dry-run first to confirm that the compact packet path is wired correctly and no credits will be spent:
+
+```bash
+npm run review:benchmarks:auto -- --provider=openai --technology=aws --limit=2 --compact --dry-run
+```
+
+Do not use compact review as an excuse to lower the launch gate. Candidate packs still remain blocked until every benchmark in that pack is `ai-evidence-verified` or `human-verified`.
+
 ## What the automation does
 
 1. Re-exports current evidence packets from the question bank.
@@ -87,6 +134,7 @@ npm run review:benchmarks:auto -- --provider=anthropic --technology=python --lim
 - `--no-import` writes review files but does not import them.
 - `--test` runs the web test suite after validation.
 - `--dry-run` checks packet loading and configuration without spending API credits.
+- `--compact` runs static triage, exports compact re-review packets, and reviews those smaller packets.
 
 ## Re-review loop
 
@@ -99,7 +147,9 @@ When review output contains `disputed` or `rejected`:
 
 ```bash
 npm run export:evidence-packets
-npm run review:benchmarks:auto -- --provider=openai --technology=<technology> --only-status=draft --limit=all --test
+npm run triage:benchmarks -- --technology=<technology>
+npm run export:rereview-packets -- --technology=<technology> --only-status=draft
+npm run review:benchmarks:auto -- --provider=openai --technology=<technology> --only-status=draft --limit=all --compact --test
 ```
 
 ## Launch gate

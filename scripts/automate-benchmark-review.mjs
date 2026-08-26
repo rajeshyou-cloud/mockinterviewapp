@@ -24,6 +24,7 @@ const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const shouldImport = !args.includes('--no-import');
 const shouldTest = args.includes('--test');
+const compact = args.includes('--compact');
 const provider = args.find((arg) => arg.startsWith('--provider='))?.split('=')[1] ?? process.env.REVIEW_PROVIDER ?? 'openai';
 const technologyArg = args.find((arg) => arg.startsWith('--technology='))?.split('=')[1] ?? 'all';
 const onlyStatus = args.find((arg) => arg.startsWith('--only-status='))?.split('=')[1] ?? 'draft,disputed';
@@ -80,9 +81,14 @@ console.log(JSON.stringify({
   concurrency,
   import: shouldImport,
   test: shouldTest,
+  compact,
 }, null, 2));
 
 run('npm', ['run', 'export:evidence-packets']);
+if (compact) {
+  run('npm', ['run', 'triage:benchmarks']);
+  run('npm', ['run', 'export:rereview-packets', '--', `--technology=${technologyArg}`, `--only-status=${onlyStatus}`, `--limit=${limit}`]);
+}
 
 const technologies = await resolveTechnologies();
 
@@ -97,6 +103,7 @@ for (const technology of technologies) {
     `--limit=${limit}`,
     `--concurrency=${concurrency}`,
   ];
+  if (compact) reviewArgs.push('--packet-dir=apps/web/data/evidence-packets-compact');
 
   if (dryRun) {
     reviewArgs.push('--dry-run');

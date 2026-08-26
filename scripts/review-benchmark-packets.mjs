@@ -50,6 +50,7 @@ const limitArg = process.argv.find((arg) => arg.startsWith('--limit='))?.split('
 const limit = limitArg === 'all' ? Number.POSITIVE_INFINITY : Number.parseInt(limitArg, 10);
 const offset = Number.parseInt(process.argv.find((arg) => arg.startsWith('--offset='))?.split('=')[1] ?? '0', 10);
 const outputName = process.argv.find((arg) => arg.startsWith('--output-name='))?.split('=')[1];
+const packetDir = process.argv.find((arg) => arg.startsWith('--packet-dir='))?.split('=')[1] ?? 'apps/web/data/evidence-packets';
 const onlyStatusArg = process.argv.find((arg) => arg.startsWith('--only-status='))?.split('=')[1];
 const onlyStatuses = onlyStatusArg ? new Set(onlyStatusArg.split(',').map((status) => status.trim()).filter(Boolean)) : null;
 const concurrency = Math.max(1, Number.parseInt(process.argv.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '1', 10));
@@ -180,7 +181,7 @@ function combineReviews(packet, primary, critic) {
 
 requireLiveModels();
 
-const packetPath = `apps/web/data/evidence-packets/${technologyArg}.jsonl`;
+const packetPath = `${packetDir.replace(/[\\/]+$/, '')}/${technologyArg}.jsonl`;
 const packets = (await readFile(packetPath, 'utf8'))
   .trim()
   .split('\n')
@@ -195,6 +196,7 @@ if (dryRun) {
     mode: 'dry-run',
     provider: providerArg,
     technology: technologyArg,
+    packetPath,
     onlyStatuses: onlyStatuses ? [...onlyStatuses] : 'all',
     offset,
     limit: limitArg,
