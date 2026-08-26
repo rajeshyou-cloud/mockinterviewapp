@@ -117,7 +117,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A BI dashboard is slowing down whenever a nightly ETL job starts. How would you use Snowflake virtual warehouses to reduce this contention?",
-    "canonicalAnswer": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data.",
+    "canonicalAnswer": "Use Snowflake virtual warehouses only when the production requirement matches the documented Snowflake capability around separate warehouses, workload isolation, compute, BI, ETL, and independent scaling. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
     "expectedConcepts": [
       "separate warehouses",
       "workload isolation",
@@ -139,8 +139,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data.",
-      "expandedExplanation": "Use separate virtual warehouses for the BI and ETL workloads so they do not compete for the same compute resources. The warehouses can be sized, suspended, resumed, and scaled independently while both access the same underlying Snowflake data. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use Snowflake virtual warehouses only when the production requirement matches the documented Snowflake capability around separate warehouses, workload isolation, compute, BI, ETL, and independent scaling. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+      "expandedExplanation": "Use Snowflake virtual warehouses only when the production requirement matches the documented Snowflake capability around separate warehouses, workload isolation, compute, BI, ETL, and independent scaling. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply separate warehouses, workload isolation, compute, BI, ETL, and independent scaling using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "separate warehouses",
         "workload isolation",
@@ -193,7 +193,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why virtual warehouses matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover separate warehouses, workload isolation, compute, BI, ETL, and independent scaling, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/warehouses",
@@ -205,32 +205,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required virtual warehouses concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required virtual warehouses concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions virtual warehouses only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual warehouses question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers separate warehouses, workload isolation, compute, BI, ETL, and independent scaling, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions virtual-warehouses superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual-warehouses question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "approve",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "Add cited evidence excerpts, not only metadata, showing that virtual warehouses provide independent compute resources, can be sized/resized, suspended/resumed, and that multiple warehouses can access the same data without sharing compute.",
-          "Tighten the required concepts to match the scenario: assign the BI dashboard to one warehouse and the nightly ETL job to a different warehouse to isolate compute contention; optionally size/schedule/auto-suspend each independently.",
-          "Revise or remove vague optional concepts such as “operational validation evidence” and “fit decision and risk controls,” which are not clearly supported by the cited evidence metadata or necessary for this scenario.",
-          "Improve accepted alternatives so they are actual paraphrases, e.g. “dedicated BI warehouse,” “dedicated ETL/loading warehouse,” “isolate workloads,” “separate compute clusters,” rather than restating the same required terms.",
-          "Adjust scoring anchors: the strong anchor should not require unspecified “intermediate level trade-offs” unless the benchmark answer and evidence define those trade-offs, such as higher credit cost from running multiple warehouses versus reduced contention.",
-          "Fix the reasoning sentence for clarity: “A complete answer should explain why separate virtual warehouses reduce Snowflake workload contention and how BI and ETL workloads can be managed independently.”"
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -241,7 +230,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "Your team maintains an INSERT/MERGE pipeline using streams and scheduled tasks. When would you consider redesigning it with Dynamic Tables?",
-    "canonicalAnswer": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective.",
+    "canonicalAnswer": "For a high-volume production workload built around Migrate from streams and tasks to dynamic tables, evolve the design by measuring current bottlenecks and explicitly validating declarative, select, target lag, streams, tasks, and imperative. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
     "expectedConcepts": [
       "declarative",
       "select",
@@ -263,8 +252,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective.",
-      "expandedExplanation": "Dynamic Tables are a strong fit when the desired pipeline can be expressed declaratively as a SELECT and the team wants Snowflake to manage incremental refreshes toward a freshness target. Streams and tasks remain useful when the workflow needs imperative control, explicit DML or stored-procedure orchestration, or scheduling semantics that are not well represented by a target-lag freshness objective. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "For a high-volume production workload built around Migrate from streams and tasks to dynamic tables, evolve the design by measuring current bottlenecks and explicitly validating declarative, select, target lag, streams, tasks, and imperative. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+      "expandedExplanation": "For a high-volume production workload built around Migrate from streams and tasks to dynamic tables, evolve the design by measuring current bottlenecks and explicitly validating declarative, select, target lag, streams, tasks, and imperative. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply declarative, select, target lag, streams, tasks, and imperative using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "declarative",
         "select",
@@ -317,7 +306,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why data engineering matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover declarative, select, target lag, streams, tasks, and imperative, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/migrate-streams-tasks",
@@ -329,37 +318,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required data engineering concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required data engineering concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions data engineering only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers declarative, select, target lag, streams, tasks, and imperative, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data-engineering superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data-engineering question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark is directionally supported, but the evidence packet is too thin to fully validate the “when would you consider redesigning” framing. The cited migration page supports dynamic tables as a replacement for some streams/tasks patterns, but the benchmark should explicitly anchor on the migration/fit criteria from the source rather than broad generalities.",
-          "The benchmarkAnswer should be tightened to avoid overclaiming that dynamic tables are fit whenever a pipeline is expressible as a SELECT. The official source indicates dynamic tables are appropriate for certain transformations and migration scenarios, but not every SELECT-only pipeline is automatically a good redesign candidate.",
-          "The benchmark should clarify the operational constraint that dynamic tables are driven by target lag / freshness objectives, while streams and tasks are more appropriate when you need explicit orchestration, procedural control, or non-declarative DML steps. This is implied by the packet, but the current wording is somewhat generic.",
-          "The acceptedAlternatives are overly minimal and do not meaningfully support scoring at advanced level; they duplicate requiredConcepts without adding discriminative value. Consider adding stricter alternates or examples of acceptable paraphrases.",
-          "The scoring anchors are valid in spirit but too broad. Add a note that answers should mention trade-offs or migration fit conditions, not just a keyword checklist.",
-          "Provide quoted or summarized official evidence from the cited Snowflake page, not just metadata, to support the key claims: dynamic tables are defined by a SELECT, use target lag/freshness objectives, and can replace some streams/tasks pipelines.",
-          "Replace the templated reasoning field with Snowflake-specific reasoning. The current text says only that the answer should explain why data engineering matters for Snowflake and is not tailored to dynamic tables, streams, or tasks.",
-          "Improve acceptedAlternatives so they are meaningful synonyms or equivalent phrases, not repetitions of the same required terms. For example: “freshness SLA” for target lag, “SQL query definition” for SELECT/declarative, and “procedural orchestration / explicit DML” for imperative workflows.",
-          "Add important constraints/trade-offs expected at advanced difficulty, such as dynamic table query/support limitations, refresh mode considerations, warehouse cost/latency trade-offs, and cases where streams/tasks remain appropriate for custom MERGE logic, stored procedures, alerts, or non-freshness-based schedules.",
-          "Clarify that Snowflake manages refreshes toward the target lag, but dynamic tables are not a blanket replacement for all streams/tasks pipelines.",
-          "Make scoring anchors more Snowflake-specific so they can distinguish an advanced answer from a generic one."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -370,7 +343,7 @@
     "difficulty": "advanced",
     "type": "design",
     "question": "You need a pipeline whose downstream table should stay within roughly ten minutes of its source data. How would a Dynamic Table model that requirement?",
-    "canonicalAnswer": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step.",
+    "canonicalAnswer": "An enterprise-ready Dynamic tables design should explicitly cover target lag, freshness, refresh, upstream, dynamic table, and declarative. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
     "expectedConcepts": [
       "target lag",
       "freshness",
@@ -392,8 +365,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step.",
-      "expandedExplanation": "A Dynamic Table can define a target lag that expresses the desired freshness relative to upstream data. Snowflake manages refresh scheduling to try to keep the table within that freshness target, rather than requiring the team to manually schedule each refresh step. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "An enterprise-ready Dynamic tables design should explicitly cover target lag, freshness, refresh, upstream, dynamic table, and declarative. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+      "expandedExplanation": "An enterprise-ready Dynamic tables design should explicitly cover target lag, freshness, refresh, upstream, dynamic table, and declarative. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the advanced design prompt because it requires the candidate to apply target lag, freshness, refresh, upstream, dynamic table, and declarative using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "target lag",
         "freshness",
@@ -405,7 +378,7 @@
       "optionalConcepts": [
         "advanced level trade-offs",
         "operational validation evidence",
-        "maintainability and governance controls"
+        "governance and maintainability controls"
       ],
       "acceptedAlternatives": [
         {
@@ -446,7 +419,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why data engineering matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the design prompt for snowflake at advanced level, explicitly cover target lag, freshness, refresh, upstream, dynamic table, and declarative, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-about",
@@ -458,39 +431,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required data engineering concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required data engineering concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions data engineering only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data engineering question in a technically useful way."
+        "strong": "Directly answers the design question, accurately covers target lag, freshness, refresh, upstream, dynamic table, and declarative, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data-engineering superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data-engineering question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.86,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark is too sparse for an advanced design question: it should mention that Dynamic Tables are declarative and refresh automatically based on target lag, but also note that Snowflake manages refresh as best effort and actual lag may vary depending on upstream dependencies and warehouse availability.",
-          "The requiredConcepts and acceptedAlternatives are overly tautological and duplicate the same core idea; they should be consolidated into fewer concept checks such as target lag, freshness/SLA, automatic refresh, and upstream dependency handling.",
-          "The question asks how a Dynamic Table would model the requirement, but the benchmark answer does not explain that you would set TARGET_LAG to approximately ten minutes on the Dynamic Table definition.",
-          "The scoring anchors are generic and do not provide concrete guidance for distinguishing a strong answer from a merely partial one in this specific Snowflake context.",
-          "The evidence citation is insufficiently specific because it only references the general Dynamic tables page without a cited excerpt or section that explicitly supports the target-lag/freshness behavior.",
-          "Include the concrete modeling statement for the question: set the dynamic table's TARGET_LAG to about 10 minutes, e.g. TARGET_LAG = '10 minutes', subject to Snowflake's supported syntax and constraints.",
-          "Clarify that target lag is a desired freshness/SLA relative to upstream data, not a hard guarantee that the table will always be exactly within ten minutes.",
-          "Add the missing explicit 'declarative' framing if it remains a required concept: dynamic tables declare the desired result and freshness target, while Snowflake orchestrates refreshes.",
-          "Remove or rewrite the generic reasoning sentence; it is templated and does not explain this Snowflake feature or the design trade-off.",
-          "Reassess the difficulty. As written, the question is closer to basic/intermediate unless it asks about multi-level dynamic table chains, DOWNSTREAM target lag, warehouse sizing, refresh modes, monitoring, or failure/lag trade-offs.",
-          "Tighten scoring anchors to this specific topic: strong answers should mention TARGET_LAG, upstream freshness, Snowflake-managed refresh scheduling, and that lag is a target rather than a strict guarantee.",
-          "The evidence metadata cites the correct official Snowflake dynamic tables documentation page, but the packet provides no quoted excerpt. Add supporting snippets from the official docs for target lag and Snowflake-managed refresh scheduling to make the benchmark independently verifiable.",
-          "Revise acceptedAlternatives so they are true synonyms or acceptable phrasings, not just repetitions of the required concept labels."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },

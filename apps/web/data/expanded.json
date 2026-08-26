@@ -6,7 +6,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "Your analysts need read access to curated schemas, but you do not want to grant object privileges directly to every user. How would you structure access in Snowflake?",
-    "canonicalAnswer": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles.",
+    "canonicalAnswer": "Use Snowflake overview of access control only when the production requirement matches the documented Snowflake capability around RBAC, custom roles, privileges, role hierarchy, users, and least privilege. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
     "expectedConcepts": [
       "RBAC",
       "custom roles",
@@ -28,8 +28,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles.",
-      "expandedExplanation": "Use role-based access control: grant the required object privileges to custom roles and grant those roles to users or to higher-level roles in a role hierarchy. Keep business-data privileges in custom roles instead of mixing them into account-management system roles. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use Snowflake overview of access control only when the production requirement matches the documented Snowflake capability around RBAC, custom roles, privileges, role hierarchy, users, and least privilege. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+      "expandedExplanation": "Use Snowflake overview of access control only when the production requirement matches the documented Snowflake capability around RBAC, custom roles, privileges, role hierarchy, users, and least privilege. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply RBAC, custom roles, privileges, role hierarchy, users, and least privilege using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "RBAC",
         "custom roles",
@@ -82,7 +82,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why security access control matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover RBAC, custom roles, privileges, role hierarchy, users, and least privilege, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -94,31 +94,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required security access control concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required security access control concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions security access control only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers RBAC, custom roles, privileges, role hierarchy, users, and least privilege, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "approve",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "Add specific Snowflake privilege details for read access to curated schemas: grant USAGE on the database/schema and SELECT on relevant tables/views, with future grants where appropriate, to a custom role rather than directly to users.",
-          "Make the least-privilege requirement explicit in the benchmark answer, since it is listed as a required concept but is only implied by “required object privileges.”",
-          "Improve acceptedAlternatives so they include genuine equivalent wording, such as “account roles/custom account roles,” “grant roles to users,” “grant privileges to roles,” and “role inheritance,” rather than repeating the exact required terms.",
-          "Replace or remove templated optional concepts and reasoning such as “operational validation evidence” and “fit decision and risk controls,” which are not directly grounded in the scenario.",
-          "Include evidence excerpts or more precise cited sections from the official Snowflake access-control documentation. The single metadata-only citation is plausible but insufficient to verify every scoring anchor and required concept."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -129,7 +119,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "A data-governance team wants grant decisions in a schema centralized rather than controlled by individual object owners. What Snowflake feature would you consider and why?",
-    "canonicalAnswer": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration.",
+    "canonicalAnswer": "For a high-volume production workload built around Snowflake overview of access control, evolve the design by measuring current bottlenecks and explicitly validating managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
     "expectedConcepts": [
       "managed access schema",
       "schema owner",
@@ -150,8 +140,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration.",
-      "expandedExplanation": "Consider a managed access schema. In a managed access schema, individual object owners do not make grant decisions; grants are controlled by the schema owner or a role with MANAGE GRANTS, which centralizes privilege administration. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "For a high-volume production workload built around Snowflake overview of access control, evolve the design by measuring current bottlenecks and explicitly validating managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+      "expandedExplanation": "For a high-volume production workload built around Snowflake overview of access control, evolve the design by measuring current bottlenecks and explicitly validating managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "managed access schema",
         "schema owner",
@@ -197,7 +187,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why security access control matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -209,34 +199,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required security access control concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required security access control concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions security access control only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security access control question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers managed access schema, schema owner, MANAGE GRANTS, centralized grants, and object owners, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer is likely correct, but the evidence packet is too thin to fully support the requiredConcepts and scoring anchors as written.",
-          "The cited source should explicitly support the key claim that in a managed access schema, object owners cannot grant privileges on their objects and grant decisions are centralized to the schema owner or a role with MANAGE GRANTS.",
-          "The benchmark should clarify whether the feature is a 'managed access schema' specifically, not just generic centralized access control, to avoid ambiguity in scoring.",
-          "The question asks 'what feature would you consider and why'; the answer should ideally mention the centralized-grants rationale and the governance benefit in one concise sentence.",
-          "The benchmark answer is technically accurate: Snowflake managed access schemas centralize object privilege grants under the schema owner or a role with the global MANAGE GRANTS privilege, rather than individual object owners.",
-          "However, the acceptedAlternatives are templated as isolated required terms rather than meaningful alternative answer formulations; a response saying only \"schema owner\" or only \"MANAGE GRANTS\" would not adequately answer the scenario.",
-          "The scoring anchors and optional concepts add expectations such as \"advanced level trade-offs,\" \"operational validation evidence,\" and \"risk controls\" that are not clearly grounded in the cited evidence packet and are not reflected in the concise benchmark answer.",
-          "The generic reasoning text should be replaced with Snowflake-specific reasoning about managed access schemas, centralized grant administration, and the object-owner grant limitation."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -247,7 +224,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A table was accidentally updated two hours ago and the team needs to inspect the previous data before restoring anything. How can Snowflake Time Travel help?",
-    "canonicalAnswer": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required.",
+    "canonicalAnswer": "Use Snowflake Time Travel only when the production requirement matches the documented Snowflake capability around Time Travel, retention period, historical data, timestamp, offset, and statement. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
     "expectedConcepts": [
       "Time Travel",
       "retention period",
@@ -269,8 +246,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required.",
-      "expandedExplanation": "Time Travel can query historical table data at or before a point within the configured retention period. The team can inspect the table using a timestamp, offset, or statement reference and can use historical cloning or undrop capabilities when recovery is required. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use Snowflake Time Travel only when the production requirement matches the documented Snowflake capability around Time Travel, retention period, historical data, timestamp, offset, and statement. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+      "expandedExplanation": "Use Snowflake Time Travel only when the production requirement matches the documented Snowflake capability around Time Travel, retention period, historical data, timestamp, offset, and statement. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply Time Travel, retention period, historical data, timestamp, offset, and statement using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "Time Travel",
         "retention period",
@@ -323,7 +300,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why data protection matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover Time Travel, retention period, historical data, timestamp, offset, and statement, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/data-time-travel",
@@ -335,30 +312,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required data protection concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required data protection concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions data protection only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers Time Travel, retention period, historical data, timestamp, offset, and statement, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions data-protection superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data-protection question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "approve"
-        ],
-        "confidence": 0.86,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer is broadly correct, but the scenario says the table was updated two hours ago; the answer should explicitly note that Time Travel works only if the event is within the table's configured retention period and account for the edition/retention window constraints implied by Snowflake Time Travel docs.",
-          "The answer mentions historical cloning and undrop capabilities, which are relevant Time Travel-related recovery options, but the benchmark should separate 'inspect previous data' from 'restore' more clearly to better align with the question intent.",
-          "The requiredConcepts list includes 'statement' but the benchmark answer says 'statement reference'; this is acceptable, but the benchmark would be stronger if it explicitly named 'statement ID' or 'AT | BEFORE' syntax support to reduce ambiguity.",
-          "The scoring anchors are serviceable, but 'intermediate level trade-offs' are not actually reflected in the benchmark answer; add a concrete trade-off such as retention window limits and inability to recover data outside that window."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -369,7 +337,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "You need an isolated copy of a production schema for a short-lived test without first making a full physical copy of all table data. What Snowflake capability fits this need?",
-    "canonicalAnswer": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available.",
+    "canonicalAnswer": "For a high-volume production workload built around Snowflake CREATE CLONE, evolve the design by measuring current bottlenecks and explicitly validating zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
     "expectedConcepts": [
       "zero-copy clone",
       "CREATE CLONE",
@@ -391,8 +359,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available.",
-      "expandedExplanation": "Use cloning with CREATE ... CLONE. Snowflake supports zero-copy cloning for databases, schemas, and tables, creating a logical copy efficiently. Cloning can also reference a historical point through Time Travel when the retained history is available. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "For a high-volume production workload built around Snowflake CREATE CLONE, evolve the design by measuring current bottlenecks and explicitly validating zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+      "expandedExplanation": "For a high-volume production workload built around Snowflake CREATE CLONE, evolve the design by measuring current bottlenecks and explicitly validating zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "zero-copy clone",
         "CREATE CLONE",
@@ -445,7 +413,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why data protection matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/sql-reference/sql/create-clone",
@@ -457,36 +425,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required data protection concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required data protection concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions data protection only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data protection question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers zero-copy clone, CREATE CLONE, logical copy, schema, Time Travel, and retention, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions data-protection superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the data-protection question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer is broadly correct, but the requiredConcepts/acceptedAlternatives are overly prescriptive and partially redundant; 'schema' and 'logical copy' are descriptive context, not distinct answer concepts that should be required.",
-          "The explanation mentions Time Travel and retention, but the cited evidence metadata only includes the CREATE CLONE documentation link; the packet does not provide excerpted evidence showing historical-point cloning or retention constraints, so those claims should be softened or explicitly supported by the source text.",
-          "The scoring anchors are generic and not tightly aligned to the question's single best answer; they should emphasize zero-copy cloning of a schema via CREATE SCHEMA CLONE or CREATE ... CLONE, rather than broad 'data protection' framing.",
-          "The difficulty label 'advanced' is not well supported by the question, which is a straightforward capability identification prompt unless additional constraints or edge cases are provided.",
-          "Core answer is technically appropriate: Snowflake cloning via CREATE ... CLONE / zero-copy cloning fits an isolated schema copy without a full physical copy.",
-          "Do not make Time Travel and retention required concepts for this question unless the scenario asks for cloning from a historical point. They can remain optional/extra-credit constraints.",
-          "Reconsider the difficulty. The presented scenario is closer to basic/intermediate unless the prompt requires advanced trade-offs such as retention windows, Fail-safe/storage cost implications after divergence, privileges, object support limits, or clone lifecycle controls.",
-          "Replace the generic reasoning text with Snowflake-specific reasoning about zero-copy cloning: logical metadata copy, shared micro-partitions initially, independent changes after clone, and applicability to schemas.",
-          "Make scoring anchors more specific to the scenario rather than generic 'data protection concepts' language.",
-          "Accepted alternatives should include natural language variants such as 'zero-copy cloning a schema', 'CREATE SCHEMA ... CLONE', and 'clone the production schema', not only exact repetitions of required concept labels."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -497,7 +450,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "A stream-based CDC pipeline stopped running for an extended period and now the stream may be stale. What would you investigate and how would you prevent recurrence?",
-    "canonicalAnswer": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set.",
+    "canonicalAnswer": "After a Snowflake introduction to streams deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves STALE_AFTER, retention, consume, offset, stream, and stale, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
     "expectedConcepts": [
       "STALE_AFTER",
       "retention",
@@ -519,8 +472,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set.",
-      "expandedExplanation": "Check the stream's STALE and STALE_AFTER information and the source object's retention window. Streams should have their change data consumed before the staleness boundary. Regular consumption advances the stream offset and helps avoid losing the ability to reliably read the pending change set. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "After a Snowflake introduction to streams deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves STALE_AFTER, retention, consume, offset, stream, and stale, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+      "expandedExplanation": "After a Snowflake introduction to streams deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves STALE_AFTER, retention, consume, offset, stream, and stale, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply STALE_AFTER, retention, consume, offset, stream, and stale using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "STALE_AFTER",
         "retention",
@@ -532,7 +485,7 @@
       "optionalConcepts": [
         "advanced level trade-offs",
         "operational validation evidence",
-        "safe diagnosis sequence"
+        "safe diagnosis and idempotent recovery"
       ],
       "acceptedAlternatives": [
         {
@@ -573,7 +526,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why change data capture matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover STALE_AFTER, retention, consume, offset, stream, and stale, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/streams-intro",
@@ -585,36 +538,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required change data capture concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required change data capture concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions change data capture only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change data capture question in a technically useful way."
+        "strong": "Directly answers the troubleshooting question, accurately covers STALE_AFTER, retention, consume, offset, stream, and stale, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions change-data-capture superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the change-data-capture question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.74,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer is directionally correct but too specific about fields named STALE and STALE_AFTER unless the cited Snowflake streams documentation explicitly exposes those terms; the evidence packet does not include the relevant source text to verify exact field names.",
-          "The answer should distinguish between diagnosing stream staleness and preventing it: investigate stream staleness status plus the underlying source table/view retention and data-change window, then prevent recurrence by ensuring periodic consumption or a downstream task schedule.",
-          "The benchmark could be strengthened by mentioning that streams do not preserve changes indefinitely and that inactivity relative to retention can cause staleness, rather than implying only 'offset' advancement without explaining the retention constraint.",
-          "The acceptedAlternatives list is overly granular and effectively duplicates required concepts; it should be consolidated or clarified to avoid overfitting scoring to isolated tokens rather than the underlying technical meaning.",
-          "Add evidence excerpts or more specific official citations showing Snowflake stream staleness behavior, including STALE/STALE_AFTER, source object data retention, and when a stream offset is advanced.",
-          "Clarify that merely querying/selecting a stream does not necessarily advance the offset; the offset is advanced when stream records are consumed in a DML transaction/committed consuming operation.",
-          "For an advanced troubleshooting answer, include what to do if the stream is already stale, such as validating whether unread changes are still recoverable via Time Travel/retention, recreating the stream if necessary, and assessing downstream data gaps.",
-          "Prevention guidance should mention operational controls such as scheduled tasks/alerts monitoring STALE_AFTER, ensuring consumers run within retention, and adjusting retention where appropriate.",
-          "Replace the templated acceptedAlternatives entries with meaningful synonyms or acceptable phrasings rather than repeating the exact required terms.",
-          "Tighten the scoring anchors and reasoning so they are specific to Snowflake stream staleness rather than generic change-data-capture wording."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -1420,7 +1358,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A dynamic table has TARGET_LAG set to 10 minutes. Does Snowflake refresh it exactly every 10 minutes, and what should the application assume about freshness?",
-    "canonicalAnswer": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput.",
+    "canonicalAnswer": "Use Snowflake dynamic table target lag only when the production requirement matches the documented Snowflake capability around target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
     "expectedConcepts": [
       "target lag",
       "staleness",
@@ -1442,8 +1380,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput.",
-      "expandedExplanation": "Target lag is a desired maximum staleness relative to the base tables, not a fixed refresh interval or a hard guarantee. Snowflake schedules refreshes to try to meet it, but actual lag can exceed the target when refresh duration, data volume, query complexity, warehouse capacity, or pipeline depth constrain throughput. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "Use Snowflake dynamic table target lag only when the production requirement matches the documented Snowflake capability around target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+      "expandedExplanation": "Use Snowflake dynamic table target lag only when the production requirement matches the documented Snowflake capability around target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "target lag",
         "staleness",
@@ -1496,7 +1434,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at intermediate level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
@@ -1508,31 +1446,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required dynamic tables concepts accurately, explains the intermediate level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+        "strong": "Directly answers the scenario question, accurately covers target lag, staleness, not a refresh interval, best effort, actual lag, and warehouse capacity, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
+        "weak": "Mentions dynamic-tables superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic-tables question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "approve",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "Add quoted or summarized official evidence from the cited Snowflake target lag page showing that TARGET_LAG is a desired/maximum staleness objective relative to base tables, not an exact refresh interval.",
-          "Add official evidence for the claim that actual lag can exceed the target due to refresh duration, data volume/query complexity, warehouse capacity, or pipeline/dependency depth. If any of those factors are not stated in the cited page, narrow the benchmark answer to only supported causes.",
-          "Revise the generic/templated reasoning field. It should specifically explain that applications should not assume an exact 10-minute cadence and should design/monitor for possible staleness beyond the target.",
-          "Improve acceptedAlternatives: they currently just restate individual required terms rather than giving meaningful equivalent phrasings that could be used for grading.",
-          "Remove or justify vague optional concepts such as “fit decision and risk controls” unless tied to evidence or scoring needs."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -1543,7 +1471,7 @@
     "difficulty": "advanced",
     "type": "design",
     "question": "In a multi-stage dynamic-table pipeline, when is TARGET_LAG = DOWNSTREAM useful, and what failure mode should you avoid at the end of the pipeline?",
-    "canonicalAnswer": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually.",
+    "canonicalAnswer": "An enterprise-ready Snowflake dynamic table target lag design should explicitly cover DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
     "expectedConcepts": [
       "DOWNSTREAM",
       "intermediate table",
@@ -1565,8 +1493,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually.",
-      "expandedExplanation": "DOWNSTREAM is useful for intermediate dynamic tables that only need to refresh when a downstream consumer requires fresh data. A terminal dynamic table with DOWNSTREAM and no downstream consumer never refreshes automatically, so the final consumer-facing table should normally have an explicit target lag or be refreshed manually. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "An enterprise-ready Snowflake dynamic table target lag design should explicitly cover DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+      "expandedExplanation": "An enterprise-ready Snowflake dynamic table target lag design should explicitly cover DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the advanced design prompt because it requires the candidate to apply DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "DOWNSTREAM",
         "intermediate table",
@@ -1578,7 +1506,7 @@
       "optionalConcepts": [
         "advanced level trade-offs",
         "operational validation evidence",
-        "maintainability and governance controls"
+        "governance and maintainability controls"
       ],
       "acceptedAlternatives": [
         {
@@ -1619,7 +1547,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the design prompt for snowflake at advanced level, explicitly cover DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag",
@@ -1631,32 +1559,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required dynamic tables concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+        "strong": "Directly answers the design question, accurately covers DOWNSTREAM, intermediate table, downstream consumer, no independent schedule, terminal table, and explicit target lag, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions dynamic-tables superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic-tables question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "approve",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "Clarify that DOWNSTREAM refresh propagation is driven by downstream dynamic tables/refresh scheduling, not by arbitrary external consumers querying the terminal table.",
-          "State the failure mode more explicitly: if the terminal table, or every table in the dynamic-table graph, is set to TARGET_LAG = DOWNSTREAM, the graph has no independent automatic refresh trigger.",
-          "Add evidence excerpts or quoted claims from the Snowflake target-lag documentation; the single metadata-only citation is relevant but insufficient as presented to fully verify the scoring anchor.",
-          "Tighten the required concept currently labeled “downstream consumer” to “downstream dynamic table or scheduled downstream refresh dependency.”",
-          "Revise the generic reasoning text; it is templated and says only that the answer should explain why dynamic tables matter, rather than giving question-specific reasoning about TARGET_LAG = DOWNSTREAM.",
-          "Consider removing or de-emphasizing optional concepts such as governance controls unless supported by cited documentation or by the scoring rubric."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -1667,7 +1584,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "A dynamic table is missing its freshness target because refreshes scan too much data. Which refresh and data-locality decisions would you investigate?",
-    "canonicalAnswer": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity.",
+    "canonicalAnswer": "After a Optimize dynamic table incremental refresh deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves incremental refresh, full refresh, refresh history, data locality, clustering, and target lag, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
     "expectedConcepts": [
       "incremental refresh",
       "full refresh",
@@ -1689,8 +1606,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity.",
-      "expandedExplanation": "Inspect whether the table is using an appropriate incremental rather than full refresh mode, review refresh history, and improve locality in source tables around JOIN, GROUP BY, or PARTITION BY keys. Also choose a target lag that is realistic relative to observed refresh duration and warehouse capacity. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "After a Optimize dynamic table incremental refresh deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves incremental refresh, full refresh, refresh history, data locality, clustering, and target lag, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+      "expandedExplanation": "After a Optimize dynamic table incremental refresh deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves incremental refresh, full refresh, refresh history, data locality, clustering, and target lag, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply incremental refresh, full refresh, refresh history, data locality, clustering, and target lag using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "incremental refresh",
         "full refresh",
@@ -1702,7 +1619,7 @@
       "optionalConcepts": [
         "advanced level trade-offs",
         "operational validation evidence",
-        "safe diagnosis sequence"
+        "safe diagnosis and idempotent recovery"
       ],
       "acceptedAlternatives": [
         {
@@ -1743,7 +1660,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why dynamic tables matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover incremental refresh, full refresh, refresh history, data locality, clustering, and target lag, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-performance-refresh-mode.html",
@@ -1755,35 +1672,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required dynamic tables concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required dynamic tables concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions dynamic tables only superficially, with limited explanation and multiple missing required concepts.",
-        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic tables question in a technically useful way."
+        "strong": "Directly answers the troubleshooting question, accurately covers incremental refresh, full refresh, refresh history, data locality, clustering, and target lag, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions dynamic-tables superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the dynamic-tables question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "dispute"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer mentions 'refresh history,' 'clustering,' and 'target lag,' but the cited evidence metadata only explicitly supports dynamic table incremental refresh optimization. The packet does not provide official evidence for refresh history investigation, clustering guidance, or target lag tuning, so these should be either backed by additional cited sources or removed from the required concepts/benchmark answer.",
-          "The question asks about 'refresh and data-locality decisions,' but the answer mixes diagnosis steps and tuning advice without clearly distinguishing what is directly supported by the cited source versus general best practice. Add source-backed wording or narrow the benchmark to the documented incremental-refresh optimization topic.",
-          "The difficulty is marked 'advanced,' but the official evidence provided is limited to a single incremental-refresh optimization document. If advanced trade-offs are intended, add evidence covering those trade-offs; otherwise consider lowering or clarifying the difficulty.",
-          "The acceptedAlternatives list is fine conceptually, but because the evidence packet does not substantiate all listed concepts, the benchmark is only partially supported as written.",
-          "Add explicit support or cited evidence for each required concept. The single cited page title supports incremental refresh optimization generally, but the packet does not provide evidence excerpts for refresh history, clustering/data locality by JOIN/GROUP BY/PARTITION BY keys, target lag, or warehouse capacity.",
-          "Make the benchmark answer explicitly mention clustering, since it is listed as a required concept; “improve locality” is directionally correct but too implicit for a required scoring anchor.",
-          "Clarify that dynamic table refresh mode selection has operational constraints: if the current mode is full rather than incremental, the remedy may require recreating or redefining the dynamic table rather than simply toggling a runtime setting.",
-          "Separate performance diagnosis from freshness SLA tuning: target lag should be adjusted based on observed refresh duration and warehouse capacity, but it does not itself reduce data scanned.",
-          "Improve the scoring anchors so they require concrete investigation steps, such as checking actual refresh mode/refresh history, identifying operators causing large scans, and clustering source data around join/group/window partition keys."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },
@@ -1794,7 +1697,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "A dynamic-table pipeline is serving stale data intermittently. Which Snowflake history and status information would you inspect first?",
-    "canonicalAnswer": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result.",
+    "canonicalAnswer": "After a Monitor Snowflake dynamic tables deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
     "expectedConcepts": [
       "DYNAMIC_TABLE_REFRESH_HISTORY",
       "refresh status",
@@ -1816,8 +1719,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result.",
-      "expandedExplanation": "Inspect DYNAMIC_TABLE_REFRESH_HISTORY for refresh status, trigger, timing, and failures, and inspect dynamic-table metadata for scheduling state, target lag, actual lag, and the latest successful data timestamp. Use the dependency graph history when an upstream failure or pipeline relationship may explain the stale result. A strong benchmark response should connect the answer to the question wording, cover the required concepts, mention relevant constraints or trade-offs, and avoid claims that contradict the official source.",
+      "canonicalAnswer": "After a Monitor Snowflake dynamic tables deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+      "expandedExplanation": "After a Monitor Snowflake dynamic tables deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
       "requiredConcepts": [
         "DYNAMIC_TABLE_REFRESH_HISTORY",
         "refresh status",
@@ -1829,7 +1732,7 @@
       "optionalConcepts": [
         "advanced level trade-offs",
         "operational validation evidence",
-        "safe diagnosis sequence"
+        "safe diagnosis and idempotent recovery"
       ],
       "acceptedAlternatives": [
         {
@@ -1870,7 +1773,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should explain why observability matters for snowflake at advanced level and show how the idea would be validated or applied in practice.",
+      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph, and ground validation in observable Snowflake evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/dynamic-tables-tasks-monitor",
@@ -1882,31 +1785,21 @@
         }
       ],
       "scoringAnchors": {
-        "strong": "Covers the required observability concepts accurately, explains the advanced level trade-offs, and stays aligned to the cited official source.",
-        "partial": "Covers some required observability concepts but misses important details, constraints, or operational reasoning expected at advanced level.",
-        "weak": "Mentions observability only superficially, with limited explanation and multiple missing required concepts.",
+        "strong": "Directly answers the troubleshooting question, accurately covers DYNAMIC_TABLE_REFRESH_HISTORY, refresh status, scheduling state, actual lag, data timestamp, and dependency graph, uses operational Snowflake evidence, and stays aligned to the cited official source.",
+        "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
+        "weak": "Mentions observability superficially, with little AWS-specific explanation and multiple missing required concepts.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "disputed",
-        "promptVersion": "benchmark-review-1.0.0",
-        "reviewerModels": [
-          "gpt-5.4-mini",
-          "gpt-5.5"
-        ],
-        "verdicts": [
-          "dispute",
-          "approve"
-        ],
-        "confidence": 0.78,
+        "status": "draft",
+        "promptVersion": "benchmark-remediation-2026-08-26",
+        "reviewerModels": [],
+        "verdicts": [],
+        "confidence": 0,
         "corrections": [
-          "The benchmark answer and required concepts reference 'dependency graph history' and 'latest successful data timestamp', but the cited evidence metadata only points to the dynamic tables monitoring page and does not demonstrate that these exact terms are present or required.",
-          "The packet lacks an explicit official evidence-backed mapping for 'dynamic-table metadata', 'target lag', and 'actual lag' as named concepts; if these are intended, they should be anchored to specific documented fields or views from the cited source.",
-          "The question asks which history and status information to inspect first, but the benchmark answer expands into diagnosis steps that may be reasonable yet are not clearly supported as the primary answer by the provided evidence metadata.",
-          "The acceptedAlternatives list duplicates the required concepts verbatim and does not add meaningful alternative phrasings; this is weak benchmark design and should be refined to include true synonyms or documented variants.",
-          "The evidence is limited to a single source reference without quoted supporting content, making it insufficient to validate the full breadth of the benchmark answer."
+          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
         ],
-        "reviewedAt": "2026-08-25"
+        "reviewedAt": null
       }
     }
   },

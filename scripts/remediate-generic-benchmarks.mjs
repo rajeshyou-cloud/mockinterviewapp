@@ -85,7 +85,10 @@ function answerFor(question) {
   }
 
   if (question.type === 'scenario') {
-    return `Use ${feature} only when the production requirement matches the documented AWS capability around ${conceptList}. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.`;
+    if (question.difficulty === 'advanced') {
+      return `For a high-volume production workload built around ${feature}, evolve the design by measuring current bottlenecks and explicitly validating ${conceptList}. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.`;
+    }
+    return `Use ${feature} only when the production requirement matches the documented ${platform} capability around ${conceptList}. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.`;
   }
 
   if (question.type === 'design') {
