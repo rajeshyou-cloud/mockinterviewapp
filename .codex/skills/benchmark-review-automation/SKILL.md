@@ -26,6 +26,8 @@ Use this skill whenever the user asks to review benchmark answers, review eviden
 4. Prefer the automated pipeline:
    - ChatGPT/OpenAI:
      - `npm run review:benchmarks:auto -- --provider=openai --technology=<technology> --limit=all --test`
+   - Gemini:
+     - `npm run review:benchmarks:auto -- --provider=gemini --technology=<technology> --limit=all --compact --test`
    - Vercel AI Gateway:
      - `npm run review:benchmarks:auto -- --provider=gateway --technology=<technology> --limit=all --test`
    - Claude/Anthropic:
@@ -39,12 +41,15 @@ Use this skill whenever the user asks to review benchmark answers, review eviden
 7. For direct OpenAI/ChatGPT review, require:
    - `OPENAI_API_KEY`
    - `REVIEW_PROVIDER=openai`
-8. For re-review after remediation, review only draft records and use compact packets:
+8. For direct Gemini review, require:
+   - `GEMINI_API_KEY` or `GOOGLE_API_KEY`
+   - `REVIEW_PROVIDER=gemini`
+9. For re-review after remediation, review only draft records and use compact packets:
    - `npm run review:benchmarks:auto -- --provider=openai --technology=<technology> --only-status=draft --limit=all --compact --test`
-9. After import, update:
+10. After import, update:
    - `PROJECT_STATE.md`
    - `HANDOVER.md`
-10. Before committing, run:
+11. Before committing, run:
    - `npm run validate:benchmarks`
    - `npm run test:web`
    - `npm run build:web`

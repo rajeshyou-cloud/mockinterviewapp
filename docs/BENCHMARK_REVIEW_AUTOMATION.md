@@ -105,6 +105,18 @@ npm run review:benchmarks:auto -- --provider=openai --technology=all --limit=all
 
 ## Other provider modes
 
+Use Gemini:
+
+```bash
+GEMINI_API_KEY=...
+REVIEW_PROVIDER=gemini
+REVIEW_PRIMARY_MODEL=gemini-2.5-flash-lite
+REVIEW_CRITIC_MODEL=gemini-2.5-flash
+npm run review:benchmarks:auto -- --provider=gemini --technology=aws --limit=10 --compact
+```
+
+For local runs, keep `GEMINI_API_KEY` in `.env.local`; never commit it. If a key is pasted into chat or terminal output, rotate it after testing.
+
 Use Vercel AI Gateway:
 
 ```bash

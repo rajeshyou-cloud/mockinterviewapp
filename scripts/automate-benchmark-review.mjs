@@ -62,6 +62,9 @@ function requireLiveConfiguration() {
   if (provider === 'anthropic' && !process.env.ANTHROPIC_API_KEY) {
     throw new Error('Set ANTHROPIC_API_KEY before running automated Claude review.');
   }
+  if (provider === 'gemini' && !(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY)) {
+    throw new Error('Set GEMINI_API_KEY or GOOGLE_API_KEY before running automated Gemini review.');
+  }
 }
 
 async function resolveTechnologies() {

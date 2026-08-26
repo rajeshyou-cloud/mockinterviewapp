@@ -58,8 +58,8 @@ const primaryModel = process.env.REVIEW_PRIMARY_MODEL;
 const criticModel = process.env.REVIEW_CRITIC_MODEL;
 
 function requireLiveModels() {
-  if (!['gateway', 'anthropic', 'openai'].includes(providerArg)) {
-    throw new Error('REVIEW_PROVIDER/--provider must be "gateway", "anthropic", or "openai".');
+  if (!['gateway', 'anthropic', 'openai', 'gemini'].includes(providerArg)) {
+    throw new Error('REVIEW_PROVIDER/--provider must be "gateway", "anthropic", "openai", or "gemini".');
   }
   if (dryRun) return;
   if (!primaryModel || !criticModel) {
@@ -73,6 +73,9 @@ function requireLiveModels() {
   }
   if (providerArg === 'openai' && !process.env.OPENAI_API_KEY) {
     throw new Error('Set OPENAI_API_KEY to use REVIEW_PROVIDER=openai.');
+  }
+  if (providerArg === 'gemini' && !(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY)) {
+    throw new Error('Set GEMINI_API_KEY or GOOGLE_API_KEY to use REVIEW_PROVIDER=gemini.');
   }
 }
 
@@ -144,8 +147,56 @@ async function reviewWithOpenAi(packet, model, reviewerRole) {
   return verdictSchema.parse(parseOpenAiStructuredOutput(body));
 }
 
+function normalizeGeminiModel(model) {
+  return model.replace(/^models\//, '').replace(/^google\//, '');
+}
+
+function parseGeminiStructuredOutput(response) {
+  const text = response.candidates?.[0]?.content?.parts
+    ?.map((part) => part.text ?? '')
+    ?.join('')
+    ?.trim();
+  if (!text) {
+    throw new Error(`Gemini response did not include structured text. status=${response.status ?? '<unknown>'}`);
+  }
+  return JSON.parse(text);
+}
+
+async function reviewWithGemini(packet, model, reviewerRole) {
+  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+  const geminiModel = normalizeGeminiModel(model);
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${apiKey}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      systemInstruction: {
+        parts: [{ text: reviewSystemPrompt }],
+      },
+      contents: [{
+        role: 'user',
+        parts: [{ text: JSON.stringify({ reviewerRole, packet }) }],
+      }],
+      generationConfig: {
+        temperature: 0,
+        responseMimeType: 'application/json',
+        responseJsonSchema: verdictJsonSchema,
+      },
+    }),
+    signal: AbortSignal.timeout(60_000),
+  });
+
+  const body = await response.json().catch(() => null);
+  if (!response.ok) {
+    throw new Error(`Gemini review failed: HTTP ${response.status} ${JSON.stringify(body)}`);
+  }
+  return verdictSchema.parse(parseGeminiStructuredOutput(body));
+}
+
 async function reviewWithModel(packet, model, reviewerRole) {
   if (providerArg === 'openai') return reviewWithOpenAi(packet, model, reviewerRole);
+  if (providerArg === 'gemini') return reviewWithGemini(packet, model, reviewerRole);
 
   const { output } = await generateText({
     model: resolveReviewModel(model),
@@ -207,7 +258,9 @@ if (dryRun) {
       ? 'Set ANTHROPIC_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different Claude model IDs.'
       : providerArg === 'openai'
         ? 'Set OPENAI_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to two different OpenAI model IDs.'
-        : 'Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different AI Gateway model IDs.',
+        : providerArg === 'gemini'
+          ? 'Set GEMINI_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to two different Gemini model IDs.'
+          : 'Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different AI Gateway model IDs.',
   }, null, 2));
   process.exit(0);
 }
