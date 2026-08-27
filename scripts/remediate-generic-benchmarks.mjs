@@ -34,9 +34,11 @@ function titleCase(value) {
 function featureName(question) {
   const fromSource = question.source?.title
     ?.replace(/^AWS\s+/i, '')
+    ?.replace(/^What\s+is\s+/i, '')
     ?.replace(/\s*-\s*AWS.*$/i, '')
     ?.replace(/\s*-\s*Amazon.*$/i, '')
     ?.replace(/\s*\|\s*.*$/i, '')
+    ?.replace(/\?$/u, '')
     ?.trim();
   if (fromSource && fromSource.length <= 90) return fromSource;
 
@@ -52,6 +54,10 @@ function conceptPhrase(concepts) {
   if (concepts.length === 0) return 'the required documented concepts';
   if (concepts.length === 1) return concepts[0];
   return `${concepts.slice(0, -1).join(', ')}, and ${concepts.at(-1)}`;
+}
+
+function indefiniteArticle(phrase) {
+  return /^[aeiou]/i.test(String(phrase ?? '').trim()) ? 'an' : 'a';
 }
 
 function validationEvidence(topic) {
@@ -81,7 +87,7 @@ function answerFor(question) {
   }
 
   if (question.type === 'hands-on') {
-    return `For a first implementation of ${feature}, start with a small scoped workload and configure only the minimum ${resourceLabel} needed to exercise ${conceptList}. Use least-privilege access, explicit region/account boundaries where relevant, safe defaults, and a rollback path; then verify the setup with ${evidence}.`;
+    return `For a first implementation of ${feature}, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum ${resourceLabel} needed to exercise ${conceptList}, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking ${evidence}, and documenting which setting proves each required concept is working.`;
   }
 
   if (question.type === 'scenario') {
@@ -96,7 +102,7 @@ function answerFor(question) {
   }
 
   if (question.type === 'troubleshooting' && question.difficulty === 'advanced') {
-    return `After a ${feature} deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves ${conceptList}, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.`;
+    return `After ${indefiniteArticle(feature)} ${feature} deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves ${conceptList}, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.`;
   }
 
   return `Troubleshoot ${feature} by first confirming the deployed configuration actually uses ${conceptList}. Compare expected behavior with ${evidence}, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.`;
