@@ -182,6 +182,16 @@ npm run export:rereview-packets -- --technology=<technology> --only-status=draft
 
 Only run paid AI review after static triage shows no obvious local blockers for that technology.
 
+## Evidence enrichment before AI review
+
+If AI review disputes a benchmark because the cited evidence is too thin, add more specific official documentation links before spending more review calls. AWS evidence can be enriched with:
+
+```bash
+npm run enrich:aws-evidence
+```
+
+This keeps the original source URL and adds targeted official AWS links for setup, security, monitoring, troubleshooting, quotas, best practices, and recovery where relevant. Tests require the primary source URL to remain present, but benchmark evidence may contain multiple official links.
+
 ## Re-review loop
 
 When review output contains `disputed` or `rejected`:

@@ -26,9 +26,11 @@ describe('candidate course question packs', () => {
       expect(question.benchmark.requiredConcepts).toEqual(question.expectedConcepts);
       expect(question.benchmark.optionalConcepts.length).toBeGreaterThan(0);
       expect(question.benchmark.acceptedAlternatives).toHaveLength(question.expectedConcepts.length);
-      expect(question.benchmark.evidence).toHaveLength(1);
-      expect(question.benchmark.evidence[0].url).toBe(question.source.url);
-      expect(question.benchmark.evidence[0].contentHash).toMatch(/^sha256:[a-f0-9]{64}$/);
+      expect(question.benchmark.evidence.length).toBeGreaterThanOrEqual(1);
+      expect(question.benchmark.evidence.some((item) => item.url === question.source.url)).toBe(true);
+      for (const evidence of question.benchmark.evidence) {
+        expect(evidence.contentHash).toMatch(/^sha256:[a-f0-9]{64}$/);
+      }
       expect(question.benchmark.scoringAnchors.incorrect.length).toBeGreaterThan(20);
       expect(benchmarkReviewStatuses).toContain(question.benchmark.review.status);
       expect(question.source.url).toMatch(/^https:\/\//);
