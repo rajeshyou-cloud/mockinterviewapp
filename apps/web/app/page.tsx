@@ -9,7 +9,6 @@ import {
   completeRemoteSession,
   claimRemoteSession,
   createRemoteSession,
-  fetchRemoteSession,
   fetchReleasedCourses,
   fetchQuestions,
   saveRemoteAnswer,
@@ -17,7 +16,7 @@ import {
 } from '../lib/api';
 import { buildAssessmentSummary } from '../lib/assessment';
 import { availableCourses, technologyLabel, type CourseDefinition } from '../lib/course-catalog';
-import { InterviewSession, clearSession, getResumeKey, loadSession, newSession, parseResumeKey, saveSession } from '../lib/session';
+import { InterviewSession, clearSession, loadSession, newSession, saveSession } from '../lib/session';
 import { SpeechInputAdapter, SpeechOutputAdapter, createBrowserSpeechInput, createBrowserSpeechOutput } from '../lib/voice';
 
 const difficultyLabels: Record<Difficulty, string> = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
@@ -50,9 +49,6 @@ export default function Home() {
   const [listening, setListening] = useState(false);
   const [voiceAvailable, setVoiceAvailable] = useState(false);
   const [cloudPersisted, setCloudPersisted] = useState(false);
-  const [resumeInput, setResumeInput] = useState('');
-  const [resumeMessage, setResumeMessage] = useState('');
-  const [resuming, setResuming] = useState(false);
   const speechInput = useRef<SpeechInputAdapter | null>(null);
   const speechOutput = useRef<SpeechOutputAdapter | null>(null);
 
@@ -189,56 +185,6 @@ export default function Home() {
     setCloudPersisted(Boolean(remote.persisted));
   }
 
-  async function copyResumeKey() {
-    if (!session) return;
-    const resumeKey = getResumeKey(session);
-    setResumeInput(resumeKey);
-    try {
-      await navigator.clipboard.writeText(resumeKey);
-      setResumeMessage('Resume key copied and shown below. Keep it private.');
-    } catch {
-      setResumeMessage('Copy the resume key from the field below.');
-    }
-  }
-
-  async function resumeRemoteSession() {
-    const key = parseResumeKey(resumeInput);
-    if (!key) { setError('Enter a valid resume key.'); return; }
-    setResuming(true); setError(''); setResumeMessage('');
-    try {
-      const remote = await fetchRemoteSession(key.id, key.resumeToken);
-      const restoredSession: InterviewSession = {
-        id: remote.session.id,
-        resumeToken: key.resumeToken,
-        technology: remote.session.technology,
-        difficulty: remote.session.difficulty,
-        currentIndex: remote.session.metadata.currentIndex ?? 0,
-        status: remote.session.status,
-        startedAt: remote.session.started_at,
-        completedAt: remote.session.completed_at ?? undefined,
-        answers: remote.answers.map((item) => ({
-          questionId: item.question_id,
-          answer: item.answer_text,
-          score: {
-            score: item.score,
-            matched_concepts: item.matched_concepts,
-            missing_concepts: item.missing_concepts,
-            summary: item.feedback,
-          },
-          answeredAt: item.answered_at,
-        })),
-      };
-      saveSession(restoredSession);
-      setSession(restoredSession); setIndex(restoredSession.currentIndex); setAnswer(''); setResult(null);
-      setCloudPersisted(true); setResumeMessage('Cloud session restored on this device.');
-      if (restoredSession.technology !== technology || restoredSession.difficulty !== difficulty) {
-        restored.current = restoredSession;
-        setTechnology(restoredSession.technology); setDifficulty(restoredSession.difficulty);
-      }
-    } catch (e) { setError(e instanceof Error ? e.message : 'Unable to restore that session'); }
-    finally { setResuming(false); }
-  }
-
   function toggleListening() {
     const input = speechInput.current;
     if (!input?.supported) { setError('Speech recognition is not supported in this browser. Text mode remains available.'); return; }
@@ -262,8 +208,8 @@ export default function Home() {
       </nav>
 
       <section className="hero interviewHero">
-        <div><p className="eyebrow"><span/> AI-POWERED INTERVIEW PRACTICE</p><h1>Build confidence for your next technical interview.</h1><p className="lede">Practice realistic questions, answer naturally by voice or text, and receive structured feedback grounded in reviewed benchmarks.</p><div className="trustRow"><span><Icon name="shield"/> Evidence-reviewed questions</span><span><Icon name="cloud"/> Private progress sync</span></div></div>
-        <div className={`statusCard ${cloudPersisted?'isSynced':''}`}><div className="statusIcon"><Icon name="cloud"/></div><div><span className="statusLabel">SESSION STATUS</span><strong>{cloudPersisted ? 'Synced securely' : 'Saved locally'}</strong><span>{cloudPersisted ? 'Continue seamlessly on any device' : 'Cloud sync activates when available'}</span></div></div>
+        <div><p className="eyebrow"><span/> AI-POWERED INTERVIEW PRACTICE</p><h1>Build confidence for your next technical interview.</h1><p className="lede">Practice realistic questions, answer naturally by voice or text, and receive structured feedback grounded in reviewed benchmarks.</p><div className="trustRow"><span><Icon name="shield"/> Evidence-reviewed questions</span><span><Icon name="cloud"/> Secure progress saving</span></div></div>
+        <div className={`statusCard ${cloudPersisted?'isSynced':''}`}><div className="statusIcon"><Icon name="cloud"/></div><div><span className="statusLabel">SESSION STATUS</span><strong>{cloudPersisted ? 'Progress saved' : 'Saved in browser'}</strong><span>{cloudPersisted ? 'Your interview is backed up securely' : 'Your answers remain on this device'}</span></div></div>
       </section>
 
       <section className="controlDeck card" aria-label="Interview settings">
@@ -272,12 +218,6 @@ export default function Home() {
         <label><span>Difficulty</span><select value={difficulty} onChange={(e)=>setDifficulty(e.target.value as Difficulty)}><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
         <div className="modePill"><span className="modeDot"/>{voiceAvailable?'Voice & text enabled':'Text mode enabled'}</div>
       </section>
-
-      <details className="resumeCard card">
-        <summary><span className="resumeIcon"><Icon name="cloud"/></span><span><strong>Continue on another device</strong><small>Use your private resume key to restore this interview</small></span><span className="resumeChevron">⌄</span></summary>
-        <div className="resumeControls"><button className="secondary" type="button" disabled={!session||!cloudPersisted} onClick={()=>void copyResumeKey()}>Copy resume key</button><input aria-label="Resume key" value={resumeInput} onChange={(e)=>setResumeInput(e.target.value)} placeholder="Paste your private resume key" autoComplete="off" spellCheck={false}/><button className="primary compactButton" type="button" disabled={resuming||!resumeInput.trim()} onClick={()=>void resumeRemoteSession()}>{resuming?'Restoring…':'Resume session'} <Icon name="arrow"/></button></div>
-        {resumeMessage?<span className="resumeMessage" aria-live="polite">{resumeMessage}</span>:null}
-      </details>
 
       {error?<div className="errorBanner" role="alert">{error}</div>:null}
 
