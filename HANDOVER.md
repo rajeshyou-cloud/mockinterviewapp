@@ -85,6 +85,8 @@ The candidate home/interview route now uses the polished InterviewStudio present
 
 Below the interactive workspace, the same route includes six truthful feature cards, an outcome-led confidence section, and a final setup CTA. No testimonial identity, employer, placement, or interview-success claim is invented. Replace the outcome cards with named testimonials only after collecting the candidate's exact quote, approved display identity, relevant preparation track, outcome evidence where claimed, and publication consent.
 
+The desktop candidate navigation exposes How it works, Features, Outcomes, Question Bank, and Account. Mobile replaces those links with a compact Menu containing Start interview, How it works, Features, Candidate outcomes, Question bank, Replay interviews, and My account. The How it works section is a responsive four-step workflow from interview selection through benchmark-led improvement; section anchors scroll smoothly and do not alter application routing or interview state.
+
 ## Scoring configuration
 
 - Default Vercel model: `openai/gpt-5.6-luna`

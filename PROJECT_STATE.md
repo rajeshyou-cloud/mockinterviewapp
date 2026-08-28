@@ -67,6 +67,8 @@ The candidate interview experience was visually redesigned on 2026-08-28 with a 
 
 The public candidate page now continues below the interview workspace with a six-card product feature section, a three-stage candidate-outcome section, and a final interview call to action. The feature copy reflects implemented behavior only. Until candidates provide approved quotes, the social-proof area deliberately presents outcome transformations instead of fabricated names, employers, interview offers, or testimonials; the page states that named learner stories require the candidate's own words and permission.
 
+Primary candidate navigation now links to How it works, Features, Outcomes, Question Bank, and Account, with Start interview, Replay, and the same marketing destinations available through an accessible compact mobile Menu. A four-step How it works section explains interview selection, voice/text answering, structured feedback, and benchmark-led improvement. All marketing anchors use smooth in-page navigation and preserve direct route links for the question bank, replay, and account.
+
 The verified production-owner account was bootstrapped with the `admin` application role on 2026-08-23. No account identifier or email is stored in the repository. Optional human escalation decisions can be recorded through `/review`, but they are not the routine question-verification or production-release gate.
 
 ## Milestone 3 — Course and question-bank expansion

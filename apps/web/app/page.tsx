@@ -38,6 +38,13 @@ const candidateOutcomes = [
   { step: '03', from: 'Interview anxiety', to: 'Confident technical communication', detail: 'Build familiarity through realistic questions, voice rehearsal, and immediate feedback.' },
 ] as const;
 
+const workflowSteps: readonly { step: string; title: string; description: string; icon: IconName; tone: string }[] = [
+  { step: '01', title: 'Choose your interview', description: 'Select a technology and difficulty that matches the role you are preparing for.', icon: 'target', tone: 'violet' },
+  { step: '02', title: 'Answer naturally', description: 'Work through 10 realistic questions using voice or a structured written response.', icon: 'mic', tone: 'pink' },
+  { step: '03', title: 'Receive feedback', description: 'Review accuracy, concept coverage, reasoning, clarity, and an interviewer follow-up.', icon: 'chart', tone: 'cyan' },
+  { step: '04', title: 'Review and improve', description: 'Compare the benchmark answer, revisit weak topics, and practise another focused session.', icon: 'spark', tone: 'emerald' },
+];
+
 function Icon({ name }: { name: IconName }) {
   const paths = {
     arrow: <><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></>,
@@ -224,7 +231,8 @@ export default function Home() {
     <div className="shell interviewShell">
       <nav className="candidateNav" aria-label="Primary navigation">
         <a className="brand" href="/" aria-label="Interview Studio home"><span className="brandMark"><Icon name="spark"/></span><span>Interview<span>Studio</span></span></a>
-        <div className="navLinks"><a href="/questions">Question bank</a><a href="/replay">Replay</a><a className="navAccount" href="/account">My account <Icon name="arrow"/></a></div>
+        <div className="navLinks"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#outcomes">Outcomes</a><a href="/questions">Question bank</a><a className="navAccount" href="/account">My account <Icon name="arrow"/></a></div>
+        <details className="mobileMenu"><summary>Menu <span>⌄</span></summary><div className="mobileMenuPanel"><a href="#interview-setup">Start interview</a><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#outcomes">Candidate outcomes</a><a href="/questions">Question bank</a><a href="/replay">Replay interviews</a><a href="/account">My account</a></div></details>
       </nav>
 
       <section className="hero interviewHero">
@@ -254,12 +262,17 @@ export default function Home() {
         </>}
       </article><aside className="card feedback" aria-live="polite"><div className="feedbackHeader"><div><p className="eyebrow"><span/> PERFORMANCE INSIGHTS</p><h2>Interview feedback</h2></div><span className="feedbackSpark"><Icon name="spark"/></span></div>{!result||!current||completed?<div className="emptyState"><div className="scoreRing"><span>{completed?assessment.averageScore:'—'}</span><small>{completed?'FINAL SCORE':'READY'}</small></div><h3>{completed?'Session complete':'Your feedback will appear here'}</h3><p>{completed?'Final average across submitted answers.':'Submit your response to see a score, concept coverage, and a tailored interviewer follow-up.'}</p><div className="emptyPreview"><span/><span/><span/></div></div>:<><div className="scoreRing resultScore"><span>{result.score}</span><small>OUT OF 100</small></div><div className="scoreMode">{result.provider?.startsWith('ai-gateway:')&&!result.provider.includes('->')?'AI semantic evaluation':'Explainable baseline evaluation'}</div><h3>{result.summary}</h3>{result.dimension_scores?<div className="dimensionGrid"><div><span>Accuracy</span><strong>{result.dimension_scores.technical_accuracy}<small>/40</small></strong></div><div><span>Coverage</span><strong>{result.dimension_scores.required_concept_coverage}<small>/30</small></strong></div><div><span>Reasoning</span><strong>{result.dimension_scores.reasoning_and_tradeoffs}<small>/20</small></strong></div><div><span>Clarity</span><strong>{result.dimension_scores.relevance_and_clarity}<small>/10</small></strong></div></div>:null}<p className="coverageCopy">You covered <strong>{result.matched_concepts.length} of {current.benchmark.requiredConcepts.length}</strong> required benchmark concepts.</p><div className="concepts">{current.benchmark.requiredConcepts.map((term)=><span key={term} className={result.matched_concepts.includes(term)?'matched':''}>{term}</span>)}</div><div className="followUp"><span className="followUpIcon">?</span><div><strong>Interviewer follow-up</strong><p>{current.followUps[0]??'Explain the trade-offs behind your answer in more depth.'}</p></div></div><details className="answerPanel"><summary>View benchmark answer <Icon name="arrow"/></summary><p>{current.benchmark.canonicalAnswer}</p><small>Benchmark v{current.benchmark.version}</small></details></>}</aside></section>
 
-      <section className="marketingSection featureSection" aria-labelledby="feature-heading">
+      <section className="marketingSection howSection" id="how-it-works" aria-labelledby="how-heading">
+        <div className="marketingHeading"><div><p className="marketingEyebrow">HOW IT WORKS</p><h2 id="how-heading">Four steps from question to improvement.</h2></div><p>A focused workflow keeps every practice session purposeful, measurable, and easy to repeat.</p></div>
+        <div className="howGrid">{workflowSteps.map((workflow)=><article className={`howCard ${workflow.tone}`} key={workflow.step}><div className="howTop"><span className="howIcon"><Icon name={workflow.icon}/></span><span className="howStep">STEP {workflow.step}</span></div><h3>{workflow.title}</h3><p>{workflow.description}</p><span className="howConnector"><Icon name="arrow"/></span></article>)}</div>
+      </section>
+
+      <section className="marketingSection featureSection" id="features" aria-labelledby="feature-heading">
         <div className="marketingHeading"><div><p className="marketingEyebrow">BUILT FOR DELIBERATE PRACTICE</p><h2 id="feature-heading">Everything you need to practise with purpose.</h2></div><p>Move beyond memorising answers. InterviewStudio helps you rehearse, evaluate, and improve the way you explain technical decisions.</p></div>
         <div className="featureGrid">{featureCards.map((feature, featureIndex)=><article className={`featureCard ${feature.tone}`} key={feature.title}><span className="featureIcon"><Icon name={feature.icon}/></span><div><h3>{feature.title}</h3><p>{feature.description}</p></div><span className="featureNumber">0{featureIndex+1}</span></article>)}</div>
       </section>
 
-      <section className="marketingSection outcomeSection" aria-labelledby="outcome-heading">
+      <section className="marketingSection outcomeSection" id="outcomes" aria-labelledby="outcome-heading">
         <div className="outcomeIntro"><p className="marketingEyebrow">CONFIDENCE THROUGH REPETITION</p><h2 id="outcome-heading">What structured practice can change.</h2><p>Real progress is more than completing questions. It is learning to communicate what you know with clarity when the pressure is on.</p><a className="outcomeCta" href="#interview-setup">Start practising <Icon name="arrow"/></a></div>
         <div className="outcomeGrid">{candidateOutcomes.map((outcome)=><article className="outcomeCard" key={outcome.step}><span className="outcomeStep">{outcome.step}</span><div className="outcomeShift"><span>{outcome.from}</span><Icon name="arrow"/><strong>{outcome.to}</strong></div><p>{outcome.detail}</p></article>)}</div>
         <div className="trustStatement"><Icon name="shield"/><p><strong>Authentic learner stories only.</strong> Named testimonials and interview outcomes will be published only when candidates provide their words and permission.</p></div>
