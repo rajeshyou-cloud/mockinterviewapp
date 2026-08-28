@@ -83,6 +83,8 @@ The production web app uses self-contained Next.js routes for scoring and persis
 
 The candidate home/interview route now uses the polished InterviewStudio presentation layer: compact brand navigation, a saturated corporate navy/violet/cyan hero, magenta/amber/emerald accents, simplified `Progress saved` session status, streamlined selectors, multicolor progress, structured answer editor, professional voice controls, evidence provenance, and a sticky tinted performance-insights panel. The anonymous cross-device resume-key control is intentionally absent from the primary experience; account-linked history and the underlying persistence APIs remain available. The underlying interview state, API calls, scoring, persistence, and benchmark reveal policy are unchanged. Desktop and mobile production renders were checked at 1440×1100 and 390×844 after a green 88-test web suite and production build.
 
+Below the interactive workspace, the same route includes six truthful feature cards, an outcome-led confidence section, and a final setup CTA. No testimonial identity, employer, placement, or interview-success claim is invented. Replace the outcome cards with named testimonials only after collecting the candidate's exact quote, approved display identity, relevant preparation track, outcome evidence where claimed, and publication consent.
+
 ## Scoring configuration
 
 - Default Vercel model: `openai/gpt-5.6-luna`

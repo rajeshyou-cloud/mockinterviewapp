@@ -21,14 +21,34 @@ import { SpeechInputAdapter, SpeechOutputAdapter, createBrowserSpeechInput, crea
 
 const difficultyLabels: Record<Difficulty, string> = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
 
-function Icon({ name }: { name: 'arrow' | 'cloud' | 'mic' | 'shield' | 'speaker' | 'spark' }) {
+type IconName = 'arrow' | 'chart' | 'cloud' | 'history' | 'mic' | 'shield' | 'speaker' | 'spark' | 'target';
+
+const featureCards: readonly { title: string; description: string; icon: IconName; tone: string }[] = [
+  { title: 'Evidence-reviewed questions', description: 'Practice realistic technical scenarios tied to documented sources and reviewed benchmark answers.', icon: 'shield', tone: 'violet' },
+  { title: 'Structured evaluation', description: 'See how your response performs across accuracy, concept coverage, reasoning, and clarity.', icon: 'chart', tone: 'cyan' },
+  { title: 'Voice and text practice', description: 'Rehearse naturally out loud or compose a deliberate written answer when you need more time.', icon: 'mic', tone: 'pink' },
+  { title: 'Benchmark comparison', description: 'Reveal a reviewed reference answer after submitting so you can identify specific gaps.', icon: 'target', tone: 'amber' },
+  { title: 'Focused improvement', description: 'Turn topic-level feedback into a clear revision plan instead of repeating random questions.', icon: 'spark', tone: 'emerald' },
+  { title: 'History and replay', description: 'Return to previous answers, feedback, and scores from your secure account history.', icon: 'history', tone: 'blue' },
+];
+
+const candidateOutcomes = [
+  { step: '01', from: 'Scattered thoughts', to: 'Clear, structured answers', detail: 'Practise organising context, approach, trade-offs, and outcomes in a repeatable response.' },
+  { step: '02', from: 'Hidden knowledge gaps', to: 'Focused revision priorities', detail: 'See which benchmark concepts were covered and which topics deserve another practice round.' },
+  { step: '03', from: 'Interview anxiety', to: 'Confident technical communication', detail: 'Build familiarity through realistic questions, voice rehearsal, and immediate feedback.' },
+] as const;
+
+function Icon({ name }: { name: IconName }) {
   const paths = {
     arrow: <><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></>,
+    chart: <><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></>,
     cloud: <path d="M17.5 19H7a5 5 0 0 1-.7-9.95A7 7 0 0 1 19.7 11 4 4 0 0 1 17.5 19Z"/>,
+    history: <><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></>,
     mic: <><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></>,
     shield: <><path d="M12 3 5 6v5c0 4.6 2.9 8.4 7 10 4.1-1.6 7-5.4 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></>,
     speaker: <><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></>,
     spark: <><path d="m12 3 1.15 3.85L17 8l-3.85 1.15L12 13l-1.15-3.85L7 8l3.85-1.15L12 3Z"/><path d="m18 14 .7 2.3L21 17l-2.3.7L18 20l-.7-2.3L15 17l2.3-.7L18 14Z"/></>,
+    target: <><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"/></>,
   };
   return <svg className="uiIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
@@ -212,7 +232,7 @@ export default function Home() {
         <div className={`statusCard ${cloudPersisted?'isSynced':''}`}><div className="statusIcon"><Icon name="cloud"/></div><div><span className="statusLabel">SESSION STATUS</span><strong>{cloudPersisted ? 'Progress saved' : 'Saved in browser'}</strong><span>{cloudPersisted ? 'Your interview is backed up securely' : 'Your answers remain on this device'}</span></div></div>
       </section>
 
-      <section className="controlDeck card" aria-label="Interview settings">
+      <section className="controlDeck card" id="interview-setup" aria-label="Interview settings">
         <div className="controlIntro"><span className="controlStep">01</span><div><strong>Configure your session</strong><span>Select a track and challenge level</span></div></div>
         <label><span>Technology</span><select value={technology} onChange={(e)=>setTechnology(e.target.value as Technology)}>{courses.map((course)=><option value={course.id} key={course.id}>{course.label}</option>)}</select></label>
         <label><span>Difficulty</span><select value={difficulty} onChange={(e)=>setDifficulty(e.target.value as Difficulty)}><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
@@ -233,6 +253,19 @@ export default function Home() {
           <p className="sourceNote"><Icon name="shield"/><span>Reviewed against <a href={current.source.url} target="_blank" rel="noreferrer">{current.source.title}</a><small>Evidence checked {current.source.verified}</small></span></p>
         </>}
       </article><aside className="card feedback" aria-live="polite"><div className="feedbackHeader"><div><p className="eyebrow"><span/> PERFORMANCE INSIGHTS</p><h2>Interview feedback</h2></div><span className="feedbackSpark"><Icon name="spark"/></span></div>{!result||!current||completed?<div className="emptyState"><div className="scoreRing"><span>{completed?assessment.averageScore:'—'}</span><small>{completed?'FINAL SCORE':'READY'}</small></div><h3>{completed?'Session complete':'Your feedback will appear here'}</h3><p>{completed?'Final average across submitted answers.':'Submit your response to see a score, concept coverage, and a tailored interviewer follow-up.'}</p><div className="emptyPreview"><span/><span/><span/></div></div>:<><div className="scoreRing resultScore"><span>{result.score}</span><small>OUT OF 100</small></div><div className="scoreMode">{result.provider?.startsWith('ai-gateway:')&&!result.provider.includes('->')?'AI semantic evaluation':'Explainable baseline evaluation'}</div><h3>{result.summary}</h3>{result.dimension_scores?<div className="dimensionGrid"><div><span>Accuracy</span><strong>{result.dimension_scores.technical_accuracy}<small>/40</small></strong></div><div><span>Coverage</span><strong>{result.dimension_scores.required_concept_coverage}<small>/30</small></strong></div><div><span>Reasoning</span><strong>{result.dimension_scores.reasoning_and_tradeoffs}<small>/20</small></strong></div><div><span>Clarity</span><strong>{result.dimension_scores.relevance_and_clarity}<small>/10</small></strong></div></div>:null}<p className="coverageCopy">You covered <strong>{result.matched_concepts.length} of {current.benchmark.requiredConcepts.length}</strong> required benchmark concepts.</p><div className="concepts">{current.benchmark.requiredConcepts.map((term)=><span key={term} className={result.matched_concepts.includes(term)?'matched':''}>{term}</span>)}</div><div className="followUp"><span className="followUpIcon">?</span><div><strong>Interviewer follow-up</strong><p>{current.followUps[0]??'Explain the trade-offs behind your answer in more depth.'}</p></div></div><details className="answerPanel"><summary>View benchmark answer <Icon name="arrow"/></summary><p>{current.benchmark.canonicalAnswer}</p><small>Benchmark v{current.benchmark.version}</small></details></>}</aside></section>
+
+      <section className="marketingSection featureSection" aria-labelledby="feature-heading">
+        <div className="marketingHeading"><div><p className="marketingEyebrow">BUILT FOR DELIBERATE PRACTICE</p><h2 id="feature-heading">Everything you need to practise with purpose.</h2></div><p>Move beyond memorising answers. InterviewStudio helps you rehearse, evaluate, and improve the way you explain technical decisions.</p></div>
+        <div className="featureGrid">{featureCards.map((feature, featureIndex)=><article className={`featureCard ${feature.tone}`} key={feature.title}><span className="featureIcon"><Icon name={feature.icon}/></span><div><h3>{feature.title}</h3><p>{feature.description}</p></div><span className="featureNumber">0{featureIndex+1}</span></article>)}</div>
+      </section>
+
+      <section className="marketingSection outcomeSection" aria-labelledby="outcome-heading">
+        <div className="outcomeIntro"><p className="marketingEyebrow">CONFIDENCE THROUGH REPETITION</p><h2 id="outcome-heading">What structured practice can change.</h2><p>Real progress is more than completing questions. It is learning to communicate what you know with clarity when the pressure is on.</p><a className="outcomeCta" href="#interview-setup">Start practising <Icon name="arrow"/></a></div>
+        <div className="outcomeGrid">{candidateOutcomes.map((outcome)=><article className="outcomeCard" key={outcome.step}><span className="outcomeStep">{outcome.step}</span><div className="outcomeShift"><span>{outcome.from}</span><Icon name="arrow"/><strong>{outcome.to}</strong></div><p>{outcome.detail}</p></article>)}</div>
+        <div className="trustStatement"><Icon name="shield"/><p><strong>Authentic learner stories only.</strong> Named testimonials and interview outcomes will be published only when candidates provide their words and permission.</p></div>
+      </section>
+
+      <section className="finalCta"><div><p className="marketingEyebrow">YOUR NEXT ANSWER STARTS HERE</p><h2>Ready to practise with confidence?</h2><p>Choose your technology, select a level, and begin a focused 10-question interview.</p></div><a href="#interview-setup">Start an interview <Icon name="arrow"/></a></section>
     </div>
   </main>;
 }
