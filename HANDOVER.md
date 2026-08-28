@@ -81,6 +81,8 @@ Production: https://mockinterviewapp-web.vercel.app
 
 The production web app uses self-contained Next.js routes for scoring and persistence. `NEXT_PUBLIC_API_BASE_URL` affects question retrieval only and is optional. The standalone FastAPI service remains independently deployable and exposes `/health`, `/v1/questions`, and a baseline `/v1/score` contract.
 
+The candidate home/interview route now uses the polished InterviewStudio presentation layer: compact brand navigation, a corporate navy/violet/cyan palette, session-status card, streamlined selectors, collapsible resume controls, gradient progress, structured answer editor, professional voice controls, evidence provenance, and a sticky performance-insights panel. The underlying interview state, API calls, scoring, persistence, and benchmark reveal policy are unchanged. Desktop and mobile production renders were checked at 1440×1100 and 390×844 after a green 88-test web suite and production build.
+
 ## Scoring configuration
 
 - Default Vercel model: `openai/gpt-5.6-luna`

@@ -74,6 +74,205 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .followUp { padding: 16px; border-radius: 16px; background: #f8fafc; border: 1px solid #e5e7eb; }
 .followUp p { margin-bottom: 0; color: #4b5563; line-height: 1.5; }
 
+/* Candidate interview experience */
+.interviewPage {
+  --ink: #10213d;
+  --muted: #66758f;
+  --violet: #5b4cf0;
+  --violet-dark: #4134c7;
+  --cyan: #0ea5c6;
+  --mint: #20b486;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(247,249,255,.94) 0%, rgba(241,246,252,.98) 46%, #f6f8fc 100%),
+    #f4f7fb;
+}
+.ambient { position: absolute; pointer-events: none; border-radius: 999px; filter: blur(2px); opacity: .7; }
+.ambientOne { width: 440px; height: 440px; top: -220px; right: -80px; background: radial-gradient(circle, rgba(98,85,244,.18), rgba(98,85,244,0) 70%); }
+.ambientTwo { width: 360px; height: 360px; top: 520px; left: -220px; background: radial-gradient(circle, rgba(14,165,198,.14), rgba(14,165,198,0) 72%); }
+.interviewShell { position: relative; z-index: 1; max-width: 1280px; padding-top: 24px; }
+.candidateNav { min-height: 56px; display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 42px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-size: 19px; font-weight: 900; letter-spacing: -.03em; text-decoration: none; }
+.brand > span:last-child > span { color: var(--violet); }
+.brandMark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: white; background: linear-gradient(145deg, #6d5df6, #4033c8); box-shadow: 0 8px 20px rgba(77,64,213,.26); }
+.brandMark .uiIcon { width: 21px; }
+.navLinks { display: flex; align-items: center; gap: 28px; }
+.navLinks a { color: #53617a; font-size: 13px; font-weight: 750; text-decoration: none; transition: color .2s ease; }
+.navLinks a:hover { color: var(--violet); }
+.navLinks .navAccount { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #dbe1ec; border-radius: 12px; color: var(--ink); background: rgba(255,255,255,.72); box-shadow: 0 5px 16px rgba(15,23,42,.04); }
+.navAccount .uiIcon { width: 15px; }
+.uiIcon { width: 20px; height: 20px; flex: 0 0 auto; }
+
+.interviewHero { align-items: center; margin-bottom: 36px; }
+.interviewHero > div:first-child { max-width: 790px; }
+.interviewHero .eyebrow, .completionState .eyebrow, .feedbackHeader .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--violet); }
+.interviewHero .eyebrow > span, .completionState .eyebrow > span, .feedbackHeader .eyebrow > span { width: 22px; height: 2px; border-radius: 4px; background: linear-gradient(90deg, var(--violet), var(--cyan)); }
+.interviewHero h1 { max-width: 780px; margin: 12px 0 16px; font-size: clamp(40px, 5vw, 62px); line-height: 1.02; letter-spacing: -.048em; text-wrap: balance; }
+.interviewHero .lede { max-width: 715px; margin-bottom: 19px; color: #61708a; font-size: 17px; line-height: 1.65; }
+.trustRow { display: flex; flex-wrap: wrap; gap: 11px 22px; color: #5c6a80; font-size: 12px; font-weight: 750; }
+.trustRow span { display: inline-flex; align-items: center; gap: 7px; }
+.trustRow .uiIcon { width: 16px; color: var(--mint); }
+.interviewPage .statusCard { min-width: 285px; display: flex; align-items: center; gap: 15px; padding: 19px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: linear-gradient(145deg, #152541, #0d1728); box-shadow: 0 20px 44px rgba(15,31,55,.2); }
+.statusCard .statusIcon { width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 14px; color: #76e6ca; background: rgba(58,213,173,.12); }
+.statusCard > div:last-child { display: grid; gap: 3px; }
+.statusCard .statusLabel { color: #8fa2bf; font-size: 9px; font-weight: 900; letter-spacing: .15em; }
+.statusCard strong { font-size: 15px; }
+.statusCard.isSynced .statusIcon { color: #71e1bc; box-shadow: inset 0 0 0 1px rgba(113,225,188,.08); }
+
+.interviewPage .card { border-color: rgba(210,219,233,.9); box-shadow: 0 18px 45px rgba(24,39,75,.07); }
+.controlDeck { display: grid; grid-template-columns: minmax(230px, 1.15fr) minmax(170px, .72fr) minmax(160px, .65fr) auto; align-items: end; gap: 16px; padding: 17px 19px; margin-bottom: 14px; border-radius: 20px; }
+.controlIntro { display: flex; align-items: center; gap: 12px; align-self: center; }
+.controlStep { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 11px; color: white; background: linear-gradient(145deg, #695af2, #493bcf); font-size: 11px; font-weight: 900; }
+.controlIntro > div { display: grid; gap: 3px; }
+.controlIntro strong { font-size: 14px; }
+.controlIntro div span { color: #7a879b; font-size: 11px; }
+.controlDeck label { gap: 6px; }
+.controlDeck label > span { color: #6d7890; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.controlDeck select { width: 100%; min-width: 0; padding: 11px 38px 11px 12px; border-color: #dce2ec; color: var(--ink); font-weight: 750; outline: none; }
+.controlDeck select:focus { border-color: #8578f6; box-shadow: 0 0 0 3px rgba(91,76,240,.1); }
+.interviewPage .modePill { align-self: center; display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 10px 13px; color: #18745d; background: #eafaf5; white-space: nowrap; }
+.modeDot { width: 7px; height: 7px; border-radius: 50%; background: #26b68a; box-shadow: 0 0 0 4px rgba(38,182,138,.11); }
+
+.interviewPage .resumeCard { display: block; padding: 0; margin-bottom: 24px; overflow: hidden; border-radius: 18px; }
+.resumeCard summary { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 18px; cursor: pointer; list-style: none; }
+.resumeCard summary::-webkit-details-marker { display: none; }
+.resumeCard summary > span:nth-child(2) { display: grid; gap: 3px; }
+.resumeCard summary strong { color: #2b3a55; font-size: 13px; }
+.resumeCard summary small { color: #7b8799; font-size: 11px; }
+.resumeIcon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; color: #5f51e8; background: #f0eefe; }
+.resumeIcon .uiIcon { width: 17px; }
+.resumeChevron { color: #8490a3; transition: transform .2s ease; }
+.resumeCard[open] .resumeChevron { transform: rotate(180deg); }
+.resumeControls { display: grid; grid-template-columns: auto minmax(220px, 1fr) auto; gap: 10px; padding: 0 18px 16px 62px; }
+.resumeControls input { min-width: 0; padding: 11px 12px; border: 1px solid #d7deea; border-radius: 12px; outline: none; }
+.resumeControls input:focus { border-color: #8578f6; box-shadow: 0 0 0 3px rgba(91,76,240,.1); }
+.resumeControls .secondary { padding-block: 10px; }
+.resumeMessage { display: block; padding: 0 18px 14px 62px; }
+
+.interviewPage .interviewGrid { grid-template-columns: minmax(0, 1.55fr) minmax(340px, .75fr); align-items: start; gap: 20px; }
+.interviewPage .interviewer { position: relative; min-height: 650px; overflow: hidden; padding: 30px; border-radius: 24px; }
+.cardAccent { position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--violet), #8175f8 42%, var(--cyan)); }
+.questionTopline { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.questionTopline > strong { color: #5f6d83; font-size: 12px; white-space: nowrap; }
+.interviewPage .questionTags { gap: 7px; }
+.interviewPage .questionTags span { padding: 6px 9px; border: 1px solid #e4e8f0; background: #f7f9fc; color: #647188; font-size: 10px; letter-spacing: .035em; text-transform: uppercase; }
+.interviewPage .questionTags .technologyTag { border-color: #dcd7ff; color: #4f41d1; background: #f1efff; }
+.progressTrack { width: 100%; height: 5px; margin: 15px 0 30px; overflow: hidden; border-radius: 99px; background: #edf0f5; }
+.progressTrack span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--violet), #8a7ff7, var(--cyan)); transition: width .35s ease; }
+.questionHeader { gap: 20px; }
+.questionHeader > div:first-child { flex: 1; }
+.sectionLabel { margin: 0 0 10px; color: #8a95a8; font-size: 10px; font-weight: 900; letter-spacing: .14em; }
+.questionHeader h2 { margin: 0 0 26px; color: #12233f; font-size: clamp(25px, 3vw, 37px); line-height: 1.22; letter-spacing: -.03em; text-wrap: balance; }
+.interviewPage .iconButton { width: auto; height: 40px; display: inline-flex; gap: 7px; padding: 0 12px; margin: 0; border: 1px solid #dedafb; border-radius: 12px; color: #5849dd; background: #f4f2ff; font-size: 11px; }
+.iconButton .uiIcon { width: 17px; }
+.answerField { overflow: hidden; border: 1px solid #dce2ec; border-radius: 17px; background: #fbfcfe; transition: border-color .2s, box-shadow .2s; }
+.answerField:focus-within { border-color: #7c6ef3; box-shadow: 0 0 0 4px rgba(91,76,240,.09); }
+.answerLabel { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; border-bottom: 1px solid #e8ebf1; background: #f7f9fc; }
+.answerLabel label { display: block; color: #33435e; font-size: 12px; }
+.answerLabel span { color: #8b96a8; font-size: 10px; }
+.answerField textarea { min-height: 190px; resize: vertical; border: 0; border-radius: 0; background: transparent; color: #20314c; font-size: 15px; line-height: 1.7; }
+.answerField textarea:focus { box-shadow: none; }
+.answerField textarea::placeholder { color: #9aa5b5; }
+.interviewPage .voiceRow { justify-content: space-between; margin: 13px 0 0; }
+.voiceRow > span { display: inline-flex; align-items: center; gap: 7px; color: #738096; font-size: 11px; }
+.syncDot { width: 7px; height: 7px; border-radius: 50%; background: #a8b1bf; }
+.syncDot.online { background: var(--mint); box-shadow: 0 0 0 4px rgba(32,180,134,.1); }
+.voiceButton, .interviewPage .listening { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; font-size: 11px; }
+.voiceButton .uiIcon, .listening .uiIcon { width: 16px; }
+.interviewPage .actions { align-items: center; margin-top: 22px; }
+.interviewPage button { transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+.interviewPage button:not(:disabled):hover { transform: translateY(-1px); }
+.interviewPage .primary { display: inline-flex; justify-content: center; align-items: center; gap: 8px; background: linear-gradient(135deg, #6253ed, #4939cc); box-shadow: 0 9px 20px rgba(81,65,214,.22); }
+.interviewPage .primary:not(:disabled):hover { box-shadow: 0 12px 24px rgba(81,65,214,.28); }
+.interviewPage .secondary { border: 1px solid #e1e6ee; background: #f5f7fa; color: #34435b; }
+.submitButton { min-width: 190px; }
+.submitButton .uiIcon, .nextButton .uiIcon, .compactButton .uiIcon, .completionState .primary .uiIcon { width: 16px; }
+.nextButton { display: inline-flex; align-items: center; gap: 7px; }
+.interviewPage .sourceNote { display: flex; gap: 10px; align-items: flex-start; margin-top: 25px; color: #7b879a; }
+.sourceNote .uiIcon { width: 17px; color: var(--mint); }
+.sourceNote > span { display: grid; gap: 3px; }
+.sourceNote a { color: #5143d4; font-weight: 750; text-decoration: none; }
+.sourceNote small { color: #9aa4b3; }
+
+.interviewPage .feedback { position: sticky; top: 20px; min-height: 650px; padding: 25px; overflow: hidden; border-radius: 24px; background: linear-gradient(180deg, #ffffff, #fbfcff); }
+.feedback::before { content: ''; position: absolute; width: 170px; height: 170px; top: -95px; right: -70px; border-radius: 50%; background: radial-gradient(circle, rgba(95,78,239,.13), rgba(95,78,239,0) 70%); }
+.feedbackHeader { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #edf0f5; }
+.feedbackHeader .eyebrow { margin: 0 0 7px; font-size: 9px; }
+.feedbackHeader .eyebrow > span { width: 15px; }
+.feedbackHeader h2 { margin: 0; font-size: 21px; letter-spacing: -.025em; }
+.feedbackSpark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: #594ae0; background: #f0edff; }
+.feedbackSpark .uiIcon { width: 19px; }
+.interviewPage .emptyState { min-height: 475px; align-content: center; gap: 4px; padding: 20px 10px; }
+.emptyState h3 { margin: 7px 0 2px; color: #263750; font-size: 16px; }
+.emptyState p { max-width: 300px; margin: 0 auto; color: #7a879b; font-size: 13px; line-height: 1.6; }
+.interviewPage .scoreRing { position: relative; width: 116px; height: 116px; display: flex; flex-direction: column; gap: 2px; margin: 17px auto; border: 8px solid #e9e6ff; color: #5141d2; background: radial-gradient(circle, #fff 58%, #f4f1ff); box-shadow: 0 10px 25px rgba(76,61,199,.1); }
+.scoreRing::after { content: ''; position: absolute; inset: -8px; border: 8px solid transparent; border-top-color: #6c5bf1; border-right-color: #6c5bf1; border-radius: 50%; transform: rotate(28deg); }
+.scoreRing span { font-size: 31px; font-weight: 900; line-height: 1; }
+.scoreRing small { color: #8a94a7; font-size: 8px; font-weight: 900; letter-spacing: .1em; }
+.emptyPreview { width: 90%; display: grid; gap: 8px; margin-top: 24px; }
+.emptyPreview span { height: 8px; border-radius: 99px; background: linear-gradient(90deg, #f0f2f6, #fafbfc); }
+.emptyPreview span:nth-child(2) { width: 78%; }
+.emptyPreview span:nth-child(3) { width: 58%; }
+.feedback .scoreMode { margin-top: -8px; }
+.feedback > h3 { color: #273650; font-size: 15px; }
+.interviewPage .dimensionGrid { gap: 9px; }
+.interviewPage .dimensionGrid div { position: relative; padding: 11px 12px; overflow: hidden; border-color: #e7eaf1; background: #f8f9fc; }
+.interviewPage .dimensionGrid div::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--violet); }
+.interviewPage .dimensionGrid div:nth-child(2)::before { background: var(--cyan); }
+.interviewPage .dimensionGrid div:nth-child(3)::before { background: #e7a82e; }
+.interviewPage .dimensionGrid div:nth-child(4)::before { background: var(--mint); }
+.dimensionGrid strong { font-size: 19px; }
+.dimensionGrid strong small { color: #8d98aa; font-size: 10px; }
+.coverageCopy { margin: 16px 0 0; color: #6e7b90; font-size: 12px; line-height: 1.5; }
+.coverageCopy strong { color: #3c4c66; }
+.interviewPage .concepts { margin: 12px 0 18px; }
+.interviewPage .concepts span { border: 1px solid #e4e8ef; font-size: 10px; }
+.interviewPage .concepts .matched { border-color: #bcebd9; background: #eafaf4; color: #14765a; }
+.interviewPage .followUp { display: flex; gap: 11px; padding: 14px; border-color: #dedafb; background: #f5f3ff; }
+.followUpIcon { width: 25px; height: 25px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 8px; color: white; background: #6253e8; font-size: 12px; font-weight: 900; }
+.interviewPage .followUp p { margin-top: 5px; color: #59677e; font-size: 12px; }
+.interviewPage .answerPanel { margin-top: 12px; padding: 0; overflow: hidden; border: 1px solid #e3e7ee; border-radius: 13px; }
+.interviewPage .answerPanel summary { display: flex; justify-content: space-between; align-items: center; padding: 12px 13px; cursor: pointer; color: #44536b; background: #f8fafc; font-size: 11px; font-weight: 850; }
+.interviewPage .answerPanel summary .uiIcon { width: 15px; }
+.interviewPage .answerPanel > p, .interviewPage .answerPanel > small { display: block; margin: 0; padding: 12px 13px 0; font-size: 12px; line-height: 1.6; }
+.interviewPage .answerPanel > small { padding: 4px 13px 13px; color: #8a95a7; }
+.loadingState { align-content: center; gap: 8px; }
+.loadingState > span:last-child { color: #8390a4; font-size: 12px; }
+.loadingOrb { width: 48px; height: 48px; display: grid; place-items: center; margin: 0 auto 8px; border-radius: 15px; color: #5c4ce3; background: #f0edff; }
+.completionState h2 em { color: #5545da; font-style: normal; }
+.completionState .primary { width: fit-content; }
+
+@media (max-width: 980px) {
+  .controlDeck { grid-template-columns: 1fr 1fr; }
+  .controlIntro { grid-column: 1 / -1; }
+  .interviewPage .modePill { justify-self: start; }
+  .interviewPage .interviewGrid { grid-template-columns: 1fr; }
+  .interviewPage .feedback { position: relative; top: auto; min-height: 520px; }
+}
+
+@media (max-width: 720px) {
+  .interviewShell { padding: 18px 16px 52px; }
+  .candidateNav { margin-bottom: 30px; }
+  .navLinks > a:not(.navAccount) { display: none; }
+  .interviewHero { gap: 24px; }
+  .interviewHero h1 { font-size: clamp(36px, 11vw, 50px); }
+  .interviewPage .statusCard { width: 100%; min-width: 0; }
+  .controlDeck { grid-template-columns: 1fr; }
+  .controlIntro { grid-column: auto; }
+  .resumeControls { grid-template-columns: 1fr; padding-left: 18px; }
+  .resumeMessage { padding-left: 18px; }
+  .interviewPage .interviewer { min-height: 0; padding: 24px 18px; }
+  .questionTopline, .questionHeader, .interviewPage .voiceRow { align-items: flex-start; flex-direction: column; }
+  .questionHeader .iconButton { order: -1; }
+  .interviewPage .actions { display: grid; grid-template-columns: 1fr; }
+  .interviewPage .actions button { width: 100%; }
+  .interviewPage .feedback { min-height: 0; padding: 22px 18px; }
+  .interviewPage .emptyState { min-height: 360px; }
+}
+
 .questionBankShell { max-width: 1100px; }
 .pageNav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 38px; font-size: 14px; font-weight: 800; }
 .pageNav a { text-decoration: none; }
