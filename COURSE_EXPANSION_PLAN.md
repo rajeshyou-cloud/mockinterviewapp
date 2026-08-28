@@ -10,11 +10,11 @@ The released bank contains 300 questions: 150 Snowflake and 150 Informatica. Mil
 |---|---:|---:|---|
 | Snowflake | 150 | 150 | Available |
 | Informatica | 150 | 150 | Available |
-| Databricks | 150 candidate | 150 | Awaiting human approval |
-| Oracle Database | 150 candidate | 150 | Awaiting human approval |
-| Power BI | 150 candidate | 150 | Awaiting human approval |
-| Python | 150 candidate | 150 | Awaiting human approval |
-| AWS | 150 candidate | 150 | Awaiting human approval |
+| Databricks | 150 candidate | 150 | AI evidence review pending |
+| Oracle Database | 150 candidate | 150 | AI verified; launch gate pending |
+| Power BI | 150 candidate | 150 | AI evidence review pending |
+| Python | 150 candidate | 150 | AI evidence review pending |
+| AWS | 150 candidate | 150 | AI evidence review pending |
 | **Total after initial expansion** | **300** | **1,050** | |
 
 The initial target is 150 per technology to match the two released courses. Expansion to 300 per technology is a later depth target and should happen only after usage and review evidence identifies the topics that need more coverage.
@@ -59,12 +59,12 @@ A planned course must not appear in the production interview selector until all 
 1. The complete 150-question pack is present.
 2. Schema, uniqueness, coverage, and exact-count tests pass.
 3. Every source URL is reachable and official.
-4. A human review pass promotes launch content from `ai-reviewed` to `approved` or `human-reviewed`.
+4. Two independent evidence-grounded AI reviewers reach approval consensus for every exact benchmark version; disputed records are remediated and re-reviewed.
 5. Question sampling, scoring, persistence, resume, and completion are tested for the new technology.
 6. The Question Bank UI can browse and filter the new course.
 7. CI, production build, and browser verification are green.
 
-The application enforces these gates dynamically. A candidate pack is excluded from the course API, interview selector, Question Bank, scoring, and answer persistence until an authorized reviewer records `approved` with official-source verification. That approval releases the complete pack without a separate code promotion; revoking approval removes it again.
+The application enforces content readiness and launch separately. A candidate pack is excluded from the course API, interview selector, Question Bank, scoring, and answer persistence until every current benchmark is `ai-evidence-verified` (or optionally `human-verified`) and the pack is explicitly added to the launch registry after source-link and production-flow checks. Legacy human course-review rows do not publish content.
 
 ## Milestone 3 work order
 
@@ -72,7 +72,7 @@ The application enforces these gates dynamically. A candidate pack is excluded f
 2. Add Databricks and Power BI packs first because they align most closely with the current data-platform audience.
 3. Add Oracle Database and Python packs.
 4. Add the AWS pack, with service scope kept explicit to avoid shallow coverage.
-5. Run human review and source revalidation in batches before enabling each selector option.
+5. Run independent AI evidence review, dispute remediation, source revalidation, and production-flow checks before enabling each selector option.
 6. Reassess whether each course should expand from 150 to 300 using search, interview, and low-score topic evidence.
 
 ## Other product activities
@@ -81,4 +81,4 @@ The application enforces these gates dynamically. A candidate pack is excluded f
 - Interview replay, recruiter analytics, reviewer/admin workflow, production authentication, and the subscription/entitlement foundation are deployed.
 - Activate Stripe products, prices, and the signed production webhook after the account owner accepts provider terms and selects prices.
 
-Human course decisions, Stripe activation, and AI Gateway billing are the remaining account-level launch gates.
+Independent AI evidence review, explicit pack launch decisions, Stripe activation, and AI Gateway billing are the remaining account-level launch gates. Human review is optional escalation, not routine content approval.

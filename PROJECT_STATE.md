@@ -63,7 +63,7 @@ Neon Managed Auth has been provisioned on the production database branch. The pr
 
 Role-based account history, reviewer, recruiter, admin, and billing implementations are deployed, with 57 web tests, 8 API tests, a production build, and zero production dependency vulnerabilities. Migration `c499f767-72d5-4e71-a535-5745fc8ce5c9` was approved and applied to the production Neon branch on 2026-08-23; its temporary verification branch was deleted after the required column, tables, constraints, and indexes were confirmed. A disposable administrator then verified `/review`, `/admin`, `/recruiter`, `/billing`, account-linked history, and secure account replay in production. Final account-deletion verification confirmed atomic cleanup of the identity, roles, subscription, and owned sessions, with zero disposable users remaining.
 
-The verified production-owner account was bootstrapped with the `admin` application role on 2026-08-23. No account identifier or email is stored in the repository. Human pack decisions can now be recorded through `/review`.
+The verified production-owner account was bootstrapped with the `admin` application role on 2026-08-23. No account identifier or email is stored in the repository. Optional human escalation decisions can be recorded through `/review`, but they are not the routine question-verification or production-release gate.
 
 ## Milestone 3 — Course and question-bank expansion
 
@@ -82,11 +82,12 @@ Status: **BENCHMARK STRUCTURE COMPLETE / INFORMATICA AND ORACLE CLAUDE-VERIFIED*
 - [x] Generate and structurally validate 150 Databricks candidate questions (50 per difficulty)
 - [x] Generate and structurally validate 150 Power BI candidate questions (50 per difficulty)
 - [x] Verify all 49 unique Databricks/Power BI source URLs are reachable official documentation
-- [ ] Human-review and approve the Databricks and Power BI candidate packs
+- [ ] Complete independent two-model AI evidence verification for Databricks and Power BI
 - [x] Generate and structurally validate 150 Oracle Database candidate questions (50 per difficulty)
 - [x] Generate and structurally validate 150 Python candidate questions (50 per difficulty)
 - [x] Verify all 50 unique Oracle Database/Python source URLs are reachable official documentation
-- [ ] Human-review and approve the Oracle Database and Python candidate packs
+- [x] Complete independent two-model AI evidence verification for Oracle Database
+- [ ] Complete independent two-model AI evidence verification for Python
 - [x] Generate and structurally validate 150 AWS candidate questions (50 per difficulty)
 - [x] Verify all 25 unique AWS source URLs are reachable official documentation
 - [x] Add versioned benchmark-answer records to all 1,050 released and candidate questions
@@ -109,9 +110,11 @@ Status: **BENCHMARK STRUCTURE COMPLETE / INFORMATICA AND ORACLE CLAUDE-VERIFIED*
 - [x] Prepare `sentforrereview` Claude upload chunks for remediated Informatica and Oracle packets
 - [x] Import final Informatica re-review and verify all 150 Informatica benchmarks as ai-evidence-verified
 - [x] Import final Oracle re-review and verify all 150 Oracle benchmarks as ai-evidence-verified
-- [ ] Human-review and approve the AWS candidate pack
-- [ ] Human-review and approve each pack before exposing it in production
+- [ ] Complete independent two-model AI evidence verification for AWS
+- [ ] Explicitly launch each fully AI-verified pack after source-link and production-flow verification
 - [ ] Revalidate all official source links and run production browser verification per launch
+
+Routine question approval is intentionally AI-led: two distinct evidence-grounded reviewers must agree before import marks an exact benchmark version `ai-evidence-verified`. Human review is optional dispute escalation, and AI verification is not vendor certification.
 
 The benchmark-answer structure from `docs/BENCHMARK_SCORING_PLAN.md` is now implemented for all 1,050 questions. This creates standard answers and evidence metadata, plus reviewer-ready evidence packets under `apps/web/data/evidence-packets`, but it is not the same as completed vendor-document review. `npm run review:benchmarks -- --dry-run --technology=snowflake --limit=2` verifies the default AI Gateway review runner. `npm run review:benchmarks -- --dry-run --provider=anthropic --technology=snowflake --limit=2` verifies the direct Claude/Anthropic path intended for expiring Claude usage credits; live Claude review requires `ANTHROPIC_API_KEY`, `REVIEW_PROVIDER=anthropic`, `REVIEW_PRIMARY_MODEL`, and `REVIEW_CRITIC_MODEL` with two different Claude model IDs. `npm run review:benchmarks:auto -- --provider=openai --technology=aws --limit=2 --dry-run` verifies the reusable ChatGPT/OpenAI automation path: export packets, review selected statuses, dry-run import, and validate. On 2026-08-24, Claude web review batches were imported after clean dry-runs: 450 valid AWS/Databricks/Informatica reviews, 150 valid Oracle first-pass reviews, two 150-record Informatica re-reviews, and three 150-record Oracle re-reviews, with 0 rejected import records. Informatica then received first-pass remediation for all 125 disputed records and passed final Claude re-review, bringing Informatica to 150 ai-evidence-verified benchmarks. Oracle was also remediated through multiple re-review passes and passed final Claude re-review, bringing Oracle to 150 ai-evidence-verified benchmarks. On 2026-08-25, the ChatGPT/OpenAI automated pipeline processed and imported 300 complete Snowflake/Power BI reviews plus 144 of 150 Python reviews before OpenAI API credits were exhausted. On 2026-08-26, the review workflow gained a zero-cost static triage command (`npm run triage:benchmarks`), bulk generic-answer remediation command (`npm run remediate:benchmarks`), compact re-review packet exporter (`npm run export:rereview-packets`), direct Gemini provider support, Gemini rate-limit retry handling, offset-based compact batches, and verified-only import (`--import-only-verified`). Local remediation has rewritten all 713 non-verified pending records across AWS, Databricks, Snowflake, Power BI, and Python, preserved the 337 already verified records, reset remediated records to `draft`, and reduced static triage flags to 0 across all technologies. Current benchmark status counts after the latest Gemini verified-only import are 707 draft and 343 ai-evidence-verified. By technology: Informatica and Oracle each have 150 verified; AWS has 24 verified and 126 draft; Databricks has 16 verified and 134 draft; Snowflake has 3 verified and 147 draft; Power BI has 150 draft; Python has 150 draft. A first Gemini free-tier pilot reviewed 10 compact AWS draft records and returned 10 disputed, mainly because the compact packet evidence was too thin for advanced/troubleshooting claims and several AWS regenerated answers still had awkward copied-title phrasing. A second Gemini free-tier AWS batch completed 9 records before throttling was stopped; 6 consensus-approved records were imported as ai-evidence-verified and 3 disputed records were left pending. On 2026-08-27, pending AWS and Databricks answers were cleaned to remove `What is ...?` source-title phrasing, and all pending technologies were strengthened with more concrete hands-on benchmark guidance while verified records remained untouched. A follow-up Gemini probe hit repeated free-tier rate limits even at `--limit=1 --concurrency=1`, so live AI review is paused until the Gemini quota window resets or higher quota is available. AWS evidence was then enriched from one broad source link per question to 3-5 official AWS evidence links per cluster, covering setup, security, monitoring/troubleshooting, throttling/quotas, backup/recovery, or cost controls as applicable. Candidate-pack approval is still blocked until every benchmark in a pack is `ai-evidence-verified` or `human-verified`. Migration `57f3457d-5e7b-4990-955e-4ecc2e8ae621` was applied to the main Neon branch on 2026-08-24 and verified. Existing `ai-reviewed` content must not be represented as vendor-certified or human-reviewed. Rotate any exposed OpenAI or Gemini API key before further live API review.
 
@@ -178,7 +181,7 @@ The implemented model is documented in `docs/GOVERNED_CONTENT_SCHEMA.md`. The mi
 
 - Interview replay — implemented, deployed, and production page verified
 - Recruiter comparison and analytics — deployed and administrator-access production verification complete; real recruiter role and cohort-data acceptance pending
-- Human reviewer/admin workflow — deployed and administrator-access production verification complete; real reviewer bootstrap and human decisions pending
+- Optional human escalation/admin workflow — deployed; routine question verification remains independent two-model AI consensus
 - Production user authentication — provisioned, deployed, and full account/history/deletion lifecycle verified
 - Subscription billing — implementation complete locally; Stripe terms/products/prices/webhook activation pending
 

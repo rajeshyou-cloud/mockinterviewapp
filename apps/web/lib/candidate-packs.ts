@@ -24,6 +24,11 @@ export const candidatePackLabels = {
 
 export type CandidateCourse = keyof typeof candidatePacks;
 
+// Content readiness comes from evidence-grounded AI consensus. Production
+// exposure remains a separate, explicit operational decision so that a newly
+// verified pack cannot launch merely because its last review finished.
+export const launchedCandidateCourses: readonly CandidateCourse[] = [];
+
 export function isCandidateCourse(value: string): value is CandidateCourse {
   return value in candidatePacks;
 }

@@ -20,7 +20,7 @@ export default async function ReviewPage({ searchParams }: { searchParams: Promi
   return (
     <main className="shell questionBankShell">
       <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/admin/content/flow">Project Flow</Link><Link href="/">Interview</Link></nav>
-      <header className="bankHeader"><div><p className="eyebrow">CONTENT RELEASE GATE</p><h1>Course review</h1><p className="lede">Inspect all 150 questions and record a traceable pack-level decision. Approval requires source checks and verified benchmark answers for every question.</p></div><div className="bankCount"><strong>{questions.length}</strong><span>{candidatePackLabels[course]} candidates</span></div></header>
+      <header className="bankHeader"><div><p className="eyebrow">OPTIONAL HUMAN ESCALATION</p><h1>Course review</h1><p className="lede">Routine question verification comes from two independent evidence-grounded AI reviewers. Use this page only to record a traceable exception, dispute escalation, or additional human opinion; it does not publish a pack.</p></div><div className="bankCount"><strong>{questions.length}</strong><span>{candidatePackLabels[course]} candidates</span></div></header>
 
       <nav className="reviewTabs">{Object.entries(candidatePackLabels).map(([id, label]) => <Link className={id === course ? 'active' : ''} href={`/review?course=${id}`} key={id}>{label}</Link>)}</nav>
       {query.saved && <p className="successBanner">Review decision saved.</p>}
@@ -35,7 +35,7 @@ export default async function ReviewPage({ searchParams }: { searchParams: Promi
 
       <form className="card reviewDecision" action={saveReview}>
         <input name="courseId" type="hidden" value={course} />
-        <label>Decision<select name="status" defaultValue={current?.status ?? 'in_review'}><option value="in_review">In review</option><option value="changes_requested">Changes requested</option><option value="approved">Approved</option></select></label>
+        <label>Optional human decision<select name="status" defaultValue={current?.status ?? 'in_review'}><option value="in_review">In review</option><option value="changes_requested">Changes requested</option><option value="approved">Additional human approval</option></select></label>
         <label className="checkLabel"><input name="sourceLinksChecked" type="checkbox" defaultChecked={Boolean(current?.source_links_checked)} /> I checked the official source links for this pack</label>
         <label>Review notes<textarea name="notes" rows={4} maxLength={2000} defaultValue={current?.notes ?? ''} placeholder="Record coverage observations, corrections, or approval rationale." /></label>
         <button className="primary" type="submit">Save review decision</button>

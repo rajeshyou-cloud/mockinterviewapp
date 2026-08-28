@@ -1,11 +1,18 @@
 import 'server-only';
 
+import { summarizeBenchmarkReviews } from './benchmark-review';
+import { candidatePacks, isCandidateCourse, launchedCandidateCourses } from './candidate-packs';
 import { availableTechnologyIds, courseCatalog, isKnownTechnology, type Technology } from './course-catalog';
-import { listApprovedCourseIds } from './db';
+
+export function isCandidateCourseAiVerified(courseId: string) {
+  return isCandidateCourse(courseId) && summarizeBenchmarkReviews(candidatePacks[courseId]).publishable;
+}
 
 export async function getReleasedCourseIds(): Promise<Technology[]> {
-  const approved = (await listApprovedCourseIds()).filter(isKnownTechnology);
-  return [...new Set<Technology>([...availableTechnologyIds, ...approved])];
+  const launched = launchedCandidateCourses
+    .filter(isKnownTechnology)
+    .filter(isCandidateCourseAiVerified);
+  return [...new Set<Technology>([...availableTechnologyIds, ...launched])];
 }
 
 export async function getReleasedCourses() {

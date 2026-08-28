@@ -25,7 +25,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
         {query.access === 'denied' && <p className="authError">Your account does not have access to that staff area.</p>}
         <div className="accountActions">
           <form action={signOut}><button className="secondary" type="submit">Sign out</button></form>
-          {(roles.includes('reviewer') || roles.includes('admin')) && <Link className="secondaryLink" href="/review">Review courses</Link>}
+          {(roles.includes('reviewer') || roles.includes('admin')) && <Link className="secondaryLink" href="/review">Optional review escalation</Link>}
           {(roles.includes('recruiter') || roles.includes('admin')) && <Link className="secondaryLink" href="/recruiter">Recruiter analytics</Link>}
           {roles.includes('admin') && <Link className="secondaryLink" href="/admin">Manage access</Link>}
           <Link className="secondaryLink" href="/billing">Billing</Link>

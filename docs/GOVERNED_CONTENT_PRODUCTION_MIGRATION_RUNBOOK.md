@@ -30,7 +30,7 @@ On 2026-08-27, from `D:\mockinterviewapp`:
 - `npm run import:governed-content -- --dry-run`: 7 technologies, 98 topics,
   1,050 questions, 1,050 benchmarks, 1,476 evidence sources and links, 686
   immutable review records, and 1,050 version snapshots.
-- `npm run test:web`: 87 passed.
+- `npm run test:web`: 88 passed.
 - `python -m pytest -q` from `apps/api`: 9 passed.
 - `npm run build:web`: passed.
 - `npm audit --audit-level=high`: 0 vulnerabilities.

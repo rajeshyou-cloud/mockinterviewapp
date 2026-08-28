@@ -53,7 +53,7 @@ describe('POST /api/score', () => {
     expect(score).not.toHaveBeenCalled();
   });
 
-  it('does not score a candidate-pack question before human approval', async () => {
+  it('does not score a candidate-pack question before AI verification and explicit launch', async () => {
     released.isReleasedTechnology.mockResolvedValue(false);
     const response = await POST(request(JSON.stringify({
       answer: 'A detailed answer',
