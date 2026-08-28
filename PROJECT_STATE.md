@@ -69,6 +69,8 @@ The public candidate page now continues below the interview workspace with a six
 
 Primary candidate navigation now links to How it works, Features, Outcomes, Question Bank, and Account, with Start interview, Replay, and the same marketing destinations available through an accessible compact mobile Menu. A four-step How it works section explains interview selection, voice/text answering, structured feedback, and benchmark-led improvement. All marketing anchors use smooth in-page navigation and preserve direct route links for the question bank, replay, and account.
 
+The candidate homepage now also contains an original, generic enterprise Agentic AI architecture explainer. Its inline responsive SVG shows orchestration, planning and reasoning, model routing, short/long-term memory, RAG, tools, functions, MCP, external APIs, high-risk human approval, guardrails, execution, observability, evaluation, and a controlled improvement loop. Signal dots follow a synchronized 12-second silent process cycle, play only while the diagram is in view, and remain static when reduced motion is requested. The dedicated Agentic AI interview track is labelled as being prepared and is not added to the released-course selector or publication registry.
+
 The verified production-owner account was bootstrapped with the `admin` application role on 2026-08-23. No account identifier or email is stored in the repository. Optional human escalation decisions can be recorded through `/review`, but they are not the routine question-verification or production-release gate.
 
 ## Milestone 3 — Course and question-bank expansion

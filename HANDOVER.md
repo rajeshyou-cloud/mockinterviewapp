@@ -87,6 +87,8 @@ Below the interactive workspace, the same route includes six truthful feature ca
 
 The desktop candidate navigation exposes How it works, Features, Outcomes, Question Bank, and Account. Mobile replaces those links with a compact Menu containing Start interview, How it works, Features, Candidate outcomes, Question bank, Replay interviews, and My account. The How it works section is a responsive four-step workflow from interview selection through benchmark-led improvement; section anchors scroll smoothly and do not alter application routing or interview state.
 
+The homepage also includes `apps/web/app/components/AgenticArchitecture.tsx`, an original generic enterprise Agentic AI explainer with a complete responsive SVG architecture plus three smaller process cards. Animated signal dots use one 12-second silent loop and the component pauses SVG playback outside the viewport or for reduced-motion users. Mobile keeps the detailed diagram legible in a labelled horizontal exploration area. The CTA truthfully marks the dedicated Agentic AI interview track as being prepared; do not add it to the selector until its governed content passes the existing AI-evidence and explicit-launch gates.
+
 ## Scoring configuration
 
 - Default Vercel model: `openai/gpt-5.6-luna`

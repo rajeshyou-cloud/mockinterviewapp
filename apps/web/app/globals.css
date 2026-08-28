@@ -264,6 +264,86 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .howConnector { position: absolute; z-index: 2; top: 38px; right: -24px; width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #dedfeb; border-radius: 50%; color: #7b68df; background: #fff; box-shadow: 0 7px 18px rgba(33,45,76,.09); }
 .howConnector .uiIcon { width: 15px; }
 .howCard:last-child .howConnector { display: none; }
+
+.agenticSection { scroll-margin-top: 24px; }
+.agenticHeading { align-items: center; }
+.agenticIntro { display: grid; gap: 14px; }
+.agenticIntro p { margin: 0; color: #68768c; font-size: 15px; line-height: 1.7; }
+.agenticIntro span { width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; color: #087e76; background: #e8fbf6; font-size: 11px; font-weight: 900; }
+.agenticIntro i { width: 8px; height: 8px; border-radius: 50%; background: #15b898; box-shadow: 0 0 0 5px rgba(21,184,152,.12); }
+.agenticCanvas { position: relative; padding: 14px; border: 1px solid #dfddec; border-radius: 30px; background: rgba(255,255,255,.84); box-shadow: 0 24px 60px rgba(37,49,89,.12); }
+.agenticPanHint { display: none; }
+.agenticDiagram { width: 100%; height: auto; display: block; border-radius: 22px; }
+.agentCard rect { fill: rgba(255,255,255,.96); stroke: #cfd4e2; stroke-width: 2; }
+.agentCard text { fill: #172a47; font-size: 16px; font-weight: 900; text-anchor: middle; letter-spacing: .02em; }
+.agentCard text.sub { fill: #718096; font-size: 11px; font-weight: 700; letter-spacing: 0; }
+.agentCard path, .agentCard circle, .agentCard ellipse { fill: none; stroke: #243755; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.agentCard.user rect { fill: #f2edff; stroke: #8061e7; }
+.agentCard.user circle { fill: #8b6aef; stroke: #493393; }
+.agentCard.user path { fill: #cdbfff; stroke: #493393; }
+.agentCard.orchestrator rect { fill: #ece8ff; stroke: #6946d9; }
+.agentCard.orchestrator circle { fill: #d63384; stroke: none; }
+.agentCard.planner rect { fill: #e8fbff; stroke: #0e93af; }
+.agentCard.planner path { stroke: #087f99; }
+.agentCard.router rect { fill: #fff5d8; stroke: #d68a18; }
+.agentCard.router rect:not(:first-child) { fill: #fff; stroke: #d68a18; stroke-width: 2; }
+.agentCard.execute rect { fill: #e9fbf4; stroke: #1a9670; }
+.agentCard.execute path { stroke: #13815f; stroke-width: 7; }
+.agentCard.memory rect { fill: #f5efff; stroke: #8b5fe9; }
+.agentCard.memory ellipse, .agentCard.memory path { stroke: #6d43cf; }
+.agentCard.rag rect { fill: #e9fbff; stroke: #1595b0; }
+.agentCard.rag circle, .agentCard.rag path { stroke: #0c819a; }
+.agentCard.tools rect { fill: #fff6df; stroke: #dc8a22; }
+.agentCard.tools circle { fill: #ef385d; stroke: none; }
+.agentCard.human rect { fill: #fff0f7; stroke: #ce3b80; }
+.agentCard.human path { stroke: #ad2869; }
+.agentLayerLabel rect { fill: #ece8ff; }
+.agentLayerLabel text { fill: #5f42ca; font-size: 11px; font-weight: 900; text-anchor: middle; letter-spacing: .12em; }
+.agentLayerLabel.intelligence rect { fill: #e6f9fd; }
+.agentLayerLabel.intelligence text { fill: #087e98; }
+.agentLayerLabel.action rect { fill: #fff2d7; }
+.agentLayerLabel.action text { fill: #ac6509; }
+.agentPath { fill: none; stroke: #72819a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 4 8; }
+.agentPath.main { stroke: url(#agentic-main); stroke-width: 4; stroke-dasharray: 7 9; }
+.agentPath.return { stroke: #7c65d8; }
+.agentSignal { fill: #ef385d; stroke: white; stroke-width: 3; filter: drop-shadow(0 3px 5px rgba(207,38,85,.35)); }
+.agentSketch { fill: none; stroke: #2a8a58; stroke-width: 5; stroke-linecap: round; }
+.guardrailBand rect:first-child { fill: #17335b; }
+.guardrailBand > path { fill: #6ee7c8; stroke: #ddfff7; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.guardrailBand > text { fill: white; font-size: 17px; font-weight: 900; }
+.guardrailBand > text.sub { fill: #c6d5e9; font-size: 12px; font-weight: 600; }
+.guardrailPills rect { fill: rgba(255,255,255,.1); stroke: rgba(255,255,255,.18); }
+.guardrailPills text { fill: #9df2df; font-size: 10px; font-weight: 900; text-anchor: middle; letter-spacing: .08em; }
+.opsBand > rect { fill: #fff; stroke: #d7dbea; stroke-width: 2; }
+.opsBand > text { fill: #273958; font-size: 15px; font-weight: 900; }
+.opsBand > text.sub { fill: #748198; font-size: 11px; font-weight: 650; }
+.opsBand > path { fill: none; stroke: #72819a; stroke-width: 3; }
+.opsBand .learningLoop { stroke: #d43c81; stroke-dasharray: 6 7; }
+.agenticLegend { position: absolute; right: 30px; bottom: 29px; display: flex; gap: 16px; padding: 8px 12px; border: 1px solid rgba(211,216,230,.9); border-radius: 999px; background: rgba(255,255,255,.88); backdrop-filter: blur(8px); }
+.agenticLegend span { display: inline-flex; align-items: center; gap: 6px; color: #65738a; font-size: 9px; font-weight: 800; }
+.agenticLegend i { width: 16px; height: 4px; border-radius: 999px; background: #ef385d; }
+.agenticLegend i.control { background: #17335b; }
+.agenticLegend i.learning { background: #d43c81; }
+.agenticFlowGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+.agenticFlowCard { --flow-accent: #7047eb; position: relative; min-height: 210px; padding: 23px; overflow: hidden; border: 1px solid #e1def0; border-radius: 22px; background: linear-gradient(145deg, #f5f0ff, #fff); box-shadow: 0 14px 34px rgba(34,47,83,.07); }
+.agenticFlowCard.cyan { --flow-accent: #0794ae; background: linear-gradient(145deg, #eafaff, #fff); }
+.agenticFlowCard.amber { --flow-accent: #ca7712; background: linear-gradient(145deg, #fff5db, #fff); }
+.agenticFlowCard > div:first-child { display: flex; align-items: center; gap: 9px; }
+.agenticFlowCard > div:first-child span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; color: white; background: var(--flow-accent); font-size: 11px; font-weight: 900; }
+.agenticFlowCard small { color: var(--flow-accent); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+.agenticFlowCard h3 { margin: 22px 0 8px; color: #1a2c49; font-size: 19px; }
+.agenticFlowCard p { margin: 0; max-width: 95%; color: #68768c; font-size: 12px; line-height: 1.6; }
+.miniFlow { position: absolute; right: 22px; bottom: 20px; width: 90px; height: 8px; display: flex; align-items: center; justify-content: space-between; }
+.miniFlow::before { content: ''; position: absolute; left: 4px; right: 4px; height: 2px; background: color-mix(in srgb, var(--flow-accent) 35%, white); }
+.miniFlow i { position: relative; width: 8px; height: 8px; border: 2px solid var(--flow-accent); border-radius: 50%; background: white; }
+.miniFlow b { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #ef385d; animation: mini-agent-flow 3.2s ease-in-out infinite; }
+.agenticCta { display: flex; justify-content: space-between; align-items: center; gap: 26px; margin-top: 16px; padding: 24px 28px; border-radius: 22px; color: white; background: linear-gradient(118deg, #182d54, #5427a7 55%, #087d91); box-shadow: 0 20px 42px rgba(42,36,112,.2); }
+.agenticCta > div { display: grid; gap: 5px; }
+.agenticCta > div > span { color: #85eee2; font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+.agenticCta strong { font-size: 22px; }
+.agenticCta p { margin: 0; max-width: 680px; color: #d4e0f1; font-size: 11px; line-height: 1.55; }
+.agenticCta a { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 10px; padding: 13px 16px; border: 1px solid rgba(255,255,255,.2); border-radius: 13px; color: #20284a; background: linear-gradient(135deg, #a7f3e3, #f8d2ef); font-size: 11px; font-weight: 900; text-decoration: none; }
+@keyframes mini-agent-flow { 0%, 12% { transform: translateX(0); opacity: 0; } 22% { opacity: 1; } 78% { opacity: 1; } 90%, 100% { transform: translateX(83px); opacity: 0; } }
 .featureGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .featureCard { position: relative; min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; padding: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,.7); border-radius: 23px; box-shadow: 0 18px 40px rgba(33,48,83,.08); transition: transform .22s ease, box-shadow .22s ease; }
 .featureCard:hover { transform: translateY(-4px); box-shadow: 0 24px 50px rgba(33,48,83,.13); }
@@ -319,6 +399,7 @@ button:disabled { cursor: not-allowed; opacity: .5; }
   .howGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .howCard:nth-child(2) .howConnector { display: none; }
   .outcomeSection { grid-template-columns: 1fr; }
+  .agenticFlowGrid { grid-template-columns: 1fr; }
   .trustStatement { grid-column: auto; }
 }
 
@@ -346,10 +427,19 @@ button:disabled { cursor: not-allowed; opacity: .5; }
   .howCard { min-height: 220px; }
   .howConnector { top: auto; right: 50%; bottom: -24px; transform: translateX(50%) rotate(90deg); }
   .howCard:nth-child(2) .howConnector { display: grid; }
+  .agenticCanvas { padding: 6px; border-radius: 20px; overflow-x: auto; }
+  .agenticPanHint { position: sticky; z-index: 3; left: 10px; width: fit-content; display: block; margin: 8px 8px 3px; padding: 6px 9px; border-radius: 999px; color: #5f42ca; background: #f0ebff; font-size: 9px; font-weight: 900; }
+  .agenticDiagram { width: 860px; max-width: none; }
+  .agenticLegend { position: sticky; left: 12px; width: fit-content; margin: -44px 0 10px 10px; }
+  .agenticCta { align-items: flex-start; flex-direction: column; padding: 24px 22px; }
   .featureCard { min-height: 220px; }
   .outcomeSection { gap: 28px; padding: 30px 22px; border-radius: 24px; }
   .outcomeCard { grid-template-columns: auto minmax(0, 1fr); }
   .finalCta { align-items: flex-start; flex-direction: column; padding: 28px 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .miniFlow b { animation: none; left: 41px; }
 }
 
 .questionBankShell { max-width: 1100px; }

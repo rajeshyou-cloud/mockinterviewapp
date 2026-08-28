@@ -18,6 +18,7 @@ import { buildAssessmentSummary } from '../lib/assessment';
 import { availableCourses, technologyLabel, type CourseDefinition } from '../lib/course-catalog';
 import { InterviewSession, clearSession, loadSession, newSession, saveSession } from '../lib/session';
 import { SpeechInputAdapter, SpeechOutputAdapter, createBrowserSpeechInput, createBrowserSpeechOutput } from '../lib/voice';
+import { AgenticArchitecture } from './components/AgenticArchitecture';
 
 const difficultyLabels: Record<Difficulty, string> = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
 
@@ -231,8 +232,8 @@ export default function Home() {
     <div className="shell interviewShell">
       <nav className="candidateNav" aria-label="Primary navigation">
         <a className="brand" href="/" aria-label="Interview Studio home"><span className="brandMark"><Icon name="spark"/></span><span>Interview<span>Studio</span></span></a>
-        <div className="navLinks"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#outcomes">Outcomes</a><a href="/questions">Question bank</a><a className="navAccount" href="/account">My account <Icon name="arrow"/></a></div>
-        <details className="mobileMenu"><summary>Menu <span>⌄</span></summary><div className="mobileMenuPanel"><a href="#interview-setup">Start interview</a><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#outcomes">Candidate outcomes</a><a href="/questions">Question bank</a><a href="/replay">Replay interviews</a><a href="/account">My account</a></div></details>
+        <div className="navLinks"><a href="#how-it-works">How it works</a><a href="#agentic-architecture">Agentic AI</a><a href="#features">Features</a><a href="#outcomes">Outcomes</a><a href="/questions">Question bank</a><a className="navAccount" href="/account">My account <Icon name="arrow"/></a></div>
+        <details className="mobileMenu"><summary>Menu <span>⌄</span></summary><div className="mobileMenuPanel"><a href="#interview-setup">Start interview</a><a href="#how-it-works">How it works</a><a href="#agentic-architecture">Agentic AI architecture</a><a href="#features">Features</a><a href="#outcomes">Candidate outcomes</a><a href="/questions">Question bank</a><a href="/replay">Replay interviews</a><a href="/account">My account</a></div></details>
       </nav>
 
       <section className="hero interviewHero">
@@ -266,6 +267,8 @@ export default function Home() {
         <div className="marketingHeading"><div><p className="marketingEyebrow">HOW IT WORKS</p><h2 id="how-heading">Four steps from question to improvement.</h2></div><p>A focused workflow keeps every practice session purposeful, measurable, and easy to repeat.</p></div>
         <div className="howGrid">{workflowSteps.map((workflow)=><article className={`howCard ${workflow.tone}`} key={workflow.step}><div className="howTop"><span className="howIcon"><Icon name={workflow.icon}/></span><span className="howStep">STEP {workflow.step}</span></div><h3>{workflow.title}</h3><p>{workflow.description}</p><span className="howConnector"><Icon name="arrow"/></span></article>)}</div>
       </section>
+
+      <AgenticArchitecture/>
 
       <section className="marketingSection featureSection" id="features" aria-labelledby="feature-heading">
         <div className="marketingHeading"><div><p className="marketingEyebrow">BUILT FOR DELIBERATE PRACTICE</p><h2 id="feature-heading">Everything you need to practise with purpose.</h2></div><p>Move beyond memorising answers. InterviewStudio helps you rehearse, evaluate, and improve the way you explain technical decisions.</p></div>
