@@ -150,6 +150,11 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .reviewTabs a.active { background: #111827; color: white; }
 .reviewDecision { display: grid; gap: 16px; padding: 20px; margin-bottom: 24px; }
 .reviewDecision button { width: fit-content; }
+.contentEditor fieldset { border: 1px solid #d7deea; border-radius: 14px; padding: 16px; }
+.contentEditor legend { padding: 0 8px; font-weight: 900; color: #334155; }
+.editorGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.bulkToolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; justify-content: space-between; margin-bottom: 16px; }
+.bulkToolbar select { min-width: 180px; }
 .checkLabel { display: flex; grid-template-columns: auto 1fr; align-items: center; gap: 8px; }
 .checkLabel input { width: 18px; height: 18px; }
 .successBanner { padding: 11px 13px; border-radius: 12px; background: #ecfdf5; color: #047857; }
@@ -174,6 +179,52 @@ th { color: #64748b; font-size: 12px; }
 .billingStatus { padding: 24px; margin-top: 18px; text-transform: capitalize; }
 .billingStatus h2 { margin-top: 0; font-size: 28px; }
 
+.flowDashboardShell { max-width: 1380px; }
+.flowHero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: end; margin: 36px 0 28px; }
+.flowHero h1 { max-width: 920px; margin: 8px 0 12px; font-size: clamp(38px, 5.5vw, 68px); line-height: 1.02; letter-spacing: -.035em; }
+.flowSource { min-width: 235px; display: grid; gap: 5px; padding: 18px; border-radius: 18px; background: #ecfdf5; color: #065f46; }
+.flowSource.json-transition { background: #fff7ed; color: #9a3412; }
+.flowSource span { max-width: 220px; font-size: 12px; line-height: 1.45; }
+.flowKpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px; }
+.flowKpis > div { min-width: 0; display: grid; gap: 5px; padding: 18px; border: 1px solid #e4e9f1; border-radius: 18px; background: white; box-shadow: 0 10px 28px rgba(15,23,42,.045); }
+.flowKpis span, .flowKpis small { color: #64748b; font-size: 12px; }
+.flowKpis strong { font-size: clamp(25px, 3vw, 38px); color: #111827; }
+.flowSection { padding: 26px; margin-bottom: 18px; }
+.flowSection h2 { margin: 5px 0 22px; font-size: clamp(25px, 3vw, 34px); }
+.flowSectionHeading { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.flowSectionHeading > p, .flowSectionHeading > span { max-width: 440px; color: #64748b; line-height: 1.55; }
+.flowPipeline { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; padding: 0; list-style: none; counter-reset: none; }
+.flowPipeline li { position: relative; min-width: 0; padding: 18px; border-radius: 16px; background: #f8fafc; }
+.flowPipeline li:not(:last-child)::after { content: '→'; position: absolute; z-index: 2; top: 46px; right: -18px; color: #94a3b8; font-size: 20px; font-weight: 900; }
+.flowPipeline strong, .flowPipeline b, .flowPipeline small { display: block; }
+.flowPipeline strong { min-height: 42px; margin-top: 15px; line-height: 1.35; }
+.flowPipeline b { margin: 12px 0 3px; font-size: 30px; color: #1e293b; }
+.flowPipeline small { color: #64748b; }
+.flowPipeline p { margin: 14px 0 0; color: #64748b; font-size: 12px; line-height: 1.5; }
+.flowStep { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: #4338ca; color: white; font-size: 12px; font-weight: 900; }
+.flowTwoColumn { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.statusDistribution { display: grid; gap: 16px; }
+.statusDistribution > div { display: grid; grid-template-columns: minmax(145px, .8fr) minmax(120px, 1.2fr) 42px; gap: 12px; align-items: center; }
+.statusDistribution > div > div:first-child { display: flex; justify-content: space-between; gap: 10px; text-transform: capitalize; }
+.statusTrack, .inlineProgress { height: 10px; overflow: hidden; border-radius: 999px; background: #e8edf4; }
+.statusTrack span, .inlineProgress span { display: block; height: 100%; min-width: 2px; background: #4f46e5; }
+.statusDistribution small { color: #64748b; text-align: right; }
+.schemaEntityGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.schemaEntityGrid > div { display: grid; gap: 5px; padding: 12px; border-radius: 12px; background: #f8fafc; }
+.schemaEntityGrid span { color: #64748b; font-size: 12px; }
+.flowContract { margin: 20px 0 0; padding: 14px; border-left: 4px solid #4f46e5; background: #eef2ff; color: #3730a3; line-height: 1.55; }
+.creationFlow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 0; list-style: none; }
+.creationFlow li { display: grid; grid-template-columns: 38px 1fr; gap: 12px; padding: 18px; border-radius: 16px; background: #f8fafc; }
+.creationFlow li > span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: #111827; color: white; font-weight: 900; }
+.creationFlow strong { font-size: 17px; }
+.creationFlow p { margin: 6px 0 0; color: #64748b; font-size: 13px; line-height: 1.55; }
+.inlineProgress { width: 110px; display: inline-block; margin-right: 8px; vertical-align: middle; }
+.metricList { display: grid; gap: 0; padding: 0; list-style: none; }
+.metricList li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid #e5e7eb; text-transform: capitalize; }
+.metricList small { grid-column: 1 / -1; color: #64748b; }
+.flowEmpty { padding: 22px; border-radius: 16px; background: #f8fafc; color: #475569; line-height: 1.6; }
+.flowEmpty p { margin-bottom: 0; }
+
 @media (max-width: 820px) {
   .hero { display: grid; }
   .toolbar { align-items: stretch; flex-direction: column; }
@@ -183,14 +234,25 @@ th { color: #64748b; font-size: 12px; }
   .interviewGrid { grid-template-columns: 1fr; }
   .voiceRow { align-items: stretch; flex-direction: column; }
   .questionMeta { flex-direction: column; gap: 4px; }
-  .bankHeader { grid-template-columns: 1fr; }
+  .bankHeader, .flowHero { grid-template-columns: 1fr; }
   .bankCount { width: fit-content; }
   .questionFilters { grid-template-columns: 1fr; }
   .filterActions { grid-column: auto; }
   .questionCard { grid-template-columns: 1fr; }
-  .replayLookup, .replaySummary, .conceptColumns { grid-template-columns: 1fr; }
+  .replayLookup, .replaySummary, .conceptColumns, .editorGrid { grid-template-columns: 1fr; }
   .analyticsCards { grid-template-columns: 1fr; }
   .roleForm { grid-template-columns: 1fr; }
   .pricingGrid { grid-template-columns: 1fr; }
+  .flowKpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flowPipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flowPipeline li::after { display: none; }
+  .flowTwoColumn, .creationFlow { grid-template-columns: 1fr; }
+  .flowSectionHeading { align-items: start; flex-direction: column; gap: 4px; }
+  .statusDistribution > div { grid-template-columns: 1fr; gap: 6px; }
+  .statusDistribution small { text-align: left; }
   .replayLookup .authError { grid-column: auto; }
+}
+
+@media (max-width: 480px) {
+  .flowKpis, .flowPipeline, .schemaEntityGrid { grid-template-columns: 1fr; }
 }

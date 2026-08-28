@@ -23,7 +23,7 @@ loadLocalEnv();
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const shouldImport = !args.includes('--no-import');
-const importOnlyVerified = args.includes('--import-only-verified');
+const importOnlyVerified = !args.includes('--import-all-statuses');
 const shouldTest = args.includes('--test');
 const compact = args.includes('--compact');
 const provider = args.find((arg) => arg.startsWith('--provider='))?.split('=')[1] ?? process.env.REVIEW_PROVIDER ?? 'openai';
@@ -32,6 +32,10 @@ const onlyStatus = args.find((arg) => arg.startsWith('--only-status='))?.split('
 const limit = args.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? 'all';
 const offset = args.find((arg) => arg.startsWith('--offset='))?.split('=')[1] ?? '0';
 const concurrency = args.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '2';
+const batchSize = args.find((arg) => arg.startsWith('--batch-size='))?.split('=')[1] ?? '25';
+const maxRetries = args.find((arg) => arg.startsWith('--max-retries='))?.split('=')[1] ?? '5';
+const requestDelayMs = args.find((arg) => arg.startsWith('--request-delay-ms='))?.split('=')[1] ?? '0';
+const quotaPauseMs = args.find((arg) => arg.startsWith('--quota-pause-ms='))?.split('=')[1] ?? '0';
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 
 function run(command, commandArgs, options = {}) {
@@ -67,6 +71,9 @@ function requireLiveConfiguration() {
   if (provider === 'gemini' && !(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY)) {
     throw new Error('Set GEMINI_API_KEY or GOOGLE_API_KEY before running automated Gemini review.');
   }
+  if (provider === 'openai-compatible' && (!process.env.REVIEW_OPENAI_COMPATIBLE_BASE_URL || !process.env.REVIEW_OPENAI_COMPATIBLE_API_KEY)) {
+    throw new Error('Set REVIEW_OPENAI_COMPATIBLE_BASE_URL and REVIEW_OPENAI_COMPATIBLE_API_KEY before live review.');
+  }
 }
 
 async function resolveTechnologies() {
@@ -85,6 +92,10 @@ console.log(JSON.stringify({
   limit,
   offset,
   concurrency,
+  batchSize,
+  maxRetries,
+  requestDelayMs,
+  quotaPauseMs,
   import: shouldImport,
   importOnlyVerified,
   test: shouldTest,
@@ -111,6 +122,10 @@ for (const technology of technologies) {
     `--only-status=${onlyStatus}`,
     `--limit=${limit}`,
     `--concurrency=${concurrency}`,
+    `--batch-size=${batchSize}`,
+    `--max-retries=${maxRetries}`,
+    `--request-delay-ms=${requestDelayMs}`,
+    `--quota-pause-ms=${quotaPauseMs}`,
   ];
   if (compact) reviewArgs.push('--packet-dir=apps/web/data/evidence-packets-compact');
   if (!compact) reviewArgs.push(`--offset=${offset}`);

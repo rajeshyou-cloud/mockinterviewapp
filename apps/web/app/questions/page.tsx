@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import type { Difficulty } from '../../lib/api';
 import { isKnownTechnology, technologyLabel } from '../../lib/course-catalog';
-import { allQuestionBank } from '../../lib/question-bank';
+import { listCandidateQuestions } from '../../lib/content-repository';
 import { filterQuestions, paginateQuestions } from '../../lib/question-search';
 import { getReleasedCourses } from '../../lib/released-courses';
 
@@ -30,7 +30,7 @@ function pageHref(params: URLSearchParams, page: number) {
 export default async function QuestionsPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const availableCourses = await getReleasedCourses();
   const releasedIds = new Set(availableCourses.map((course) => course.id));
-  const questionBank = allQuestionBank.filter((question) => releasedIds.has(question.technology));
+  const questionBank = await listCandidateQuestions([...releasedIds]);
   const raw = await searchParams;
   const query = valueOf(raw.q).trim().slice(0, 120);
   const technologyValue = valueOf(raw.technology);

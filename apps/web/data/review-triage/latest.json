@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-08-27T06:00:45.809Z",
+    "generatedAt": "2026-08-27T14:27:49.184Z",
     "filters": {
       "technology": "all",
       "onlyStatus": [
@@ -9,7 +9,9 @@
         "rejected",
         "stale",
         "reviewing"
-      ]
+      ],
+      "linkHealthCheckedAt": "2026-08-27T14:20:58.506Z",
+      "linkHealthMode": "offline-structure-only"
     },
     "totalInspected": 1050,
     "totalFlaggedRecords": 0,

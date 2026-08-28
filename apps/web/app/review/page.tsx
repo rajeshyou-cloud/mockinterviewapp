@@ -19,7 +19,7 @@ export default async function ReviewPage({ searchParams }: { searchParams: Promi
 
   return (
     <main className="shell questionBankShell">
-      <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/">Interview</Link></nav>
+      <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/admin/content/flow">Project Flow</Link><Link href="/">Interview</Link></nav>
       <header className="bankHeader"><div><p className="eyebrow">CONTENT RELEASE GATE</p><h1>Course review</h1><p className="lede">Inspect all 150 questions and record a traceable pack-level decision. Approval requires source checks and verified benchmark answers for every question.</p></div><div className="bankCount"><strong>{questions.length}</strong><span>{candidatePackLabels[course]} candidates</span></div></header>
 
       <nav className="reviewTabs">{Object.entries(candidatePackLabels).map(([id, label]) => <Link className={id === course ? 'active' : ''} href={`/review?course=${id}`} key={id}>{label}</Link>)}</nav>

@@ -19,12 +19,20 @@ Production: https://mockinterviewapp-web.vercel.app
 - `apps/web/app/api/auth/[...path]` — Neon Managed Auth API proxy
 - `apps/web/app/auth` — custom sign-in/sign-up server actions and forms
 - `apps/web/app/account` — protected signed-in account surface
+- `apps/web/app/account/progress` — candidate topic coverage, progression, history, and governed recommendations
+- `apps/web/app/admin/content` — role-protected governed-content dashboards, authoring, review, and lifecycle actions
+- `apps/web/app/admin/content/flow` — nontechnical stakeholder view of lifecycle, schema, inventory, review, evidence, and release statistics
+- `apps/web/app/admin/content/publication` — frozen release batches, readiness, decisions, publication, and rollback
 - `apps/web/lib/auth/server.ts` — server-only Managed Auth configuration
 - `apps/web/proxy.ts` — Next.js 16 protection for account/staff/billing routes
 - `apps/web/lib/scoring.ts` — AI Gateway, deterministic, and resilient scoring providers
 - `apps/web/lib/session.ts` — browser session and versioned resume-key format
 - `apps/web/lib/db.ts` — server-only Neon adapter and resume-token hashing
 - `apps/web/lib/persistence-validation.ts` — persistence request boundaries
+- `apps/web/lib/content-repository.ts` — JSON/shadow/database read modes and fail-closed verified publication filter
+- `apps/web/lib/governed-content-admin.ts` — Content Admin reads, immutable revisions, evidence, human review, and bulk lifecycle mutations
+- `apps/web/lib/project-flow-dashboard.ts` — governed database read model with truthful JSON-transition fallback
+- `apps/web/lib/publication-batches.ts` — audited exact-version release lifecycle and rollback gates
 - `apps/web/lib/benchmark-review.ts` — benchmark verification summary and candidate-pack launch gate
 - `apps/web/lib/candidate-packs.ts` — shared hidden course-pack registry
 - `apps/web/lib/question-bank.ts` — shared 300-question bank
@@ -38,11 +46,23 @@ Production: https://mockinterviewapp-web.vercel.app
 - `scripts/automate-benchmark-review.mjs` — reusable full review pipeline for evidence export, AI review, dry-run import, import, validation, and optional tests
 - `scripts/review-benchmark-packets.mjs` — dual-model benchmark review runner
 - `scripts/static-benchmark-triage.mjs` — zero-cost local triage for duplicate/template/concept/evidence issues
+- `scripts/check-evidence-links.mjs` — offline/live evidence URL health and optional content-hash report
+- `scripts/apply-evidence-freshness.mjs` — dry-run-by-default evidence-version comparison and audited stale/unpublish workflow
+- `scripts/content-scale-report.mjs` — per-track capacity, distribution, evidence-depth, quality, and review-priority report
 - `scripts/remediate-generic-benchmarks.mjs` — bulk rewrite/reset tool for generic non-verified benchmark answers
 - `scripts/export-compact-rereview-packets.mjs` — compact `sentforrereview` packet exporter for cheaper AI re-review
 - `scripts/validate-benchmarks.mjs` — benchmark-answer validator and publication-blocking summary
+- `scripts/import-governed-content.mjs` — dry-run-by-default, idempotent JSON-to-Neon importer
+- `scripts/export-governed-content.mjs` — governed database snapshot exporter grouped by technology
+- `scripts/verify-governed-export.mjs` — deep JSON source/export parity verifier
+- `scripts/lib/governed-content-import.mjs` — deterministic normalization, hashing, provenance, writes, and reconciliation
 - `apps/api/app/main.py` — standalone FastAPI question/baseline-scoring service
 - `packages/db/schema.sql` — persistence schema
+- `packages/db/migrations/20260827_01_governed_content.sql` — unapplied additive governed-content migration
+- `packages/db/schema.test.mjs` — schema/migration parity and publication-invariant tests
+- `docs/GOVERNED_CONTENT_SCHEMA.md` — Phase 1 relational model and migration-safety boundary
+- `docs/GOVERNED_CONTENT_PRODUCTION_MIGRATION_RUNBOOK.md` — exact-artifact approval, apply, verification, and recovery boundary for the unapplied main-branch migration
+- `docs/CONTENT_SCALE_STANDARD.md` — 1,000-question taxonomy, distribution, evidence, staging, and quality standard
 - `.github/workflows/ci.yml` — web tests/build and API tests
 - `COURSE_EXPANSION_PLAN.md` — Milestone 3 targets and launch gates
 - `docs/BENCHMARK_SCORING_PLAN.md` — vendor-evidence benchmark, dual-AI review, semantic scoring, persistence, calibration, and rollout plan
@@ -85,12 +105,18 @@ From the repository root:
 ```bash
 npm install
 npm run test:web
+npm run test:db-schema
+npm run test:content-import
+npm run test:review-runtime
+npm run import:governed-content -- --dry-run
 npm run build:web
 npm audit --audit-level=high
 npm run validate:benchmarks
 npm run export:evidence-packets
 npm run import:benchmark-reviews -- --dry-run
 npm run triage:benchmarks
+npm run check:evidence-links -- --offline --fail-on-broken
+npm run report:content-scale -- --no-write
 npm run remediate:benchmarks -- --technology=aws --dry-run
 npm run export:rereview-packets
 npm run review:benchmarks:auto -- --provider=openai --technology=aws --limit=2 --dry-run
@@ -105,7 +131,7 @@ From `apps/api`:
 python -m pytest -q
 ```
 
-Current local verification counts are 62 web tests and 9 API tests, with a green Next.js production build. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. API schema tests now validate benchmark records across all 1,050 released and candidate questions. `npm run validate:benchmarks` currently reports 1,050 total benchmarks, 150 per technology, 707 draft, 343 ai-evidence-verified, 560 candidate questions blocked from publication, and 150 evidence packets per technology. GitHub Actions now runs the benchmark validator in the web job.
+Current local verification counts are 87 web tests, 9 API tests, 4 governed-schema tests, 5 importer tests, and 5 review-runtime tests, with a green Next.js production build and zero dependency vulnerabilities. The governed importer dry-run reconciles 7 technologies, 98 topics, 1,050 questions and benchmarks, 1,476 evidence sources and links, 686 immutable review records, and 1,050 version snapshots. Live-content tests require exactly 300 valid, unique reviewed questions and sufficient coverage for every released technology/difficulty pair. Candidate-content tests separately enforce 150 unique questions, 50 per difficulty, complete rubrics, official-source hosts, and complete benchmark-answer records for Databricks, Oracle Database, Power BI, Python, and AWS. `npm run validate:benchmarks` currently reports 1,050 total benchmarks, 707 draft, 343 ai-evidence-verified, and 560 candidate questions blocked from publication. Static triage has zero local flags. The compact Gemini AWS review pipeline also passed a two-record dry run on 2026-08-27 without making a provider call or changing a review status. Shadow mode now preserves JSON candidate service when the governed database is unavailable and compares unpublished snapshots without changing the served source. Governed admin/progress/publication routes render explicit migration-pending states until the Neon schema is separately approved and applied. CI validates the governed schema/importer/review runtime, URL structure, benchmark gate, scale report, web build, and API.
 
 ## Deployment
 

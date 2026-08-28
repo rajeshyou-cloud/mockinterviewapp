@@ -18,7 +18,13 @@ jobs:
           cache: npm
       - run: npm install
       - run: npm run test:web
+      - run: npm run test:db-schema
+      - run: npm run test:content-import
+      - run: npm run test:review-runtime
+      - run: npm run import:governed-content -- --dry-run
       - run: npm run validate:benchmarks
+      - run: npm run check:evidence-links -- --offline --fail-on-broken
+      - run: npm run report:content-scale -- --no-write
       - run: npm run build:web
 
   api:

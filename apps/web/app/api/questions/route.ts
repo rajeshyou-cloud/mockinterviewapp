@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'node:crypto';
 
-import { allQuestionBank } from '../../../lib/question-bank';
+import { ContentRepositoryUnavailableError, listCandidateQuestions } from '../../../lib/content-repository';
 import { getReleasedCourseIds } from '../../../lib/released-courses';
 
 function seededRank(seed: string, id: string) {
@@ -30,7 +30,17 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'seed is too long' }, { status: 400 });
   }
 
-  const filtered = allQuestionBank.filter((question) => {
+  let questionBank;
+  try {
+    questionBank = await listCandidateQuestions(releasedCourseIds);
+  } catch (error) {
+    if (error instanceof ContentRepositoryUnavailableError) {
+      return NextResponse.json({ error: 'Question service is temporarily unavailable' }, { status: 503 });
+    }
+    throw error;
+  }
+
+  const filtered = questionBank.filter((question) => {
     if (!released.has(question.technology)) return false;
     if (technology && question.technology !== technology) return false;
     if (difficulty && question.difficulty !== difficulty) return false;

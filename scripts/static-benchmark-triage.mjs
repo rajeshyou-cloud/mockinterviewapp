@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const packs = [
@@ -37,6 +38,11 @@ const onlyStatusArg = args.find((arg) => arg.startsWith('--only-status='))?.spli
 const onlyStatuses = new Set(onlyStatusArg.split(',').map((status) => status.trim()).filter(Boolean));
 const shouldWrite = !args.includes('--no-write');
 const outputDirectory = resolve('apps/web/data/review-triage');
+const linkHealthPath = resolve('apps/web/data/evidence-link-health/latest.json');
+const linkHealth = existsSync(linkHealthPath) ? JSON.parse(await readFile(linkHealthPath, 'utf8')) : null;
+const brokenEvidenceUrls = new Set((linkHealth?.entries ?? [])
+  .filter((entry) => entry.state === 'broken')
+  .map((entry) => entry.url));
 
 function normalize(text) {
   return String(text ?? '')
@@ -140,6 +146,11 @@ for (const question of questions) {
   if (evidence?.url && question.source?.url && evidence.url !== question.source.url) {
     addReason(reasons, 'evidence-source-mismatch', 'Benchmark evidence URL differs from the question source URL.');
   }
+  for (const evidenceRecord of question.benchmark?.evidence ?? []) {
+    if (brokenEvidenceUrls.has(evidenceRecord.url)) {
+      addReason(reasons, 'broken-evidence-url', `Latest evidence health check failed for ${evidenceRecord.url}.`);
+    }
+  }
 
   const duplicateIds = duplicateAnswerIds.get(question.id);
   if (duplicateIds?.length) {
@@ -169,6 +180,8 @@ const summary = {
   filters: {
     technology: technologyFilter ?? 'all',
     onlyStatus: [...onlyStatuses],
+    linkHealthCheckedAt: linkHealth?.summary?.checkedAt ?? null,
+    linkHealthMode: linkHealth?.summary?.mode ?? 'not-run',
   },
   totalInspected: questions.length,
   totalFlaggedRecords: records.filter((record) => record.reasons.length > 0).length,

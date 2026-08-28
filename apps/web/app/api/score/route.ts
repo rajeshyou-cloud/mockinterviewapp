@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import { findQuestion } from '../../../lib/question-bank';
+import { ContentRepositoryUnavailableError, getCandidateQuestion } from '../../../lib/content-repository';
 import { checkScoringRateLimit } from '../../../lib/rate-limit';
 import { isReleasedTechnology } from '../../../lib/released-courses';
 import { createScoringProvider } from '../../../lib/scoring';
@@ -20,10 +20,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'A valid JSON request body is required' }, { status: 400 });
   }
   const answer = payload.answer?.trim() ?? '';
-  const question = payload.question_id ? findQuestion(payload.question_id) : undefined;
-
   if (!answer || !payload.question_id) {
     return NextResponse.json({ error: 'answer and question_id are required' }, { status: 400 });
+  }
+  let question;
+  try {
+    question = await getCandidateQuestion(payload.question_id);
+  } catch (error) {
+    if (error instanceof ContentRepositoryUnavailableError) {
+      return NextResponse.json({ error: 'Scoring content is temporarily unavailable' }, { status: 503 });
+    }
+    throw error;
   }
   if (!question || !(await isReleasedTechnology(question.technology))) {
     return NextResponse.json({ error: 'The reviewed question was not found' }, { status: 404 });

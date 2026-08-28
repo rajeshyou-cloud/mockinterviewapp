@@ -1,6 +1,8 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+vi.mock('server-only', () => ({}));
+
 const released = vi.hoisted(() => ({ getReleasedCourseIds: vi.fn() }));
 
 vi.mock('../../../lib/released-courses', () => released);

@@ -1,6 +1,6 @@
 # Benchmark Review Automation
 
-This project can review benchmark answers automatically with ChatGPT/OpenAI, Vercel AI Gateway, or Claude/Anthropic, then import only consensus-valid results into the benchmark gate.
+This project can review benchmark answers automatically with OpenAI, Gemini, Vercel AI Gateway, Claude/Anthropic, or an OpenAI-compatible provider, then import only two-model consensus approvals into the benchmark gate.
 
 ## Cost-control workflow
 
@@ -58,7 +58,7 @@ Do not use compact review as an excuse to lower the launch gate. Candidate packs
 3. Requires two different reviewer models for independent consensus.
 4. Writes reviewed JSONL files into `apps/web/data/benchmark-reviews`.
 5. Runs a dry-run import first.
-6. Imports valid reviews.
+6. Imports consensus-approved reviews only. Disputes and rejects remain in the review JSONL remediation queue.
 7. Runs `npm run validate:benchmarks`.
 8. Optionally runs the web test suite.
 
@@ -104,6 +104,30 @@ npm run review:benchmarks:auto -- --provider=openai --technology=all --limit=all
 ```
 
 ## Other provider modes
+
+Use an OpenAI-compatible endpoint (DeepSeek, SiliconFlow, Alibaba/Qwen, OpenRouter, or another compatible HTTPS endpoint):
+
+```env
+REVIEW_PROVIDER=openai-compatible
+REVIEW_OPENAI_COMPATIBLE_NAME=deepseek
+REVIEW_OPENAI_COMPATIBLE_BASE_URL=https://api.deepseek.com
+REVIEW_OPENAI_COMPATIBLE_API_KEY=...
+REVIEW_PRIMARY_MODEL=<first-model>
+REVIEW_CRITIC_MODEL=<different-model>
+```
+
+Common base URLs are `https://api.deepseek.com`, `https://api.siliconflow.com/v1`, `https://dashscope-intl.aliyuncs.com/compatible-mode/v1`, and `https://openrouter.ai/api/v1`. Verify current model names and pricing with the provider before a live run. The adapter rejects non-HTTPS remote endpoints.
+
+Configure cost estimates from the provider's current per-million-token prices:
+
+```env
+REVIEW_PRIMARY_INPUT_USD_PER_MILLION_TOKENS=0
+REVIEW_PRIMARY_OUTPUT_USD_PER_MILLION_TOKENS=0
+REVIEW_CRITIC_INPUT_USD_PER_MILLION_TOKENS=0
+REVIEW_CRITIC_OUTPUT_USD_PER_MILLION_TOKENS=0
+```
+
+Each live output gets a sibling `.summary.json` with status counts, token usage, and estimated USD cost. A zero cost is explicitly marked unconfigured unless both reviewer rates are supplied.
 
 Use Gemini:
 
@@ -156,10 +180,31 @@ npm run review:benchmarks:auto -- --provider=anthropic --technology=python --lim
 - `--offset=10` starts from the next selected record, useful for free-tier batch review.
 - `--limit=all` reviews all selected packets.
 - `--no-import` writes review files but does not import them.
-- `--import-only-verified` imports only consensus-approved records, leaving disputed/rejected records pending for remediation.
+- Consensus-approved-only import is the default. `--import-all-statuses` is an explicit diagnostic escape hatch; it must not be used for routine publication workflows.
+- `--batch-size=25` caps records processed in one invocation even when `--limit=all`.
+- `--max-retries=5` retries transient HTTP failures and honors `Retry-After`.
+- `--request-delay-ms=1000` spaces individual provider calls.
+- `--quota-pause-ms=5000` pauses between completed two-model reviews.
 - `--test` runs the web test suite after validation.
 - `--dry-run` checks packet loading and configuration without spending API credits.
 - `--compact` runs static triage, exports compact re-review packets, and reviews those smaller packets.
+
+Check evidence URL health separately before review:
+
+```bash
+npm run check:evidence-links -- --concurrency=8 --timeout-ms=15000 --fail-on-broken
+```
+
+Use `--hash-content` when an operational freshness run also needs a fetched-body SHA-256. CI uses `--offline` to validate URL structure without making vendor documentation availability a build dependency.
+
+After reviewing a live hash report, compare it with governed evidence in dry-run mode and apply the stale workflow explicitly:
+
+```bash
+npm run apply:evidence-freshness -- --report=apps/web/data/evidence-link-health/latest.json
+npm run apply:evidence-freshness -- --report=apps/web/data/evidence-link-health/latest.json --apply
+```
+
+Changed evidence versions are preserved rather than overwritten. The apply path adds the replacement evidence version, retains links, records a static stale audit, marks affected benchmarks/questions stale, and unpublishes them. This command requires the governed migration and a server-only `DATABASE_URL`.
 
 ## Bulk remediation before re-review
 

@@ -52,7 +52,12 @@ def test_all_released_and_candidate_packs_have_benchmark_answers():
         benchmark = question['benchmark']
         assert benchmark['canonicalAnswer'] == question['canonicalAnswer']
         assert benchmark['requiredConcepts'] == question['expectedConcepts']
-        assert benchmark['review']['status'] == 'draft'
+        review = benchmark['review']
+        if review['status'] == 'ai-evidence-verified':
+            assert len(review['reviewerModels']) >= 2
+            assert review['reviewedAt'] is not None
+        elif review['status'] == 'human-verified':
+            assert review['reviewedAt'] is not None
         assert benchmark['evidence'][0]['url'] == question['source']['url']
 
     assert not errors, '\n'.join(errors)

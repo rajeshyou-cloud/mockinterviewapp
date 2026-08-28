@@ -9,3 +9,5 @@ next-env.d.ts
 .vercel
 .env.local
 .env.*.local
+apps/web/data/evidence-link-health/
+apps/web/data/content-scale-report/

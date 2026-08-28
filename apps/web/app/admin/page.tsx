@@ -13,7 +13,7 @@ export default async function AdminPage() {
   return (
     <main className="shell recruiterShell">
       <nav className="pageNav"><Link href="/account">← Account</Link><Link href="/">Interview</Link></nav>
-      <header className="bankHeader"><div><p className="eyebrow">ADMINISTRATION</p><h1>Access control</h1><p className="lede">Grant least-privilege reviewer, recruiter, or administrator access using the account ID shown on each user’s account page.</p></div></header>
+      <header className="bankHeader"><div><p className="eyebrow">ADMINISTRATION</p><h1>Access control</h1><p className="lede">Grant least-privilege reviewer, recruiter, or administrator access using the account ID shown on each user’s account page.</p></div><div className="accountActions"><Link className="secondaryLink" href="/admin/content/flow">View Project Flow →</Link><Link className="secondaryLink" href="/admin/content">Open Content Platform →</Link></div></header>
       <form className="card roleForm" action={grantRole}>
         <label>Account ID<input name="userId" required minLength={4} maxLength={200} /></label>
         <label>Role<select name="role" defaultValue="reviewer"><option value="candidate">Candidate</option><option value="reviewer">Reviewer</option><option value="recruiter">Recruiter</option><option value="admin">Administrator</option></select></label>

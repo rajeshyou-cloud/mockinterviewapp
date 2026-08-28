@@ -4,6 +4,14 @@ import { resolve } from 'node:path';
 import { createAnthropic } from '@ai-sdk/anthropic';
 import { Output, generateText } from 'ai';
 import { z } from 'zod';
+import {
+  estimateReviewCost,
+  normalizeUsage,
+  retryDelayMs,
+  shouldRetryStatus,
+  summarizeReviews,
+  validateCompatibleBaseUrl,
+} from './lib/review-runtime.mjs';
 
 function loadLocalEnv() {
   for (const envPath of ['.env.local', '.env']) {
@@ -54,12 +62,20 @@ const packetDir = process.argv.find((arg) => arg.startsWith('--packet-dir='))?.s
 const onlyStatusArg = process.argv.find((arg) => arg.startsWith('--only-status='))?.split('=')[1];
 const onlyStatuses = onlyStatusArg ? new Set(onlyStatusArg.split(',').map((status) => status.trim()).filter(Boolean)) : null;
 const concurrency = Math.max(1, Number.parseInt(process.argv.find((arg) => arg.startsWith('--concurrency='))?.split('=')[1] ?? '1', 10));
+const batchSize = Math.max(1, Number.parseInt(process.argv.find((arg) => arg.startsWith('--batch-size='))?.split('=')[1] ?? '25', 10));
+const maxRetries = Math.max(0, Number.parseInt(process.argv.find((arg) => arg.startsWith('--max-retries='))?.split('=')[1] ?? '5', 10));
+const requestDelayMs = Math.max(0, Number.parseInt(process.argv.find((arg) => arg.startsWith('--request-delay-ms='))?.split('=')[1] ?? '0', 10));
+const quotaPauseMs = Math.max(0, Number.parseInt(process.argv.find((arg) => arg.startsWith('--quota-pause-ms='))?.split('=')[1] ?? '0', 10));
 const primaryModel = process.env.REVIEW_PRIMARY_MODEL;
 const criticModel = process.env.REVIEW_CRITIC_MODEL;
+const compatibleProviderName = (process.env.REVIEW_OPENAI_COMPATIBLE_NAME ?? 'openai-compatible').trim();
+const compatibleBaseUrl = process.env.REVIEW_OPENAI_COMPATIBLE_BASE_URL
+  ? validateCompatibleBaseUrl(process.env.REVIEW_OPENAI_COMPATIBLE_BASE_URL)
+  : null;
 
 function requireLiveModels() {
-  if (!['gateway', 'anthropic', 'openai', 'gemini'].includes(providerArg)) {
-    throw new Error('REVIEW_PROVIDER/--provider must be "gateway", "anthropic", "openai", or "gemini".');
+  if (!['gateway', 'anthropic', 'openai', 'gemini', 'openai-compatible'].includes(providerArg)) {
+    throw new Error('REVIEW_PROVIDER/--provider must be gateway, anthropic, openai, gemini, or openai-compatible.');
   }
   if (dryRun) return;
   if (!primaryModel || !criticModel) {
@@ -76,6 +92,9 @@ function requireLiveModels() {
   }
   if (providerArg === 'gemini' && !(process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY)) {
     throw new Error('Set GEMINI_API_KEY or GOOGLE_API_KEY to use REVIEW_PROVIDER=gemini.');
+  }
+  if (providerArg === 'openai-compatible' && (!compatibleBaseUrl || !process.env.REVIEW_OPENAI_COMPATIBLE_API_KEY)) {
+    throw new Error('Set REVIEW_OPENAI_COMPATIBLE_BASE_URL and REVIEW_OPENAI_COMPATIBLE_API_KEY.');
   }
 }
 
@@ -116,6 +135,7 @@ function parseOpenAiStructuredOutput(response) {
 }
 
 async function reviewWithOpenAi(packet, model, reviewerRole) {
+  const startedAt = Date.now();
   const response = await fetch('https://api.openai.com/v1/responses', {
     method: 'POST',
     headers: {
@@ -144,7 +164,11 @@ async function reviewWithOpenAi(packet, model, reviewerRole) {
   if (!response.ok) {
     throw new Error(`OpenAI review failed: HTTP ${response.status} ${JSON.stringify(body)}`);
   }
-  return verdictSchema.parse(parseOpenAiStructuredOutput(body));
+  return {
+    verdict: verdictSchema.parse(parseOpenAiStructuredOutput(body)),
+    usage: normalizeUsage(body.usage),
+    latencyMs: Date.now() - startedAt,
+  };
 }
 
 function normalizeGeminiModel(model) {
@@ -166,6 +190,59 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function fetchJsonWithRetry(url, options, label) {
+  for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+    if (requestDelayMs > 0) await sleep(requestDelayMs);
+    const response = await fetch(url, options);
+    const body = await response.json().catch(() => null);
+    if (response.ok) return body;
+    if (attempt < maxRetries && shouldRetryStatus(response.status)) {
+      const delayMs = retryDelayMs(response, attempt);
+      console.warn(`${label} returned HTTP ${response.status}; retrying in ${Math.round(delayMs / 1000)}s.`);
+      await sleep(delayMs);
+      continue;
+    }
+    throw new Error(`${label} failed: HTTP ${response.status} ${JSON.stringify(body)}`);
+  }
+  throw new Error(`${label} failed after retries.`);
+}
+
+function parseCompatibleOutput(body) {
+  const content = body?.choices?.[0]?.message?.content;
+  if (typeof content !== 'string' || !content.trim()) {
+    throw new Error('OpenAI-compatible response did not include choices[0].message.content.');
+  }
+  return JSON.parse(content.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, ''));
+}
+
+async function reviewWithOpenAiCompatible(packet, model, reviewerRole) {
+  const startedAt = Date.now();
+  const body = await fetchJsonWithRetry(`${compatibleBaseUrl}/chat/completions`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.REVIEW_OPENAI_COMPATIBLE_API_KEY}`,
+      'Content-Type': 'application/json',
+      ...(process.env.REVIEW_OPENAI_COMPATIBLE_SITE_URL ? { 'HTTP-Referer': process.env.REVIEW_OPENAI_COMPATIBLE_SITE_URL } : {}),
+      ...(process.env.REVIEW_OPENAI_COMPATIBLE_APP_NAME ? { 'X-Title': process.env.REVIEW_OPENAI_COMPATIBLE_APP_NAME } : {}),
+    },
+    body: JSON.stringify({
+      model,
+      temperature: 0,
+      response_format: { type: 'json_object' },
+      messages: [
+        { role: 'system', content: `${reviewSystemPrompt} Return JSON matching this schema: ${JSON.stringify(verdictJsonSchema)}` },
+        { role: 'user', content: JSON.stringify({ reviewerRole, packet }) },
+      ],
+    }),
+    signal: AbortSignal.timeout(60_000),
+  }, `${compatibleProviderName} review`);
+  return {
+    verdict: verdictSchema.parse(parseCompatibleOutput(body)),
+    usage: normalizeUsage(body.usage),
+    latencyMs: Date.now() - startedAt,
+  };
+}
+
 function retryDelayMsFromGeminiError(body, attempt) {
   const retryDelay = body?.error?.details
     ?.find((detail) => typeof detail.retryDelay === 'string')
@@ -176,6 +253,7 @@ function retryDelayMsFromGeminiError(body, attempt) {
 }
 
 async function reviewWithGemini(packet, model, reviewerRole) {
+  const startedAt = Date.now();
   const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
   const geminiModel = normalizeGeminiModel(model);
   for (let attempt = 0; attempt < 6; attempt += 1) {
@@ -202,7 +280,13 @@ async function reviewWithGemini(packet, model, reviewerRole) {
     });
 
     const body = await response.json().catch(() => null);
-    if (response.ok) return verdictSchema.parse(parseGeminiStructuredOutput(body));
+    if (response.ok) {
+      return {
+        verdict: verdictSchema.parse(parseGeminiStructuredOutput(body)),
+        usage: normalizeUsage(body.usageMetadata),
+        latencyMs: Date.now() - startedAt,
+      };
+    }
     if (response.status === 429 && attempt < 5) {
       const delayMs = retryDelayMsFromGeminiError(body, attempt);
       console.warn(`Gemini rate limit for ${geminiModel}; retrying in ${Math.round(delayMs / 1000)}s.`);
@@ -215,10 +299,12 @@ async function reviewWithGemini(packet, model, reviewerRole) {
 }
 
 async function reviewWithModel(packet, model, reviewerRole) {
+  const startedAt = Date.now();
+  if (providerArg === 'openai-compatible') return reviewWithOpenAiCompatible(packet, model, reviewerRole);
   if (providerArg === 'openai') return reviewWithOpenAi(packet, model, reviewerRole);
   if (providerArg === 'gemini') return reviewWithGemini(packet, model, reviewerRole);
 
-  const { output } = await generateText({
+  const { output, usage } = await generateText({
     model: resolveReviewModel(model),
     output: Output.object({
       schema: verdictSchema,
@@ -229,12 +315,14 @@ async function reviewWithModel(packet, model, reviewerRole) {
     prompt: JSON.stringify({ reviewerRole, packet }),
     abortSignal: AbortSignal.timeout(30_000),
   });
-  return output;
+  return { verdict: output, usage: normalizeUsage(usage), latencyMs: Date.now() - startedAt };
 }
 
 function combineReviews(packet, primary, critic) {
-  const approved = primary.verdict === 'approve' && critic.verdict === 'approve';
-  const rejected = primary.verdict === 'reject' || critic.verdict === 'reject';
+  const approved = primary.verdict.verdict === 'approve' && critic.verdict.verdict === 'approve';
+  const rejected = primary.verdict.verdict === 'reject' || critic.verdict.verdict === 'reject';
+  const primaryCost = estimateReviewCost(primary.usage, 'primary');
+  const criticCost = estimateReviewCost(critic.usage, 'critic');
   return {
     questionId: packet.questionId,
     technology: packet.technology,
@@ -242,9 +330,23 @@ function combineReviews(packet, primary, critic) {
     promptVersion: 'benchmark-review-1.0.0',
     primaryModel,
     criticModel,
-    reviewProvider: providerArg,
-    primary,
-    critic,
+    reviewProvider: providerArg === 'openai-compatible' ? compatibleProviderName : providerArg,
+    primary: primary.verdict,
+    critic: critic.verdict,
+    reviewerMetrics: {
+      primary: { usage: primary.usage, cost: primaryCost, latencyMs: primary.latencyMs },
+      critic: { usage: critic.usage, cost: criticCost, latencyMs: critic.latencyMs },
+    },
+    usage: {
+      inputTokens: primary.usage.inputTokens + critic.usage.inputTokens,
+      outputTokens: primary.usage.outputTokens + critic.usage.outputTokens,
+      totalTokens: primary.usage.totalTokens + critic.usage.totalTokens,
+    },
+    cost: {
+      currency: 'USD',
+      estimatedUsd: Number((primaryCost.estimatedUsd + criticCost.estimatedUsd).toFixed(8)),
+      ratesConfigured: primaryCost.ratesConfigured && criticCost.ratesConfigured,
+    },
     finalStatus: approved ? 'ai-evidence-verified' : rejected ? 'rejected' : 'disputed',
     reviewedAt: new Date().toISOString(),
   };
@@ -272,6 +374,10 @@ if (dryRun) {
     offset,
     limit: limitArg,
     concurrency,
+    batchSize,
+    maxRetries,
+    requestDelayMs,
+    quotaPauseMs,
     packetsLoaded: packets.length,
     firstQuestionId: packets[0]?.questionId ?? null,
     liveRunRequirement: providerArg === 'anthropic'
@@ -280,6 +386,8 @@ if (dryRun) {
         ? 'Set OPENAI_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to two different OpenAI model IDs.'
         : providerArg === 'gemini'
           ? 'Set GEMINI_API_KEY plus REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to two different Gemini model IDs.'
+          : providerArg === 'openai-compatible'
+            ? 'Set REVIEW_OPENAI_COMPATIBLE_BASE_URL, REVIEW_OPENAI_COMPATIBLE_API_KEY, and two different reviewer model IDs.'
           : 'Set REVIEW_PRIMARY_MODEL and REVIEW_CRITIC_MODEL to different AI Gateway model IDs.',
   }, null, 2));
   process.exit(0);
@@ -295,17 +403,28 @@ const reviews = existsSync(outputPath)
   ? readFileSync(outputPath, 'utf8').trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line))
   : [];
 const reviewedQuestionIds = new Set(reviews.map((review) => review.questionId));
-const pendingPackets = packets.filter((packet) => !reviewedQuestionIds.has(packet.questionId));
+const pendingPackets = packets.filter((packet) => !reviewedQuestionIds.has(packet.questionId)).slice(0, batchSize);
 
 let nextPacketIndex = 0;
+let persistChain = Promise.resolve();
+function persistReview(review) {
+  reviews.push(review);
+  persistChain = persistChain.then(() => writeFile(
+    outputPath,
+    `${reviews.map((item) => JSON.stringify(item)).join('\n')}\n`,
+    'utf8',
+  ));
+  return persistChain;
+}
+
 async function reviewNextPacket() {
   while (nextPacketIndex < pendingPackets.length) {
     const packet = pendingPackets[nextPacketIndex];
     nextPacketIndex += 1;
   const primary = await reviewWithModel(packet, primaryModel, 'primary');
   const critic = await reviewWithModel(packet, criticModel, 'critic');
-  reviews.push(combineReviews(packet, primary, critic));
-  await writeFile(outputPath, `${reviews.map((review) => JSON.stringify(review)).join('\n')}\n`, 'utf8');
+  await persistReview(combineReviews(packet, primary, critic));
+  if (quotaPauseMs > 0) await sleep(quotaPauseMs);
   }
 }
 
@@ -314,13 +433,24 @@ await Promise.all(Array.from(
   () => reviewNextPacket(),
 ));
 
+const batchSummary = summarizeReviews(reviews);
+batchSummary.cost.estimatedUsd = Number(batchSummary.cost.estimatedUsd.toFixed(8));
+const summaryPath = outputPath.replace(/\.reviewed\.jsonl$/, '.summary.json');
+await writeFile(summaryPath, `${JSON.stringify({
+  generatedAt: new Date().toISOString(),
+  provider: providerArg === 'openai-compatible' ? compatibleProviderName : providerArg,
+  primaryModel,
+  criticModel,
+  reviewedThisRun: pendingPackets.length,
+  totalInOutput: reviews.length,
+  ...batchSummary,
+}, null, 2)}\n`, 'utf8');
+
 console.log(JSON.stringify({
   technology: technologyArg,
   reviewedThisRun: pendingPackets.length,
   totalInOutput: reviews.length,
   outputPath,
-  statuses: reviews.reduce((counts, review) => {
-    counts[review.finalStatus] = (counts[review.finalStatus] ?? 0) + 1;
-    return counts;
-  }, {}),
+  summaryPath,
+  ...batchSummary,
 }, null, 2));

@@ -64,6 +64,68 @@ export function isDatabaseConfigured() {
   return Boolean(process.env.DATABASE_URL);
 }
 
+export async function listGovernedQuestionSnapshots(input: {
+  technologyIds: string[];
+  includeUnpublished?: boolean;
+}) {
+  const sql = getSql();
+  if (!sql) return null;
+  if (input.technologyIds.length === 0) return [];
+  const rows = await sql`
+    WITH selected_technologies AS (
+      SELECT value AS id
+      FROM jsonb_array_elements_text(${JSON.stringify(input.technologyIds)}::jsonb)
+    )
+    SELECT version.snapshot
+    FROM questions question
+    JOIN question_versions version
+      ON version.question_id = question.id AND version.version = question.version
+    WHERE question.technology_id IN (SELECT id FROM selected_technologies)
+      AND (
+        ${Boolean(input.includeUnpublished)}
+        OR (
+          question.publish_status = 'published'
+          AND question.review_status IN ('ai-evidence-verified', 'human-verified')
+          AND EXISTS (
+            SELECT 1 FROM publication_batch_items item
+            JOIN publication_batches batch ON batch.id=item.batch_id AND batch.status='published'
+            WHERE item.question_id=question.id AND item.question_version=question.version
+              AND item.benchmark_version=version.benchmark_version
+          )
+        )
+      )
+    ORDER BY question.technology_id, question.id
+  `;
+  return rows.map((row) => row.snapshot as unknown);
+}
+
+export async function getGovernedQuestionSnapshot(id: string, input: { includeUnpublished?: boolean } = {}) {
+  const sql = getSql();
+  if (!sql) return null;
+  const rows = await sql`
+    SELECT version.snapshot
+    FROM questions question
+    JOIN question_versions version
+      ON version.question_id = question.id AND version.version = question.version
+    WHERE question.id = ${id}
+      AND (
+        ${Boolean(input.includeUnpublished)}
+        OR (
+          question.publish_status = 'published'
+          AND question.review_status IN ('ai-evidence-verified', 'human-verified')
+          AND EXISTS (
+            SELECT 1 FROM publication_batch_items item
+            JOIN publication_batches batch ON batch.id=item.batch_id AND batch.status='published'
+            WHERE item.question_id=question.id AND item.question_version=question.version
+              AND item.benchmark_version=version.benchmark_version
+          )
+        )
+      )
+    LIMIT 1
+  `;
+  return rows[0]?.snapshot as unknown | undefined;
+}
+
 export async function createInterviewSession(input: { id: string; resumeToken: string; technology: string; difficulty: string; currentIndex?: number }) {
   const sql = getSql();
   if (!sql) return null;
@@ -234,6 +296,54 @@ export async function listUserInterviewSessions(userId: string) {
     LIMIT 100
   `;
   return rows as PersistedSession[];
+}
+
+export async function getCandidateLearningProgress(userId: string) {
+  const sql = getSql();
+  if (!sql) return { topics: [], history: [], recommendations: [] };
+  const [topics, history, recommendations] = await Promise.all([
+    sql`
+      SELECT session.technology, COALESCE(topic.name, question.topic_id, 'Unclassified') AS topic,
+        count(answer.id)::int AS attempts, round(avg(answer.score)::numeric, 1) AS average_score,
+        max(answer.answered_at) AS last_practiced_at
+      FROM interview_sessions session JOIN interview_answers answer ON answer.session_id=session.id
+      LEFT JOIN questions question ON question.id=answer.question_id
+      LEFT JOIN topics topic ON topic.id=question.topic_id AND topic.technology_id=question.technology_id
+      WHERE session.owner_user_id=${userId}
+      GROUP BY session.technology, COALESCE(topic.name, question.topic_id, 'Unclassified')
+      ORDER BY average_score, attempts DESC
+    `,
+    sql`
+      SELECT id, technology, difficulty, total_score, completed_at
+      FROM interview_sessions WHERE owner_user_id=${userId} AND status='completed'
+      ORDER BY completed_at DESC LIMIT 50
+    `,
+    sql`
+      WITH weak_topics AS (
+        SELECT question.technology_id, question.topic_id, avg(answer.score) AS average_score
+        FROM interview_sessions session JOIN interview_answers answer ON answer.session_id=session.id
+        JOIN questions question ON question.id=answer.question_id
+        WHERE session.owner_user_id=${userId}
+        GROUP BY question.technology_id, question.topic_id HAVING avg(answer.score)<70
+      ), answered AS (
+        SELECT answer.question_id FROM interview_sessions session JOIN interview_answers answer ON answer.session_id=session.id
+        WHERE session.owner_user_id=${userId}
+      )
+      SELECT question.id, question.technology_id, topic.name AS topic, question.difficulty, question.question_type, question.prompt
+      FROM weak_topics weak JOIN questions question ON question.technology_id=weak.technology_id AND question.topic_id=weak.topic_id
+      JOIN topics topic ON topic.id=question.topic_id AND topic.technology_id=question.technology_id
+      WHERE question.review_status IN ('ai-evidence-verified','human-verified') AND question.publish_status='published'
+        AND NOT EXISTS (SELECT 1 FROM answered WHERE answered.question_id=question.id)
+        AND EXISTS (SELECT 1 FROM publication_batch_items item JOIN publication_batches batch ON batch.id=item.batch_id
+          JOIN question_versions version ON version.question_id=question.id AND version.version=question.version
+          WHERE item.question_id=question.id AND batch.status='published' AND item.question_version=question.version
+            AND item.benchmark_version=version.benchmark_version)
+      ORDER BY weak.average_score, CASE question.question_type WHEN 'scenario' THEN 0 WHEN 'troubleshooting' THEN 1 ELSE 2 END,
+        CASE question.difficulty WHEN 'beginner' THEN 0 WHEN 'intermediate' THEN 1 ELSE 2 END
+      LIMIT 12
+    `,
+  ]);
+  return { topics, history, recommendations };
 }
 
 export async function getOwnedInterviewSession(id: string, userId: string) {
