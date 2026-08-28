@@ -1,53 +1,21 @@
 {
-  "generatedAt": "2026-08-27T14:29:38.084Z",
+  "generatedAt": "2026-08-28T11:08:56.745Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
-    "technology": "all",
+    "technology": "aws",
     "onlyStatus": [
-      "draft",
-      "disputed",
-      "rejected"
+      "draft"
     ],
     "limit": "all",
     "offset": 0
   },
-  "totalQuestions": 707,
+  "totalQuestions": 107,
   "technologies": {
     "aws": {
-      "count": 126,
+      "count": 107,
       "path": "apps/web/data/evidence-packets-compact/aws-sentforrereview-compact.jsonl",
       "runnerPath": "apps/web/data/evidence-packets-compact/aws.jsonl"
-    },
-    "databricks": {
-      "count": 134,
-      "path": "apps/web/data/evidence-packets-compact/databricks-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/databricks.jsonl"
-    },
-    "informatica": {
-      "count": 0,
-      "path": "apps/web/data/evidence-packets-compact/informatica-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/informatica.jsonl"
-    },
-    "oracle": {
-      "count": 0,
-      "path": "apps/web/data/evidence-packets-compact/oracle-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/oracle.jsonl"
-    },
-    "power-bi": {
-      "count": 150,
-      "path": "apps/web/data/evidence-packets-compact/power-bi-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/power-bi.jsonl"
-    },
-    "python": {
-      "count": 150,
-      "path": "apps/web/data/evidence-packets-compact/python-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/python.jsonl"
-    },
-    "snowflake": {
-      "count": 147,
-      "path": "apps/web/data/evidence-packets-compact/snowflake-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/snowflake.jsonl"
     }
   }
 }

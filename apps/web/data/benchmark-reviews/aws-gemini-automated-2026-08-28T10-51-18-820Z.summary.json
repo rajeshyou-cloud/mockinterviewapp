@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-08-28T10:53:39.934Z",
+  "provider": "gemini",
+  "primaryModel": "gemini-2.5-flash-lite",
+  "criticModel": "gemini-2.5-flash",
+  "reviewedThisRun": 10,
+  "totalInOutput": 10,
+  "statuses": {
+    "disputed": 2,
+    "ai-evidence-verified": 8
+  },
+  "usage": {
+    "inputTokens": 21906,
+    "outputTokens": 3087,
+    "totalTokens": 38054
+  },
+  "cost": {
+    "currency": "USD",
+    "estimatedUsd": 0,
+    "ratesConfigured": false
+  }
+}

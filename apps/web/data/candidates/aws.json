@@ -6846,7 +6846,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Explain Elastic Load Balancing and EC2 Auto Scaling and the main problem it solves.",
-    "canonicalAnswer": "Elastic Load Balancing should be explained in terms of load balancer, target group, Auto Scaling group, health check, and scaling policy. A correct benchmark answer states the AWS problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Elastic Load Balancing distributes incoming traffic across healthy registered targets in one or more Availability Zones. A target group defines where a load balancer routes requests and uses health checks to keep unhealthy targets out of service. An EC2 Auto Scaling group maintains the desired number of instances, replaces unhealthy instances, and can add or remove capacity through a scaling policy as demand changes. Together they solve availability and variable-load problems: the load balancer routes traffic across healthy capacity while Auto Scaling maintains and adjusts that capacity. Validate the design through target health, load-balancer routing, Auto Scaling activity, desired-versus-actual capacity, and a controlled scaling test.",
     "expectedConcepts": [
       "load balancer",
       "target group",
@@ -6867,8 +6867,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Elastic Load Balancing should be explained in terms of load balancer, target group, Auto Scaling group, health check, and scaling policy. A correct benchmark answer states the AWS problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Elastic Load Balancing should be explained in terms of load balancer, target group, Auto Scaling group, health check, and scaling policy. A correct benchmark answer states the AWS problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply load balancer, target group, Auto Scaling group, health check, and scaling policy using evidence from the cited official AWS source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Elastic Load Balancing distributes incoming traffic across healthy registered targets in one or more Availability Zones. A target group defines where a load balancer routes requests and uses health checks to keep unhealthy targets out of service. An EC2 Auto Scaling group maintains the desired number of instances, replaces unhealthy instances, and can add or remove capacity through a scaling policy as demand changes. Together they solve availability and variable-load problems: the load balancer routes traffic across healthy capacity while Auto Scaling maintains and adjusts that capacity. Validate the design through target health, load-balancer routing, Auto Scaling activity, desired-versus-actual capacity, and a controlled scaling test.",
+      "expandedExplanation": "Elastic Load Balancing distributes incoming traffic across healthy registered targets in one or more Availability Zones. A target group defines where a load balancer routes requests and uses health checks to keep unhealthy targets out of service. An EC2 Auto Scaling group maintains the desired number of instances, replaces unhealthy instances, and can add or remove capacity through a scaling policy as demand changes. Together they solve availability and variable-load problems: the load balancer routes traffic across healthy capacity while Auto Scaling maintains and adjusts that capacity. Validate the design through target health, load-balancer routing, Auto Scaling activity, desired-versus-actual capacity, and a controlled scaling test. The two services solve complementary parts of a resilient compute design: traffic distribution and capacity management. Attaching the target group to the Auto Scaling group lets newly launched instances register for traffic and terminated instances drain or deregister. A strong beginner answer verifies both layers through target-health status, load-balancer behavior, scaling activities, capacity metrics, and a controlled load or instance-failure test.",
       "requiredConcepts": [
         "load balancer",
         "target group",
@@ -6956,15 +6956,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 1,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -7085,15 +7089,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -7214,15 +7222,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -7343,15 +7355,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -7472,15 +7488,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -7601,15 +7621,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the compute question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -12540,15 +12564,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the serverless question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -12677,15 +12705,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the serverless question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -12814,15 +12846,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the serverless question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -12951,15 +12987,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the serverless question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -13088,15 +13128,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the serverless question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -15674,15 +15718,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -15693,7 +15741,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A production team is considering Amazon CloudWatch and AWS CloudTrail. How would you decide whether it fits and implement it safely?",
-    "canonicalAnswer": "Use Amazon CloudWatch only when the production requirement matches the documented AWS capability around metric, log, alarm, API event, and audit trail. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "Use Amazon CloudWatch for operational telemetry such as metrics, log collection and analysis, dashboards, and alarms. Use AWS CloudTrail for the account's API event history and audit trail: who or what made an API call, when it occurred, and which resource was affected. Choose both when the production requirement needs service-health monitoring plus governance or security investigation. Implement safely by defining required metrics and log retention, creating actionable alarms, enabling an appropriate CloudTrail trail and protected destination, restricting access, and controlling ingestion and retention cost. Validate with a known workload signal, a test alarm, a test API event visible in CloudTrail, and an end-to-end incident query that correlates telemetry with the audit event.",
     "expectedConcepts": [
       "metric",
       "log",
@@ -15714,8 +15762,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Amazon CloudWatch only when the production requirement matches the documented AWS capability around metric, log, alarm, API event, and audit trail. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Amazon CloudWatch only when the production requirement matches the documented AWS capability around metric, log, alarm, API event, and audit trail. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply metric, log, alarm, API event, and audit trail using evidence from the cited official AWS source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Use Amazon CloudWatch for operational telemetry such as metrics, log collection and analysis, dashboards, and alarms. Use AWS CloudTrail for the account's API event history and audit trail: who or what made an API call, when it occurred, and which resource was affected. Choose both when the production requirement needs service-health monitoring plus governance or security investigation. Implement safely by defining required metrics and log retention, creating actionable alarms, enabling an appropriate CloudTrail trail and protected destination, restricting access, and controlling ingestion and retention cost. Validate with a known workload signal, a test alarm, a test API event visible in CloudTrail, and an end-to-end incident query that correlates telemetry with the audit event.",
+      "expandedExplanation": "Use Amazon CloudWatch for operational telemetry such as metrics, log collection and analysis, dashboards, and alarms. Use AWS CloudTrail for the account's API event history and audit trail: who or what made an API call, when it occurred, and which resource was affected. Choose both when the production requirement needs service-health monitoring plus governance or security investigation. Implement safely by defining required metrics and log retention, creating actionable alarms, enabling an appropriate CloudTrail trail and protected destination, restricting access, and controlling ingestion and retention cost. Validate with a known workload signal, a test alarm, a test API event visible in CloudTrail, and an end-to-end incident query that correlates telemetry with the audit event. CloudWatch and CloudTrail are complementary rather than interchangeable: CloudWatch answers how systems are behaving, while CloudTrail records control-plane activity for audit and investigation. A strong answer should make that boundary explicit, describe how CloudTrail events can support monitoring or incident correlation, and define measurable acceptance checks for metrics, logs, alarms, API events, retention, access, and cost.",
       "requiredConcepts": [
         "metric",
         "log",
@@ -15804,12 +15852,12 @@
       },
       "review": {
         "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
+        "promptVersion": "benchmark-dispute-remediation-2026-08-28",
         "reviewerModels": [],
         "verdicts": [],
         "confidence": 0,
         "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+          "Separated CloudWatch telemetry from CloudTrail API-event auditing after AI dispute; requires independent two-model evidence re-review before publication."
         ],
         "reviewedAt": null
       }
@@ -15932,15 +15980,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16061,15 +16113,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16190,15 +16246,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the observability question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16309,6 +16369,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:ca6de84ca0d16639caecad4a9f80d8a7a99e77c5edd14157477d5bca325d3e52"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:99cd75d6e4b959f2619f64810248a73d714aefc373fb1bc357b27c49a9c472d4"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:93f36013419f032c6b11168cc3ef251ce6e916da453e901452eeff688ffbc9fc"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:da36ec9f281388b5f272a6659cc48be5452186687a1fe09cdedf93e098fca68e"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:2a078eadcbeadd550f991f025ef8a3cb4adf436b078b19a3e08c5671f31ee836"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:c4ba03fbca1c3cccaf3a990fc61b04ea95377918e5233fcbf3575740ba5924d6"
         }
       ],
       "scoringAnchors": {
@@ -16442,6 +16542,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:c3dddb0bddc6d63241f087a2a4d24f8422ca6ae9fa29c5a9169f7ed53eef883a"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:5a413cb333a8b03353ef922cf7fbdaec49145d0f1e2a157f6a082cf10dfe4771"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:feba8dff5ba3481536b7e335faed3f8358b32352712c58480eb5c973fd250efd"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:882c68ea2398907f90c94a95be0a8c83b91275969b7a131a439175d2d2dc211a"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:95a6872958f9118c636885cfcc7597fdb98f5236500a3e5f986c610430ac3d5c"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:3335700045d75c92e0cf1683028cd59e934605770ec91923588cadf53912615d"
         }
       ],
       "scoringAnchors": {
@@ -16451,15 +16591,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the infrastructure-as-code question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16571,6 +16715,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:ddfeba1b9f29f3b58966692b3dc221e3168fd6047ca9b3314c5d31a7a6fd8c0d"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:54f37e87d9c975dce1d4a78232a49c82795a5b1b19a8286f2cb0a11594b1ed42"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:e52dd40f37bc836dd4241e8e16866f1b9510d3bf6b7119088fa775d39717d741"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:f00a70d3adbc4cfb761017d9ec4532ebc7a210a3f9dd9fb778ff30290cc08dfe"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:94f56b191f42c05db31dc6472d7ed964b15398e091391ad6cb03bf651b1b5698"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:8e2ece72fc65a701ab7beede18ca444e269c79548b2c07512fbf123476c40064"
         }
       ],
       "scoringAnchors": {
@@ -16704,6 +16888,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:701aab71555753858f8e02357e4956221a687c6679e7bc2fe1d2aeed7ffc7639"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:e53bcf50ad614c990ed67e444813c4a7313c9d4ba0d6027d7772fb82de41cf76"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:6a95666e2de2f19e80c797c5294d32835f0234993494d9bf23a89e14019805ac"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:c9d212d070d414a298e29ab1a964cc63fcb504ca9b855723bb7cb2c6ba054c40"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:719faa427029be0b75675d6420c915ff918757c534f64514564faf2944d325d2"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:83e68176eb9a4f5bc86f2bbe1d0f29cbd60215c75e26f0db92bdf78588cf9cbc"
         }
       ],
       "scoringAnchors": {
@@ -16713,15 +16937,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the infrastructure-as-code question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16732,7 +16960,7 @@
     "difficulty": "advanced",
     "type": "design",
     "question": "Design an enterprise-ready solution around AWS CloudFormation. Which trade-offs and controls matter most?",
-    "canonicalAnswer": "An enterprise-ready AWS CloudFormation design should explicitly cover template, stack, change set, drift, and rollback. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+    "canonicalAnswer": "Use version-controlled, tested CloudFormation templates to create repeatable stacks, separate environments and accounts, and use StackSets when the same controlled baseline must reach multiple accounts or Regions. Review a change set before execution, detect drift from the template, and use stack policies, staged StackSet operation preferences, and CloudWatch rollback triggers to limit deployment blast radius. Use least-privilege CloudFormation service roles, dynamic references instead of embedded secrets, CloudTrail audit logging, and tags for ownership and cost allocation. Important trade-offs are centralized consistency versus cross-account permissions and blast radius, deployment speed versus staged failure tolerance, and reconciliation versus preserving intentional out-of-band changes. Validate through change-set review, stack events, drift results, alarm-driven rollback tests, and StackSet operation results.",
     "expectedConcepts": [
       "template",
       "stack",
@@ -16753,8 +16981,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "An enterprise-ready AWS CloudFormation design should explicitly cover template, stack, change set, drift, and rollback. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
-      "expandedExplanation": "An enterprise-ready AWS CloudFormation design should explicitly cover template, stack, change set, drift, and rollback. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the advanced design prompt because it requires the candidate to apply template, stack, change set, drift, and rollback using evidence from the cited official AWS source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Use version-controlled, tested CloudFormation templates to create repeatable stacks, separate environments and accounts, and use StackSets when the same controlled baseline must reach multiple accounts or Regions. Review a change set before execution, detect drift from the template, and use stack policies, staged StackSet operation preferences, and CloudWatch rollback triggers to limit deployment blast radius. Use least-privilege CloudFormation service roles, dynamic references instead of embedded secrets, CloudTrail audit logging, and tags for ownership and cost allocation. Important trade-offs are centralized consistency versus cross-account permissions and blast radius, deployment speed versus staged failure tolerance, and reconciliation versus preserving intentional out-of-band changes. Validate through change-set review, stack events, drift results, alarm-driven rollback tests, and StackSet operation results.",
+      "expandedExplanation": "Use version-controlled, tested CloudFormation templates to create repeatable stacks, separate environments and accounts, and use StackSets when the same controlled baseline must reach multiple accounts or Regions. Review a change set before execution, detect drift from the template, and use stack policies, staged StackSet operation preferences, and CloudWatch rollback triggers to limit deployment blast radius. Use least-privilege CloudFormation service roles, dynamic references instead of embedded secrets, CloudTrail audit logging, and tags for ownership and cost allocation. Important trade-offs are centralized consistency versus cross-account permissions and blast radius, deployment speed versus staged failure tolerance, and reconciliation versus preserving intentional out-of-band changes. Validate through change-set review, stack events, drift results, alarm-driven rollback tests, and StackSet operation results. This operating model uses stacks as auditable deployment units for each environment. Change sets expose proposed replacements and deletions before execution, while drift detection identifies resources changed outside the declared template. StackSets extend a standard template across selected accounts and Regions, with concurrency and failure-tolerance settings controlling rollout risk. Least-privilege service roles separate the deployer's permissions from CloudFormation's provisioning permissions; dynamic references avoid embedded credentials, and CloudTrail records API activity. Stack policies protect critical resources, and alarm-driven rollback limits failed deployment impact.",
       "requiredConcepts": [
         "template",
         "stack",
@@ -16833,6 +17061,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:28b721645650565b1cc67a7fb494e084c4aee48d7f167c1b2b7b5364ce05283f"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:0bc4e55f99230e11d30aa24d07cc57ee61099ea9c1d656daeee5d1a271a4c164"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:82769794775d24cb1baf330b56e7aa3aa016852ce6a368b29ea5fe19ca88cf31"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:928fc77e7690c836f741ab3ed4a3bb55bb2ac6c476f3fe767c8b74f2d791365b"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:894f235860ed0c9b2daf9f42e069e2c6b9638985f643a2797f214d67cbb77f0e"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:2cafec647fcec75c102ea8ab65be8de24a88cf8188b3a4badfd6dd670120bb45"
         }
       ],
       "scoringAnchors": {
@@ -16842,15 +17110,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the infrastructure-as-code question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },
@@ -16962,6 +17234,46 @@
           "retrievedAt": "2026-08-27",
           "documentVersion": "official-aws-evidence-depth-2026-08-27",
           "contentHash": "sha256:75d6af97a2a98fc853e14a1c9573d476226fe4e3e8486e673d4cc04943140e6d"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html",
+          "title": "CloudFormation best practices",
+          "section": "Governance, least privilege, quotas, and multi-account deployment",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:5fcaccdd4b168fd38fb21df5e17c690d54b01dc1c1875e38c6db98044e761aec"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html",
+          "title": "CloudFormation StackSets concepts",
+          "section": "Multi-account and multi-Region deployment controls",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:8fc7d6ff01db8d742e9f5511d39119b37ca9c1063f8b4c497d020a826a2ca2ca"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html",
+          "title": "CloudFormation security best practices",
+          "section": "IAM service roles, credentials, and audit logging",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:0a888b0192808edce3a5d86eb6d98b8b206efa6f7c881f78bcdcc9dd9801552b"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+          "title": "CloudFormation drift detection",
+          "section": "Detect unmanaged configuration changes",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:faf7ffa1119eb1ce61343296a2cf503ebf7d89b7b965c75cf7aeb453a269cb5f"
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html",
+          "title": "CloudFormation rollback triggers",
+          "section": "CloudWatch alarm based deployment rollback",
+          "retrievedAt": "2026-08-27",
+          "documentVersion": "official-aws-evidence-depth-2026-08-27",
+          "contentHash": "sha256:de954ed22aa77dc3f91d4e471dc743356099f0cefd2d223bc8ce6aa51b304dce"
         }
       ],
       "scoringAnchors": {
@@ -16971,15 +17283,19 @@
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the infrastructure-as-code question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Remediated locally from static triage; requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gemini-2.5-flash-lite",
+          "gemini-2.5-flash"
         ],
-        "reviewedAt": null
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.9,
+        "corrections": [],
+        "reviewedAt": "2026-08-28"
       }
     }
   },

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-08-27T14:27:49.184Z",
+    "generatedAt": "2026-08-28T11:09:08.556Z",
     "filters": {
       "technology": "all",
       "onlyStatus": [
@@ -10,19 +10,19 @@
         "stale",
         "reviewing"
       ],
-      "linkHealthCheckedAt": "2026-08-27T14:20:58.506Z",
-      "linkHealthMode": "offline-structure-only"
+      "linkHealthCheckedAt": "2026-08-28T11:07:49.611Z",
+      "linkHealthMode": "live"
     },
     "totalInspected": 1050,
     "totalFlaggedRecords": 0,
-    "totalSelectedRecords": 707,
+    "totalSelectedRecords": 688,
     "byTechnology": {
       "snowflake": {
         "selected": 147,
         "flagged": 0
       },
       "aws": {
-        "selected": 126,
+        "selected": 107,
         "flagged": 0
       },
       "databricks": {
@@ -39,7 +39,7 @@
       }
     },
     "byStatus": {
-      "draft": 707
+      "draft": 688
     },
     "byReason": {}
   },
@@ -2385,78 +2385,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-aws-autoscaling-elb-01",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "beginner",
-      "type": "conceptual",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-autoscaling-elb-02",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-autoscaling-elb-03",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-autoscaling-elb-04",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-autoscaling-elb-05",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-autoscaling-elb-06",
-      "technology": "aws",
-      "topic": "compute",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-aws-s3-02",
       "technology": "aws",
       "topic": "storage",
@@ -2817,66 +2745,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-aws-api-gateway-02",
-      "technology": "aws",
-      "topic": "serverless",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-api-gateway-03",
-      "technology": "aws",
-      "topic": "serverless",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-api-gateway-04",
-      "technology": "aws",
-      "topic": "serverless",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-api-gateway-05",
-      "technology": "aws",
-      "topic": "serverless",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-api-gateway-06",
-      "technology": "aws",
-      "topic": "serverless",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-aws-ecs-eks-01",
       "technology": "aws",
       "topic": "containers",
@@ -3081,18 +2949,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-aws-cloudwatch-cloudtrail-02",
-      "technology": "aws",
-      "topic": "observability",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-aws-cloudwatch-cloudtrail-03",
       "technology": "aws",
       "topic": "observability",
@@ -3101,90 +2957,6 @@
       "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudwatch-cloudtrail-04",
-      "technology": "aws",
-      "topic": "observability",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudwatch-cloudtrail-05",
-      "technology": "aws",
-      "topic": "observability",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudwatch-cloudtrail-06",
-      "technology": "aws",
-      "topic": "observability",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudformation-02",
-      "technology": "aws",
-      "topic": "infrastructure-as-code",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudformation-04",
-      "technology": "aws",
-      "topic": "infrastructure-as-code",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudformation-05",
-      "technology": "aws",
-      "topic": "infrastructure-as-code",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-aws-cloudformation-06",
-      "technology": "aws",
-      "topic": "infrastructure-as-code",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html",
       "reasonCodes": [],
       "reasons": []
     },

@@ -115,6 +115,11 @@ const evidenceByCluster = {
     ['CloudFormation getting started', 'Create and update stacks', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html'],
     ['CloudFormation stacks', 'Stack lifecycle and updates', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html'],
     ['CloudFormation troubleshooting', 'Stack failure diagnosis', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html'],
+    ['CloudFormation best practices', 'Governance, least privilege, quotas, and multi-account deployment', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html'],
+    ['CloudFormation StackSets concepts', 'Multi-account and multi-Region deployment controls', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html'],
+    ['CloudFormation security best practices', 'IAM service roles, credentials, and audit logging', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/security-best-practices.html'],
+    ['CloudFormation drift detection', 'Detect unmanaged configuration changes', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html'],
+    ['CloudFormation rollback triggers', 'CloudWatch alarm based deployment rollback', 'https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html'],
   ],
   'candidate-aws-kms-secrets': [
     ['AWS KMS keys', 'KMS key concepts and key material', 'https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html'],
