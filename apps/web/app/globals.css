@@ -82,12 +82,14 @@ button:disabled { cursor: not-allowed; opacity: .5; }
   overflow: hidden;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(247,249,255,.94) 0%, rgba(241,246,252,.98) 46%, #f6f8fc 100%),
-    #f4f7fb;
+    radial-gradient(circle at 8% 34%, rgba(20,184,166,.15), transparent 24%),
+    radial-gradient(circle at 92% 8%, rgba(124,58,237,.2), transparent 27%),
+    radial-gradient(circle at 82% 72%, rgba(14,165,233,.11), transparent 24%),
+    linear-gradient(180deg, #f7f7ff 0%, #eef7fb 48%, #f8f6ff 100%);
 }
 .ambient { position: absolute; pointer-events: none; border-radius: 999px; filter: blur(2px); opacity: .7; }
-.ambientOne { width: 440px; height: 440px; top: -220px; right: -80px; background: radial-gradient(circle, rgba(98,85,244,.18), rgba(98,85,244,0) 70%); }
-.ambientTwo { width: 360px; height: 360px; top: 520px; left: -220px; background: radial-gradient(circle, rgba(14,165,198,.14), rgba(14,165,198,0) 72%); }
+.ambientOne { width: 520px; height: 520px; top: -250px; right: -90px; background: radial-gradient(circle, rgba(236,72,153,.18), rgba(124,58,237,.1) 38%, rgba(98,85,244,0) 72%); }
+.ambientTwo { width: 430px; height: 430px; top: 520px; left: -240px; background: radial-gradient(circle, rgba(16,185,129,.18), rgba(14,165,233,.08) 46%, rgba(14,165,198,0) 74%); }
 .interviewShell { position: relative; z-index: 1; max-width: 1280px; padding-top: 24px; }
 .candidateNav { min-height: 56px; display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 42px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-size: 19px; font-weight: 900; letter-spacing: -.03em; text-decoration: none; }
@@ -101,16 +103,21 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .navAccount .uiIcon { width: 15px; }
 .uiIcon { width: 20px; height: 20px; flex: 0 0 auto; }
 
-.interviewHero { align-items: center; margin-bottom: 36px; }
+.interviewHero { position: relative; align-items: center; margin-bottom: 26px; padding: 38px 40px; overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 30px; color: white; background: linear-gradient(120deg, #152d55 0%, #352a87 55%, #0b7087 100%); box-shadow: 0 28px 70px rgba(37,42,105,.24); }
+.interviewHero::before { content: ''; position: absolute; width: 330px; height: 330px; right: 17%; bottom: -260px; border: 56px solid rgba(255,255,255,.06); border-radius: 50%; }
+.interviewHero::after { content: ''; position: absolute; width: 220px; height: 220px; top: -145px; right: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(244,114,182,.5), rgba(168,85,247,.08) 65%, transparent 66%); }
+.interviewHero > * { position: relative; z-index: 1; }
 .interviewHero > div:first-child { max-width: 790px; }
 .interviewHero .eyebrow, .completionState .eyebrow, .feedbackHeader .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--violet); }
+.interviewHero .eyebrow { color: #9eeef2; }
 .interviewHero .eyebrow > span, .completionState .eyebrow > span, .feedbackHeader .eyebrow > span { width: 22px; height: 2px; border-radius: 4px; background: linear-gradient(90deg, var(--violet), var(--cyan)); }
+.interviewHero .eyebrow > span { background: linear-gradient(90deg, #5eead4, #f0abfc); }
 .interviewHero h1 { max-width: 780px; margin: 12px 0 16px; font-size: clamp(40px, 5vw, 62px); line-height: 1.02; letter-spacing: -.048em; text-wrap: balance; }
-.interviewHero .lede { max-width: 715px; margin-bottom: 19px; color: #61708a; font-size: 17px; line-height: 1.65; }
-.trustRow { display: flex; flex-wrap: wrap; gap: 11px 22px; color: #5c6a80; font-size: 12px; font-weight: 750; }
-.trustRow span { display: inline-flex; align-items: center; gap: 7px; }
-.trustRow .uiIcon { width: 16px; color: var(--mint); }
-.interviewPage .statusCard { min-width: 285px; display: flex; align-items: center; gap: 15px; padding: 19px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: linear-gradient(145deg, #152541, #0d1728); box-shadow: 0 20px 44px rgba(15,31,55,.2); }
+.interviewHero .lede { max-width: 715px; margin-bottom: 21px; color: #d7e5f7; font-size: 17px; line-height: 1.65; }
+.trustRow { display: flex; flex-wrap: wrap; gap: 10px; color: #edf6ff; font-size: 12px; font-weight: 750; }
+.trustRow span { display: inline-flex; align-items: center; gap: 7px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; background: rgba(255,255,255,.08); backdrop-filter: blur(8px); }
+.trustRow .uiIcon { width: 16px; color: #5eead4; }
+.interviewPage .statusCard { min-width: 285px; display: flex; align-items: center; gap: 15px; padding: 19px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; background: linear-gradient(145deg, rgba(8,22,48,.72), rgba(17,45,71,.5)); box-shadow: 0 20px 44px rgba(4,12,32,.24); backdrop-filter: blur(14px); }
 .statusCard .statusIcon { width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 14px; color: #76e6ca; background: rgba(58,213,173,.12); }
 .statusCard > div:last-child { display: grid; gap: 3px; }
 .statusCard .statusLabel { color: #8fa2bf; font-size: 9px; font-weight: 900; letter-spacing: .15em; }
@@ -118,9 +125,9 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .statusCard.isSynced .statusIcon { color: #71e1bc; box-shadow: inset 0 0 0 1px rgba(113,225,188,.08); }
 
 .interviewPage .card { border-color: rgba(210,219,233,.9); box-shadow: 0 18px 45px rgba(24,39,75,.07); }
-.controlDeck { display: grid; grid-template-columns: minmax(230px, 1.15fr) minmax(170px, .72fr) minmax(160px, .65fr) auto; align-items: end; gap: 16px; padding: 17px 19px; margin-bottom: 14px; border-radius: 20px; }
+.controlDeck { display: grid; grid-template-columns: minmax(230px, 1.15fr) minmax(170px, .72fr) minmax(160px, .65fr) auto; align-items: end; gap: 16px; padding: 17px 19px; margin-bottom: 14px; border-radius: 20px; background: linear-gradient(110deg, rgba(255,255,255,.98), rgba(245,242,255,.97) 58%, rgba(235,253,249,.97)); }
 .controlIntro { display: flex; align-items: center; gap: 12px; align-self: center; }
-.controlStep { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 11px; color: white; background: linear-gradient(145deg, #695af2, #493bcf); font-size: 11px; font-weight: 900; }
+.controlStep { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 11px; color: white; background: linear-gradient(145deg, #7c3aed, #db2777); box-shadow: 0 8px 18px rgba(168,50,150,.23); font-size: 11px; font-weight: 900; }
 .controlIntro > div { display: grid; gap: 3px; }
 .controlIntro strong { font-size: 14px; }
 .controlIntro div span { color: #7a879b; font-size: 11px; }
@@ -134,21 +141,23 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 
 .interviewPage .interviewGrid { grid-template-columns: minmax(0, 1.55fr) minmax(340px, .75fr); align-items: start; gap: 20px; }
 .interviewPage .interviewer { position: relative; min-height: 650px; overflow: hidden; padding: 30px; border-radius: 24px; }
-.cardAccent { position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--violet), #8175f8 42%, var(--cyan)); }
+.cardAccent { position: absolute; inset: 0 0 auto; height: 6px; background: linear-gradient(90deg, #7c3aed, #ec4899 34%, #f59e0b 62%, #06b6d4 82%, #10b981); }
 .questionTopline { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
 .questionTopline > strong { color: #5f6d83; font-size: 12px; white-space: nowrap; }
 .interviewPage .questionTags { gap: 7px; }
-.interviewPage .questionTags span { padding: 6px 9px; border: 1px solid #e4e8f0; background: #f7f9fc; color: #647188; font-size: 10px; letter-spacing: .035em; text-transform: uppercase; }
-.interviewPage .questionTags .technologyTag { border-color: #dcd7ff; color: #4f41d1; background: #f1efff; }
-.progressTrack { width: 100%; height: 5px; margin: 15px 0 30px; overflow: hidden; border-radius: 99px; background: #edf0f5; }
-.progressTrack span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--violet), #8a7ff7, var(--cyan)); transition: width .35s ease; }
+.interviewPage .questionTags span { padding: 6px 9px; border: 1px solid #cdeff5; background: #eafafe; color: #08758c; font-size: 10px; letter-spacing: .035em; text-transform: uppercase; }
+.interviewPage .questionTags span:nth-child(2) { border-color: #fde2b2; color: #9a5a05; background: #fff7df; }
+.interviewPage .questionTags span:nth-child(3) { border-color: #ccebdd; color: #137154; background: #eaf9f2; }
+.interviewPage .questionTags .technologyTag { border-color: #d8ceff; color: #5731b7; background: #f0ebff; }
+.progressTrack { width: 100%; height: 7px; margin: 15px 0 30px; overflow: hidden; border-radius: 99px; background: #e8edf5; }
+.progressTrack span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #7c3aed, #ec4899 43%, #f59e0b 68%, #06b6d4); box-shadow: 0 0 12px rgba(236,72,153,.24); transition: width .35s ease; }
 .questionHeader { gap: 20px; }
 .questionHeader > div:first-child { flex: 1; }
 .sectionLabel { margin: 0 0 10px; color: #8a95a8; font-size: 10px; font-weight: 900; letter-spacing: .14em; }
 .questionHeader h2 { margin: 0 0 26px; color: #12233f; font-size: clamp(25px, 3vw, 37px); line-height: 1.22; letter-spacing: -.03em; text-wrap: balance; }
 .interviewPage .iconButton { width: auto; height: 40px; display: inline-flex; gap: 7px; padding: 0 12px; margin: 0; border: 1px solid #dedafb; border-radius: 12px; color: #5849dd; background: #f4f2ff; font-size: 11px; }
 .iconButton .uiIcon { width: 17px; }
-.answerField { overflow: hidden; border: 1px solid #dce2ec; border-radius: 17px; background: #fbfcfe; transition: border-color .2s, box-shadow .2s; }
+.answerField { overflow: hidden; border: 1px solid #d9def0; border-radius: 17px; background: linear-gradient(145deg, #fbfbff, #f3f9ff); transition: border-color .2s, box-shadow .2s; }
 .answerField:focus-within { border-color: #7c6ef3; box-shadow: 0 0 0 4px rgba(91,76,240,.09); }
 .answerLabel { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; border-bottom: 1px solid #e8ebf1; background: #f7f9fc; }
 .answerLabel label { display: block; color: #33435e; font-size: 12px; }
@@ -177,13 +186,13 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .sourceNote a { color: #5143d4; font-weight: 750; text-decoration: none; }
 .sourceNote small { color: #9aa4b3; }
 
-.interviewPage .feedback { position: sticky; top: 20px; min-height: 650px; padding: 25px; overflow: hidden; border-radius: 24px; background: linear-gradient(180deg, #ffffff, #fbfcff); }
-.feedback::before { content: ''; position: absolute; width: 170px; height: 170px; top: -95px; right: -70px; border-radius: 50%; background: radial-gradient(circle, rgba(95,78,239,.13), rgba(95,78,239,0) 70%); }
-.feedbackHeader { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #edf0f5; }
+.interviewPage .feedback { position: sticky; top: 20px; min-height: 650px; padding: 25px; overflow: hidden; border-color: #dcd5fb; border-radius: 24px; background: linear-gradient(160deg, #ffffff 0%, #f7f3ff 48%, #edfbfa 100%); box-shadow: 0 22px 55px rgba(76,53,154,.12); }
+.feedback::before { content: ''; position: absolute; width: 210px; height: 210px; top: -105px; right: -70px; border-radius: 50%; background: radial-gradient(circle, rgba(236,72,153,.2), rgba(124,58,237,.1) 45%, rgba(95,78,239,0) 72%); }
+.feedbackHeader { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #e3ddf5; }
 .feedbackHeader .eyebrow { margin: 0 0 7px; font-size: 9px; }
 .feedbackHeader .eyebrow > span { width: 15px; }
 .feedbackHeader h2 { margin: 0; font-size: 21px; letter-spacing: -.025em; }
-.feedbackSpark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: #594ae0; background: #f0edff; }
+.feedbackSpark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: white; background: linear-gradient(145deg, #7c3aed, #ec4899); box-shadow: 0 8px 18px rgba(173,50,161,.24); }
 .feedbackSpark .uiIcon { width: 19px; }
 .interviewPage .emptyState { min-height: 475px; align-content: center; gap: 4px; padding: 20px 10px; }
 .emptyState h3 { margin: 7px 0 2px; color: #263750; font-size: 16px; }
@@ -199,7 +208,7 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .feedback .scoreMode { margin-top: -8px; }
 .feedback > h3 { color: #273650; font-size: 15px; }
 .interviewPage .dimensionGrid { gap: 9px; }
-.interviewPage .dimensionGrid div { position: relative; padding: 11px 12px; overflow: hidden; border-color: #e7eaf1; background: #f8f9fc; }
+.interviewPage .dimensionGrid div { position: relative; padding: 11px 12px; overflow: hidden; border-color: #e1dcf0; background: rgba(255,255,255,.72); }
 .interviewPage .dimensionGrid div::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--violet); }
 .interviewPage .dimensionGrid div:nth-child(2)::before { background: var(--cyan); }
 .interviewPage .dimensionGrid div:nth-child(3)::before { background: #e7a82e; }
@@ -237,7 +246,7 @@ button:disabled { cursor: not-allowed; opacity: .5; }
   .interviewShell { padding: 18px 16px 52px; }
   .candidateNav { margin-bottom: 30px; }
   .navLinks > a:not(.navAccount) { display: none; }
-  .interviewHero { gap: 24px; }
+  .interviewHero { gap: 24px; padding: 28px 22px; border-radius: 24px; }
   .interviewHero h1 { font-size: clamp(36px, 11vw, 50px); }
   .interviewPage .statusCard { width: 100%; min-width: 0; }
   .controlDeck { grid-template-columns: 1fr; }
