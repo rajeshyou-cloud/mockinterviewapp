@@ -19,10 +19,11 @@ describe('released course gate', () => {
     await expect(getReleasedCourses()).resolves.toHaveLength(4);
   });
 
-  it('separates AI content readiness from the explicit production launch decision', () => {
+  it('separates AI content readiness from the explicit production launch decision', async () => {
     expect(isCandidateCourseAiVerified('oracle')).toBe(true);
     expect(isCandidateCourseAiVerified('databricks')).toBe(true);
-    expect(isCandidateCourseAiVerified('aws')).toBe(false);
+    expect(isCandidateCourseAiVerified('aws')).toBe(true);
+    await expect(isReleasedTechnology('aws')).resolves.toBe(false);
     expect(isCandidateCourseAiVerified('unknown')).toBe(false);
   });
 });

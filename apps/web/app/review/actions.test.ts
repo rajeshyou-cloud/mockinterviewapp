@@ -40,8 +40,8 @@ describe('saveReview', () => {
   });
 
   it('requires benchmark verification before approval', async () => {
-    await expect(saveReview(form({ courseId: 'aws', status: 'approved', sourceLinksChecked: true })))
-      .rejects.toThrow('redirect:/review?course=aws&error=benchmarks');
+    await expect(saveReview(form({ courseId: 'power-bi', status: 'approved', sourceLinksChecked: true })))
+      .rejects.toThrow('redirect:/review?course=power-bi&error=benchmarks');
     expect(saveCoursePackReview).not.toHaveBeenCalled();
   });
 

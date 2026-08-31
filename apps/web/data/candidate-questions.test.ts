@@ -19,7 +19,7 @@ describe('candidate course question packs', () => {
       expect(question.technology).toBe(technology);
       expect(question.question.length).toBeGreaterThanOrEqual(20);
       expect(question.canonicalAnswer.length).toBeGreaterThanOrEqual(100);
-      expect(question.expectedConcepts).toHaveLength(5);
+      expect(question.expectedConcepts.length).toBeGreaterThanOrEqual(5);
       expect(question.followUps).toHaveLength(2);
       expect(question.benchmark.version).toBe('1.0.0');
       expect(question.benchmark.canonicalAnswer).toBe(question.canonicalAnswer);

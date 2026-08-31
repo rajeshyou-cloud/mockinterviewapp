@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T09:00:00.000+05:30",
+  "updatedAt": "2026-08-31T19:30:00.000+05:30",
   "workspace": "D:\\mockinterviewapp",
   "purpose": "Low-context index for continuing governed benchmark AI review without rereading PROJECT_STATE.md and HANDOVER.md on every batch.",
   "contract": {
@@ -13,9 +13,9 @@
   },
   "latestValidatedCounts": {
     "totalBenchmarks": 1050,
-    "aiEvidenceVerified": 538,
-    "draft": 512,
-    "blockedCandidateQuestions": 365
+    "aiEvidenceVerified": 653,
+    "draft": 397,
+    "blockedCandidateQuestions": 300
   },
   "technologyStatus": {
     "informatica": {
@@ -30,14 +30,16 @@
       "note": "Published through the explicit launch registry on 2026-08-31 after full AI-evidence verification and evidence-link verification."
     },
     "snowflake": {
-      "verified": 3,
-      "draft": 147,
-      "userVisible": true
+      "verified": 53,
+      "draft": 97,
+      "userVisible": true,
+      "note": "Snowflake advanced from 13/150 to 53/150 ai-evidence-verified through optimized labelled compact batches 1a-1e. Static triage is 0; benchmark validation passes. Existing user-visible status remains from earlier release path, but only verified benchmark records should be treated as approved."
     },
     "aws": {
-      "verified": 85,
-      "draft": 65,
-      "userVisible": false
+      "verified": 150,
+      "draft": 0,
+      "userVisible": false,
+      "note": "Fully AI-evidence verified on 2026-08-31 through optimized labelled compact packets batch5a-batch5g with independent chat-level primary/critic consensus and guarded dry-run imports. Still not user-visible until explicit launch registry publication and production smoke verification."
     },
     "databricks": {
       "verified": 150,
@@ -57,8 +59,8 @@
     }
   },
   "activeReview": {
-    "technology": "aws",
-    "nextBatchLabel": "next-course-after-databricks-complete",
+    "technology": "snowflake",
+    "nextBatchLabel": "snowflake-review-20260831-batch1f",
     "pendingReviewerPacket": [],
     "reviewerModels": [
       "gpt-5.6-luna",
@@ -67,17 +69,16 @@
     "reviewerModelStrategy": {
       "preferredLowCostPrimary": "gpt-5.6-luna",
       "critic": "gpt-5.5",
-      "retirementFallbackAfter2026-08-31": "For ChatGPT-sign-in Codex, replace gpt-5.4-mini with gpt-5.6-luna as the low-cost primary. Keep gpt-5.5 as the critic when available and within usage limits; otherwise use gpt-5.6-terra as the lower-cost critic fallback.",
-      "rule": "Luna can be used for first-pass approval only when paired with a different independent critic model; do not import Luna-only approvals."
+      "rule": "Use compact labelled packets, static triage before reviewer calls, primary first, and spend critic only after primary approval. Do not import single-model approvals."
     },
-    "packetPath": "apps/web/data/evidence-packets-compact/aws.jsonl",
-    "packetGuardCommand": "npm run validate:review-packet -- --packet=apps/web/data/evidence-packets-compact/aws.jsonl --allowed-status=draft --max-records=20",
+    "packetPath": null,
+    "packetGuardCommand": "npm run validate:review-packet -- --packet=<labelled-packet> --allowed-status=draft --max-records=10",
     "blocker": null,
     "latestMilestone": {
-      "technology": "aws",
+      "technology": "snowflake",
       "status": "review-in-progress",
-      "summary": "Databricks and Oracle are published through the explicit launch registry after reaching 150/150 ai-evidence-verified and passing source-link verification. AWS advanced to 85/150 ai-evidence-verified through targeted two-model chat-level review imports. Latest AWS packet contains 20 draft records starting with candidate-aws-iam-policies-02 through candidate-aws-route53-02. Static triage is 0 and benchmark validation passes.",
-      "launchStatus": "databricks-and-oracle-launched",
+      "summary": "AWS is fully AI-evidence verified at 150/150 but not published. Snowflake has advanced to 53/150 ai-evidence-verified after batches 1a-1e covering architecture, bulk loading, cloning, clustering, dynamic tables, multi-cluster warehouses, policy security, and query optimization. Static triage is 0 and benchmark validation passes.",
+      "launchStatus": "AWS not launched; Snowflake partially verified and existing user visibility must not be interpreted as full pack approval.",
       "productionDeployment": {
         "commit": "868077e",
         "deploymentId": "dpl_36bzVdhuJvYqXojtzpZQVFqMW4Fy",
@@ -94,11 +95,12 @@
     "rules": [
       "Do not print full JSONL packets unless debugging requires it.",
       "Use ID/count summaries for routine state.",
+      "Use labelled compact packets so reviewers do not accidentally review stale aws.jsonl content.",
       "Before any reviewer call, run validate:review-packet and proceed only when the packet has draft records, no duplicates, and no verified records.",
       "Read PROJECT_STATE.md and HANDOVER.md only at start/end of larger checkpoints or when contract ambiguity exists.",
-      "Update PROJECT_STATE.md and HANDOVER.md after meaningful milestones, not every tiny batch.",
-      "Use gpt-5.6-luna for low-cost first-pass review after the gpt-5.4-mini retirement; use gpt-5.5 as the critic where available before import.",
-      "Use 20-record batches for Databricks review unless static triage or reviewer disputes indicate the batch should be split."
+      "Update PROJECT_STATE.md and HANDOVER.md after meaningful milestones or before handoff, not every small batch.",
+      "Use gpt-5.4 for low-cost primary review where available; use gpt-5.5 as the independent critic before import.",
+      "Use 10-record batches for AWS-style remediation-heavy review; increase only when primary approval rate is consistently high."
     ]
   }
 }

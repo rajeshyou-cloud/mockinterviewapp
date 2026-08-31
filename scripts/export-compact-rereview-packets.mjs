@@ -9,6 +9,7 @@ const onlyStatuses = new Set(onlyStatusArg.split(',').map((status) => status.tri
 const limitArg = args.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? 'all';
 const limit = limitArg === 'all' ? Number.POSITIVE_INFINITY : Number.parseInt(limitArg, 10);
 const offset = Number.parseInt(args.find((arg) => arg.startsWith('--offset='))?.split('=')[1] ?? '0', 10);
+const batchLabel = args.find((arg) => arg.startsWith('--batch-label='))?.split('=')[1]?.trim();
 const outputDirectory = resolve('apps/web/data/evidence-packets-compact');
 const triagePath = resolve('apps/web/data/review-triage/latest.json');
 
@@ -73,6 +74,7 @@ const outputManifest = {
     onlyStatus: [...onlyStatuses],
     limit: limitArg,
     offset: Number.isFinite(offset) && offset > 0 ? offset : 0,
+    batchLabel: batchLabel || null,
   },
   totalQuestions: 0,
   technologies: {},
@@ -92,15 +94,20 @@ for (const technology of technologies) {
 
   const runnerOutputName = `${technology}.jsonl`;
   const sentForRereviewOutputName = `${technology}-sentforrereview-compact.jsonl`;
+  const labelledOutputName = batchLabel ? `${technology}-${batchLabel}.jsonl` : null;
   const body = packets.length ? `${packets.map((packet) => JSON.stringify(packet)).join('\n')}\n` : '';
   await writeFile(resolve(outputDirectory, runnerOutputName), body, 'utf8');
   await writeFile(resolve(outputDirectory, sentForRereviewOutputName), body, 'utf8');
+  if (labelledOutputName) {
+    await writeFile(resolve(outputDirectory, labelledOutputName), body, 'utf8');
+  }
 
   outputManifest.totalQuestions += packets.length;
   outputManifest.technologies[technology] = {
     count: packets.length,
     path: `apps/web/data/evidence-packets-compact/${sentForRereviewOutputName}`,
     runnerPath: `apps/web/data/evidence-packets-compact/${runnerOutputName}`,
+    labelledPath: labelledOutputName ? `apps/web/data/evidence-packets-compact/${labelledOutputName}` : null,
   };
 }
 

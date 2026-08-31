@@ -1,21 +1,23 @@
 {
-  "generatedAt": "2026-08-31T03:28:22.392Z",
+  "generatedAt": "2026-08-31T13:55:26.760Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
-    "technology": "aws",
+    "technology": "snowflake",
     "onlyStatus": [
       "draft"
     ],
-    "limit": "20",
-    "offset": 0
+    "limit": "10",
+    "offset": 0,
+    "batchLabel": "review-20260831-batch1e-r2"
   },
-  "totalQuestions": 20,
+  "totalQuestions": 10,
   "technologies": {
-    "aws": {
-      "count": 20,
-      "path": "apps/web/data/evidence-packets-compact/aws-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/aws.jsonl"
+    "snowflake": {
+      "count": 10,
+      "path": "apps/web/data/evidence-packets-compact/snowflake-sentforrereview-compact.jsonl",
+      "runnerPath": "apps/web/data/evidence-packets-compact/snowflake.jsonl",
+      "labelledPath": "apps/web/data/evidence-packets-compact/snowflake-review-20260831-batch1e-r2.jsonl"
     }
   }
 }
