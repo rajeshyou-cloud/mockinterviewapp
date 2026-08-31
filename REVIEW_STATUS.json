@@ -77,7 +77,14 @@
       "technology": "aws",
       "status": "review-in-progress",
       "summary": "Databricks and Oracle are published through the explicit launch registry after reaching 150/150 ai-evidence-verified and passing source-link verification. AWS advanced to 85/150 ai-evidence-verified through targeted two-model chat-level review imports. Latest AWS packet contains 20 draft records starting with candidate-aws-iam-policies-02 through candidate-aws-route53-02. Static triage is 0 and benchmark validation passes.",
-      "launchStatus": "databricks-and-oracle-launched"
+      "launchStatus": "databricks-and-oracle-launched",
+      "productionDeployment": {
+        "commit": "868077e",
+        "deploymentId": "dpl_36bzVdhuJvYqXojtzpZQVFqMW4Fy",
+        "status": "READY",
+        "verifiedAt": "2026-08-31T09:17:00.000+05:30",
+        "smoke": "Production /api/courses exposes Snowflake, Informatica, Databricks, and Oracle; Databricks and Oracle beginner samples return 10 questions; AWS remains blocked with HTTP 400."
+      }
     }
   },
   "optimizationMode": {
