@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T11:08:56.745Z",
+  "generatedAt": "2026-08-31T03:28:22.392Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
@@ -7,13 +7,13 @@
     "onlyStatus": [
       "draft"
     ],
-    "limit": "all",
+    "limit": "20",
     "offset": 0
   },
-  "totalQuestions": 107,
+  "totalQuestions": 20,
   "technologies": {
     "aws": {
-      "count": 107,
+      "count": 20,
       "path": "apps/web/data/evidence-packets-compact/aws-sentforrereview-compact.jsonl",
       "runnerPath": "apps/web/data/evidence-packets-compact/aws.jsonl"
     }

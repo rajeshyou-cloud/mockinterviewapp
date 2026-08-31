@@ -17,7 +17,7 @@ const questionPackPaths = [
 const reviewDirectory = 'apps/web/data/benchmark-reviews';
 const dryRun = process.argv.includes('--dry-run');
 const reviewFileArgs = process.argv
-  .filter((arg) => arg.startsWith('--review-file='))
+  .filter((arg) => arg.startsWith('--review-file=') || arg.startsWith('--file='))
   .map((arg) => arg.split('=')[1])
   .filter(Boolean);
 const allowedStatuses = new Set(['ai-evidence-verified', 'disputed', 'rejected']);

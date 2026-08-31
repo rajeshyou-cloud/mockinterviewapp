@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { availableTechnologyIds } from './course-catalog';
+import { technologyIds } from './course-catalog';
 
 export const resumeTokenPattern = /^[0-9a-f]{64}$/i;
 
@@ -8,7 +8,7 @@ export const sessionIdSchema = z.uuid();
 
 export const createSessionSchema = z.object({
   id: sessionIdSchema,
-  technology: z.enum(availableTechnologyIds),
+  technology: z.enum(technologyIds),
   difficulty: z.enum(['beginner', 'intermediate', 'advanced']),
   currentIndex: z.number().int().min(0).max(19).optional(),
 });

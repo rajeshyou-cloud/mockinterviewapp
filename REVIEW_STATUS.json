@@ -1,0 +1,97 @@
+{
+  "updatedAt": "2026-08-31T09:00:00.000+05:30",
+  "workspace": "D:\\mockinterviewapp",
+  "purpose": "Low-context index for continuing governed benchmark AI review without rereading PROJECT_STATE.md and HANDOVER.md on every batch.",
+  "contract": {
+    "routineHumanReview": false,
+    "approvalRule": "Only import ai-evidence-verified after two independent AI reviewer approvals through the benchmark review importer.",
+    "publicationRule": "Candidate courses remain hidden until every benchmark in the course is verified and the explicit launch registry/publication gate is applied.",
+    "forbiddenClaims": [
+      "human-reviewed",
+      "vendor-certified"
+    ]
+  },
+  "latestValidatedCounts": {
+    "totalBenchmarks": 1050,
+    "aiEvidenceVerified": 538,
+    "draft": 512,
+    "blockedCandidateQuestions": 365
+  },
+  "technologyStatus": {
+    "informatica": {
+      "verified": 150,
+      "draft": 0,
+      "userVisible": true
+    },
+    "oracle": {
+      "verified": 150,
+      "draft": 0,
+      "userVisible": true,
+      "note": "Published through the explicit launch registry on 2026-08-31 after full AI-evidence verification and evidence-link verification."
+    },
+    "snowflake": {
+      "verified": 3,
+      "draft": 147,
+      "userVisible": true
+    },
+    "aws": {
+      "verified": 85,
+      "draft": 65,
+      "userVisible": false
+    },
+    "databricks": {
+      "verified": 150,
+      "draft": 0,
+      "userVisible": true,
+      "note": "Published through the explicit launch registry on 2026-08-31 after full AI-evidence verification and evidence-link verification."
+    },
+    "power-bi": {
+      "verified": 0,
+      "draft": 150,
+      "userVisible": false
+    },
+    "python": {
+      "verified": 0,
+      "draft": 150,
+      "userVisible": false
+    }
+  },
+  "activeReview": {
+    "technology": "aws",
+    "nextBatchLabel": "next-course-after-databricks-complete",
+    "pendingReviewerPacket": [],
+    "reviewerModels": [
+      "gpt-5.6-luna",
+      "gpt-5.5"
+    ],
+    "reviewerModelStrategy": {
+      "preferredLowCostPrimary": "gpt-5.6-luna",
+      "critic": "gpt-5.5",
+      "retirementFallbackAfter2026-08-31": "For ChatGPT-sign-in Codex, replace gpt-5.4-mini with gpt-5.6-luna as the low-cost primary. Keep gpt-5.5 as the critic when available and within usage limits; otherwise use gpt-5.6-terra as the lower-cost critic fallback.",
+      "rule": "Luna can be used for first-pass approval only when paired with a different independent critic model; do not import Luna-only approvals."
+    },
+    "packetPath": "apps/web/data/evidence-packets-compact/aws.jsonl",
+    "packetGuardCommand": "npm run validate:review-packet -- --packet=apps/web/data/evidence-packets-compact/aws.jsonl --allowed-status=draft --max-records=20",
+    "blocker": null,
+    "latestMilestone": {
+      "technology": "aws",
+      "status": "review-in-progress",
+      "summary": "Databricks and Oracle are published through the explicit launch registry after reaching 150/150 ai-evidence-verified and passing source-link verification. AWS advanced to 85/150 ai-evidence-verified through targeted two-model chat-level review imports. Latest AWS packet contains 20 draft records starting with candidate-aws-iam-policies-02 through candidate-aws-route53-02. Static triage is 0 and benchmark validation passes.",
+      "launchStatus": "databricks-and-oracle-launched"
+    }
+  },
+  "optimizationMode": {
+    "enabled": true,
+    "baselineTokensUsed": 374971,
+    "baselineTimeUsedSeconds": 1166,
+    "rules": [
+      "Do not print full JSONL packets unless debugging requires it.",
+      "Use ID/count summaries for routine state.",
+      "Before any reviewer call, run validate:review-packet and proceed only when the packet has draft records, no duplicates, and no verified records.",
+      "Read PROJECT_STATE.md and HANDOVER.md only at start/end of larger checkpoints or when contract ambiguity exists.",
+      "Update PROJECT_STATE.md and HANDOVER.md after meaningful milestones, not every tiny batch.",
+      "Use gpt-5.6-luna for low-cost first-pass review after the gpt-5.4-mini retirement; use gpt-5.5 as the critic where available before import.",
+      "Use 20-record batches for Databricks review unless static triage or reviewer disputes indicate the batch should be split."
+    ]
+  }
+}

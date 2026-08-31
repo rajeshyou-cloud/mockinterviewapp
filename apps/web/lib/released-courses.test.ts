@@ -5,20 +5,24 @@ vi.mock('server-only', () => ({}));
 import { getReleasedCourseIds, getReleasedCourses, isCandidateCourseAiVerified, isReleasedTechnology } from './released-courses';
 
 describe('released course gate', () => {
-  it('always releases the two reviewed foundation courses', async () => {
-    await expect(getReleasedCourseIds()).resolves.toEqual(['snowflake', 'informatica']);
+  it('releases foundation courses plus explicitly launched AI-verified candidate courses', async () => {
+    await expect(getReleasedCourseIds()).resolves.toEqual(['snowflake', 'informatica', 'databricks', 'oracle']);
   });
 
-  it('does not let legacy human course approvals control candidate exposure', async () => {
-    await expect(getReleasedCourseIds()).resolves.toEqual(['snowflake', 'informatica']);
-    await expect(isReleasedTechnology('databricks')).resolves.toBe(false);
+  it('does not expose incomplete candidate packs', async () => {
+    await expect(getReleasedCourseIds()).resolves.toEqual(['snowflake', 'informatica', 'databricks', 'oracle']);
+    await expect(isReleasedTechnology('databricks')).resolves.toBe(true);
+    await expect(isReleasedTechnology('oracle')).resolves.toBe(true);
+    await expect(isReleasedTechnology('aws')).resolves.toBe(false);
+    await expect(isReleasedTechnology('power-bi')).resolves.toBe(false);
     await expect(isReleasedTechnology('python')).resolves.toBe(false);
-    await expect(getReleasedCourses()).resolves.toHaveLength(2);
+    await expect(getReleasedCourses()).resolves.toHaveLength(4);
   });
 
   it('separates AI content readiness from the explicit production launch decision', () => {
     expect(isCandidateCourseAiVerified('oracle')).toBe(true);
-    expect(isCandidateCourseAiVerified('databricks')).toBe(false);
+    expect(isCandidateCourseAiVerified('databricks')).toBe(true);
+    expect(isCandidateCourseAiVerified('aws')).toBe(false);
     expect(isCandidateCourseAiVerified('unknown')).toBe(false);
   });
 });

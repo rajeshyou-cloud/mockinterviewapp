@@ -40,8 +40,8 @@ describe('saveReview', () => {
   });
 
   it('requires benchmark verification before approval', async () => {
-    await expect(saveReview(form({ courseId: 'databricks', status: 'approved', sourceLinksChecked: true })))
-      .rejects.toThrow('redirect:/review?course=databricks&error=benchmarks');
+    await expect(saveReview(form({ courseId: 'aws', status: 'approved', sourceLinksChecked: true })))
+      .rejects.toThrow('redirect:/review?course=aws&error=benchmarks');
     expect(saveCoursePackReview).not.toHaveBeenCalled();
   });
 

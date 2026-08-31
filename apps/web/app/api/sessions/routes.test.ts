@@ -67,6 +67,20 @@ describe('session persistence routes', () => {
     });
   });
 
+  it('rejects session creation for known courses that are not released', async () => {
+    released.isReleasedTechnology.mockResolvedValue(false);
+
+    const response = await createSession(request('/api/sessions', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-resume-token': token },
+      body: JSON.stringify({ id, technology: 'aws', difficulty: 'beginner' }),
+    }));
+
+    expect(response.status).toBe(400);
+    expect(await response.json()).toEqual({ error: 'unsupported_technology' });
+    expect(db.createInterviewSession).not.toHaveBeenCalled();
+  });
+
   it('rejects malformed JSON and invalid session fields before touching Neon', async () => {
     const malformed = await createSession(request('/api/sessions', {
       method: 'POST', headers: { 'x-resume-token': token }, body: '{',
