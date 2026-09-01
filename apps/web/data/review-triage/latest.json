@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-09-01T02:22:54.039Z",
+    "generatedAt": "2026-09-01T02:32:45.538Z",
     "filters": {
       "technology": "all",
       "onlyStatus": [
@@ -15,10 +15,10 @@
     },
     "totalInspected": 1050,
     "totalFlaggedRecords": 0,
-    "totalSelectedRecords": 300,
+    "totalSelectedRecords": 280,
     "byTechnology": {
       "power-bi": {
-        "selected": 150,
+        "selected": 130,
         "flagged": 0
       },
       "python": {
@@ -27,7 +27,7 @@
       }
     },
     "byStatus": {
-      "draft": 300
+      "draft": 280
     },
     "byReason": {}
   },
@@ -537,78 +537,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-power-bi-calculated-columns-01",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "beginner",
-      "type": "conceptual",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-calculated-columns-02",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-calculated-columns-03",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-calculated-columns-04",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-calculated-columns-05",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-calculated-columns-06",
-      "technology": "power-bi",
-      "topic": "dax",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-power-bi-evaluation-context-01",
       "technology": "power-bi",
       "topic": "dax",
@@ -1113,78 +1041,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-power-bi-apps-sharing-01",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "beginner",
-      "type": "conceptual",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-apps-sharing-02",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-apps-sharing-03",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-apps-sharing-04",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-apps-sharing-05",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-apps-sharing-06",
-      "technology": "power-bi",
-      "topic": "distribution",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-power-bi-deployment-pipelines-01",
       "technology": "power-bi",
       "topic": "deployment",
@@ -1401,78 +1257,6 @@
       "reasons": []
     },
     {
-      "questionId": "candidate-power-bi-accessibility-01",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "beginner",
-      "type": "conceptual",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-accessibility-02",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-accessibility-03",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "intermediate",
-      "type": "scenario",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-accessibility-04",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "intermediate",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-accessibility-05",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "advanced",
-      "type": "design",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-accessibility-06",
-      "technology": "power-bi",
-      "topic": "report-design",
-      "difficulty": "advanced",
-      "type": "troubleshooting",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
       "questionId": "candidate-power-bi-permissions-01",
       "technology": "power-bi",
       "topic": "governance",
@@ -1613,30 +1397,6 @@
       "currentReviewStatus": "draft",
       "packType": "candidate",
       "sourceUrl": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-endorsement-overview",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-dataflows-01",
-      "technology": "power-bi",
-      "topic": "data-preparation",
-      "difficulty": "beginner",
-      "type": "conceptual",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
-      "reasonCodes": [],
-      "reasons": []
-    },
-    {
-      "questionId": "candidate-power-bi-dataflows-02",
-      "technology": "power-bi",
-      "topic": "data-preparation",
-      "difficulty": "beginner",
-      "type": "hands-on",
-      "currentReviewStatus": "draft",
-      "packType": "candidate",
-      "sourceUrl": "https://learn.microsoft.com/en-us/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365",
       "reasonCodes": [],
       "reasons": []
     },

@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-09-01T02:21:08.839Z",
+  "generatedAt": "2026-09-01T02:30:27.104Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
-    "technology": "snowflake",
+    "technology": "power-bi",
     "onlyStatus": [
       "draft"
     ],
-    "limit": "20",
-    "offset": 0,
-    "batchLabel": "review-20260901-batch1k-final-r3"
+    "limit": "8",
+    "offset": 12,
+    "batchLabel": "review-20260901-batch1a-r5-delta"
   },
-  "totalQuestions": 7,
+  "totalQuestions": 8,
   "technologies": {
-    "snowflake": {
-      "count": 7,
-      "path": "apps/web/data/evidence-packets-compact/snowflake-sentforrereview-compact.jsonl",
-      "runnerPath": "apps/web/data/evidence-packets-compact/snowflake.jsonl",
-      "labelledPath": "apps/web/data/evidence-packets-compact/snowflake-review-20260901-batch1k-final-r3.jsonl"
+    "power-bi": {
+      "count": 8,
+      "path": "apps/web/data/evidence-packets-compact/power-bi-sentforrereview-compact.jsonl",
+      "runnerPath": "apps/web/data/evidence-packets-compact/power-bi.jsonl",
+      "labelledPath": "apps/web/data/evidence-packets-compact/power-bi-review-20260901-batch1a-r5-delta.jsonl"
     }
   }
 }
