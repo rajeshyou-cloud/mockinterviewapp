@@ -2277,7 +2277,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Explain resource monitors and the main problem it solves.",
-    "canonicalAnswer": "Working with resource monitors should be explained in terms of credit quota, threshold, notify, suspend, and user-managed warehouse. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Snowflake resource monitors control credit usage by setting a credit quota with thresholds that notify users or suspend assigned user-managed warehouses. They solve spend governance by warning or stopping compute consumption before budget overruns continue.",
     "expectedConcepts": [
       "credit quota",
       "threshold",
@@ -2298,8 +2298,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Working with resource monitors should be explained in terms of credit quota, threshold, notify, suspend, and user-managed warehouse. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Working with resource monitors should be explained in terms of credit quota, threshold, notify, suspend, and user-managed warehouse. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply credit quota, threshold, notify, suspend, and user-managed warehouse using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Snowflake resource monitors control credit usage by setting a credit quota with thresholds that notify users or suspend assigned user-managed warehouses. They solve spend governance by warning or stopping compute consumption before budget overruns continue.",
+      "expandedExplanation": "Snowflake resource monitors control credit usage by setting a credit quota with thresholds that notify users or suspend assigned user-managed warehouses. They solve spend governance by warning or stopping compute consumption before budget overruns continue. Candidates should explain monitor frequency, notification thresholds, suspend or suspend-immediate actions, recipient configuration, and warehouse/account assignment boundaries.",
       "requiredConcepts": [
         "credit quota",
         "threshold",
@@ -2345,7 +2345,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the conceptual prompt for snowflake at beginner level, explicitly cover credit quota, threshold, notify, suspend, and user-managed warehouse, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete conceptual answer must cover credit quota, threshold, notify, suspend, and user-managed warehouse.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/resource-monitors",
@@ -2359,20 +2359,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers credit quota, threshold, notify, suspend, and user-managed warehouse, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions cost-governance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the cost-governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -2383,7 +2386,7 @@
     "difficulty": "beginner",
     "type": "hands-on",
     "question": "You are configuring resource monitors for the first time. Which core settings or objects would you identify before running a small validation?",
-    "canonicalAnswer": "For a first implementation of Working with resource monitors, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise credit quota, threshold, notify, suspend, and user-managed warehouse, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
+    "canonicalAnswer": "Before validation, identify the credit quota, monitor frequency, threshold percentages, notify recipients, suspend or suspend-immediate action, and the user-managed warehouse assignments. Test with a safe low quota or nonproduction warehouse so notifications and suspension behavior are understood.",
     "expectedConcepts": [
       "credit quota",
       "threshold",
@@ -2404,8 +2407,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a first implementation of Working with resource monitors, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise credit quota, threshold, notify, suspend, and user-managed warehouse, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
-      "expandedExplanation": "For a first implementation of Working with resource monitors, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise credit quota, threshold, notify, suspend, and user-managed warehouse, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working. This benchmark is specific to the beginner hands-on prompt because it requires the candidate to apply credit quota, threshold, notify, suspend, and user-managed warehouse using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Before validation, identify the credit quota, monitor frequency, threshold percentages, notify recipients, suspend or suspend-immediate action, and the user-managed warehouse assignments. Test with a safe low quota or nonproduction warehouse so notifications and suspension behavior are understood.",
+      "expandedExplanation": "Before validation, identify the credit quota, monitor frequency, threshold percentages, notify recipients, suspend or suspend-immediate action, and the user-managed warehouse assignments. Test with a safe low quota or nonproduction warehouse so notifications and suspension behavior are understood. Before validation, identify the credit quota, monitor frequency, threshold percentages, notify recipients, suspend or suspend-immediate action, and the user-managed warehouse assignments. Confirm whether the monitor applies at account or warehouse level, configure users who should receive notifications, and test on a safe nonproduction user-managed warehouse. Validate that threshold notification and suspend behavior match expectations without interrupting production unexpectedly.",
       "requiredConcepts": [
         "credit quota",
         "threshold",
@@ -2451,7 +2454,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the hands-on prompt for snowflake at beginner level, explicitly cover credit quota, threshold, notify, suspend, and user-managed warehouse, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete hands-on answer should include quota, threshold, notify, suspend, warehouse assignment, and safe validation.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/resource-monitors",
@@ -2465,20 +2468,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the hands-on question, accurately covers credit quota, threshold, notify, suspend, and user-managed warehouse, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions cost-governance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the cost-governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -2489,7 +2495,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A team is considering resource monitors for a production data pipeline. How would you decide whether it fits and apply it safely?",
-    "canonicalAnswer": "Use Working with resource monitors only when the production requirement matches the documented Snowflake capability around credit quota, threshold, notify, suspend, and user-managed warehouse. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "Resource monitors fit when the pipeline needs credit-budget guardrails for user-managed warehouses. Apply safely by setting an appropriate credit quota, thresholds, notify recipients, suspend behavior, monitor scope, and exception process so critical workloads are protected while runaway spend is stopped.",
     "expectedConcepts": [
       "credit quota",
       "threshold",
@@ -2510,8 +2516,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Working with resource monitors only when the production requirement matches the documented Snowflake capability around credit quota, threshold, notify, suspend, and user-managed warehouse. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Working with resource monitors only when the production requirement matches the documented Snowflake capability around credit quota, threshold, notify, suspend, and user-managed warehouse. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply credit quota, threshold, notify, suspend, and user-managed warehouse using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Resource monitors fit when the pipeline needs credit-budget guardrails for user-managed warehouses. Apply safely by setting an appropriate credit quota, thresholds, notify recipients, suspend behavior, monitor scope, and exception process so critical workloads are protected while runaway spend is stopped.",
+      "expandedExplanation": "Resource monitors fit when the pipeline needs credit-budget guardrails for user-managed warehouses. Apply safely by setting an appropriate credit quota, thresholds, notify recipients, suspend behavior, monitor scope, and exception process so critical workloads are protected while runaway spend is stopped. Use warnings before hard suspension, document who can raise quota or resume a warehouse, and test behavior in nonproduction before production rollout.",
       "requiredConcepts": [
         "credit quota",
         "threshold",
@@ -2557,7 +2563,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover credit quota, threshold, notify, suspend, and user-managed warehouse, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete scenario answer should decide fit around Snowflake credit governance and include threshold, notification, suspension, and user-managed warehouse controls.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/resource-monitors",
@@ -2571,20 +2577,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers credit quota, threshold, notify, suspend, and user-managed warehouse, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions cost-governance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the cost-governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -2595,7 +2604,7 @@
     "difficulty": "intermediate",
     "type": "troubleshooting",
     "question": "resource monitors is configured, but the expected result or performance improvement is not appearing. What would you investigate first?",
-    "canonicalAnswer": "Troubleshoot Working with resource monitors by first confirming the deployed configuration actually uses credit quota, threshold, notify, suspend, and user-managed warehouse. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
+    "canonicalAnswer": "Investigate whether the resource monitor is assigned to the intended user-managed warehouse, the credit quota and usage reset interval, threshold percentages, notify recipients, suspend action state, and whether the warehouse was resumed or excluded from the monitor scope.",
     "expectedConcepts": [
       "credit quota",
       "threshold",
@@ -2616,8 +2625,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Troubleshoot Working with resource monitors by first confirming the deployed configuration actually uses credit quota, threshold, notify, suspend, and user-managed warehouse. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
-      "expandedExplanation": "Troubleshoot Working with resource monitors by first confirming the deployed configuration actually uses credit quota, threshold, notify, suspend, and user-managed warehouse. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time. This benchmark is specific to the intermediate troubleshooting prompt because it requires the candidate to apply credit quota, threshold, notify, suspend, and user-managed warehouse using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Investigate whether the resource monitor is assigned to the intended user-managed warehouse, the credit quota and usage reset interval, threshold percentages, notify recipients, suspend action state, and whether the warehouse was resumed or excluded from the monitor scope.",
+      "expandedExplanation": "Investigate whether the resource monitor is assigned to the intended user-managed warehouse, the credit quota and usage reset interval, threshold percentages, notify recipients, suspend action state, and whether the warehouse was resumed or excluded from the monitor scope. Check current credit usage, monitor level, threshold history, notification delivery, and suspension/resume events. Fix the monitor assignment, quota, recipients, or action only after confirming the expected spend-control behavior.",
       "requiredConcepts": [
         "credit quota",
         "threshold",
@@ -2663,7 +2672,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at intermediate level, explicitly cover credit quota, threshold, notify, suspend, and user-managed warehouse, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should use resource-monitor-specific checks for quota, thresholds, notify, suspend, and user-managed warehouse scope.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/resource-monitors",
@@ -2677,20 +2686,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers credit quota, threshold, notify, suspend, and user-managed warehouse, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions cost-governance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the cost-governance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3019,7 +3031,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Explain Query Profile and the main problem it solves.",
-    "canonicalAnswer": "Analyzing queries with Query Profile should be explained in terms of execution plan, operators, partitions scanned, spilling, and queueing. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Query Profile is Snowflake’s view for analyzing an executed query execution plan. It helps explain why a query is slow or expensive by showing operators, partitions scanned, spilling, and queueing or timing signals, so teams can diagnose bottlenecks with evidence instead of guessing.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3040,8 +3052,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Analyzing queries with Query Profile should be explained in terms of execution plan, operators, partitions scanned, spilling, and queueing. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Analyzing queries with Query Profile should be explained in terms of execution plan, operators, partitions scanned, spilling, and queueing. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Query Profile is Snowflake’s view for analyzing an executed query execution plan. It helps explain why a query is slow or expensive by showing operators, partitions scanned, spilling, and queueing or timing signals, so teams can diagnose bottlenecks with evidence instead of guessing.",
+      "expandedExplanation": "Query Profile is Snowflake’s view for analyzing an executed query execution plan. It helps explain why a query is slow or expensive by showing operators, partitions scanned, spilling, and queueing or timing signals, so teams can diagnose bottlenecks with evidence instead of guessing. Query Profile is not a separately deployed service; it is an analysis view for executed Snowflake queries. It shows the execution plan and operators, including scan, join, sort, and aggregation behavior. Useful signals include partitions scanned, pruning effectiveness, spilled data, queueing or timing delays, and row-flow through operators. The main problem it solves is evidence-based performance diagnosis: candidates should explain how the profile identifies bottlenecks and validates improvements.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3087,7 +3099,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the conceptual prompt for snowflake at beginner level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete conceptual answer should define Query Profile as an analysis view and cover execution plan, operators, partitions scanned, spilling, and queueing as evidence for query diagnosis.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3101,20 +3113,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3125,7 +3140,7 @@
     "difficulty": "beginner",
     "type": "hands-on",
     "question": "You are configuring Query Profile for the first time. Which core settings or objects would you identify before running a small validation?",
-    "canonicalAnswer": "For a first implementation of Analyzing queries with Query Profile, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise execution plan, operators, partitions scanned, spilling, and queueing, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
+    "canonicalAnswer": "In a hands-on workflow, run a representative query, open its Query Profile from query history, and inspect the execution plan operators, partitions scanned, spilling, and queueing/timing sections. Capture the baseline, make one change, rerun, and compare the same profile evidence before claiming improvement.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3146,8 +3161,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a first implementation of Analyzing queries with Query Profile, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise execution plan, operators, partitions scanned, spilling, and queueing, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
-      "expandedExplanation": "For a first implementation of Analyzing queries with Query Profile, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise execution plan, operators, partitions scanned, spilling, and queueing, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working. This benchmark is specific to the beginner hands-on prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "In a hands-on workflow, run a representative query, open its Query Profile from query history, and inspect the execution plan operators, partitions scanned, spilling, and queueing/timing sections. Capture the baseline, make one change, rerun, and compare the same profile evidence before claiming improvement.",
+      "expandedExplanation": "In a hands-on workflow, run a representative query, open its Query Profile from query history, and inspect the execution plan operators, partitions scanned, spilling, and queueing/timing sections. Capture the baseline, make one change, rerun, and compare the same profile evidence before claiming improvement. A practical Query Profile answer should describe the workflow. Start with a representative slow query, open the profile from Snowflake query history, and read the execution plan from left to right through the operators. Check whether scans read too many partitions, whether joins or sorts spill, whether queueing or compilation dominates elapsed time, and whether the chosen warehouse or optimization changed the bottleneck. Keep before/after profile screenshots or metrics as operational evidence.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3193,7 +3208,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the hands-on prompt for snowflake at beginner level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete hands-on answer should show how to use Query Profile evidence, including execution plan, operators, partitions scanned, spilling, and queueing, to validate changes.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3207,20 +3222,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the hands-on question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3231,7 +3249,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A team is considering Query Profile for a production data pipeline. How would you decide whether it fits and apply it safely?",
-    "canonicalAnswer": "Use Analyzing queries with Query Profile only when the production requirement matches the documented Snowflake capability around execution plan, operators, partitions scanned, spilling, and queueing. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "Use Query Profile when the scenario requires diagnosing or proving query performance behavior. It fits because it exposes the execution plan, operators, partitions scanned, spilling, and queueing signals for a completed query; it is not a service to configure, so safe use means controlling access to query history and preserving representative before/after evidence.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3252,8 +3270,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Analyzing queries with Query Profile only when the production requirement matches the documented Snowflake capability around execution plan, operators, partitions scanned, spilling, and queueing. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Analyzing queries with Query Profile only when the production requirement matches the documented Snowflake capability around execution plan, operators, partitions scanned, spilling, and queueing. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Use Query Profile when the scenario requires diagnosing or proving query performance behavior. It fits because it exposes the execution plan, operators, partitions scanned, spilling, and queueing signals for a completed query; it is not a service to configure, so safe use means controlling access to query history and preserving representative before/after evidence.",
+      "expandedExplanation": "Use Query Profile when the scenario requires diagnosing or proving query performance behavior. It fits because it exposes the execution plan, operators, partitions scanned, spilling, and queueing signals for a completed query; it is not a service to configure, so safe use means controlling access to query history and preserving representative before/after evidence. For a scenario question, decide fit by asking whether the team needs evidence about why a Snowflake query behaves a certain way. Query Profile fits performance triage, optimization validation, and cost review because it exposes plan operators, partitions scanned, pruning, spilling, and queueing/timing signals. Apply it safely by using representative queries, recording a baseline, protecting SQL text and literals visible in history, limiting access by role, and comparing the same evidence after any tuning change.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3299,7 +3317,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete scenario answer should explain when Query Profile is appropriate, clarify that it is an analysis view, and include evidence and access-control considerations.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3313,20 +3331,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3337,7 +3358,7 @@
     "difficulty": "intermediate",
     "type": "troubleshooting",
     "question": "Query Profile is configured, but the expected result or performance improvement is not appearing. What would you investigate first?",
-    "canonicalAnswer": "Troubleshoot Analyzing queries with Query Profile by first confirming the deployed configuration actually uses execution plan, operators, partitions scanned, spilling, and queueing. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
+    "canonicalAnswer": "Troubleshoot with Query Profile by locating the execution plan operators that changed or dominate time, then checking partitions scanned, pruning, bytes processed, spilling, join/sort behavior, and queueing. Compare the profile to a known-good baseline before changing SQL, warehouse size, clustering, or other optimizations.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3358,8 +3379,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Troubleshoot Analyzing queries with Query Profile by first confirming the deployed configuration actually uses execution plan, operators, partitions scanned, spilling, and queueing. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
-      "expandedExplanation": "Troubleshoot Analyzing queries with Query Profile by first confirming the deployed configuration actually uses execution plan, operators, partitions scanned, spilling, and queueing. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time. This benchmark is specific to the intermediate troubleshooting prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Troubleshoot with Query Profile by locating the execution plan operators that changed or dominate time, then checking partitions scanned, pruning, bytes processed, spilling, join/sort behavior, and queueing. Compare the profile to a known-good baseline before changing SQL, warehouse size, clustering, or other optimizations.",
+      "expandedExplanation": "Troubleshoot with Query Profile by locating the execution plan operators that changed or dominate time, then checking partitions scanned, pruning, bytes processed, spilling, join/sort behavior, and queueing. Compare the profile to a known-good baseline before changing SQL, warehouse size, clustering, or other optimizations. A Query Profile troubleshooting answer should follow the evidence. Inspect the execution plan and operators to find bottlenecks, then verify whether scans read excessive partitions, joins multiply rows, sorts or aggregations spill, or queueing/compilation dominates elapsed time. Compare against query history or a previous profile before changing SQL, warehouse size, clustering, search optimization, materialized views, or query acceleration. The fix should target the measured bottleneck, not a generic tuning checklist.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3405,7 +3426,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at intermediate level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should use Query Profile operator evidence plus partitions scanned, spilling, and queueing to choose a focused remedy.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3419,20 +3440,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3443,7 +3467,7 @@
     "difficulty": "intermediate",
     "type": "design",
     "question": "Design a maintainable implementation using Query Profile. Which trade-offs and operational controls belong in the design?",
-    "canonicalAnswer": "An enterprise-ready Analyzing queries with Query Profile design should explicitly cover execution plan, operators, partitions scanned, spilling, and queueing. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+    "canonicalAnswer": "Design an enterprise Query Profile practice with required baseline capture, review of execution plan operators, partitions scanned, spilling, and queueing, and evidence retention for optimization changes. Define who can access query history/profile data, how SQL text is protected, and how profile findings feed performance tickets.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3464,8 +3488,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "An enterprise-ready Analyzing queries with Query Profile design should explicitly cover execution plan, operators, partitions scanned, spilling, and queueing. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
-      "expandedExplanation": "An enterprise-ready Analyzing queries with Query Profile design should explicitly cover execution plan, operators, partitions scanned, spilling, and queueing. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the intermediate design prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Design an enterprise Query Profile practice with required baseline capture, review of execution plan operators, partitions scanned, spilling, and queueing, and evidence retention for optimization changes. Define who can access query history/profile data, how SQL text is protected, and how profile findings feed performance tickets.",
+      "expandedExplanation": "Design an enterprise Query Profile practice with required baseline capture, review of execution plan operators, partitions scanned, spilling, and queueing, and evidence retention for optimization changes. Define who can access query history/profile data, how SQL text is protected, and how profile findings feed performance tickets. A production design should make Query Profile part of the performance governance workflow. Require teams to attach before/after profile evidence for important query changes, including execution-plan operators, partitions scanned, pruning, spilling, queueing/timing, and credit impact from query history. Define role-based access to query history, protect sensitive SQL text and literals, train engineers to read operator bottlenecks, and link profile findings to tuning tickets for SQL, warehouse sizing, clustering, search optimization, materialized views, or query acceleration.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3511,7 +3535,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the design prompt for snowflake at intermediate level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete design answer should turn Query Profile into a governed evidence workflow and cover execution plan, operators, partitions scanned, spilling, queueing, access, and retention.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3525,20 +3549,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the design question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3549,7 +3576,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "A high-volume production workload depends on Query Profile and now has stricter reliability and cost objectives. How would you evolve the design?",
-    "canonicalAnswer": "For a high-volume production workload built around Analyzing queries with Query Profile, evolve the design by measuring current bottlenecks and explicitly validating execution plan, operators, partitions scanned, spilling, and queueing. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+    "canonicalAnswer": "Evolve Query Profile use into a governed reliability and cost-review workflow. For high-volume workloads, keep query-history baselines and compare execution plan operators, partitions scanned, spilling, queueing, elapsed time, and credit impact before and after SQL, warehouse, clustering, or acceleration changes.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3570,8 +3597,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a high-volume production workload built around Analyzing queries with Query Profile, evolve the design by measuring current bottlenecks and explicitly validating execution plan, operators, partitions scanned, spilling, and queueing. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
-      "expandedExplanation": "For a high-volume production workload built around Analyzing queries with Query Profile, evolve the design by measuring current bottlenecks and explicitly validating execution plan, operators, partitions scanned, spilling, and queueing. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Evolve Query Profile use into a governed reliability and cost-review workflow. For high-volume workloads, keep query-history baselines and compare execution plan operators, partitions scanned, spilling, queueing, elapsed time, and credit impact before and after SQL, warehouse, clustering, or acceleration changes.",
+      "expandedExplanation": "Evolve Query Profile use into a governed reliability and cost-review workflow. For high-volume workloads, keep query-history baselines and compare execution plan operators, partitions scanned, spilling, queueing, elapsed time, and credit impact before and after SQL, warehouse, clustering, or acceleration changes. Evolve Query Profile use into a governed reliability and cost-review workflow. Query Profile is analysis evidence, not a runtime dependency. For high-volume workloads, keep query-history baselines and compare execution plan operators, partitions scanned, pruning effectiveness, spilling, queueing, elapsed time, and credit impact before and after SQL, warehouse, clustering, search optimization, materialized view, or query acceleration changes. Add owners, retention rules, access controls for query text, SLO thresholds, and rollback criteria so reliability and cost decisions are based on measured profile evidence.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3617,7 +3644,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete advanced answer treats Query Profile as governed diagnostic evidence and covers execution plan, operators, partitions scanned, spilling, queueing, baselines, cost, and reliability controls.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3631,20 +3658,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -3655,7 +3685,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "After a deployment involving Query Profile, data is incomplete or duplicated and reruns are risky. Describe a safe diagnosis and recovery approach.",
-    "canonicalAnswer": "After an Analyzing queries with Query Profile deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves execution plan, operators, partitions scanned, spilling, and queueing, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+    "canonicalAnswer": "Query Profile does not itself write data, so diagnose the incident without assuming it caused incomplete or duplicated rows. Preserve the failed query and pipeline state, use Query Profile and query history to compare execution plan operators, partitions scanned, spilling, and queueing, then recover with idempotent pipeline controls before any rerun.",
     "expectedConcepts": [
       "execution plan",
       "operators",
@@ -3676,8 +3706,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "After an Analyzing queries with Query Profile deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves execution plan, operators, partitions scanned, spilling, and queueing, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
-      "expandedExplanation": "After an Analyzing queries with Query Profile deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves execution plan, operators, partitions scanned, spilling, and queueing, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply execution plan, operators, partitions scanned, spilling, and queueing using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Query Profile does not itself write data, so diagnose the incident without assuming it caused incomplete or duplicated rows. Preserve the failed query and pipeline state, use Query Profile and query history to compare execution plan operators, partitions scanned, spilling, and queueing, then recover with idempotent pipeline controls before any rerun.",
+      "expandedExplanation": "Query Profile does not itself write data, so diagnose the incident without assuming it caused incomplete or duplicated rows. Preserve the failed query and pipeline state, use Query Profile and query history to compare execution plan operators, partitions scanned, spilling, and queueing, then recover with idempotent pipeline controls before any rerun. Query Profile does not itself write data, so diagnose the incident without assuming it caused incomplete or duplicated rows. Freeze unsafe reruns, preserve query IDs and pipeline checkpoints, and use Query Profile/query history to inspect the execution plan, operators, partitions scanned, spilling, queueing, join row counts, and timing changes around the deployment. If the profile shows a query or performance regression, fix that measured bottleneck; if the data issue is in the pipeline, recover with idempotent loads, reconciliation, and controlled replay rather than using Query Profile as a data-repair tool.",
       "requiredConcepts": [
         "execution plan",
         "operators",
@@ -3723,7 +3753,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover execution plan, operators, partitions scanned, spilling, and queueing, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete incident answer should clarify that Query Profile is diagnostic only, then use execution plan, operators, partitions scanned, spilling, and queueing evidence while protecting idempotent recovery.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/ui-query-profile",
@@ -3737,20 +3767,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers execution plan, operators, partitions scanned, spilling, and queueing, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -4742,7 +4775,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A team is considering query optimization services for a production data pipeline. How would you decide whether it fits and apply it safely?",
-    "canonicalAnswer": "Use Optimizing query performance only when the production requirement matches the documented Snowflake capability around search optimization, materialized view, query acceleration, clustering, and access pattern. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "Decide fit by matching the slow workload to its access pattern: use search optimization for highly selective point lookups, materialized views for repeated precomputed results, query acceleration for eligible scan-heavy queries, and clustering when large-table pruning is poor. Apply one optimization at a time, baseline Query Profile and query history metrics, and keep rollback and credit-cost thresholds before production rollout.",
     "expectedConcepts": [
       "search optimization",
       "materialized view",
@@ -4763,8 +4796,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Optimizing query performance only when the production requirement matches the documented Snowflake capability around search optimization, materialized view, query acceleration, clustering, and access pattern. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Optimizing query performance only when the production requirement matches the documented Snowflake capability around search optimization, materialized view, query acceleration, clustering, and access pattern. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply search optimization, materialized view, query acceleration, clustering, and access pattern using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Decide fit by matching the slow workload to its access pattern: use search optimization for highly selective point lookups, materialized views for repeated precomputed results, query acceleration for eligible scan-heavy queries, and clustering when large-table pruning is poor. Apply one optimization at a time, baseline Query Profile and query history metrics, and keep rollback and credit-cost thresholds before production rollout.",
+      "expandedExplanation": "Decide fit by matching the slow workload to its access pattern: use search optimization for highly selective point lookups, materialized views for repeated precomputed results, query acceleration for eligible scan-heavy queries, and clustering when large-table pruning is poor. Apply one optimization at a time, baseline Query Profile and query history metrics, and keep rollback and credit-cost thresholds before production rollout. A safe Snowflake query-optimization decision starts with the access pattern, not with enabling every feature. Search optimization is a fit for selective lookup predicates; materialized views help when the same result shape can be maintained and reused; query acceleration can help eligible scan-heavy queries; clustering is useful when table organization improves partition pruning. Validate each option with Query Profile, partitions scanned, elapsed time, spilled data, and credit impact. Promote only after a controlled before/after test, ownership for maintenance cost, and a rollback threshold are agreed.",
       "requiredConcepts": [
         "search optimization",
         "materialized view",
@@ -4810,7 +4843,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete answer must choose among search optimization, materialized view, query acceleration, and clustering based on the workload access pattern, then validate the choice with observable Snowflake performance and cost evidence before rollout.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/performance-query-options",
@@ -4824,20 +4857,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers search optimization, materialized view, query acceleration, clustering, and access pattern, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -4848,7 +4884,7 @@
     "difficulty": "intermediate",
     "type": "troubleshooting",
     "question": "query optimization services is configured, but the expected result or performance improvement is not appearing. What would you investigate first?",
-    "canonicalAnswer": "Troubleshoot Optimizing query performance by first confirming the deployed configuration actually uses search optimization, materialized view, query acceleration, clustering, and access pattern. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
+    "canonicalAnswer": "Troubleshoot by proving which optimization no longer matches the access pattern. Compare Query Profile and query history before and after the regression, checking whether search optimization is useful for the predicates, materialized view refresh or rewrite is occurring, query acceleration is eligible, clustering still improves pruning, and warehouse queueing, spilling, or credits changed.",
     "expectedConcepts": [
       "search optimization",
       "materialized view",
@@ -4869,8 +4905,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Troubleshoot Optimizing query performance by first confirming the deployed configuration actually uses search optimization, materialized view, query acceleration, clustering, and access pattern. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
-      "expandedExplanation": "Troubleshoot Optimizing query performance by first confirming the deployed configuration actually uses search optimization, materialized view, query acceleration, clustering, and access pattern. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time. This benchmark is specific to the intermediate troubleshooting prompt because it requires the candidate to apply search optimization, materialized view, query acceleration, clustering, and access pattern using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Troubleshoot by proving which optimization no longer matches the access pattern. Compare Query Profile and query history before and after the regression, checking whether search optimization is useful for the predicates, materialized view refresh or rewrite is occurring, query acceleration is eligible, clustering still improves pruning, and warehouse queueing, spilling, or credits changed.",
+      "expandedExplanation": "Troubleshoot by proving which optimization no longer matches the access pattern. Compare Query Profile and query history before and after the regression, checking whether search optimization is useful for the predicates, materialized view refresh or rewrite is occurring, query acceleration is eligible, clustering still improves pruning, and warehouse queueing, spilling, or credits changed. For a query-optimization incident, keep the diagnosis about performance and cost evidence. Start from the slow query profile: operators, partitions scanned, bytes processed, spilling, queueing, and elapsed time. Then test each Snowflake option against the current access pattern: search optimization for selective filters, materialized view maintenance and rewrite behavior for repeated result shapes, query acceleration eligibility for scan-heavy work, and clustering depth/pruning for large tables. Roll back or adjust the smallest ineffective change and retain before/after evidence.",
       "requiredConcepts": [
         "search optimization",
         "materialized view",
@@ -4916,7 +4952,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at intermediate level, explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should distinguish search optimization, materialized views, query acceleration, and clustering, tie them to access patterns, and use Query Profile/query history instead of generic tuning claims.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/performance-query-options",
@@ -4930,20 +4966,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers search optimization, materialized view, query acceleration, clustering, and access pattern, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -4954,7 +4993,7 @@
     "difficulty": "intermediate",
     "type": "design",
     "question": "Design a maintainable implementation using query optimization services. Which trade-offs and operational controls belong in the design?",
-    "canonicalAnswer": "An enterprise-ready Optimizing query performance design should explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+    "canonicalAnswer": "Design an enterprise query-optimization standard that maps access patterns to search optimization, materialized views, query acceleration, or clustering, with required baseline metrics, ownership, cost budgets, change review, and rollback criteria. Treat every optimization as an operational feature with maintenance, storage, or credit impact that must be measured after deployment.",
     "expectedConcepts": [
       "search optimization",
       "materialized view",
@@ -4975,8 +5014,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "An enterprise-ready Optimizing query performance design should explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
-      "expandedExplanation": "An enterprise-ready Optimizing query performance design should explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the intermediate design prompt because it requires the candidate to apply search optimization, materialized view, query acceleration, clustering, and access pattern using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Design an enterprise query-optimization standard that maps access patterns to search optimization, materialized views, query acceleration, or clustering, with required baseline metrics, ownership, cost budgets, change review, and rollback criteria. Treat every optimization as an operational feature with maintenance, storage, or credit impact that must be measured after deployment.",
+      "expandedExplanation": "Design an enterprise query-optimization standard that maps access patterns to search optimization, materialized views, query acceleration, or clustering, with required baseline metrics, ownership, cost budgets, change review, and rollback criteria. Treat every optimization as an operational feature with maintenance, storage, or credit impact that must be measured after deployment. A production design should define when each Snowflake optimization is allowed. Use search optimization for selective lookup workloads, materialized views for reusable maintained result sets, query acceleration for eligible scan-heavy queries, and clustering for large tables where pruning improves. Require Query Profile and query-history baselines, expected latency and credit targets, review of maintenance or storage cost, and an explicit owner. The rollout should include canary testing, monitoring, and retirement of optimizations that no longer match the access pattern.",
       "requiredConcepts": [
         "search optimization",
         "materialized view",
@@ -5022,7 +5061,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the design prompt for snowflake at intermediate level, explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete design answer links each optimization to a Snowflake access pattern and adds governance for evidence, cost, ownership, and rollback.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/performance-query-options",
@@ -5036,20 +5075,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the design question, accurately covers search optimization, materialized view, query acceleration, clustering, and access pattern, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -5060,7 +5102,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "A high-volume production workload depends on query optimization services and now has stricter reliability and cost objectives. How would you evolve the design?",
-    "canonicalAnswer": "For a high-volume production workload built around Optimizing query performance, evolve the design by measuring current bottlenecks and explicitly validating search optimization, materialized view, query acceleration, clustering, and access pattern. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+    "canonicalAnswer": "At scale, evolve query optimization with a reliability and cost-control loop: track access-pattern drift, Query Profile baselines, query history, partitions scanned, spilling, elapsed time, and credits before changing search optimization, materialized views, query acceleration, or clustering. Add, tune, or retire each optimization through controlled rollout, SLO/cost thresholds, owner approval, monitoring, and rollback criteria.",
     "expectedConcepts": [
       "search optimization",
       "materialized view",
@@ -5081,8 +5123,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a high-volume production workload built around Optimizing query performance, evolve the design by measuring current bottlenecks and explicitly validating search optimization, materialized view, query acceleration, clustering, and access pattern. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
-      "expandedExplanation": "For a high-volume production workload built around Optimizing query performance, evolve the design by measuring current bottlenecks and explicitly validating search optimization, materialized view, query acceleration, clustering, and access pattern. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply search optimization, materialized view, query acceleration, clustering, and access pattern using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "At scale, evolve query optimization with a reliability and cost-control loop: track access-pattern drift, Query Profile baselines, query history, partitions scanned, spilling, elapsed time, and credits before changing search optimization, materialized views, query acceleration, or clustering. Add, tune, or retire each optimization through controlled rollout, SLO/cost thresholds, owner approval, monitoring, and rollback criteria.",
+      "expandedExplanation": "At scale, evolve query optimization with a reliability and cost-control loop: track access-pattern drift, Query Profile baselines, query history, partitions scanned, spilling, elapsed time, and credits before changing search optimization, materialized views, query acceleration, or clustering. Add, tune, or retire each optimization through controlled rollout, SLO/cost thresholds, owner approval, monitoring, and rollback criteria. For advanced production use, query optimization is a lifecycle. Workloads change, so the team should periodically compare pruning effectiveness, query acceleration usage, materialized-view maintenance and rewrite behavior, search-optimization benefit, clustering depth, and credit consumption. Promote changes gradually, alert on latency or spend regressions, document why the feature still matches the access pattern, and remove optimizations that no longer meet the agreed reliability and cost target.",
       "requiredConcepts": [
         "search optimization",
         "materialized view",
@@ -5128,7 +5170,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete advanced scenario answer should discuss evidence-driven governance, reliability controls, cost thresholds, rollout/rollback, and ongoing access-pattern review across search optimization, materialized views, query acceleration, and clustering.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/performance-query-options",
@@ -5142,20 +5184,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers search optimization, materialized view, query acceleration, clustering, and access pattern, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -5166,7 +5211,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "After a deployment involving query optimization services, data is incomplete or duplicated and reruns are risky. Describe a safe diagnosis and recovery approach.",
-    "canonicalAnswer": "After an Optimizing query performance deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves search optimization, materialized view, query acceleration, clustering, and access pattern, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+    "canonicalAnswer": "Handle the incident as a query performance and cost regression. Preserve the slow query, query history, and Query Profile, then check whether the current access pattern still fits search optimization, materialized views, query acceleration, and clustering. Compare pruning, partitions scanned, spilling, queueing, elapsed time, and credits, then roll back the smallest suspect optimization change.",
     "expectedConcepts": [
       "search optimization",
       "materialized view",
@@ -5187,8 +5232,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "After an Optimizing query performance deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves search optimization, materialized view, query acceleration, clustering, and access pattern, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
-      "expandedExplanation": "After an Optimizing query performance deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves search optimization, materialized view, query acceleration, clustering, and access pattern, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply search optimization, materialized view, query acceleration, clustering, and access pattern using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Handle the incident as a query performance and cost regression. Preserve the slow query, query history, and Query Profile, then check whether the current access pattern still fits search optimization, materialized views, query acceleration, and clustering. Compare pruning, partitions scanned, spilling, queueing, elapsed time, and credits, then roll back the smallest suspect optimization change.",
+      "expandedExplanation": "Handle the incident as a query performance and cost regression. Preserve the slow query, query history, and Query Profile, then check whether the current access pattern still fits search optimization, materialized views, query acceleration, and clustering. Compare pruning, partitions scanned, spilling, queueing, elapsed time, and credits, then roll back the smallest suspect optimization change. A strong incident response avoids generic data-repair language. Capture the affected statements and profiles, compare them to the previous baseline, and inspect operators, partition pruning, spilled data, warehouse queueing, and credits. Confirm whether search optimization helps the actual predicates, whether a materialized view is maintained and eligible for rewrite, whether query acceleration applied to the scan-heavy query, and whether clustering still improves pruning. Stabilize the workload by reverting or adjusting the least risky optimization first.",
       "requiredConcepts": [
         "search optimization",
         "materialized view",
@@ -5234,7 +5279,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover search optimization, materialized view, query acceleration, clustering, and access pattern, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should frame the problem as Snowflake query performance evidence and isolate search optimization, materialized views, query acceleration, clustering, and access-pattern drift.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/performance-query-options",
@@ -5248,20 +5293,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers search optimization, materialized view, query acceleration, clustering, and access pattern, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions performance superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Mentions Snowflake performance superficially without enough evidence from the cited feature, missing required concepts, or giving generic cloud-tuning advice.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the performance question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -10529,7 +10577,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Explain role-based access control and the main problem it solves.",
-    "canonicalAnswer": "Overview of access control should be explained in terms of roles, privileges, role hierarchy, least privilege, and managed access schema. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Snowflake role-based access control uses roles, privileges, and a role hierarchy to decide which users can access objects. It solves access governance by applying least privilege, with managed access schema ownership controls helping centralize grants in shared schemas.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -10550,8 +10598,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Overview of access control should be explained in terms of roles, privileges, role hierarchy, least privilege, and managed access schema. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Overview of access control should be explained in terms of roles, privileges, role hierarchy, least privilege, and managed access schema. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Snowflake role-based access control uses roles, privileges, and a role hierarchy to decide which users can access objects. It solves access governance by applying least privilege, with managed access schema ownership controls helping centralize grants in shared schemas.",
+      "expandedExplanation": "Snowflake role-based access control uses roles, privileges, and a role hierarchy to decide which users can access objects. It solves access governance by applying least privilege, with managed access schema ownership controls helping centralize grants in shared schemas. Candidates should explain that users activate roles, roles inherit other roles, privileges are granted on objects or future objects, and managed access schemas shift grant control to the schema owner or privileged role.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -10597,7 +10645,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the conceptual prompt for snowflake at beginner level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete conceptual answer must cover roles, privileges, role hierarchy, least privilege, and managed access schema as Snowflake access-control primitives.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -10611,20 +10659,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -10635,7 +10686,7 @@
     "difficulty": "beginner",
     "type": "hands-on",
     "question": "You are configuring role-based access control for the first time. Which core settings or objects would you identify before running a small validation?",
-    "canonicalAnswer": "For a first implementation of Overview of access control, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise roles, privileges, role hierarchy, least privilege, and managed access schema, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
+    "canonicalAnswer": "Before validating RBAC, identify the functional roles, required privileges, role hierarchy, least-privilege grant scope, and whether a managed access schema should centralize object grants. Then test allowed and denied queries with the intended active role.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -10656,8 +10707,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a first implementation of Overview of access control, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise roles, privileges, role hierarchy, least privilege, and managed access schema, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
-      "expandedExplanation": "For a first implementation of Overview of access control, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise roles, privileges, role hierarchy, least privilege, and managed access schema, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working. This benchmark is specific to the beginner hands-on prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Before validating RBAC, identify the functional roles, required privileges, role hierarchy, least-privilege grant scope, and whether a managed access schema should centralize object grants. Then test allowed and denied queries with the intended active role.",
+      "expandedExplanation": "Before validating RBAC, identify the functional roles, required privileges, role hierarchy, least-privilege grant scope, and whether a managed access schema should centralize object grants. Then test allowed and denied queries with the intended active role. Before validating RBAC, identify the functional roles, required privileges, role hierarchy, least-privilege grant scope, and whether a managed access schema should centralize object grants. Create or reuse roles, grant only the needed database/schema/table/warehouse privileges, assign roles through the hierarchy, and validate with SHOW GRANTS plus allowed and denied SQL using the intended active role. Include future-grant behavior when new objects will be created.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -10703,7 +10754,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the hands-on prompt for snowflake at beginner level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete hands-on answer should include concrete Snowflake role, privilege, hierarchy, managed access schema, and validation checks.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -10717,20 +10768,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the hands-on question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -10741,7 +10795,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A team is considering role-based access control for a production data pipeline. How would you decide whether it fits and apply it safely?",
-    "canonicalAnswer": "Use Overview of access control only when the production requirement matches the documented Snowflake capability around roles, privileges, role hierarchy, least privilege, and managed access schema. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "RBAC fits when a pipeline needs governed object access by job, team, or environment. Apply it safely by designing roles, privileges, a role hierarchy, least-privilege grants, and managed access schema ownership, then rollout with grant reviews and positive/negative access tests.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -10762,8 +10816,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Overview of access control only when the production requirement matches the documented Snowflake capability around roles, privileges, role hierarchy, least privilege, and managed access schema. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Overview of access control only when the production requirement matches the documented Snowflake capability around roles, privileges, role hierarchy, least privilege, and managed access schema. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "RBAC fits when a pipeline needs governed object access by job, team, or environment. Apply it safely by designing roles, privileges, a role hierarchy, least-privilege grants, and managed access schema ownership, then rollout with grant reviews and positive/negative access tests.",
+      "expandedExplanation": "RBAC fits when a pipeline needs governed object access by job, team, or environment. Apply it safely by designing roles, privileges, a role hierarchy, least-privilege grants, and managed access schema ownership, then rollout with grant reviews and positive/negative access tests. RBAC fits when a pipeline needs governed object access by job, team, or environment. Apply it safely by designing roles, privileges, a role hierarchy, least-privilege grants, and managed access schema ownership. Separate service roles from human roles, avoid broad ownership/admin grants, document grant intent, test allowed and denied access with active roles, and review future grants and managed access schemas before production rollout.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -10809,7 +10863,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete scenario answer should decide RBAC fit through access-governance needs and include safe Snowflake grant hierarchy and validation controls.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -10823,20 +10877,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -10847,7 +10904,7 @@
     "difficulty": "intermediate",
     "type": "troubleshooting",
     "question": "role-based access control is configured, but the expected result or performance improvement is not appearing. What would you investigate first?",
-    "canonicalAnswer": "Troubleshoot Overview of access control by first confirming the deployed configuration actually uses roles, privileges, role hierarchy, least privilege, and managed access schema. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
+    "canonicalAnswer": "Investigate roles, the active role, direct and inherited privileges, role hierarchy, object ownership, managed access schema grant rules, and least-privilege scope. Use SHOW GRANTS and positive/negative access tests to find where privilege resolution differs from the expected access path.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -10868,8 +10925,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Troubleshoot Overview of access control by first confirming the deployed configuration actually uses roles, privileges, role hierarchy, least privilege, and managed access schema. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
-      "expandedExplanation": "Troubleshoot Overview of access control by first confirming the deployed configuration actually uses roles, privileges, role hierarchy, least privilege, and managed access schema. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time. This benchmark is specific to the intermediate troubleshooting prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Investigate roles, the active role, direct and inherited privileges, role hierarchy, object ownership, managed access schema grant rules, and least-privilege scope. Use SHOW GRANTS and positive/negative access tests to find where privilege resolution differs from the expected access path.",
+      "expandedExplanation": "Investigate roles, the active role, direct and inherited privileges, role hierarchy, object ownership, managed access schema grant rules, and least-privilege scope. Use SHOW GRANTS and positive/negative access tests to find where privilege resolution differs from the expected access path. Investigate roles, the active role, direct and inherited privileges, role hierarchy, object ownership, managed access schema grant rules, and least-privilege scope. Confirm the user or service has activated the expected role, check inherited roles and revoked grants, inspect object and future grants, and verify whether a managed access schema prevents an object owner from granting access. Reproduce with allowed and denied queries before changing grants.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -10915,7 +10972,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at intermediate level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should use concrete Snowflake privilege-resolution checks for roles, privileges, hierarchy, managed access schemas, and least privilege.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -10929,20 +10986,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -10953,7 +11013,7 @@
     "difficulty": "intermediate",
     "type": "design",
     "question": "Design a maintainable implementation using role-based access control. Which trade-offs and operational controls belong in the design?",
-    "canonicalAnswer": "An enterprise-ready Overview of access control design should explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+    "canonicalAnswer": "A maintainable RBAC design defines business roles, service roles, privileges, role hierarchy, least-privilege grants, managed access schema boundaries, ownership, access-review cadence, and test evidence for allowed and denied operations.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -10974,8 +11034,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "An enterprise-ready Overview of access control design should explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
-      "expandedExplanation": "An enterprise-ready Overview of access control design should explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the intermediate design prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "A maintainable RBAC design defines business roles, service roles, privileges, role hierarchy, least-privilege grants, managed access schema boundaries, ownership, access-review cadence, and test evidence for allowed and denied operations.",
+      "expandedExplanation": "A maintainable RBAC design defines business roles, service roles, privileges, role hierarchy, least-privilege grants, managed access schema boundaries, ownership, access-review cadence, and test evidence for allowed and denied operations. Trade-offs include fewer broad roles versus many precise roles, centralized managed access versus distributed object ownership, future grants versus explicit grants, and operational overhead for grant review and drift detection.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -11021,7 +11081,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the design prompt for snowflake at intermediate level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete design answer should turn Snowflake roles, privileges, role hierarchy, least privilege, and managed access schema into an auditable operating model.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -11035,20 +11095,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the design question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -11059,7 +11122,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "A high-volume production workload depends on role-based access control and now has stricter reliability and cost objectives. How would you evolve the design?",
-    "canonicalAnswer": "For a high-volume production workload built around Overview of access control, evolve the design by measuring current bottlenecks and explicitly validating roles, privileges, role hierarchy, least privilege, and managed access schema. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+    "canonicalAnswer": "At scale, evolve RBAC by controlling role hierarchy growth, privilege drift, managed access schema boundaries, and least-privilege reviews. Automate grant inventory, test critical allowed/denied paths, separate human and service roles, and require change approval for broad privileges or ownership.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -11080,8 +11143,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a high-volume production workload built around Overview of access control, evolve the design by measuring current bottlenecks and explicitly validating roles, privileges, role hierarchy, least privilege, and managed access schema. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
-      "expandedExplanation": "For a high-volume production workload built around Overview of access control, evolve the design by measuring current bottlenecks and explicitly validating roles, privileges, role hierarchy, least privilege, and managed access schema. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "At scale, evolve RBAC by controlling role hierarchy growth, privilege drift, managed access schema boundaries, and least-privilege reviews. Automate grant inventory, test critical allowed/denied paths, separate human and service roles, and require change approval for broad privileges or ownership.",
+      "expandedExplanation": "At scale, evolve RBAC by controlling role hierarchy growth, privilege drift, managed access schema boundaries, and least-privilege reviews. Automate grant inventory, test critical allowed/denied paths, separate human and service roles, and require change approval for broad privileges or ownership. At scale, evolve RBAC by controlling role hierarchy growth, privilege drift, managed access schema boundaries, and least-privilege reviews. Automate SHOW GRANTS inventory or equivalent snapshots, monitor new future grants, separate human roles from service roles, and regularly test critical allowed and denied access paths. Reliability comes from predictable active-role behavior; cost and risk controls come from preventing broad privileges, excessive ownership, and unmanaged schema grant paths.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -11127,7 +11190,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete advanced answer should address Snowflake role and grant scale, hierarchy complexity, managed access boundaries, least privilege, drift detection, and access-validation evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -11141,20 +11204,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -11165,7 +11231,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "After a deployment involving role-based access control, data is incomplete or duplicated and reruns are risky. Describe a safe diagnosis and recovery approach.",
-    "canonicalAnswer": "After an Overview of access control deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves roles, privileges, role hierarchy, least privilege, and managed access schema, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+    "canonicalAnswer": "RBAC changes can block or overexpose access, but they do not directly duplicate rows. Freeze risky reruns, identify roles, the active role, privileges, role hierarchy, least-privilege grant changes, and managed access schema ownership, then restore the minimal required grants and validate allowed/denied access before replay.",
     "expectedConcepts": [
       "roles",
       "privileges",
@@ -11186,8 +11252,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "After an Overview of access control deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves roles, privileges, role hierarchy, least privilege, and managed access schema, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
-      "expandedExplanation": "After an Overview of access control deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves roles, privileges, role hierarchy, least privilege, and managed access schema, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply roles, privileges, role hierarchy, least privilege, and managed access schema using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "RBAC changes can block or overexpose access, but they do not directly duplicate rows. Freeze risky reruns, identify roles, the active role, privileges, role hierarchy, least-privilege grant changes, and managed access schema ownership, then restore the minimal required grants and validate allowed/denied access before replay.",
+      "expandedExplanation": "RBAC changes can block or overexpose access, but they do not directly duplicate rows. Freeze risky reruns, identify roles, the active role, privileges, role hierarchy, least-privilege grant changes, and managed access schema ownership, then restore the minimal required grants and validate allowed/denied access before replay. RBAC changes can block or overexpose access, but they do not directly duplicate rows. Freeze risky reruns and preserve job errors, query IDs, and grant-change history. Check roles, active role selection, direct and inherited privileges, role hierarchy, least-privilege scope, managed access schema rules, object ownership, and future grants. Restore only the minimal missing privilege, validate allowed and denied access, then replay the pipeline idempotently after reconciling partial outputs.",
       "requiredConcepts": [
         "roles",
         "privileges",
@@ -11233,7 +11299,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover roles, privileges, role hierarchy, least privilege, and managed access schema, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete incident answer should diagnose Snowflake privilege resolution and protect idempotent recovery instead of treating RBAC as a data-write feature.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
@@ -11247,20 +11313,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers roles, privileges, role hierarchy, least privilege, and managed access schema, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions security-access-control superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the security-access-control question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -13518,7 +13587,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Explain replication and failover and the main problem it solves.",
-    "canonicalAnswer": "Replication and failover across multiple accounts should be explained in terms of replication group, failover group, refresh, recovery objective, and promotion. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Snowflake replication and failover copies selected account objects across accounts using replication groups or failover groups. It solves disaster recovery and continuity by refreshing a secondary account toward a recovery objective and allowing controlled promotion during outage or migration.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -13539,8 +13608,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Replication and failover across multiple accounts should be explained in terms of replication group, failover group, refresh, recovery objective, and promotion. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Replication and failover across multiple accounts should be explained in terms of replication group, failover group, refresh, recovery objective, and promotion. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Snowflake replication and failover copies selected account objects across accounts using replication groups or failover groups. It solves disaster recovery and continuity by refreshing a secondary account toward a recovery objective and allowing controlled promotion during outage or migration.",
+      "expandedExplanation": "Snowflake replication and failover copies selected account objects across accounts using replication groups or failover groups. It solves disaster recovery and continuity by refreshing a secondary account toward a recovery objective and allowing controlled promotion during outage or migration. Candidates should mention group scope, refresh cadence or lag, recovery objective, failover readiness, and promotion governance.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -13586,7 +13655,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the conceptual prompt for snowflake at beginner level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete conceptual answer must cover replication group, failover group, refresh, recovery objective, and promotion.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -13600,20 +13669,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -13624,7 +13696,7 @@
     "difficulty": "beginner",
     "type": "hands-on",
     "question": "You are configuring replication and failover for the first time. Which core settings or objects would you identify before running a small validation?",
-    "canonicalAnswer": "For a first implementation of Replication and failover across multiple accounts, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise replication group, failover group, refresh, recovery objective, and promotion, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
+    "canonicalAnswer": "Before validation, identify the source and target accounts, replication group or failover group scope, refresh schedule, recovery objective, roles and object eligibility, and promotion procedure. Run a small refresh, verify replicated objects, and rehearse controlled failover/promotion safely.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -13645,8 +13717,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a first implementation of Replication and failover across multiple accounts, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise replication group, failover group, refresh, recovery objective, and promotion, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working.",
-      "expandedExplanation": "For a first implementation of Replication and failover across multiple accounts, build one minimal end-to-end example rather than a broad production rollout. Choose a single small use case, create the minimum platform resources needed to exercise replication group, failover group, refresh, recovery objective, and promotion, configure access with least privilege, keep defaults conservative, and record the rollback or cleanup step before testing. Verify it by running one controlled request or workload through the configured path, confirming the expected result, checking runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, and documenting which setting proves each required concept is working. This benchmark is specific to the beginner hands-on prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Before validation, identify the source and target accounts, replication group or failover group scope, refresh schedule, recovery objective, roles and object eligibility, and promotion procedure. Run a small refresh, verify replicated objects, and rehearse controlled failover/promotion safely.",
+      "expandedExplanation": "Before validation, identify the source and target accounts, replication group or failover group scope, refresh schedule, recovery objective, roles and object eligibility, and promotion procedure. Run a small refresh, verify replicated objects, and rehearse controlled failover/promotion safely. Before validation, identify the source and target accounts, replication group or failover group scope, refresh schedule, recovery objective, roles and object eligibility, and promotion procedure. Configure a limited group first, run a refresh, check status and lag, validate replicated databases or account objects, and perform a documented failover exercise only in a safe scope. Record RPO/RTO evidence and the steps to promote and fail back.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -13692,7 +13764,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the hands-on prompt for snowflake at beginner level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete hands-on answer should include concrete replication/failover group setup, refresh validation, recovery objective checks, and promotion safeguards.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -13706,20 +13778,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the hands-on question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -13730,7 +13805,7 @@
     "difficulty": "intermediate",
     "type": "scenario",
     "question": "A team is considering replication and failover for a production data pipeline. How would you decide whether it fits and apply it safely?",
-    "canonicalAnswer": "Use Replication and failover across multiple accounts only when the production requirement matches the documented Snowflake capability around replication group, failover group, refresh, recovery objective, and promotion. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "Replication and failover fit when the pipeline needs cross-account disaster recovery, migration, or regional continuity with defined recovery objectives. Apply safely by scoping replication groups or failover groups, validating refresh lag, testing promotion, documenting RPO/RTO, and controlling cost and object eligibility.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -13751,8 +13826,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Replication and failover across multiple accounts only when the production requirement matches the documented Snowflake capability around replication group, failover group, refresh, recovery objective, and promotion. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Replication and failover across multiple accounts only when the production requirement matches the documented Snowflake capability around replication group, failover group, refresh, recovery objective, and promotion. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the intermediate scenario prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Replication and failover fit when the pipeline needs cross-account disaster recovery, migration, or regional continuity with defined recovery objectives. Apply safely by scoping replication groups or failover groups, validating refresh lag, testing promotion, documenting RPO/RTO, and controlling cost and object eligibility.",
+      "expandedExplanation": "Replication and failover fit when the pipeline needs cross-account disaster recovery, migration, or regional continuity with defined recovery objectives. Apply safely by scoping replication groups or failover groups, validating refresh lag, testing promotion, documenting RPO/RTO, and controlling cost and object eligibility. Replication and failover fit when the pipeline needs cross-account disaster recovery, migration, or regional continuity with defined recovery objectives. Apply safely by scoping replication groups or failover groups to required objects, validating refresh lag and errors, testing promotion in a controlled exercise, documenting RPO/RTO, and checking object eligibility, privileges, downstream dependencies, and cost before production use.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -13798,7 +13873,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at intermediate level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete scenario answer should decide fit based on DR/continuity needs and cover replication group, failover group, refresh, recovery objective, and promotion controls.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -13812,20 +13887,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -13836,7 +13914,7 @@
     "difficulty": "intermediate",
     "type": "troubleshooting",
     "question": "replication and failover is configured, but the expected result or performance improvement is not appearing. What would you investigate first?",
-    "canonicalAnswer": "Troubleshoot Replication and failover across multiple accounts by first confirming the deployed configuration actually uses replication group, failover group, refresh, recovery objective, and promotion. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
+    "canonicalAnswer": "Troubleshoot replication by checking replication group or failover group status, last refresh time, refresh errors, lag against the recovery objective, object eligibility, privileges, network/account configuration, and whether promotion is safe for the current secondary state.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -13857,8 +13935,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Troubleshoot Replication and failover across multiple accounts by first confirming the deployed configuration actually uses replication group, failover group, refresh, recovery objective, and promotion. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time.",
-      "expandedExplanation": "Troubleshoot Replication and failover across multiple accounts by first confirming the deployed configuration actually uses replication group, failover group, refresh, recovery objective, and promotion. Compare expected behavior with runtime metrics and logs, platform audit events, configuration state, access tests, and a small controlled workload, isolate the smallest failing component, check permissions, limits, dependencies, recent changes, and service events, then make one reversible correction at a time. This benchmark is specific to the intermediate troubleshooting prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Troubleshoot replication by checking replication group or failover group status, last refresh time, refresh errors, lag against the recovery objective, object eligibility, privileges, network/account configuration, and whether promotion is safe for the current secondary state.",
+      "expandedExplanation": "Troubleshoot replication by checking replication group or failover group status, last refresh time, refresh errors, lag against the recovery objective, object eligibility, privileges, network/account configuration, and whether promotion is safe for the current secondary state. Compare expected group scope to replicated objects, inspect failed refresh details, verify dependencies, and avoid promotion until consistency and RPO/RTO evidence are understood.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -13904,7 +13982,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at intermediate level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete troubleshooting answer should use replication-specific status, refresh, lag, eligibility, failover group, and promotion-readiness checks.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -13918,20 +13996,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -13942,7 +14023,7 @@
     "difficulty": "intermediate",
     "type": "design",
     "question": "Design a maintainable implementation using replication and failover. Which trade-offs and operational controls belong in the design?",
-    "canonicalAnswer": "An enterprise-ready Replication and failover across multiple accounts design should explicitly cover replication group, failover group, refresh, recovery objective, and promotion. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
+    "canonicalAnswer": "A maintainable design defines replication group and failover group scope, refresh cadence, recovery objective, promotion authority, failover drills, monitoring of lag/errors, object eligibility review, access controls, cost ownership, and safe failback procedures.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -13963,8 +14044,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "An enterprise-ready Replication and failover across multiple accounts design should explicitly cover replication group, failover group, refresh, recovery objective, and promotion. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks.",
-      "expandedExplanation": "An enterprise-ready Replication and failover across multiple accounts design should explicitly cover replication group, failover group, refresh, recovery objective, and promotion. Include account and environment separation, least-privilege governance, encryption or network controls where relevant, observability, failure isolation, backup or rollback expectations, capacity planning, cost controls, ownership, and documented operational runbooks. This benchmark is specific to the intermediate design prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "A maintainable design defines replication group and failover group scope, refresh cadence, recovery objective, promotion authority, failover drills, monitoring of lag/errors, object eligibility review, access controls, cost ownership, and safe failback procedures.",
+      "expandedExplanation": "A maintainable design defines replication group and failover group scope, refresh cadence, recovery objective, promotion authority, failover drills, monitoring of lag/errors, object eligibility review, access controls, cost ownership, and safe failback procedures. Trade-offs include broad replication versus cost and lag, faster refresh versus compute/network spend, automated promotion versus governance risk, and secondary capacity versus recovery expectations.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -14010,7 +14091,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the design prompt for snowflake at intermediate level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete design answer should combine Snowflake replication/failover mechanics with RPO/RTO, monitoring, governance, promotion, failback, and cost controls.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -14024,20 +14105,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the design question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at intermediate level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -14048,7 +14132,7 @@
     "difficulty": "advanced",
     "type": "scenario",
     "question": "A high-volume production workload depends on replication and failover and now has stricter reliability and cost objectives. How would you evolve the design?",
-    "canonicalAnswer": "For a high-volume production workload built around Replication and failover across multiple accounts, evolve the design by measuring current bottlenecks and explicitly validating replication group, failover group, refresh, recovery objective, and promotion. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
+    "canonicalAnswer": "At scale, evolve replication and failover by measuring refresh throughput, lag against the recovery objective, replication group and failover group scope, secondary capacity, promotion drills, failback safety, and cost. Tighten refresh cadence and scope only when evidence supports the RPO/RTO target.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -14069,8 +14153,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "For a high-volume production workload built around Replication and failover across multiple accounts, evolve the design by measuring current bottlenecks and explicitly validating replication group, failover group, refresh, recovery objective, and promotion. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend.",
-      "expandedExplanation": "For a high-volume production workload built around Replication and failover across multiple accounts, evolve the design by measuring current bottlenecks and explicitly validating replication group, failover group, refresh, recovery objective, and promotion. Separate critical and noisy workloads where possible, define reliability and recovery behavior, test cost-performance trade-offs, document operating limits, and promote only after production-like evidence proves the new design improves reliability without uncontrolled spend. This benchmark is specific to the advanced scenario prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "At scale, evolve replication and failover by measuring refresh throughput, lag against the recovery objective, replication group and failover group scope, secondary capacity, promotion drills, failback safety, and cost. Tighten refresh cadence and scope only when evidence supports the RPO/RTO target.",
+      "expandedExplanation": "At scale, evolve replication and failover by measuring refresh throughput, lag against the recovery objective, replication group and failover group scope, secondary capacity, promotion drills, failback safety, and cost. Tighten refresh cadence and scope only when evidence supports the RPO/RTO target. At scale, evolve replication and failover by measuring refresh throughput, lag against the recovery objective, replication group and failover group scope, secondary capacity, promotion drills, failback safety, and cost. High-volume workloads need regular disaster-recovery exercises, alerting on refresh errors and lag, object-eligibility reviews, capacity planning for promoted accounts, and controlled promotion/failback runbooks. Reduce scope or adjust cadence if cost or lag exceeds the agreed recovery objective.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -14116,7 +14200,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the scenario prompt for snowflake at advanced level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete advanced answer should address high-volume refresh, lag, RPO/RTO, promotion drills, failover capacity, failback, and measured recovery evidence.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -14130,20 +14214,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
@@ -14154,7 +14241,7 @@
     "difficulty": "advanced",
     "type": "troubleshooting",
     "question": "After a deployment involving replication and failover, data is incomplete or duplicated and reruns are risky. Describe a safe diagnosis and recovery approach.",
-    "canonicalAnswer": "After a Replication and failover across multiple accounts deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves replication group, failover group, refresh, recovery objective, and promotion, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
+    "canonicalAnswer": "For a replication/failover incident, freeze unsafe promotion or reruns, preserve refresh history, and check replication group or failover group status, refresh lag/errors, object scope, consistency, recovery objective, and promotion state. Recover by reconciling source/secondary state before controlled failback or replay.",
     "expectedConcepts": [
       "replication group",
       "failover group",
@@ -14175,8 +14262,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "After a Replication and failover across multiple accounts deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves replication group, failover group, refresh, recovery objective, and promotion, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled.",
-      "expandedExplanation": "After a Replication and failover across multiple accounts deployment produces incomplete or inconsistent production results, stop unsafe retries and preserve evidence such as request IDs, logs, metrics, configuration changes, event history, and affected resources. Diagnose whether the failure involves replication group, failover group, refresh, recovery objective, and promotion, identify the last known correct state, reconcile expected versus actual results, repair with an idempotent rollback, replay, restore, or configuration correction, and resume only after monitoring and validation prove recurrence is controlled. This benchmark is specific to the advanced troubleshooting prompt because it requires the candidate to apply replication group, failover group, refresh, recovery objective, and promotion using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "For a replication/failover incident, freeze unsafe promotion or reruns, preserve refresh history, and check replication group or failover group status, refresh lag/errors, object scope, consistency, recovery objective, and promotion state. Recover by reconciling source/secondary state before controlled failback or replay.",
+      "expandedExplanation": "For a replication/failover incident, freeze unsafe promotion or reruns, preserve refresh history, and check replication group or failover group status, refresh lag/errors, object scope, consistency, recovery objective, and promotion state. Recover by reconciling source/secondary state before controlled failback or replay. For a replication/failover incident, freeze unsafe promotion or reruns, preserve refresh history, and check replication group or failover group status, refresh lag/errors, object scope, consistency, recovery objective, and promotion state. Determine whether data is incomplete because the refresh did not include objects, failed, lagged, or promoted too early. Reconcile source and secondary state, confirm downstream dependencies, and execute controlled failback or idempotent replay only after RPO/RTO and consistency evidence are clear.",
       "requiredConcepts": [
         "replication group",
         "failover group",
@@ -14222,7 +14309,7 @@
         }
       ],
       "incorrectClaims": [],
-      "reasoning": "A complete answer should directly address the troubleshooting prompt for snowflake at advanced level, explicitly cover replication group, failover group, refresh, recovery objective, and promotion, and ground validation in observable Snowflake evidence.",
+      "reasoning": "A complete incident answer should diagnose refresh, lag, group scope, consistency, promotion, recovery objectives, and safe failback/replay.",
       "evidence": [
         {
           "url": "https://docs.snowflake.com/en/user-guide/account-replication-intro",
@@ -14236,20 +14323,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the troubleshooting question, accurately covers replication group, failover group, refresh, recovery objective, and promotion, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at advanced level.",
-        "weak": "Mentions business-continuity superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the business-continuity question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-08-31"
       }
     }
   },
