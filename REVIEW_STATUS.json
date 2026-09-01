@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T19:47:30.000+05:30",
+  "updatedAt": "2026-09-01T07:53:30.000+05:30",
   "workspace": "D:\\mockinterviewapp",
   "purpose": "Low-context index for continuing governed benchmark AI review without rereading PROJECT_STATE.md and HANDOVER.md on every batch.",
   "contract": {
@@ -13,8 +13,8 @@
   },
   "latestValidatedCounts": {
     "totalBenchmarks": 1050,
-    "aiEvidenceVerified": 683,
-    "draft": 367,
+    "aiEvidenceVerified": 750,
+    "draft": 300,
     "blockedCandidateQuestions": 300
   },
   "technologyStatus": {
@@ -30,10 +30,10 @@
       "note": "Published through the explicit launch registry on 2026-08-31 after full AI-evidence verification and evidence-link verification."
     },
     "snowflake": {
-      "verified": 83,
-      "draft": 67,
+      "verified": 150,
+      "draft": 0,
       "userVisible": true,
-      "note": "Snowflake advanced from 13/150 to 83/150 ai-evidence-verified through optimized labelled compact batches 1a-1g. Static triage is 0; benchmark validation passes. Existing user-visible status remains from earlier release path, but only verified benchmark records should be treated as approved."
+      "note": "Snowflake is fully AI-evidence verified at 150/150 after optimized labelled compact batches 1a-1k. Static triage is 0 and benchmark validation passes. Existing user-visible status remains from earlier release path; this checkpoint now supports treating the full Snowflake benchmark pack as AI-evidence verified, not human/vendor reviewed."
     },
     "aws": {
       "verified": 150,
@@ -59,8 +59,8 @@
     }
   },
   "activeReview": {
-    "technology": "snowflake",
-    "nextBatchLabel": "snowflake-review-20260831-batch1h",
+    "technology": "power-bi",
+    "nextBatchLabel": "power-bi-review-20260901-batch1a",
     "pendingReviewerPacket": [],
     "reviewerModels": [
       "gpt-5.6-luna",
@@ -76,9 +76,9 @@
     "blocker": null,
     "latestMilestone": {
       "technology": "snowflake",
-      "status": "review-in-progress",
-      "summary": "AWS is fully AI-evidence verified at 150/150 but not published. Snowflake has advanced to 83/150 ai-evidence-verified after batches 1a-1g covering architecture, bulk loading, cloning, clustering, dynamic tables, multi-cluster warehouses, policy security, query optimization, Query Profile, RBAC, replication/failover, and resource monitors. Static triage is 0 and benchmark validation passes.",
-      "launchStatus": "AWS not launched; Snowflake partially verified and existing user visibility must not be interpreted as full pack approval.",
+      "status": "fully-ai-evidence-verified",
+      "summary": "AWS, Databricks, Informatica, Oracle, and Snowflake are fully AI-evidence verified at 150/150 each. Snowflake completed batches 1a-1k through two-model chat-level consensus with dry-run imports. Remaining draft courses are Power BI 150 and Python 150. Static triage is 0 and benchmark validation passes.",
+      "launchStatus": "AWS is still not launched; Snowflake is fully AI-evidence verified and already user-visible from earlier release path. Do not describe any course as human-reviewed or vendor-certified.",
       "productionDeployment": {
         "commit": "868077e",
         "deploymentId": "dpl_36bzVdhuJvYqXojtzpZQVFqMW4Fy",

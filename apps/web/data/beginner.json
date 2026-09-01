@@ -6,7 +6,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "What are the roles of a database, schema, table, and virtual warehouse in Snowflake?",
-    "canonicalAnswer": "Snowflake in 20 minutes should be explained in terms of database, schema, table, virtual warehouse, and compute. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "A Snowflake database groups schemas, a schema organizes tables and other objects, a table stores rows, and a virtual warehouse supplies compute to query or load those objects.",
     "expectedConcepts": [
       "database",
       "schema",
@@ -27,8 +27,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Snowflake in 20 minutes should be explained in terms of database, schema, table, virtual warehouse, and compute. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Snowflake in 20 minutes should be explained in terms of database, schema, table, virtual warehouse, and compute. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply database, schema, table, virtual warehouse, and compute using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "A Snowflake database groups schemas, a schema organizes tables and other objects, a table stores rows, and a virtual warehouse supplies compute to query or load those objects.",
+      "expandedExplanation": "A Snowflake database groups schemas, a schema organizes tables and other objects, a table stores rows, and a virtual warehouse supplies compute to query or load those objects. Databases, schemas, and tables are storage/namespace objects; the virtual warehouse is the independent compute layer that runs SQL and loading work. This separation lets the same stored data be queried by different warehouses with different performance and credit profiles.",
       "requiredConcepts": [
         "database",
         "schema",
@@ -88,20 +88,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers database, schema, table, virtual warehouse, and compute, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions core-objects superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the core-objects question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-09-01"
       }
     }
   },
@@ -112,7 +115,7 @@
     "difficulty": "beginner",
     "type": "conceptual",
     "question": "Why does Snowflake need a virtual warehouse to run a query or load data?",
-    "canonicalAnswer": "Virtual warehouses should be explained in terms of compute, CPU, memory, queries, loading, and credits. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
+    "canonicalAnswer": "Snowflake needs a virtual warehouse because queries and loading require compute: CPU and memory resources execute SQL, scan data, transform rows, and load files. Credits are consumed while that warehouse compute runs.",
     "expectedConcepts": [
       "compute",
       "CPU",
@@ -134,8 +137,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Virtual warehouses should be explained in terms of compute, CPU, memory, queries, loading, and credits. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions.",
-      "expandedExplanation": "Virtual warehouses should be explained in terms of compute, CPU, memory, queries, loading, and credits. A correct benchmark answer states the Snowflake problem it solves, what the platform manages, what the customer must configure or operate, and how the feature is validated with observable service behavior rather than assumptions. This benchmark is specific to the beginner conceptual prompt because it requires the candidate to apply compute, CPU, memory, queries, loading, and credits using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "Snowflake needs a virtual warehouse because queries and loading require compute: CPU and memory resources execute SQL, scan data, transform rows, and load files. Credits are consumed while that warehouse compute runs.",
+      "expandedExplanation": "Snowflake needs a virtual warehouse because queries and loading require compute: CPU and memory resources execute SQL, scan data, transform rows, and load files. Credits are consumed while that warehouse compute runs. Storage alone does not execute work. A virtual warehouse provides the CPU and memory-style compute for queries and loading, can be sized for the workload, and consumes credits while active. Auto-suspend and auto-resume help avoid idle compute cost.",
       "requiredConcepts": [
         "compute",
         "CPU",
@@ -202,20 +205,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the conceptual question, accurately covers compute, CPU, memory, queries, loading, and credits, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions virtual-warehouses superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the virtual-warehouses question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-09-01"
       }
     }
   },
@@ -226,7 +232,7 @@
     "difficulty": "beginner",
     "type": "scenario",
     "question": "You have a CSV file and want to load it into Snowflake for analysis. At a high level, what objects or steps do you need?",
-    "canonicalAnswer": "Use Snowflake in 20 minutes only when the production requirement matches the documented Snowflake capability around database, table, warehouse, stage, and COPY INTO. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
+    "canonicalAnswer": "To load a CSV, choose a database and schema, create a target table, use a warehouse for compute, place the file in a stage, define file format if needed, and run COPY INTO to load the table.",
     "expectedConcepts": [
       "database",
       "table",
@@ -247,8 +253,8 @@
     "version": 1,
     "benchmark": {
       "version": "1.0.0",
-      "canonicalAnswer": "Use Snowflake in 20 minutes only when the production requirement matches the documented Snowflake capability around database, table, warehouse, stage, and COPY INTO. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design.",
-      "expandedExplanation": "Use Snowflake in 20 minutes only when the production requirement matches the documented Snowflake capability around database, table, warehouse, stage, and COPY INTO. Decide fit by mapping business requirements to service limits, security responsibility, dependencies, recovery needs, operating effort, measurable acceptance criteria, and cost before promoting the design. This benchmark is specific to the beginner scenario prompt because it requires the candidate to apply database, table, warehouse, stage, and COPY INTO using evidence from the cited official Snowflake source and operational validation, while avoiding unsupported claims or generic service descriptions.",
+      "canonicalAnswer": "To load a CSV, choose a database and schema, create a target table, use a warehouse for compute, place the file in a stage, define file format if needed, and run COPY INTO to load the table.",
+      "expandedExplanation": "To load a CSV, choose a database and schema, create a target table, use a warehouse for compute, place the file in a stage, define file format if needed, and run COPY INTO to load the table. At a high level, CSV loading needs Snowflake storage objects and compute: a database/schema/table, a virtual warehouse, a stage for the file, an optional file format, and COPY INTO to move rows from the stage into the table. Validate row counts and rejected rows after the load.",
       "requiredConcepts": [
         "database",
         "table",
@@ -308,20 +314,23 @@
       "scoringAnchors": {
         "strong": "Directly answers the scenario question, accurately covers database, table, warehouse, stage, and COPY INTO, uses operational Snowflake evidence, and stays aligned to the cited official source.",
         "partial": "Covers some required concepts but misses important Snowflake constraints, validation evidence, or operational reasoning expected at beginner level.",
-        "weak": "Mentions loading-data superficially, with little AWS-specific explanation and multiple missing required concepts.",
+        "weak": "Gives generic Snowflake advice without enough feature-specific mechanics, required concepts, operational evidence, or safe validation controls.",
         "incorrect": "Gives claims that conflict with the benchmark answer or does not answer the loading-data question in a technically useful way."
       },
       "review": {
-        "status": "draft",
-        "promptVersion": "benchmark-remediation-2026-08-26",
-        "reviewerModels": [],
-        "verdicts": [],
-        "confidence": 0,
-        "corrections": [
-          "Requires independent AI evidence re-review before publication."
+        "status": "ai-evidence-verified",
+        "promptVersion": "benchmark-review-1.0.0",
+        "reviewerModels": [
+          "gpt-5.6-luna",
+          "gpt-5.5"
         ],
-        "reviewedAt": null,
-        "notes": "Pending AI evidence review."
+        "verdicts": [
+          "approve",
+          "approve"
+        ],
+        "confidence": 0.94,
+        "corrections": [],
+        "reviewedAt": "2026-09-01"
       }
     }
   },

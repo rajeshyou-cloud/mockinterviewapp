@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T14:14:56.650Z",
+  "generatedAt": "2026-09-01T02:21:08.839Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
@@ -9,15 +9,15 @@
     ],
     "limit": "20",
     "offset": 0,
-    "batchLabel": "review-20260831-batch1g-r3"
+    "batchLabel": "review-20260901-batch1k-final-r3"
   },
-  "totalQuestions": 20,
+  "totalQuestions": 7,
   "technologies": {
     "snowflake": {
-      "count": 20,
+      "count": 7,
       "path": "apps/web/data/evidence-packets-compact/snowflake-sentforrereview-compact.jsonl",
       "runnerPath": "apps/web/data/evidence-packets-compact/snowflake.jsonl",
-      "labelledPath": "apps/web/data/evidence-packets-compact/snowflake-review-20260831-batch1g-r3.jsonl"
+      "labelledPath": "apps/web/data/evidence-packets-compact/snowflake-review-20260901-batch1k-final-r3.jsonl"
     }
   }
 }
