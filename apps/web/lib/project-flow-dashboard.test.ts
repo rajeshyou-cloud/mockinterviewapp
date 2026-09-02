@@ -23,8 +23,8 @@ describe('stakeholder project-flow read model', () => {
     expect(result.totals.legacyReleased).toBe(300);
     expect(result.lifecycle.find((stage) => stage.key === 'published')?.count).toBe(0);
     expect(result.statuses).toEqual(expect.arrayContaining([
-      expect.objectContaining({ status: 'draft', count: 280 }),
-      expect.objectContaining({ status: 'ai-evidence-verified', count: 770 }),
+      expect.objectContaining({ status: 'draft', count: 200 }),
+      expect.objectContaining({ status: 'ai-evidence-verified', count: 850 }),
     ]));
   });
 

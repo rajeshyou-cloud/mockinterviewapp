@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T02:30:27.104Z",
+  "generatedAt": "2026-09-02T03:57:34.864Z",
   "packetVersion": "compact-rereview-1.0.0",
   "sourceManifest": "apps/web/data/evidence-packets/manifest.json",
   "filters": {
@@ -7,17 +7,17 @@
     "onlyStatus": [
       "draft"
     ],
-    "limit": "8",
-    "offset": 12,
-    "batchLabel": "review-20260901-batch1a-r5-delta"
+    "limit": "all",
+    "offset": 0,
+    "batchLabel": null
   },
-  "totalQuestions": 8,
+  "totalQuestions": 50,
   "technologies": {
     "power-bi": {
-      "count": 8,
+      "count": 50,
       "path": "apps/web/data/evidence-packets-compact/power-bi-sentforrereview-compact.jsonl",
       "runnerPath": "apps/web/data/evidence-packets-compact/power-bi.jsonl",
-      "labelledPath": "apps/web/data/evidence-packets-compact/power-bi-review-20260901-batch1a-r5-delta.jsonl"
+      "labelledPath": null
     }
   }
 }

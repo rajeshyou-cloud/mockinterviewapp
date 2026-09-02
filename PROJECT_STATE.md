@@ -1,6 +1,6 @@
 # Project State
 
-_Last updated: 2026-08-31_
+_Last updated: 2026-09-02_
 
 ## Current milestone
 
@@ -118,7 +118,7 @@ Status: **BENCHMARK STRUCTURE COMPLETE / INFORMATICA AND ORACLE CLAUDE-VERIFIED*
 - [x] Prepare `sentforrereview` Claude upload chunks for remediated Informatica and Oracle packets
 - [x] Import final Informatica re-review and verify all 150 Informatica benchmarks as ai-evidence-verified
 - [x] Import final Oracle re-review and verify all 150 Oracle benchmarks as ai-evidence-verified
-- [ ] Complete independent two-model AI evidence verification for AWS
+- [x] Complete independent two-model AI evidence verification for AWS
 - [x] Explicitly launch Databricks and Oracle after full AI-evidence verification and source-link verification
 - [ ] Explicitly launch each remaining fully AI-verified pack after source-link and production-flow verification
 - [ ] Revalidate all official source links and run production browser verification per launch
@@ -142,6 +142,10 @@ Databricks is now **150/150 ai-evidence-verified** after optimized chat-level re
 ### 2026-08-31 Databricks and Oracle launch registry publication
 
 Databricks and Oracle Database are now explicitly present in the JSON candidate launch registry after both packs reached **150/150 ai-evidence-verified**. The publication gate still requires both predicates at runtime: full-pack AI evidence verification and explicit launch registry membership. AWS remains blocked at **85/150 verified**, while Power BI and Python remain **0/150 verified**; these packs are not launched. `npm run validate:benchmarks` reports **1,050 total benchmarks, 538 ai-evidence-verified, 512 draft, and 365 blocked candidate questions**. `npm run check:evidence-links -- --offline --fail-on-broken` passed, and a live evidence-link scan reported **273/273 healthy URLs**. This launch does not imply human review, vendor certification, governed database cutover, or completion of the pending Neon governed-content main migration.
+
+### 2026-09-02 Power BI review continuation production push
+
+Current benchmark validation reports **1,050 total benchmarks, 850 ai-evidence-verified, 200 draft, and 200 blocked candidate questions**. AWS, Databricks, Informatica, Oracle Database, and Snowflake are each **150/150 ai-evidence-verified**. Power BI is **100/150 ai-evidence-verified** after governed chat-level batches 1a through 1e using independent two-model consensus; **50 Power BI benchmarks remain draft**. Python remains **0/150 verified** and draft. Power BI batches 1b through 1e were imported only after exact review-file dry runs and verified-only writes; `gpt-5.4-mini` was used as the first-pass reviewer and `gpt-5.5` as the critic, with remediation before re-review where either model disputed generic or under-evidenced answers. Static Power BI triage is 0 flags and `npm run validate:benchmarks` passes. This is AI evidence verification only, not human review or vendor certification. AWS and Power BI are not newly launched by this review push; production exposure still requires explicit launch registry membership plus source-link and production-flow verification.
 
 ## Milestone 4 — Governed content platform
 
@@ -177,7 +181,7 @@ Status: **PHASES 1–9 PLATFORM IMPLEMENTED / OPERATIONAL CONTENT AND MAIN MIGRA
 - [x] Extend CI with review-runtime, evidence-link structure, and content-scale report gates.
 - [ ] Switch read paths only after imported counts, statuses, versions, hashes, and release gates match JSON.
 
-The implemented model is documented in `docs/GOVERNED_CONTENT_SCHEMA.md`. The migration `packages/db/migrations/20260827_01_governed_content.sql` has not yet been approved for or applied to the Neon main branch. Revised migration `6c9b01ff-d490-4563-acfe-38d75ac854c9` and the complete importer/exporter flow passed on temporary branch `br-bitter-dream-a6cc7cum`: 7 technologies, 98 topics, 1,050 questions and benchmarks, 1,476 evidence sources and links, 686 immutable per-model review records, and 1,050 version snapshots. The exact production approval boundary, artifact SHA-256, apply procedure, and post-apply checks are recorded in `docs/GOVERNED_CONTENT_PRODUCTION_MIGRATION_RUNBOOK.md`; approval of that schema artifact does not authorize the separate production content import or read-source cutover. Database reads remain behind `GOVERNED_CONTENT_SOURCE`; JSON is still the default, shadow mode compares unpublished database snapshots while serving JSON and keeps serving JSON if Neon is unavailable, and database mode requires verified status plus exact-version published-batch membership. Content Admin, publication batches, freshness health, and learning-progress routes are implemented; before the migration, linked governed routes render an explicit unavailable/transition state instead of failing or implying readiness. Static triage reports 707 pending drafts and 0 local flags, but live independent review remains blocked by provider quota/credits and a previously exposed Gemini key must be rotated before reuse. No draft or candidate pack is newly exposed, no human/vendor label was inferred, and no publication batch has been launched.
+The implemented model is documented in `docs/GOVERNED_CONTENT_SCHEMA.md`. The migration `packages/db/migrations/20260827_01_governed_content.sql` has not yet been approved for or applied to the Neon main branch. Revised migration `6c9b01ff-d490-4563-acfe-38d75ac854c9` and the complete importer/exporter flow passed on temporary branch `br-bitter-dream-a6cc7cum`: 7 technologies, 98 topics, 1,050 questions and benchmarks, 1,476 evidence sources and links, 686 immutable per-model review records, and 1,050 version snapshots. The exact production approval boundary, artifact SHA-256, apply procedure, and post-apply checks are recorded in `docs/GOVERNED_CONTENT_PRODUCTION_MIGRATION_RUNBOOK.md`; approval of that schema artifact does not authorize the separate production content import or read-source cutover. Database reads remain behind `GOVERNED_CONTENT_SOURCE`; JSON is still the default, shadow mode compares unpublished database snapshots while serving JSON and keeps serving JSON if Neon is unavailable, and database mode requires verified status plus exact-version published-batch membership. Content Admin, publication batches, freshness health, and learning-progress routes are implemented; before the migration, linked governed routes render an explicit unavailable/transition state instead of failing or implying readiness. Static triage reports 200 pending drafts and 0 local flags after the latest Power BI review import. No draft or candidate pack is newly exposed, no human/vendor label was inferred, and no publication batch has been launched.
 
 The 2026-08-29 Databricks continuation supersedes the preceding pending-count snapshot: 642 drafts remain, static triage still reports 0 local flags, and the next review actions are additional controlled Databricks compact batches after Delta table history/time travel 06 and Lakeflow Jobs 02-05 were consensus-approved. The production migration, database import/cutover, course launch, provider billing, and human/vendor verification boundaries remain unchanged.
 

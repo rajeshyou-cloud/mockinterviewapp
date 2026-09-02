@@ -17,8 +17,8 @@ test('normalizes all JSON packs without changing stable identity or review truth
   assert.equal(model.summary.benchmarkAnswers, 1050);
   assert.equal(model.summary.questionVersions, 1050);
   assert.deepEqual(model.summary.byReviewStatus, {
-    draft: 707,
-    'ai-evidence-verified': 343,
+    draft: 200,
+    'ai-evidence-verified': 850,
   });
   assert.equal(new Set(model.questions.map((question) => question.id)).size, 1050);
 
@@ -31,7 +31,7 @@ test('normalizes all JSON packs without changing stable identity or review truth
 test('publishes only verified questions from released packs', () => {
   const model = buildImportModel(records);
   const published = model.questions.filter((question) => question.publishStatus === 'published');
-  assert.equal(published.length, 153);
+  assert.equal(published.length, 300);
   assert.ok(published.every((question) => question.sourceKind === 'released'));
   assert.ok(published.every((question) => ['ai-evidence-verified', 'human-verified'].includes(question.benchmarkReviewStatus)));
   assert.ok(model.questions.filter((question) => question.sourceKind === 'candidate').every((question) => question.publishStatus === 'unpublished'));

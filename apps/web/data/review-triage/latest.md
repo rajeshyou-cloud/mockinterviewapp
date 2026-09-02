@@ -1,18 +1,17 @@
 # Static Benchmark Triage Report
 
-Generated: 2026-09-01T02:32:45.538Z
-Technology: all
+Generated: 2026-09-02T03:57:26.095Z
+Technology: power-bi
 Statuses: draft, disputed, rejected, stale, reviewing
 
-Selected records: 280
+Selected records: 50
 Records with local flags: 0
 
 ## By technology
 
 | Technology | Selected | Flagged |
 |---|---:|---:|
-| power-bi | 130 | 0 |
-| python | 150 | 0 |
+| power-bi | 50 | 0 |
 
 ## By reason
 

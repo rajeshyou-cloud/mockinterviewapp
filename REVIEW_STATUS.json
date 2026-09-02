@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T08:03:00.000+05:30",
+  "updatedAt": "2026-09-02T09:27:46.000+05:30",
   "workspace": "D:\\mockinterviewapp",
   "purpose": "Low-context index for continuing governed benchmark AI review without rereading PROJECT_STATE.md and HANDOVER.md on every batch.",
   "contract": {
@@ -13,9 +13,9 @@
   },
   "latestValidatedCounts": {
     "totalBenchmarks": 1050,
-    "aiEvidenceVerified": 770,
-    "draft": 280,
-    "blockedCandidateQuestions": 280
+    "aiEvidenceVerified": 850,
+    "draft": 200,
+    "blockedCandidateQuestions": 200
   },
   "technologyStatus": {
     "informatica": {
@@ -48,10 +48,10 @@
       "note": "Published through the explicit launch registry on 2026-08-31 after full AI-evidence verification and evidence-link verification."
     },
     "power-bi": {
-      "verified": 20,
-      "draft": 130,
+      "verified": 100,
+      "draft": 50,
       "userVisible": false,
-      "note": "Power BI batch 1a completed through two-model chat-level AI consensus after evidence alignment for calculated tables and dataflows. Static triage is 0 and benchmark validation passes."
+      "note": "Power BI batches 1a through 1e completed through two-model chat-level AI consensus. Batch 1e used gpt-5.4-mini as primary and gpt-5.5 as critic after compact-packet remediation. Static triage is 0 and benchmark validation passes."
     },
     "python": {
       "verified": 0,
@@ -61,24 +61,26 @@
   },
   "activeReview": {
     "technology": "power-bi",
-    "nextBatchLabel": "power-bi-review-20260901-batch1b",
+    "nextBatchLabel": "power-bi-review-20260902-batch1f",
     "pendingReviewerPacket": [],
     "reviewerModels": [
-      "gpt-5.6-luna",
+      "gpt-5.4-mini",
       "gpt-5.5"
     ],
     "reviewerModelStrategy": {
-      "preferredLowCostPrimary": "gpt-5.6-luna",
+      "preferredLowCostPrimary": "gpt-5.4-mini",
+      "futurePrimaryAfterRetirement": "gpt-5.6-luna",
       "critic": "gpt-5.5",
+      "fallbackCritic": "gpt-5.6-terra",
       "rule": "Use compact labelled packets, static triage before reviewer calls, primary first, and spend critic only after primary approval. Do not import single-model approvals."
     },
     "packetPath": null,
-    "packetGuardCommand": "npm run validate:review-packet -- --packet=<labelled-packet> --allowed-status=draft --max-records=10",
+    "packetGuardCommand": "npm run validate:review-packet -- --packet=<labelled-packet> --allowed-status=draft --max-records=20",
     "blocker": null,
     "latestMilestone": {
       "technology": "power-bi",
       "status": "review-in-progress",
-      "summary": "AWS, Databricks, Informatica, Oracle, and Snowflake are fully AI-evidence verified at 150/150 each. Power BI has started and is 20/150 ai-evidence-verified after batch 1a. Remaining draft courses are Power BI 130 and Python 150. Static triage is 0 and benchmark validation passes.",
+      "summary": "AWS, Databricks, Informatica, Oracle, and Snowflake are fully AI-evidence verified at 150/150 each. Power BI is 100/150 ai-evidence-verified after batches 1a through 1e. Remaining draft courses are Power BI 50 and Python 150. Static triage is 0 and benchmark validation passes.",
       "launchStatus": "AWS and Power BI are not launched; Snowflake is fully AI-evidence verified and already user-visible from earlier release path. Do not describe any course as human-reviewed or vendor-certified.",
       "productionDeployment": {
         "commit": "868077e",
@@ -100,8 +102,8 @@
       "Before any reviewer call, run validate:review-packet and proceed only when the packet has draft records, no duplicates, and no verified records.",
       "Read PROJECT_STATE.md and HANDOVER.md only at start/end of larger checkpoints or when contract ambiguity exists.",
       "Update PROJECT_STATE.md and HANDOVER.md after meaningful milestones or before handoff, not every small batch.",
-      "Use gpt-5.4 for low-cost primary review where available; use gpt-5.5 as the independent critic before import.",
-      "Use 10-record batches for AWS-style remediation-heavy review; increase only when primary approval rate is consistently high."
+      "Use gpt-5.4-mini for low-cost primary review while available; after retirement use gpt-5.6-luna. Use gpt-5.5 as critic when available and not usage-limited, otherwise use gpt-5.6-terra.",
+      "Use 20-record batches, run the primary first, and send only primary-approved records to the critic."
     ]
   }
 }
